@@ -20,7 +20,7 @@
   <meta content="__james1 的博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1628934454405" as="style">
+  <link rel="preload" href="/css/style.css?time=1628936378885" as="style">
   <!-- 页面元数据 -->
   <title>倍增 - __james1 的博客</title>
   <meta name="keywords" content="倍增,null">
@@ -2290,8 +2290,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1628934454405" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1628934454405"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1628936378885" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1628936378885"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("user-color-scheme")
       if(userColorScheme){
@@ -2844,8 +2844,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span> 相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2021\03\20\2pointer\" title="2-pointer（双指针）" rel="bookmark "><img src="https://z3.ax1x.com/2021/03/20/6h5V6H.jpg" class="lazyload placeholder" data-srcset="https://z3.ax1x.com/2021/03/20/6h5V6H.jpg" srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" /><span class="title">2-pointer（双指针）</span><span class="excerpt">
-双指针，指的是在遍历对象的过程中，不是普通的使用单个指针进行访问，而是使用两个相同方向或者相反方向的指针进行扫描。本文...</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\2021\08\02\BIT\" title="树状数组" rel="bookmark "><img src="https://z3.ax1x.com/2021/02/27/6pHaJU.jpg" class="lazyload placeholder" data-srcset="https://z3.ax1x.com/2021/02/27/6pHaJU.jpg" srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg" /><span class="title">树状数组</span><span class="excerpt">
+树状数组（Binary Indexed Tree，BIT，即二叉索引树），又称 Fenwick 树（因为发明人是 Fe...</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2958,6 +2958,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
 
+    
+      <div id="beaudar_container"></div>
     
 
     
@@ -3285,6 +3287,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.css("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css");
   
   
+  volantis.css("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css");
+  
   
   
 </script>
@@ -3491,7 +3495,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-    volantis.js('/js/rightMenu.js?time=1628934454405')
+    volantis.js('/js/rightMenu.js?time=1628936378885')
   </script>
 
 
@@ -3602,19 +3606,19 @@ volantis.pjax.push(bindToggleButton);
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1628934454405")
+        volantis.js("/js/plugins/sites.js?time=1628936378885")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1628934454405")
+        volantis.js("/js/plugins/friends.js?time=1628936378885")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1628934454405")
+        volantis.js("/js/plugins/contributors.js?time=1628936378885")
       }
     
   };
@@ -3737,7 +3741,7 @@ volantis.pjax.push(bindToggleButton);
 
     
       // 右键 music 需要在 APlayer  MetingJS 之后加载
-      await volantis.js('/js/aplayer.js?time=1628934454407')
+      await volantis.js('/js/aplayer.js?time=1628936378887')
       volantis.APlayerController.music = true;
     
   })();
@@ -3797,11 +3801,62 @@ volantis.pjax.push(bindToggleButton);
 
 
 
+  <script>
+  volantis.beaudar = {};
+
+  function check_beaudar() {
+    if (volantis.dark.mode === "dark") {
+      volantis.beaudar.Theme = 'github-dark';
+    } else {
+      volantis.beaudar.Theme = 'github-light';
+    }
+
+    return document.getElementById("beaudar_container");
+  }
+
+  function pjax_beaudar() {
+    const HEAD = check_beaudar();
+    if (!HEAD) return;
+
+    const script = document.createElement('script');
+    let issuenumber = "";
+    if (issuenumber) {
+      script.setAttribute('issue-number', issuenumber);
+    } else {
+      script.setAttribute('issue-term', "pathname");
+    }
+    script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
+    script.setAttribute('repo', 'https://github.com/james1BadCreeper/james1BadCreeper.github.io');
+    script.setAttribute('input-position', 'top');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.setAttribute('branch', 'main');
+    script.setAttribute('comment-order', 'desc');
+    script.setAttribute('label', '✨💬✨');
+    script.setAttribute('theme', volantis.beaudar.Theme);
+    HEAD.appendChild(script);
+  }
+
+  function dark_beaudar() {
+    const HEAD = check_beaudar();
+    if (!HEAD) return;
+
+    const message = {
+      type: 'set-theme',
+      theme: volantis.beaudar.Theme
+    };
+    const beaudarIframe = document.querySelector('iframe');
+    beaudarIframe.contentWindow.postMessage(message, 'https://beaudar.lipk.org');
+  }
+  pjax_beaudar();
+  volantis.pjax.push(pjax_beaudar);
+  volantis.dark.push(dark_beaudar);
+</script>
 
 
 
 
-<script src="/js/app.js?time=1628934454405.js"></script>
+
+<script src="/js/app.js?time=1628936378885.js"></script>
 
 
 <!-- optional -->
@@ -3861,8 +3916,8 @@ function setSearchService() {
   <script>
   volantis.message = (title, message, icon = 'fas fa-info-circle light-blue', time = '5000', position = 'topRight', done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1628934454405')
-      volantis.js('/js/message.js?time=1628934454405', () => {
+      volantis.css('/css/message.css?time=1628936378885')
+      volantis.js('/js/message.js?time=1628936378885', () => {
         tozashMessage(title, message, icon, time, position, done);
       });
     } else {
@@ -3895,8 +3950,8 @@ function setSearchService() {
 
   volantis.question = (title, message, success = null, cancel = null, done = null, icon = 'fas fa-question-circle light-blue', time = '20000') => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1628934454405')
-      volantis.js('/js/message.js?time=1628934454405', () => {
+      volantis.css('/css/message.css?time=1628936378885')
+      volantis.js('/js/message.js?time=1628936378885', () => {
         tozashQuestion(title, message, icon , time, success, cancel, done);
       });
     } else {

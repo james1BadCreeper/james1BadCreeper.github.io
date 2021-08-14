@@ -20,7 +20,7 @@
   <meta content="__james1 的博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1628934454396" as="style">
+  <link rel="preload" href="/css/style.css?time=1628936378874" as="style">
   <!-- 页面元数据 -->
   <title>树状数组 - __james1 的博客</title>
   <meta name="keywords" content="DS,树状数组,null">
@@ -2293,8 +2293,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1628934454396" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1628934454396"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1628936378874" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1628936378874"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("user-color-scheme")
       if(userColorScheme){
@@ -2978,6 +2978,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
     
+      <div id="beaudar_container"></div>
+    
 
     
       <!-- Custom Files comment begin-->
@@ -3318,6 +3320,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.css("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css");
   
   
+  volantis.css("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css");
+  
   
   
 </script>
@@ -3524,7 +3528,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-    volantis.js('/js/rightMenu.js?time=1628934454396')
+    volantis.js('/js/rightMenu.js?time=1628936378874')
   </script>
 
 
@@ -3635,19 +3639,19 @@ volantis.pjax.push(bindToggleButton);
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1628934454396")
+        volantis.js("/js/plugins/sites.js?time=1628936378874")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1628934454396")
+        volantis.js("/js/plugins/friends.js?time=1628936378874")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1628934454396")
+        volantis.js("/js/plugins/contributors.js?time=1628936378874")
       }
     
   };
@@ -3770,7 +3774,7 @@ volantis.pjax.push(bindToggleButton);
 
     
       // 右键 music 需要在 APlayer  MetingJS 之后加载
-      await volantis.js('/js/aplayer.js?time=1628934454398')
+      await volantis.js('/js/aplayer.js?time=1628936378876')
       volantis.APlayerController.music = true;
     
   })();
@@ -3830,11 +3834,62 @@ volantis.pjax.push(bindToggleButton);
 
 
 
+  <script>
+  volantis.beaudar = {};
+
+  function check_beaudar() {
+    if (volantis.dark.mode === "dark") {
+      volantis.beaudar.Theme = 'github-dark';
+    } else {
+      volantis.beaudar.Theme = 'github-light';
+    }
+
+    return document.getElementById("beaudar_container");
+  }
+
+  function pjax_beaudar() {
+    const HEAD = check_beaudar();
+    if (!HEAD) return;
+
+    const script = document.createElement('script');
+    let issuenumber = "";
+    if (issuenumber) {
+      script.setAttribute('issue-number', issuenumber);
+    } else {
+      script.setAttribute('issue-term', "pathname");
+    }
+    script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
+    script.setAttribute('repo', 'https://github.com/james1BadCreeper/james1BadCreeper.github.io');
+    script.setAttribute('input-position', 'top');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.setAttribute('branch', 'main');
+    script.setAttribute('comment-order', 'desc');
+    script.setAttribute('label', '✨💬✨');
+    script.setAttribute('theme', volantis.beaudar.Theme);
+    HEAD.appendChild(script);
+  }
+
+  function dark_beaudar() {
+    const HEAD = check_beaudar();
+    if (!HEAD) return;
+
+    const message = {
+      type: 'set-theme',
+      theme: volantis.beaudar.Theme
+    };
+    const beaudarIframe = document.querySelector('iframe');
+    beaudarIframe.contentWindow.postMessage(message, 'https://beaudar.lipk.org');
+  }
+  pjax_beaudar();
+  volantis.pjax.push(pjax_beaudar);
+  volantis.dark.push(dark_beaudar);
+</script>
 
 
 
 
-<script src="/js/app.js?time=1628934454396.js"></script>
+
+<script src="/js/app.js?time=1628936378874.js"></script>
 
 
 <!-- optional -->
@@ -3894,8 +3949,8 @@ function setSearchService() {
   <script>
   volantis.message = (title, message, icon = 'fas fa-info-circle light-blue', time = '5000', position = 'topRight', done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1628934454396')
-      volantis.js('/js/message.js?time=1628934454396', () => {
+      volantis.css('/css/message.css?time=1628936378874')
+      volantis.js('/js/message.js?time=1628936378874', () => {
         tozashMessage(title, message, icon, time, position, done);
       });
     } else {
@@ -3928,8 +3983,8 @@ function setSearchService() {
 
   volantis.question = (title, message, success = null, cancel = null, done = null, icon = 'fas fa-question-circle light-blue', time = '20000') => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1628934454396')
-      volantis.js('/js/message.js?time=1628934454396', () => {
+      volantis.css('/css/message.css?time=1628936378874')
+      volantis.js('/js/message.js?time=1628936378874', () => {
         tozashQuestion(title, message, icon , time, success, cancel, done);
       });
     } else {
