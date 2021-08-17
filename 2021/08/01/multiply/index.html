@@ -20,7 +20,7 @@
   <meta content="__james1 的博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1628936378885" as="style">
+  <link rel="preload" href="/css/style.css?time=1629180404976" as="style">
   <!-- 页面元数据 -->
   <title>倍增 - __james1 的博客</title>
   <meta name="keywords" content="倍增,null">
@@ -2290,8 +2290,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1628936378885" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1628936378885"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1629180404976" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1629180404976"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("user-color-scheme")
       if(userColorScheme){
@@ -2377,7 +2377,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/copy-tex.min.js" integrity="sha384-Ep9Es0VCjVn9dFeaN2uQxgGcGmG+pfZ4eBaHxUpxXDORrrVACZVOpywyzvFRGbmv" crossorigin="anonymous"></script>  
 </head>
   <body>
-    <header id="l_header" class="l_header always shadow blur show"  >
+    <header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -3030,7 +3030,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2021 __james1</a></p>
+        <p><a href="/">Copyright © 2021 james1BadCreeper</a></p>
 
         </div>
       
@@ -3287,8 +3287,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.css("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css");
   
   
-  volantis.css("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css");
-  
   
   
 </script>
@@ -3433,60 +3431,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           </li>
         
       
-        
-          <hr class="menuLoad-Content">
-        
-      
-        
-          <div id="menuMusic">
-            <li class='music name menuOption-Content'>
-              <p class='nav music-title fix-cursor-default'></p>
-            </li>
-            <li class='music ctrl'>
-              <a class='nav icon-only backward fix-cursor-default' onclick='volantis.rightMenu.aplayerBackward()'><i class='fa fa-step-backward fa-fw '></i></a>
-              <a class='nav icon-only toggle fix-cursor-default' onclick='volantis.rightMenu.aplayerToggle()'><i class='fa fa-play fa-fw '></i></a>
-              <a class='nav icon-only forward fix-cursor-default' onclick='volantis.rightMenu.aplayerForward()'><i class='fa fa-step-forward fa-fw '></i></a>
-            </li>
-            <li class='music volume'>
-              <a class='nav volume'>
-                <div class="aplayer-volume-bar-wrap">
-                  <div class="aplayer-volume-bar fix-cursor-pointer">
-                    <div class="aplayer-volume"></div>
-                    <i class='left fa fa-volume-off fa-fw'></i>
-                    <i class='right fa fa-volume-up fa-fw'></i>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </div>
-        
-      
     </ul>
   </div>
 
   <script>
     volantis.rightMenu = {};
     volantis.rightMenu.faicon = 'fa' || 'fa';
-    
-      volantis.rightMenu.music = true;
-      volantis.rightMenu.aplayerBackward = () => {
-        event.stopPropagation();
-        if (MainAPlayer.aplayerBackward) {
-          MainAPlayer.aplayerBackward();
-        }
-      }
-      volantis.rightMenu.aplayerToggle = () => {
-        event.stopPropagation();
-        if (MainAPlayer.aplayerToggle) {
-          MainAPlayer.aplayerToggle();
-        }
-      }
-      volantis.rightMenu.aplayerForward = () => {
-        event.stopPropagation();
-        if (MainAPlayer.aplayerForward) {
-          MainAPlayer.aplayerForward();
-        }
-      }
     
     
       volantis.rightMenu.defaultStyles = true;
@@ -3495,7 +3445,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-    volantis.js('/js/rightMenu.js?time=1628936378885')
+    volantis.js('/js/rightMenu.js?time=1629180404976')
   </script>
 
 
@@ -3606,19 +3556,19 @@ volantis.pjax.push(bindToggleButton);
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1628936378885")
+        volantis.js("/js/plugins/sites.js?time=1629180404976")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1628936378885")
+        volantis.js("/js/plugins/friends.js?time=1629180404976")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1628936378885")
+        volantis.js("/js/plugins/contributors.js?time=1629180404976")
       }
     
   };
@@ -3662,8 +3612,6 @@ volantis.pjax.push(bindToggleButton);
 
 
   
-
-<script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 
 
 
@@ -3727,6 +3675,28 @@ volantis.pjax.push(bindToggleButton);
 
 
 
+   <script type="text/javascript">
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal("#l_main .reveal", {
+      distance: "32px",
+      duration: "800",
+      interval: "20",
+      scale: "1",
+      easing: "ease-out",
+    });
+  }
+  volantis.js("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  document.addEventListener("DOMContentLoaded", ()=>{
+    var checkScrollReveal = setInterval(function () {
+      if (typeof ScrollReveal == "undefined") return;
+      clearInterval(checkScrollReveal);
+      pjax_scrollrebeal();
+    }, 100);
+  })
+  volantis.pjax.push(pjax_scrollrebeal);
+</script>
+
+
 
 
   <script>
@@ -3739,10 +3709,6 @@ volantis.pjax.push(bindToggleButton);
     await volantis.js("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
     await volantis.js("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 
-    
-      // 右键 music 需要在 APlayer  MetingJS 之后加载
-      await volantis.js('/js/aplayer.js?time=1628936378887')
-      volantis.APlayerController.music = true;
     
   })();
 // message see: /layout/_third-party/message/script.ejs
@@ -3826,7 +3792,7 @@ volantis.pjax.push(bindToggleButton);
       script.setAttribute('issue-term', "pathname");
     }
     script.setAttribute('src', 'https://beaudar.lipk.org/client.js');
-    script.setAttribute('repo', 'https://github.com/james1BadCreeper/james1BadCreeper.github.io');
+    script.setAttribute('repo', 'james1BadCreeper/comments');
     script.setAttribute('input-position', 'top');
     script.setAttribute('crossorigin', 'anonymous');
     script.setAttribute('branch', 'main');
@@ -3856,7 +3822,7 @@ volantis.pjax.push(bindToggleButton);
 
 
 
-<script src="/js/app.js?time=1628936378885.js"></script>
+<script src="/js/app.js?time=1629180404976.js"></script>
 
 
 <!-- optional -->
@@ -3916,8 +3882,8 @@ function setSearchService() {
   <script>
   volantis.message = (title, message, icon = 'fas fa-info-circle light-blue', time = '5000', position = 'topRight', done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1628936378885')
-      volantis.js('/js/message.js?time=1628936378885', () => {
+      volantis.css('/css/message.css?time=1629180404976')
+      volantis.js('/js/message.js?time=1629180404976', () => {
         tozashMessage(title, message, icon, time, position, done);
       });
     } else {
@@ -3950,8 +3916,8 @@ function setSearchService() {
 
   volantis.question = (title, message, success = null, cancel = null, done = null, icon = 'fas fa-question-circle light-blue', time = '20000') => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1628936378885')
-      volantis.js('/js/message.js?time=1628936378885', () => {
+      volantis.css('/css/message.css?time=1629180404976')
+      volantis.js('/js/message.js?time=1629180404976', () => {
         tozashQuestion(title, message, icon , time, success, cancel, done);
       });
     } else {
