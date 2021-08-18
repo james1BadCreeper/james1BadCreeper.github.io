@@ -20,7 +20,7 @@
   <meta content="__james1 的博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1629180404950" as="style">
+  <link rel="preload" href="/css/style.css?time=1629250121161" as="style">
   <!-- 页面元数据 -->
   <title>扩展欧几里得算法（exgcd） - __james1 的博客</title>
   <meta name="keywords" content="exgcd,数论,null">
@@ -2293,8 +2293,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1629180404950" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1629180404950"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1629250121161" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1629250121161"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("user-color-scheme")
       if(userColorScheme){
@@ -2533,43 +2533,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
                     
-                      
-            
-              
-                <li>
-                  <a class="menuitem flat-box">
-                    <i class='fas fa-compact-disc fa-fw music'></i>背景音乐
-                  </a>
-                  <ul class="list-v">
-                    <li>
-                      <div class="aplayer-container">
-                        
-
-  
-    <meting-js
-      theme='#1BCDFC'
-      autoplay='false'
-      volume='0.7'
-      loop='all'
-      order='random'
-      fixed='false'
-      list-max-height='320px'
-      server='netease'
-      type='playlist'
-      id='6619405731'
-      list-folded='true'>
-    </meting-js>
-  
-
-
-                      </div>
-                    </li>
-                  </ul>
-                <li>
-              
-            
-          
-                    
                   </ul>
                 
               </li>
@@ -2715,12 +2678,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   <i class='fas fa-moon fa-fw'></i>暗黑模式
                 </a>
               <li>
-            
-          
-                    
-                      
-            
-              
             
           
                     
@@ -3059,6 +3016,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <footer class="footer clearfix">
     <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='random'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='6619405731'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
     
       
         
@@ -3491,7 +3472,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-    volantis.js('/js/rightMenu.js?time=1629180404950')
+    volantis.js('/js/rightMenu.js?time=1629250121161')
   </script>
 
 
@@ -3602,19 +3583,19 @@ volantis.pjax.push(bindToggleButton);
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1629180404950")
+        volantis.js("/js/plugins/sites.js?time=1629250121161")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1629180404950")
+        volantis.js("/js/plugins/friends.js?time=1629250121161")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1629180404950")
+        volantis.js("/js/plugins/contributors.js?time=1629250121161")
       }
     
   };
@@ -3749,10 +3730,10 @@ volantis.pjax.push(bindToggleButton);
   volantis.APlayerController = {};
   volantis.APlayerController.id = '6619405731';  // 设定全局音乐播放ID
   volantis.APlayerController.volume = '0.7';
-  volantis.css("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css");
+  volantis.css("https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css");
   // APlayer 需要在  MetingJS 之前加载
   (async () => {
-    await volantis.js("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+    await volantis.js("https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js")
     await volantis.js("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 
     
@@ -3818,7 +3799,7 @@ volantis.pjax.push(bindToggleButton);
 
   function check_beaudar() {
     if (volantis.dark.mode === "dark") {
-      volantis.beaudar.Theme = 'github-dark';
+      volantis.beaudar.Theme = 'photon-dark';
     } else {
       volantis.beaudar.Theme = 'github-light';
     }
@@ -3841,7 +3822,7 @@ volantis.pjax.push(bindToggleButton);
     script.setAttribute('repo', 'james1BadCreeper/comments');
     script.setAttribute('input-position', 'top');
     script.setAttribute('crossorigin', 'anonymous');
-    script.setAttribute('branch', 'main');
+    script.setAttribute('branch', 'beaudar');
     script.setAttribute('comment-order', 'desc');
     script.setAttribute('label', '✨💬✨');
     script.setAttribute('theme', volantis.beaudar.Theme);
@@ -3868,7 +3849,7 @@ volantis.pjax.push(bindToggleButton);
 
 
 
-<script src="/js/app.js?time=1629180404950.js"></script>
+<script src="/js/app.js?time=1629250121161.js"></script>
 
 
 <!-- optional -->
@@ -3926,10 +3907,10 @@ function setSearchService() {
 
 
   <script>
-  volantis.message = (title, message, icon = 'fas fa-info-circle light-blue', time = '5000', position = 'topRight', done = null) => {
+  volantis.message = (title, message, icon = 'fas fa-info-circle', time = '5000', position = 'topRight', done = null) => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1629180404950')
-      volantis.js('/js/message.js?time=1629180404950', () => {
+      volantis.css('/css/message.css?time=1629250121161')
+      volantis.js('/js/message.js?time=1629250121161', () => {
         tozashMessage(title, message, icon, time, position, done);
       });
     } else {
@@ -3960,10 +3941,10 @@ function setSearchService() {
     }
   };
 
-  volantis.question = (title, message, success = null, cancel = null, done = null, icon = 'fas fa-question-circle light-blue', time = '20000') => {
+  volantis.question = (title, message, success = null, cancel = null, done = null, icon = 'fas fa-question-circle', time = '20000') => {
     if (typeof iziToast == "undefined") {
-      volantis.css('/css/message.css?time=1629180404950')
-      volantis.js('/js/message.js?time=1629180404950', () => {
+      volantis.css('/css/message.css?time=1629250121161')
+      volantis.js('/js/message.js?time=1629250121161', () => {
         tozashQuestion(title, message, icon , time, success, cancel, done);
       });
     } else {
@@ -4007,7 +3988,7 @@ function setSearchService() {
     document.body.oncopy = function(){
       volantis.message('知识共享许可协议',
       '请遵守 CC BY-NC-SA 4.0 协议。', 
-      'far fa-copyright light-blue');
+      'far fa-copyright');
     }; 
   
 </script>
