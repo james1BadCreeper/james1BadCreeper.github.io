@@ -7527,7 +7527,7 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   }
   :root:not([color-scheme]) .highlight pre .line,
   :root:not([color-scheme]) .highlight pre .params {
-    color: var(--color-meta);
+    color: #bbb;
   }
   :root:not([color-scheme]) .highlight pre .comment {
     color: rgba(158,142,142,0.9);
@@ -7636,7 +7636,7 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 }
 [color-scheme='dark'] .highlight pre .line,
 [color-scheme='dark'] .highlight pre .params {
-  color: var(--color-meta);
+  color: #bbb;
 }
 [color-scheme='dark'] .highlight pre .comment {
   color: rgba(158,142,142,0.9);

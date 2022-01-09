@@ -222,7 +222,7 @@ const RightMenu = (() => {
       })
       
       !!_bingSearch && (_bingSearch.onclick = () => {
-        window.open('htpps://www.bing.com/search?q=' + encodeURIComponent(selectText));
+        window.open('https://global.bing.com/search?q=' + encodeURIComponent(selectText));
       })
     } else {
       fn.visible(_copyText, false);

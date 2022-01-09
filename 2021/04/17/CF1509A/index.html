@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/22w02a'>
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/22w03a'>
   <meta name="generator" content="Hexo 5.4.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
@@ -20,7 +20,7 @@
   <meta content="james1 的博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1641558089838" as="style">
+  <link rel="preload" href="/css/style.css?time=1641728653475" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1739,8 +1739,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1641558089838" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1641558089838"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1641728653475" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1641728653475"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -2166,22 +2166,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <!-- Custom Files head end-->
 </head>
-  <script>
-  function switchDarkMode() {
-    if (volantis.dark.mode == "dark")
-    {
-      volantis.message('系统提示', '暗黑模式已开启', {
-        icon: 'fal fa-house-night WISTERIA'
-      });
-    }
-    else
-    {
-      volantis.message('系统提示', '白昼模式已开启', {
-        icon: 'fal fa-house-day CARROT'
-      });
-    }
-  }
-</script>  <body itemscope itemtype="http://schema.org/WebPage">
+  <body itemscope itemtype="http://schema.org/WebPage">
     <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
@@ -2312,7 +2297,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box header toggle-mode-btn" onclick="switchDarkMode()">
+                <a class="menuitem flat-box header toggle-mode-btn" href="/" onclick="return false;" title="Click me!" >
                   <i class='fad fa-moon-over-sun AMETHYST fa-fw'></i>昼夜切换
                 </a>
               <li>
@@ -2525,7 +2510,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box header toggle-mode-btn" onclick="switchDarkMode()">
+                <a class="menuitem flat-box header toggle-mode-btn" href="/" onclick="return false;" title="Click me!" >
                   <i class='fad fa-moon-over-sun AMETHYST fa-fw'></i>昼夜切换
                 </a>
               <li>
@@ -3172,8 +3157,8 @@ Day ?
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641558089838')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/thirdparty/message.js?time=1641558089838', () => {
+      volantis.css('/css/message.css?time=1641728653475')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/thirdparty/message.js?time=1641728653475', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -3218,8 +3203,8 @@ Day ?
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641558089838')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/thirdparty/message.js?time=1641558089838', () => {
+      volantis.css('/css/message.css?time=1641728653475')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/thirdparty/message.js?time=1641728653475', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -3278,8 +3263,8 @@ Day ?
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641558089838')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/thirdparty/message.js?time=1641558089838', () => {
+      volantis.css('/css/message.css?time=1641728653475')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/thirdparty/message.js?time=1641728653475', () => {
         hideMessage(done);
       });
     } else {
@@ -3415,7 +3400,7 @@ Day ?
         
       
         
-          <li class='option menuOption-Content' onclick="switchDarkMode()">
+          <li class='option menuOption-Content'>
             <span class='vlts-menu opt fix-cursor-default toggle-mode-btn' id='menuDarkBtn'>
               <i class='fad fa-moon-over-sun WISTERIA fa-fw '></i> 昼夜切换
             </span>
@@ -3488,7 +3473,7 @@ Day ?
     
     
     
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/plugins/rightMenu.js?time=1641558089838')
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/plugins/rightMenu.js?time=1641728653475')
   </script>
 
 
@@ -3567,6 +3552,80 @@ const toggleCustomDarkMode = () => {
   setLS(darkModeStorageKey, currentSetting);
   return currentSetting;
 };
+
+/**
+ * DARKMODE ANIMATE
+ */
+ function hasClass(obj, cls) {
+    return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+}
+
+function addClass(obj, cls) {
+    if (!hasClass(obj, cls)) obj.className += "" + cls;
+}
+
+function removeClass(obj, cls) {
+    if (hasClass(obj, cls)) {
+        var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+        obj.className = obj.className.replace(reg, '');
+    }
+}
+
+function toggleClass(obj, cls) {
+    if (hasClass(obj, cls)) {
+        removeClass(obj, cls);
+    } else {
+        addClass(obj, cls);
+    }
+}
+const switchDarkMode = () => {
+  // 黑暗模式动画移植自 Cuteen 4.x 主题
+  // https://github.com/zwying0814/Cuteen
+  // MPL-2.0 License
+  console.log("switchDarkMode");
+  
+  const btn = document.getElementsByTagName('html')[0];
+
+  const hb = '<div id="sky"><div class="planet"><div class="sun"></div><div class="moon"></div></div></div>';
+  btn.insertAdjacentHTML('beforeend', hb);
+
+  const sky = document.getElementById('sky');
+  btn.className = volantis.dark.mode == "dark" ? 'sr' : "dark-mode";
+  if (sky !== undefined) {
+    setTimeout(function () {
+      if (volantis.dark.mode == "dark") {
+        btn.className = "dark-mode";
+      } else {
+        btn.className = "sr";
+      }
+    }, 800)
+    
+    setTimeout(function () {
+      var num = 10;
+      var st = setInterval(function () {
+        num--;
+        sky.style.opacity = num / 10;
+        if (num <= 0) {
+          clearInterval(st);
+          sky.remove();
+        }
+      }, 30);
+    }, 2800)    
+  }
+
+  setTimeout(function () {
+    if (volantis.dark.mode == "dark") {
+      volantis.message('系统提示', '暗黑模式已开启', {
+        icon: 'fal fa-house-night WISTERIA'
+      });
+    } else {
+      volantis.message('系统提示', '白昼模式已开启', {
+        icon: 'fal fa-house-day CARROT'
+      });
+    }
+  }, 2800)
+};
+
 /**
  * 暗黑模式触发器
  */
@@ -3575,6 +3634,7 @@ volantis.dark.toggle=()=>{
   applyCustomDarkModeSettings(mode);
   // 使用 volantis.dark.push 方法传入volantis.dark.toggle回调函数 参见layout/_partial/scripts/global.ejs
   volantis.dark.method.toggle.start();
+  switchDarkMode();
 }
 /**
  * bind event for toggle button
@@ -3609,7 +3669,87 @@ const darkModelListeners={
 window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
 window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
 </script>
+<style>
+#sky {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999999999;
+  background-image: linear-gradient(to top, #fddb92 0, #d1fdff 80%)
+}
+#sky:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, #30cfd0 0, #330867 100%);
+  opacity: 0;
+  transition: opacity 2s ease-out;
+}
+.dark-mode #sky:before {
+  opacity: 1;
+}
+#sky .planet {
+  position: fixed;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  -webkit-animation: rotate 2s cubic-bezier(.7, 0, 0, 1);
+  animation: rotate 2s cubic-bezier(.7, 0, 0, 1);
+  transform-origin: center bottom
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+.dark-mode #sky .sun {
+  opacity: 0
+}
 
+.dark-mode #sky .moon {
+  opacity: 1
+}
+#sky .moon,
+#sky .sun {
+  position: absolute;
+  border-radius: 100%;
+  left: 40%;
+  top: 35%
+}
+#sky .sun {
+  height: 64px;
+  width: 64px;
+  background: #ffee94;
+  box-shadow: 0 0 40px #ffee94;
+  opacity: 1
+}
+#sky .moon {
+  position: absolute;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  box-shadow: -1.3em 0.5em 0 0.3em #fff;
+  opacity: 0
+}
+</style>
 
 
 
@@ -3618,19 +3758,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/plugins/sites.js?time=1641558089838")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/plugins/sites.js?time=1641728653475")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/plugins/friends.js?time=1641558089838")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/plugins/friends.js?time=1641728653475")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/plugins/contributors.js?time=1641558089838")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/plugins/contributors.js?time=1641728653475")
       }
     
   };
@@ -3729,7 +3869,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/plugins/aplayer.js?time=1641558089845')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/plugins/aplayer.js?time=1641728653478')
     volantis.APlayerController.music = true;
   
   })();
@@ -3865,7 +4005,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/app.js?time=1641558089838.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/app.js?time=1641728653475.js"></script>
 
 
 <!-- optional -->
@@ -3878,7 +4018,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/search/hexo.js?time=1641558089838");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/search/hexo.js?time=1641728653475");
   }
 
   function loadSearchService() {
@@ -3943,7 +4083,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3986,7 +4126,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/plugins/parallax.js?time=1641558089838').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/plugins/parallax.js?time=1641728653475').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4254,7 +4394,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w02a/source/js/iconfont.js?time=1641558089838.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w03a/source/js/iconfont.js?time=1641728653475.js"></script>
 
 
 <!-- more -->
