@@ -799,3 +799,27 @@ const highlightKeyWords = (() => {
   }
 })()
 Object.freeze(highlightKeyWords);
+
+// 彩色标签云
+const colortag = () => {
+  console.log("coloring tag!");
+  $("ul.tag-list li").each(function () {
+    let random = Math.floor(Math.random() * 7 + 1);
+    if (random == 1) {
+      $(this).find('a').addClass('tagred');
+    } else if (random == 2) {
+      $(this).find('a').addClass('tagyellow');
+    } else if (random == 3) {
+      $(this).find('a').addClass('tagblue');
+    } else if (random == 4) {
+      $(this).find('a').addClass('taggreen');
+    } else if (random == 5) {
+      $(this).find('a').addClass('tagpurple');
+    } else if (random == 6) {
+      $(this).find('a').addClass('taggrown');
+    } else if (random == 7) {
+      $(this).find('a').addClass('tagorange');
+    }
+  });
+}
+colortag();

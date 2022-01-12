@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/22w05a'>
-  <meta name="generator" content="Hexo 5.4.0">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/22w06a'>
+  <meta name="generator" content="Hexo 6.0.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -20,7 +20,7 @@
   <meta content="james1 的博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1641901294222" as="style">
+  <link rel="preload" href="/css/style.css?time=1641998021665" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -757,22 +757,22 @@ button {
   :root:not([color-scheme]) {
     --color-site-body: #000;
     --color-read-bkg: #222;
-    --color-read-post: #333;
+    --color-read-post: #222;
     --color-site-bg: #222;
     --color-site-inner: #eee;
     --color-site-footer: #aaa;
-    --color-card: #333;
+    --color-card: #222;
     --color-text: #eee;
-    --color-block: #3a3a3a;
+    --color-block: #2a2a2a;
     --color-codeblock: #343a3c;
-    --color-inlinecode: #ffc0cb;
-    --color-h1: #eee;
-    --color-h2: #eee;
-    --color-h3: #ddd;
-    --color-h4: #ddd;
+    --color-inlinecode: #d56d28;
+    --color-h1: #efefef;
+    --color-h2: #efefef;
+    --color-h3: #eee;
+    --color-h4: #eee;
     --color-h5: #ddd;
     --color-h6: #ddd;
-    --color-p: #bbb;
+    --color-p: #ccc;
     --color-list: #aaa;
     --color-list-hl: #69dfc4;
     --color-meta: #bbb;
@@ -822,26 +822,29 @@ button {
   :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
     background: var(--color-block) !important;
   }
+  :root:not([color-scheme]) hr {
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  }
 }
 [color-scheme='dark'] {
   --color-site-body: #000;
   --color-read-bkg: #222;
-  --color-read-post: #333;
+  --color-read-post: #222;
   --color-site-bg: #222;
   --color-site-inner: #eee;
   --color-site-footer: #aaa;
-  --color-card: #333;
+  --color-card: #222;
   --color-text: #eee;
-  --color-block: #3a3a3a;
+  --color-block: #2a2a2a;
   --color-codeblock: #343a3c;
-  --color-inlinecode: #ffc0cb;
-  --color-h1: #eee;
-  --color-h2: #eee;
-  --color-h3: #ddd;
-  --color-h4: #ddd;
+  --color-inlinecode: #d56d28;
+  --color-h1: #efefef;
+  --color-h2: #efefef;
+  --color-h3: #eee;
+  --color-h4: #eee;
   --color-h5: #ddd;
   --color-h6: #ddd;
-  --color-p: #bbb;
+  --color-p: #ccc;
   --color-list: #aaa;
   --color-list-hl: #69dfc4;
   --color-meta: #bbb;
@@ -895,6 +898,9 @@ button {
   [color-scheme='dark'] .l_header .m_search {
     background: var(--color-site-bg) !important;
   }
+}
+[color-scheme='dark'] hr {
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
 }
 @font-face {
   font-family: 'Docis';
@@ -1739,8 +1745,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1641901294222" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1641901294222"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1641998021665" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1641998021665"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -2041,7 +2047,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.import = {
     jQuery: () => {
       if (typeof jQuery == "undefined") {
-        return volantis.js("https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js")
+        return volantis.js("http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js")
       } else {
         return new Promise(resolve => {
           resolve()
@@ -2743,13 +2749,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       <i class="fad fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：1k 字</p>
+      <p>字数：1.1k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       <i class="fad fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3 分钟</p>
+      <p>时长：4 分钟</p>
     </a>
   </div>
 
@@ -2779,35 +2785,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 然而午间自习开始的时候老师叫我们做好，弄得我摸不着头脑。</p>
 <p>结果是，老师打算今天下午带我们去大连<del>著名</del>的星海公园去看<del>著名</del>的圣亚海洋世界！</p>
 <div class="note quote"><p>俗话说的真好，近处没有好看的风景……</p></div>
-<p>天哪，这是专门为我散心而准备的吗？</p>
-<p>所以留下了一些非常美好的回忆。我瞬间感觉对省选充满了信心。</p>
+
+天哪，这是专门为我散心而准备的吗？
+
+所以留下了一些非常美好的回忆。我瞬间感觉对省选充满了信心。
+
 <details blue open><summary> 一些回忆 </summary>
               <div class='content'>
               <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://i.loli.net/2021/04/17/aGB8sPiHTugydxm.jpg" class="lazyload" data-srcset="https://i.loli.net/2021/04/17/aGB8sPiHTugydxm.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="嗯，这是《海豚湾之恋》，不过我记得以前是有海盗的，现在被删了qaq"/></div><span class="image-caption">嗯，这是《海豚湾之恋》，不过我记得以前是有海盗的，现在被删了qaq</span></div><div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://i.loli.net/2021/04/17/TFhYBQkvHopnmty.jpg" class="lazyload" data-srcset="https://i.loli.net/2021/04/17/TFhYBQkvHopnmty.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="功 夫 海 象"/></div><span class="image-caption">功 夫 海 象</span></div><div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://i.loli.net/2021/04/17/wUi1lpZarMbWFvK.jpg" class="lazyload" data-srcset="https://i.loli.net/2021/04/17/wUi1lpZarMbWFvK.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="这里可是国家级的企鹅繁殖基地呢！"/></div><span class="image-caption">这里可是国家级的企鹅繁殖基地呢！</span></div><div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://i.loli.net/2021/04/16/9WSV2bwUlijH1BG.jpg" class="lazyload" data-srcset="https://i.loli.net/2021/04/16/9WSV2bwUlijH1BG.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="闹 鬼 系 列（左边的同学名为“坦克”）"/></div><span class="image-caption">闹 鬼 系 列（左边的同学名为“坦克”）</span></div><div class="note info"><p>这些是我们老师拍摄的照片，在此表示最崇高的敬意！</p></div>
               </div>
             </details>
-<p>LNOI2021 加油！<psw>月考分在晚上全出来了：语文（83/100），数学（138/150），外语（131/140），物理（87/90），但是不知道年级排名……</psw></p>
-</div><h2 id="day-1">Day 1</h2><div class="story post-story">
-<p>还好在大连大学考，否则周五下午的活动我就不能去了，需要请假赶往沈阳之类的地方。</p>
-<p>等待的时候看到了许多神仙，除了一个 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/107484">wmh</a> 比我小，剩下都是高中生？感觉他们好厉害的样子（其实真的很厉害）。</p>
-<p>进考场了！</p>
-<p>虽然题目要比我预想中的简单不少，<del>但我还是什么也不会。</del></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7514">T1</a> 拿了 <span class="math inline">\(20\)</span> 分的暴力滚蛋了。</li>
-<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7515">T2</a> 可能做出了 <kbd>m=2</kbd> 的情况拿了 <span class="math inline">\(30\)</span> 分，但由于感觉自己写的有点问题，<del>所以也可能是 0 分</del><img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/%E9%98%B4%E9%99%A9.png" style="height:1.5em" alt="This is a picture without description" />。</li>
-<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7516">T3</a> 做了个 <span class="math inline">\(16\)</span> 分的暴力<del>然后又滚蛋了</del>。</li>
-</ul>
-<p>Day 1 估分（最悲观）：<span class="math inline">\(20 + 0 + 16 = 36\)</span></p>
-<p>嗯，我真菜<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/%E5%95%8A.png" style="height:1.5em" alt="This is a picture without description" />。</p>
-</div><h2 id="day-2">Day 2</h2><div class="story post-story">
-<p><strong>心 情 极 为 郁 闷。</strong></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7518">T1</a> 嗯，这题我不会，所以我选择直接打暴力，以为只有 <span class="math inline">\(10\)</span> 分的暴力竟然拿了 <span class="math inline">\(25\)</span> 分<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/what.png" style="height:1.5em" alt="This is a picture without description" />？</li>
-<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7519">T2</a> <del>嗯，这题我也不会。</del> 而且好像连暴力也不会了（生成排名后不知道怎么判断是否成立），最后胡乱写上去了一个，预期得分 <span class="math inline">\(0\)</span> 分<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/%E7%8B%82%E6%B1%97.png" style="height:1.5em" alt="This is a picture without description" />。</li>
-<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7520">T3</a> <del>嗯，这题我还是不会。</del> （某人：你究竟会啥？<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/%E6%8C%96%E9%BC%BB.png" style="height:1.5em" alt="This is a picture without description" />） <del>而且连暴力也不会了qwq。</del> 最后似乎搞出了这图是树的情况得了 <span class="math inline">\(15\)</span> 分（<del>但也可能是错的</del>），预期得分 <span class="math inline">\(0\)</span> 分。</li>
-</ul>
-<p><span class="math inline">\(\therefore\)</span> Day2 估分为 <span class="math inline">\(10+0+0=10\)</span>。</p>
-<p><span class="math inline">\(\therefore\)</span> 最后分数为 <span class="math inline">\(20+0+16+10+0+0=46\)</span>。</p>
+
+LNOI2021 加油！<psw>月考分在晚上全出来了：语文（83/100），数学（138/150），外语（131/140），物理（87/90），但是不知道年级排名……</psw>
+
+## Day 1
+
+还好在大连大学考，否则周五下午的活动我就不能去了，需要请假赶往沈阳之类的地方。
+
+等待的时候看到了许多神仙，除了一个 [wmh](https://www.luogu.com.cn/user/107484) 比我小，剩下都是高中生？感觉他们好厉害的样子（其实真的很厉害）。
+
+进考场了！
+
+虽然题目要比我预想中的简单不少，~~但我还是什么也不会。~~
+
+- [T1](https://www.luogu.com.cn/problem/P7514) 拿了 $20$ 分的暴力滚蛋了。
+- [T2](https://www.luogu.com.cn/problem/P7515) 可能做出了 <kbd>m=2</kbd> 的情况拿了 $30$ 分，但由于感觉自己写的有点问题，~~所以也可能是 0 分~~<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/%E9%98%B4%E9%99%A9.png" style="height:1.5em" alt="This is a picture without description" />。
+- [T3](https://www.luogu.com.cn/problem/P7516) 做了个 $16$ 分的暴力~~然后又滚蛋了~~。
+
+Day 1 估分（最悲观）：$20 + 0 + 16 = 36$
+
+嗯，我真菜<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/%E5%95%8A.png" style="height:1.5em" alt="This is a picture without description" />。
+
+## Day 2
+**心 情 极 为 郁 闷。**
+
+- [T1](https://www.luogu.com.cn/problem/P7518) 嗯，这题我不会，所以我选择直接打暴力，以为只有 $10$ 分的暴力竟然拿了 $25$ 分<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/what.png" style="height:1.5em" alt="This is a picture without description" />？
+- [T2](https://www.luogu.com.cn/problem/P7519) ~~嗯，这题我也不会。~~ 而且好像连暴力也不会了（生成排名后不知道怎么判断是否成立），最后胡乱写上去了一个，预期得分 $0$ 分<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/%E7%8B%82%E6%B1%97.png" style="height:1.5em" alt="This is a picture without description" />。
+- [T3](https://www.luogu.com.cn/problem/P7520) ~~嗯，这题我还是不会。~~ （某人：你究竟会啥？<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/%E6%8C%96%E9%BC%BB.png" style="height:1.5em" alt="This is a picture without description" />） ~~而且连暴力也不会了qwq。~~ 最后似乎搞出了这图是树的情况得了 $15$ 分（~~但也可能是错的~~），预期得分 $0$ 分。
+
+$\therefore$ Day2 估分为 $10+0+0=10$。
+
+$\therefore$ 最后分数为 $20+0+16+10+0+0=46$。
+
 <div class="note radiation yellow"><p>你可以退役了，你这个松饼脑袋。<br />——路人甲。</p></div>
 </div><h2 id="day-4">Day 4</h2><div class="story post-story">
 <p>月考班级排名 Rk2，年级 Rk4。</p>
@@ -2958,7 +2977,7 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day"><span class="toc-number">1.</span> <span class="toc-text">Day ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day--1"><span class="toc-number">2.</span> <span class="toc-text">Day -1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day-1"><span class="toc-number">3.</span> <span class="toc-text">Day 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day-2"><span class="toc-number">4.</span> <span class="toc-text">Day 2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day-4"><span class="toc-number">5.</span> <span class="toc-text">Day 4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day-6-or-7"><span class="toc-number">6.</span> <span class="toc-text">Day 6 or 7</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day"><span class="toc-number">1.</span> <span class="toc-text">Day ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day--1"><span class="toc-number">2.</span> <span class="toc-text">Day -1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day-4"><span class="toc-number">3.</span> <span class="toc-text">Day 4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#day-6-or-7"><span class="toc-number">4.</span> <span class="toc-text">Day 6 or 7</span></a></li></ol>
     </div>
   </section>
 
@@ -3164,6 +3183,10 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
 
 <!-- required -->
 
+  
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+
+
 
 <!-- internal -->
 
@@ -3171,8 +3194,8 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641901294222')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/thirdparty/message.js?time=1641901294222', () => {
+      volantis.css('/css/message.css?time=1641998021665')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/thirdparty/message.js?time=1641998021665', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -3217,8 +3240,8 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641901294222')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/thirdparty/message.js?time=1641901294222', () => {
+      volantis.css('/css/message.css?time=1641998021665')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/thirdparty/message.js?time=1641998021665', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -3277,8 +3300,8 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641901294222')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/thirdparty/message.js?time=1641901294222', () => {
+      volantis.css('/css/message.css?time=1641998021665')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/thirdparty/message.js?time=1641998021665', () => {
         hideMessage(done);
       });
     } else {
@@ -3422,10 +3445,6 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
         
       
         
-          <hr class="menuLoad-Content">
-        
-      
-        
           <div id="menuMusic">
             <li class='music name menuOption-Content'>
               <p class='nav music-title fix-cursor-default'></p>
@@ -3487,7 +3506,7 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
     
     
     
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/rightMenu.js?time=1641901294222')
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/rightMenu.js?time=1641998021665')
   </script>
 
 
@@ -3745,19 +3764,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/sites.js?time=1641901294222")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/sites.js?time=1641998021665")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/friends.js?time=1641901294222")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/friends.js?time=1641998021665")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/contributors.js?time=1641901294222")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/contributors.js?time=1641998021665")
       }
     
   };
@@ -3856,7 +3875,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/aplayer.js?time=1641901294230')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/aplayer.js?time=1641998021671')
     volantis.APlayerController.music = true;
   
   })();
@@ -3944,7 +3963,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function check_giscus() {
     if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'https://cdn.jsdelivr.net/gh/james1badcreeper/cdn/giscus/dark.css';
+      volantis.giscus.Theme = 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/dark.css';
     } else {
       volantis.giscus.Theme = 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css';
     }
@@ -3955,7 +3974,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   function pjax_giscus() {
     const HEAD = check_giscus();
     if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css","dark":"https://cdn.jsdelivr.net/gh/james1badcreeper/cdn/giscus/dark.css"},"repo":"james1BadCreeper/comments","repo-id":"R_kgDOGJmFcw","category":"Announcements","category-id":"DIC_kwDOGJmFc84B_RH7","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
+    let cfg = Object.assign({"theme":{"light":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css","dark":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/dark.css"},"repo":"james1BadCreeper/comments","repo-id":"R_kgDOGJmFcw","category":"Announcements","category-id":"DIC_kwDOGJmFc84B_RH7","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
     const script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
     Object.keys(cfg).forEach(k=>{
@@ -3992,7 +4011,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/app.js?time=1641901294222.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/app.js?time=1641998021665.js"></script>
 
 
 <!-- optional -->
@@ -4005,7 +4024,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/search/hexo.js?time=1641901294222");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/search/hexo.js?time=1641998021665");
   }
 
   function loadSearchService() {
@@ -4070,7 +4089,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4113,7 +4132,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/parallax.js?time=1641901294222').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/parallax.js?time=1641998021665').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4381,7 +4400,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/iconfont.js?time=1641901294222.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/iconfont.js?time=1641998021665.js"></script>
 
 
 <!-- more -->

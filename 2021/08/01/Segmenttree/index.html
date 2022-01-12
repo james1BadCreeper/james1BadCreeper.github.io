@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/22w05a'>
-  <meta name="generator" content="Hexo 5.4.0">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/22w06a'>
+  <meta name="generator" content="Hexo 6.0.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -20,13 +20,13 @@
   <meta content="james1 的博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1641901294097" as="style">
+  <link rel="preload" href="/css/style.css?time=1641998021606" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>线段树（Segement Tree）基础 - james1 的博客</title>
-  <meta name="keywords" content="数据结构,null">
+  <meta name="keywords" content="数据结构,线段树,null">
   <meta name="description" content="线段树（Segment Tree）是一种二叉搜索树，1977 年由 Jon Louis Bentley 发明，可以较为灵活且效率较高地解决各类序列维护问题。本文将引导你学习简单的线段树。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线段树（Segement Tree）基础">
@@ -36,9 +36,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-08-01T12:08:43.000Z">
-<meta property="article:modified_time" content="2021-12-06T12:49:44.234Z">
+<meta property="article:modified_time" content="2022-01-12T13:52:28.536Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="线段树">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -757,22 +758,22 @@ button {
   :root:not([color-scheme]) {
     --color-site-body: #000;
     --color-read-bkg: #222;
-    --color-read-post: #333;
+    --color-read-post: #222;
     --color-site-bg: #222;
     --color-site-inner: #eee;
     --color-site-footer: #aaa;
-    --color-card: #333;
+    --color-card: #222;
     --color-text: #eee;
-    --color-block: #3a3a3a;
+    --color-block: #2a2a2a;
     --color-codeblock: #343a3c;
-    --color-inlinecode: #ffc0cb;
-    --color-h1: #eee;
-    --color-h2: #eee;
-    --color-h3: #ddd;
-    --color-h4: #ddd;
+    --color-inlinecode: #d56d28;
+    --color-h1: #efefef;
+    --color-h2: #efefef;
+    --color-h3: #eee;
+    --color-h4: #eee;
     --color-h5: #ddd;
     --color-h6: #ddd;
-    --color-p: #bbb;
+    --color-p: #ccc;
     --color-list: #aaa;
     --color-list-hl: #69dfc4;
     --color-meta: #bbb;
@@ -822,26 +823,29 @@ button {
   :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
     background: var(--color-block) !important;
   }
+  :root:not([color-scheme]) hr {
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  }
 }
 [color-scheme='dark'] {
   --color-site-body: #000;
   --color-read-bkg: #222;
-  --color-read-post: #333;
+  --color-read-post: #222;
   --color-site-bg: #222;
   --color-site-inner: #eee;
   --color-site-footer: #aaa;
-  --color-card: #333;
+  --color-card: #222;
   --color-text: #eee;
-  --color-block: #3a3a3a;
+  --color-block: #2a2a2a;
   --color-codeblock: #343a3c;
-  --color-inlinecode: #ffc0cb;
-  --color-h1: #eee;
-  --color-h2: #eee;
-  --color-h3: #ddd;
-  --color-h4: #ddd;
+  --color-inlinecode: #d56d28;
+  --color-h1: #efefef;
+  --color-h2: #efefef;
+  --color-h3: #eee;
+  --color-h4: #eee;
   --color-h5: #ddd;
   --color-h6: #ddd;
-  --color-p: #bbb;
+  --color-p: #ccc;
   --color-list: #aaa;
   --color-list-hl: #69dfc4;
   --color-meta: #bbb;
@@ -895,6 +899,9 @@ button {
   [color-scheme='dark'] .l_header .m_search {
     background: var(--color-site-bg) !important;
   }
+}
+[color-scheme='dark'] hr {
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
 }
 @font-face {
   font-family: 'Docis';
@@ -1739,8 +1746,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1641901294097" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1641901294097"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1641998021606" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1641998021606"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -2041,7 +2048,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.import = {
     jQuery: () => {
       if (typeof jQuery == "undefined") {
-        return volantis.js("https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js")
+        return volantis.js("http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js")
       } else {
         return new Promise(resolve => {
           resolve()
@@ -2729,10 +2736,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2021-12-06T20:49:44+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-01-12T21:52:28+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fad fa-edit fa-fw" aria-hidden="true"></i>
-    <p>最后更新于：2021年12月6日</p>
+    <p>最后更新于：2022年1月12日</p>
   </a>
 </div>
 
@@ -2743,7 +2750,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       <i class="fad fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：7.4k 字</p>
+      <p>字数：7.5k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2791,87 +2798,143 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>线段树的正常写法是堆式线段树，动态开点等黑科技我们会在后文介绍。</p>
 <p>其实就是只用一个数组 <span class="math inline">\(T\)</span> 存储线段树，用堆的编号来表示线段树的左儿子和右儿子（<code>lc = o &lt;&lt; 1, rc = o &lt;&lt; 1 | 1</code>），不过进行操作的时候要多传两个数据 <span class="math inline">\(l\)</span> 和 <span class="math inline">\(r\)</span>。</p>
 <div class="note warning"><p>注意，线段树的节点必须开四倍空间！否则如果遇到非满二叉树的线段树，二倍空间就会爆炸！</p></div>
-<p>在网上你能看到这样一种堆式线段树：</p>
+
+在网上你能看到这样一种堆式线段树：
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l, r;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">&#125;T[<span class="number">4</span>*MAXN];</span><br></pre></td></tr></table></figure>
-<p>注意，它是记录了当前节点 <span class="math inline">\(o\)</span> 的<strong>区间</strong> <span class="math inline">\([l,r]\)</span>，在传参时可以省掉两个参数（听不懂？那就不管，往下看就行）。<br />
-有时候要维护的信息特别复杂，我们会将数组 <span class="math inline">\(T\)</span> 的类型改为结构体，但还是不会使用记录区间的方式。</p>
-<p>一般我们使用堆式线段树中的数组方式，而不记录左右儿子（不记慢不了多少）。接下来若不是特殊情况，我们均使用这种方式。</p>
-</div><h2 id="线段树的建树">线段树的建树</h2><div class="story post-story">
-<p>我们再来看这棵线段树：</p>
+
+注意，它是记录了当前节点 $o$ 的**区间** $[l,r]$，在传参时可以省掉两个参数（听不懂？那就不管，往下看就行）。   
+有时候要维护的信息特别复杂，我们会将数组 $T$ 的类型改为结构体，但还是不会使用记录区间的方式。
+
+一般我们使用堆式线段树中的数组方式，而不记录左右儿子（不记慢不了多少）。接下来若不是特殊情况，我们均使用这种方式。
+
+## 线段树的建树
+
+我们再来看这棵线段树：
+
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/04/03/cnxtl4.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/04/03/cnxtl4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="嘻嘻，还是我"/></div><span class="image-caption">嘻嘻，还是我</span></div>
-<p>最后一层若当作原序列的值，即 <span class="math inline">\([i,i]\)</span> 保存 <span class="math inline">\(A_i\)</span> 的值。由于线段树是二叉树结构，可以很方便地从下往上传递信息。以区间和为例，令节点 <span class="math inline">\([l,r]\)</span> 表示 <span class="math inline">\(\sum\limits_{i=l}^{r}A_i\)</span>，显然 <span class="math inline">\([l,r]=[l,mid]+[mid+1,r]\)</span>（这里的区间代表区间所对应的值）。</p>
-<p>比如原序列是 <code>1 2 3 4</code>，那么对于节点 <span class="math inline">\(1\)</span>~<span class="math inline">\(7\)</span>，可推算出它们的值分别为 <code>10 3 7 1 2 3 4</code>。</p>
-<p>那么建树的代码大概就像这样：</p>
+
+最后一层若当作原序列的值，即 $[i,i]$ 保存 $A_i$ 的值。由于线段树是二叉树结构，可以很方便地从下往上传递信息。以区间和为例，令节点 $[l,r]$ 表示 $\sum\limits_{i=l}^{r}A_i$，显然 $[l,r]=[l,mid]+[mid+1,r]$（这里的区间代表区间所对应的值）。
+
+比如原序列是 `1 2 3 4`，那么对于节点 $1$~$7$，可推算出它们的值分别为 `10 3 7 1 2 3 4`。
+
+那么建树的代码大概就像这样：
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> L(x) ((x)&lt;&lt;1)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> R(x) ((x)&lt;&lt;1|1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 当然，你也可以不用宏定义。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T[<span class="number">4</span>*N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">maintain</span><span class="params">(<span class="keyword">int</span> o)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    T[o] = T[<span class="built_in">L</span>(o)] + T[<span class="built_in">R</span>(o)];</span><br><span class="line">    <span class="comment">// 从下往上传递信息。事实上你也可以写在需要调用 maintain 函数的函数里，不过有时传递的信息较为复杂，还是建议写一个 maintain 函数。网上有的教程把它写作 pushup，至于为什么，接下来你了解到 pushdown 就知道了。</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> <span class="comment">//o 代表当前维护结点的标号，l 和 r 代表所对应的区间</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r) <span class="comment">//如果这是叶子节点</span></span><br><span class="line">    &#123;</span><br><span class="line">        T[o] = a[l]; <span class="comment">//赋值</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>; <span class="comment">// 计算中值</span></span><br><span class="line">    <span class="built_in">build</span>(<span class="built_in">L</span>(o), l, mid); <span class="comment">// 为左半段建树</span></span><br><span class="line">    <span class="built_in">build</span>(<span class="built_in">R</span>(o), mid+<span class="number">1</span>, r); <span class="comment">// 为右半段建树</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">maintain</span>(o); <span class="comment">// 计算当前结点的值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在 <code>main</code> 用 <code>build(1, 1, n)</code> 来调用 <code>build</code>。 由于每个节点只访问了一次，所以建树的时间复杂度为 <span class="math inline">\(\mathcal{O}(n)\)</span>。</p>
-</div><h2 id="点修改与区间查询">点修改与区间查询</h2><div class="story post-story">
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3374">模板</a>。</p>
-<h3 id="点修改">点修改</h3>
-<p>还是以这棵线段树为例：</p>
+
+在 `main` 用 `build(1, 1, n) ` 来调用 `build`。
+由于每个节点只访问了一次，所以建树的时间复杂度为 $\mathcal{O}(n)$。
+
+## 点修改与区间查询
+
+[模板](https://www.luogu.com.cn/problem/P3374)。
+
+### 点修改
+
+还是以这棵线段树为例：   
+
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/04/03/cnxtl4.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/04/03/cnxtl4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="我又来啦"/></div><span class="image-caption">我又来啦</span></div>
-<p>根据刚才的数据，初始化后它应该长这样：</p>
+
+根据刚才的数据，初始化后它应该长这样：   
+
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/04/04/cuIpnO.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/04/04/cuIpnO.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="初始化后的线段树"/></div><span class="image-caption">初始化后的线段树</span></div>
-<p>我们先来进行点修改，比如要给原序列的第 <span class="math inline">\(2\)</span> 个元素加上 <span class="math inline">\(1\)</span>，那么这棵线段树会怎么变化呢？<br />
-可以发现，节点 <span class="math inline">\(4\)</span>、<span class="math inline">\(2\)</span>、<span class="math inline">\(1\)</span> 都会加上 <span class="math inline">\(1\)</span>。线段树就变成了这个样子：</p>
+
+我们先来进行点修改，比如要给原序列的第 $2$ 个元素加上 $1$，那么这棵线段树会怎么变化呢？   
+可以发现，节点 $4$、$2$、$1$ 都会加上 $1$。线段树就变成了这个样子：  
+
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/04/04/cuIzPs.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/04/04/cuIzPs.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="点修改后的线段树"/></div><span class="image-caption">点修改后的线段树</span></div>
-<p>那代码怎么实现呢？一般来讲，根节点 <span class="math inline">\(1\)</span> 总是线段树执行的入口，从根节点出发，递归找到需要修改的叶子节点，这里代码如下：</p>
+
+那代码怎么实现呢？一般来讲，根节点 $1$ 总是线段树执行的入口，从根节点出发，递归找到需要修改的叶子节点，这里代码如下：
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> x, <span class="keyword">int</span> k)</span> <span class="comment">//给原序列第 x 个元素加上 k。</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r) <span class="comment">//这是叶子节点</span></span><br><span class="line">    &#123;</span><br><span class="line">        T[o] += k; <span class="comment">//直接加</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (x &lt;= mid) <span class="built_in">update</span>(<span class="built_in">L</span>(o), l, mid, x, k); <span class="comment">// 叶子节点在 [l,mid] 处。</span></span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">update</span>(<span class="built_in">R</span>(o), mid+<span class="number">1</span>, r, x, k); <span class="comment">// 叶子节点在 [mid+1,r] 处。</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">maintain</span>(o); <span class="comment">//重新计算这个节点的值。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>由于线段树的层数在 <span class="math inline">\(\log\)</span> 级别，所以点修改的时间复杂度为 <span class="math inline">\(\mathcal{O}(\log n)\)</span>。</p>
-<h3 id="区间查询">区间查询</h3>
-<p>查询区间 <span class="math inline">\([l,r]\)</span> 的和，从根节点开始，递归执行下列过程：</p>
-<ol type="1">
-<li>若当前区间 <span class="math inline">\([l,r]\)</span> 完全覆盖了需要求解的范围，那么直接返回答案。</li>
-<li>若当前区间与左子节点有重叠，访问左子节点 <span class="math inline">\([l,mid]\)</span>。</li>
-<li>若当前区间与右子节点有重叠，访问右子节点 <span class="math inline">\([mid+1,r]\)</span>（注意不是访问左子节点后就不用访问右子节点了）。</li>
-</ol>
-<p>那怎么解释这个东西呢？还是看那棵线段树 <del>（它的出镜率为什么这么高）</del>：</p>
+
+由于线段树的层数在 $\log$ 级别，所以点修改的时间复杂度为 $\mathcal{O}(\log n)$。
+
+### 区间查询
+
+查询区间 $[l,r]$ 的和，从根节点开始，递归执行下列过程：
+
+1. 若当前区间 $[l,r]$ 完全覆盖了需要求解的范围，那么直接返回答案。
+2. 若当前区间与左子节点有重叠，访问左子节点 $[l,mid]$。
+3. 若当前区间与右子节点有重叠，访问右子节点 $[mid+1,r]$（注意不是访问左子节点后就不用访问右子节点了）。
+
+那怎么解释这个东西呢？还是看那棵线段树 ~~（它的出镜率为什么这么高）~~：   
+
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/04/04/cuIzPs.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/04/04/cuIzPs.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="嗯，又是我"/></div><span class="image-caption">嗯，又是我</span></div>
-<p>比如现在我们要查 <span class="math inline">\([1,3]\)</span>。<br />
-<span class="math inline">\([1,3]\)</span> 与 <span class="math inline">\([1,2]\)</span> 和 <span class="math inline">\([3,4]\)</span> 都有重叠，所以我们要分别访问。<br />
-<span class="math inline">\([1,2]\)</span> 完全覆盖，直接返回。<br />
-<span class="math inline">\([3,4]\)</span> 左子节点有覆盖，右子节点没有，访问左子节点。<br />
-<span class="math inline">\([3,3]\)</span> 直接返回。<br />
-所以答案是 <span class="math inline">\(4+3=7\)</span>。</p>
-<p>那么代码就长这样：</p>
+
+比如现在我们要查 $[1,3]$。   
+$[1,3]$ 与 $[1,2]$ 和 $[3,4]$ 都有重叠，所以我们要分别访问。   
+$[1,2]$ 完全覆盖，直接返回。   
+$[3,4]$ 左子节点有覆盖，右子节点没有，访问左子节点。   
+$[3,3]$ 直接返回。   
+所以答案是 $4+3=7$。
+
+那么代码就长这样：
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ql, <span class="keyword">int</span> qr)</span> <span class="comment">//[ql,qr] 是要查的区间</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (ql &lt;= l &amp;&amp; r &lt;= qr) <span class="keyword">return</span> T[o]; <span class="comment">//完全包含</span></span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>, res = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 接下来，只要你在（哪怕只有一个元素），我就查</span></span><br><span class="line">    <span class="keyword">if</span> (ql &lt;= mid) res += <span class="built_in">query</span>(<span class="built_in">L</span>(o), l, mid, ql, qr); <span class="comment">//左子节点</span></span><br><span class="line">    <span class="keyword">if</span> (mid + <span class="number">1</span> &lt;= qr) res += <span class="built_in">query</span>(<span class="built_in">R</span>(o), mid+<span class="number">1</span>, r, ql, qr); <span class="comment">//右子节点</span></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>同 <code>update</code>，<code>query</code> 的时间复杂度也是 <span class="math inline">\(\mathcal{O}(\log n)\)</span>。</p>
-<p>以下代码就可以通过刚才的模板了。</p>
+同 `update`，`query` 的时间复杂度也是 $\mathcal{O}(\log n)$。
+
+以下代码就可以通过刚才的模板了。 
+
 <details cyan><summary> 查看代码 </summary>
               <div class='content'>
               <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> L(x) (x&lt;&lt;1)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> R(x) (L(x)|1)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>, c = <span class="built_in">getchar</span>(), f = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (!<span class="built_in">isdigit</span>(c)) &#123;<span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>) f = <span class="number">-1</span>; c = <span class="built_in">getchar</span>();&#125;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(c)) x = (x&lt;&lt;<span class="number">3</span>) + (x&lt;&lt;<span class="number">1</span>) + (c^<span class="number">48</span>), c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">int</span> T[<span class="number">2000005</span>];</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">500005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r)</span><br><span class="line">    &#123;</span><br><span class="line">        T[o] = a[l];</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">build</span>(<span class="built_in">L</span>(o), l, mid);</span><br><span class="line">    <span class="built_in">build</span>(<span class="built_in">R</span>(o), mid+<span class="number">1</span>, r);</span><br><span class="line">    T[o] = T[<span class="built_in">L</span>(o)] + T[<span class="built_in">R</span>(o)];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> x, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r)</span><br><span class="line">    &#123;</span><br><span class="line">        T[o] += k;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (x &lt;= mid) <span class="built_in">update</span>(<span class="built_in">L</span>(o), l, mid, x, k);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">update</span>(<span class="built_in">R</span>(o), mid+<span class="number">1</span>, r, x, k);</span><br><span class="line">    T[o] = T[<span class="built_in">L</span>(o)] + T[<span class="built_in">R</span>(o)];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ql, <span class="keyword">int</span> qr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (ql &lt;= l &amp;&amp; r &lt;= qr) <span class="keyword">return</span> T[o];</span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>, res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (ql &lt;= mid) res += <span class="built_in">query</span>(<span class="built_in">L</span>(o), l, mid, ql, qr);</span><br><span class="line">    <span class="keyword">if</span> (mid + <span class="number">1</span> &lt;= qr) res += <span class="built_in">query</span>(<span class="built_in">R</span>(o), mid+<span class="number">1</span>, r, ql, qr);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n = <span class="built_in">read</span>(), m = <span class="built_in">read</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">        a[i] = <span class="built_in">read</span>();</span><br><span class="line">    <span class="built_in">build</span>(<span class="number">1</span>, <span class="number">1</span>, n);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> op = <span class="built_in">read</span>(), x = <span class="built_in">read</span>(), y = <span class="built_in">read</span>();</span><br><span class="line">        <span class="keyword">if</span> (op == <span class="number">1</span>) <span class="built_in">update</span>(<span class="number">1</span>, <span class="number">1</span>, n, x, y);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">query</span>(<span class="number">1</span>, <span class="number">1</span>, n, x, y));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
               </div>
             </details>
-<h3 id="problemset">Problemset</h3>
-<p>在讨论区间修改之前，我们先看几道线段树的题目。</p>
-<h4 id="动态最大子段和">动态最大子段和</h4>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA1400">UVa1400</a>。</p>
-<blockquote>
-<p>给定一个序列和多组询问 <span class="math inline">\((l,r)\)</span>，查询区间 <span class="math inline">\([l,r]\)</span> 的最大子段和，<strong>并给出答案对应的字典序最小的子区间</strong>。</p>
-</blockquote>
-<p>最大子段和可以使用 <span class="math inline">\(\mathcal{O}(n \log n)\)</span> 的分治法进行求解，因为这个子段要么在序列的左半段，要么在右半段，要么跨越中点。加上多组询问，这就是线段树嘛！</p>
-<p>最大和的子段在中点两端好说，现在就来看一下跨越中点的情况。<br />
-线段树的每个节点维护三个值：最大子段和、最大前缀和、最大后缀和所对应的区间（此区间是线段树的节点所对应的区间）。那么最大子段和跨越中点时，就是前半区间的最大后缀和，加上后半区间的最大前缀和。</p>
-<p>首先是建树，像这样：</p>
+
+### Problemset
+
+在讨论区间修改之前，我们先看几道线段树的题目。
+
+#### 动态最大子段和
+
+[UVa1400](https://www.luogu.com.cn/problem/UVA1400)。
+
+> 给定一个序列和多组询问 $(l,r)$，查询区间 $[l,r]$ 的最大子段和，**并给出答案对应的字典序最小的子区间**。
+
+最大子段和可以使用 $\mathcal{O}(n \log n)$ 的分治法进行求解，因为这个子段要么在序列的左半段，要么在右半段，要么跨越中点。加上多组询问，这就是线段树嘛！
+
+最大和的子段在中点两端好说，现在就来看一下跨越中点的情况。  
+线段树的每个节点维护三个值：最大子段和、最大前缀和、最大后缀和所对应的区间（此区间是线段树的节点所对应的区间）。那么最大子段和跨越中点时，就是前半区间的最大后缀和，加上后半区间的最大前缀和。
+
+首先是建树，像这样：
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r)</span><br><span class="line">    &#123;</span><br><span class="line">        maxsub[o] = <span class="built_in">make_pair</span>(l, r);</span><br><span class="line">        maxpre[o] = l;</span><br><span class="line">        maxsuf[o] = r;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 以上显然</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>, lc = o &lt;&lt; <span class="number">1</span>, rc = o &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">build</span>(lc, l, mid);</span><br><span class="line">    <span class="built_in">build</span>(rc, mid+<span class="number">1</span>, r);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// maintain</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如何维护这一节点呢？根据刚才所说，对应三种情况：</p>
+
+如何维护这一节点呢？根据刚才所说，对应三种情况：
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">maxsub[o] = <span class="built_in">better</span>(maxsub[lc], maxsub[rc]); <span class="comment">// 左右区间</span></span><br><span class="line">maxsub[o] = <span class="built_in">better</span>(maxsub[o], <span class="built_in">make_pair</span>(maxsuf[lc], maxpre[rc])); <span class="comment">// 跨越中点</span></span><br></pre></td></tr></table></figure>
-<p>其中 <code>better</code> 函数用于比较哪个子区间更好。</p>
-<p><code>maxsuf</code> 和 <code>maxpre</code> 怎么维护呢？以 <code>maxpre</code> 为例子，像这样：</p>
+
+其中 `better` 函数用于比较哪个子区间更好。
+
+`maxsuf` 和 `maxpre` 怎么维护呢？以 `maxpre` 为例子，像这样：
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">LL v1 = <span class="built_in">sum</span>(l, maxpre[lc]);</span><br><span class="line">LL v2 = <span class="built_in">sum</span>(l, maxpre[rc]);</span><br><span class="line"><span class="keyword">if</span> (v1 == v2) maxpre[o] = <span class="built_in">min</span>(maxpre[lc], maxpre[rc]); <span class="comment">// 右端点肯定是越小越好的</span></span><br><span class="line"><span class="keyword">else</span> maxpre[o] = v1 &gt; v2 ? maxpre[lc] : maxpre[rc];</span><br></pre></td></tr></table></figure>
-<p>其中 <code>sum</code> 指原序列的区间和，容易用前缀和求解。</p>
-<p>接下来是查询，大概像这样：</p>
+
+其中 `sum` 指原序列的区间和，容易用前缀和求解。
+
+接下来是查询，大概像这样：
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Interval <span class="title">query</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ql, <span class="keyword">int</span> qr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (ql &lt;= l &amp;&amp; r &lt;= qr) <span class="keyword">return</span> maxsub[o]; <span class="comment">// 在区间范围内</span></span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>, lc = o &lt;&lt; <span class="number">1</span>, rc = o &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (qr &lt;= mid) <span class="keyword">return</span> <span class="built_in">query</span>(lc, l, mid, ql, qr); <span class="comment">// 完全在左半端</span></span><br><span class="line">    <span class="keyword">if</span> (ql &gt; mid) <span class="keyword">return</span> <span class="built_in">query</span>(rc, mid+<span class="number">1</span>, r, ql, qr); <span class="comment">// 完全在右半段</span></span><br><span class="line">    Interval ans = <span class="built_in">better</span>(<span class="built_in">query</span>(lc, l, mid, ql, qr), <span class="built_in">query</span>(rc, mid+<span class="number">1</span>, r, ql, qr)); <span class="comment">// 不跨越中点</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">better</span>(ans, <span class="built_in">make_pair</span>(<span class="built_in">calc_suf</span>(lc, l, mid, ql).L, <span class="built_in">calc_pre</span>(rc, mid+<span class="number">1</span>, r, qr).R)); <span class="comment">// 跨越中点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注意求解前缀和后缀的函数，这里的写法完全符合刚才的定义，这里给出 <code>calc_pre</code> 的实现，<code>calc_suf</code> 的实现大致相同。</p>
+
+注意求解前缀和后缀的函数，这里的写法完全符合刚才的定义，这里给出 `calc_pre` 的实现，`calc_suf` 的实现大致相同。
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Interval <span class="title">calc_pre</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> qr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (maxpre[o] &lt;= qr) <span class="keyword">return</span> <span class="built_in">make_pair</span>(l, maxpre[o]);  <span class="comment">// 完全在查询范围内</span></span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>, lc = o &lt;&lt; <span class="number">1</span>, rc = o &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (qr &lt;= mid) <span class="keyword">return</span> <span class="built_in">calc_pre</span>(lc, l, mid, qr); <span class="comment">// 在左半端</span></span><br><span class="line">    <span class="comment">// 注意它要么完全在左半段要么跨越中点，不可能全在右半段</span></span><br><span class="line">    Interval ans = <span class="built_in">make_pair</span>(l, <span class="built_in">calc_pre</span>(rc, mid+<span class="number">1</span>, r, qr).R); <span class="comment">// 跨越中点</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">better</span>(ans, <span class="built_in">make_pair</span>(l, maxpre[lc])); <span class="comment">// 与完全在左半段比较</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>下面是完整代码：</p>
+
+下面是完整代码：
+
 <details cyan><summary> 查看代码 </summary>
               <div class='content'>
               <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Interval pair<span class="meta-string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> L first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> R second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>, c = <span class="built_in">getchar</span>(), f = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (!<span class="built_in">isdigit</span>(c)) &#123;<span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>) f = <span class="number">-1</span>; c = <span class="built_in">getchar</span>();&#125;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(c)) x = (x&lt;&lt;<span class="number">3</span>) + (x&lt;&lt;<span class="number">1</span>) + (c^<span class="number">48</span>), c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">500005</span>];</span><br><span class="line">Interval maxsub[<span class="number">2000005</span>];</span><br><span class="line">LL prefix_sum[<span class="number">500005</span>];</span><br><span class="line"><span class="keyword">int</span> maxpre[<span class="number">2000005</span>], maxsuf[<span class="number">2000005</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">sum</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;<span class="keyword">return</span> prefix_sum[r] - prefix_sum[l<span class="number">-1</span>];&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">sum</span><span class="params">(Interval x)</span> </span>&#123;<span class="keyword">return</span> <span class="built_in">sum</span>(x.L, x.R);&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> Interval <span class="title">better</span><span class="params">(Interval a, Interval b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">sum</span>(a) != <span class="built_in">sum</span>(b)) <span class="keyword">return</span> <span class="built_in">sum</span>(a) &gt; <span class="built_in">sum</span>(b) ? a : b;</span><br><span class="line">    <span class="keyword">return</span> a &lt; b ? a : b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r)</span><br><span class="line">    &#123;</span><br><span class="line">        maxsub[o] = <span class="built_in">make_pair</span>(l, r);</span><br><span class="line">        maxpre[o] = l;</span><br><span class="line">        maxsuf[o] = r;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>, lc = o &lt;&lt; <span class="number">1</span>, rc = o &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">build</span>(lc, l, mid);</span><br><span class="line">    <span class="built_in">build</span>(rc, mid+<span class="number">1</span>, r);</span><br><span class="line"></span><br><span class="line">    LL v1 = <span class="built_in">sum</span>(l, maxpre[lc]);</span><br><span class="line">    LL v2 = <span class="built_in">sum</span>(l, maxpre[rc]);</span><br><span class="line">    <span class="keyword">if</span> (v1 == v2) maxpre[o] = <span class="built_in">min</span>(maxpre[lc], maxpre[rc]);</span><br><span class="line">    <span class="keyword">else</span> maxpre[o] = v1 &gt; v2 ? maxpre[lc] : maxpre[rc];</span><br><span class="line"></span><br><span class="line">    v1 = <span class="built_in">sum</span>(maxsuf[lc], r);</span><br><span class="line">    v2 = <span class="built_in">sum</span>(maxsuf[rc], r);</span><br><span class="line">    <span class="keyword">if</span> (v1 == v2) maxsuf[o] = <span class="built_in">min</span>(maxsuf[lc], maxsuf[rc]);</span><br><span class="line">    <span class="keyword">else</span> maxsuf[o] = v1 &gt; v2 ? maxsuf[lc] : maxsuf[rc];</span><br><span class="line"></span><br><span class="line">    maxsub[o] = <span class="built_in">better</span>(maxsub[lc], maxsub[rc]);</span><br><span class="line">    maxsub[o] = <span class="built_in">better</span>(maxsub[o], <span class="built_in">make_pair</span>(maxsuf[lc], maxpre[rc]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Interval <span class="title">calc_pre</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> qr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (maxpre[o] &lt;= qr) <span class="keyword">return</span> <span class="built_in">make_pair</span>(l, maxpre[o]);</span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>, lc = o &lt;&lt; <span class="number">1</span>, rc = o &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (qr &lt;= mid) <span class="keyword">return</span> <span class="built_in">calc_pre</span>(lc, l, mid, qr);</span><br><span class="line">    Interval ans = <span class="built_in">make_pair</span>(l, <span class="built_in">calc_pre</span>(rc, mid+<span class="number">1</span>, r, qr).R);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">better</span>(ans, <span class="built_in">make_pair</span>(l, maxpre[lc]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Interval <span class="title">calc_suf</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ql)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (maxsuf[o] &gt;= ql) <span class="keyword">return</span> <span class="built_in">make_pair</span>(maxsuf[o], r);</span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>, lc = o &lt;&lt; <span class="number">1</span>, rc = o &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (ql &gt; mid) <span class="keyword">return</span> <span class="built_in">calc_suf</span>(rc, mid+<span class="number">1</span>, r, ql);</span><br><span class="line">    Interval ans = <span class="built_in">make_pair</span>(<span class="built_in">calc_suf</span>(lc, l, mid, ql).L, r);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">better</span>(ans, <span class="built_in">make_pair</span>(maxsuf[rc], r));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Interval <span class="title">query</span><span class="params">(<span class="keyword">int</span> o, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ql, <span class="keyword">int</span> qr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (ql &lt;= l &amp;&amp; r &lt;= qr) <span class="keyword">return</span> maxsub[o];</span><br><span class="line">    <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>, lc = o &lt;&lt; <span class="number">1</span>, rc = o &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (qr &lt;= mid) <span class="keyword">return</span> <span class="built_in">query</span>(lc, l, mid, ql, qr);</span><br><span class="line">    <span class="keyword">if</span> (ql &gt; mid) <span class="keyword">return</span> <span class="built_in">query</span>(rc, mid+<span class="number">1</span>, r, ql, qr);</span><br><span class="line">    Interval ans = <span class="built_in">better</span>(<span class="built_in">query</span>(lc, l, mid, ql, qr), <span class="built_in">query</span>(rc, mid+<span class="number">1</span>, r, ql, qr));</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">better</span>(ans, <span class="built_in">make_pair</span>(<span class="built_in">calc_suf</span>(lc, l, mid, ql).L, <span class="built_in">calc_pre</span>(rc, mid+<span class="number">1</span>, r, qr).R));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> kase = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;m) == <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Case %d:\n&quot;</span>, ++kase);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) </span><br><span class="line">        &#123;</span><br><span class="line">            a[i] = <span class="built_in">read</span>();</span><br><span class="line">            prefix_sum[i] = prefix_sum[i<span class="number">-1</span>] + a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">build</span>(<span class="number">1</span>, <span class="number">1</span>, n);</span><br><span class="line">        <span class="keyword">while</span> (m--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> l = <span class="built_in">read</span>(), r = <span class="built_in">read</span>();</span><br><span class="line">            Interval ans = <span class="built_in">query</span>(<span class="number">1</span>, <span class="number">1</span>, n, l, r);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, ans.L, ans.R);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
               </div>
             </details>
-<p>根据以上可以发现，线段树可以维护的是容易按照区间进行划分和合并，这一点又称满足<strong>区间可加性</strong>。关于这一点，接下来还会详细叙述。</p>
-<h4 id="区间-gcd">区间 GCD</h4>
-<p><a target="_blank" rel="noopener" href="http://noi-test.zzstep.com/contest/0x40%E3%80%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BF%9B%E9%98%B6%E3%80%8D%E4%BE%8B%E9%A2%98/4302%20Interval%20GCD">题面</a>。</p>
+
+根据以上可以发现，线段树可以维护的是容易按照区间进行划分和合并，这一点又称满足**区间可加性**。关于这一点，接下来还会详细叙述。
+
+#### 区间 GCD
+
+[题面](http://noi-test.zzstep.com/contest/0x40%E3%80%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BF%9B%E9%98%B6%E3%80%8D%E4%BE%8B%E9%A2%98/4302%20Interval%20GCD)。
+
 <div class="note link green"><p>给定长度为 <span class="math inline">\(n(n\leqslant 5\times 10^5)\)</span> 的序列 <span class="math inline">\(A\)</span>，<span class="math inline">\(m(m\leqslant 10^5)\)</span> 次操作：</p><ol type="1"><li><code>C l r d</code>，表示区间加 <span class="math inline">\(d\)</span>。<br /></li><li><code>Q l r</code>，表示求 <span class="math inline">\(\gcd(A_l,A_{l+1},\cdots,A_{r-1},A_r)\)</span>。</li></ol></div>
 <p>这个问题看上去很棘手，怎么办呢？强烈建议读者停下来自行思考——想一想 <span class="math inline">\(\gcd\)</span> 的性质，利用在树状数组学过的内容将原问题转换为可以用点修改实现的。还有一点可以发现：<span class="math inline">\(\gcd\)</span> 满足区间可加性，可以通过小区间的 <span class="math inline">\(\gcd\)</span> 求出大区间的 <span class="math inline">\(\gcd\)</span>。</p>
 <p>请读者先自行撕烤，然后再看解答。</p>
@@ -3023,8 +3086,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="nofollow"><i class="fad fa-hashtag fa-fw" aria-hidden="true"></i><p>数据结构</p></a></div>
-  <span hidden itemprop="keywords">数据结构</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="nofollow"><i class="fad fa-hashtag fa-fw" aria-hidden="true"></i><p>数据结构</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="nofollow"><i class="fad fa-hashtag fa-fw" aria-hidden="true"></i><p>线段树</p></a></div>
+  <span hidden itemprop="keywords">数据结构 线段树</span>
 
 
         
@@ -3108,7 +3171,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B%E7%BA%BF%E6%AE%B5%E6%A0%91"><span class="toc-number">1.</span> <span class="toc-text">简介线段树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%9A%84%E5%AD%98%E5%82%A8"><span class="toc-number">2.</span> <span class="toc-text">线段树的存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%9A%84%E5%BB%BA%E6%A0%91"><span class="toc-number">3.</span> <span class="toc-text">线段树的建树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%82%B9%E4%BF%AE%E6%94%B9%E4%B8%8E%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2"><span class="toc-number">4.</span> <span class="toc-text">点修改与区间查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%82%B9%E4%BF%AE%E6%94%B9"><span class="toc-number">4.1.</span> <span class="toc-text">点修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2"><span class="toc-number">4.2.</span> <span class="toc-text">区间查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#problemset"><span class="toc-number">4.3.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E6%9C%80%E5%A4%A7%E5%AD%90%E6%AE%B5%E5%92%8C"><span class="toc-number">4.3.1.</span> <span class="toc-text">动态最大子段和</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%BA%E9%97%B4-gcd"><span class="toc-number">4.3.2.</span> <span class="toc-text">区间 GCD</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BA%E9%97%B4%E4%BF%AE%E6%94%B9%E4%B8%8E%E5%BB%B6%E8%BF%9F%E6%A0%87%E8%AE%B0"><span class="toc-number">5.</span> <span class="toc-text">区间修改与延迟标记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%B6%E8%BF%9F%E6%A0%87%E8%AE%B0%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="toc-number">5.1.</span> <span class="toc-text">延迟标记的介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BB%84%E5%BB%B6%E8%BF%9F%E6%A0%87%E8%AE%B0"><span class="toc-number">5.2.</span> <span class="toc-text">多组延迟标记</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E7%9F%A9%E9%98%B5%E6%93%8D%E4%BD%9C"><span class="toc-number">5.2.1.</span> <span class="toc-text">快速矩阵操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ahoi2009-%E7%BB%B4%E6%8A%A4%E5%BA%8F%E5%88%97"><span class="toc-number">5.2.2.</span> <span class="toc-text">[AHOI2009] 维护序列</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-number">6.</span> <span class="toc-text">线段树的本质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%9A%84%E5%BA%94%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="toc-number">6.1.</span> <span class="toc-text">线段树的应用范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%B6%E8%BF%9F%E6%A0%87%E8%AE%B0%E4%B8%8E%E6%8C%87%E9%92%88%E5%BC%8F%E7%BA%BF%E6%AE%B5%E6%A0%91"><span class="toc-number">6.2.</span> <span class="toc-text">延迟标记与指针式线段树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%AB%E6%8F%8F%E7%BA%BF"><span class="toc-number">7.</span> <span class="toc-text">扫描线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%BC%80%E7%82%B9%E4%B8%8E%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%90%88%E5%B9%B6"><span class="toc-number">8.</span> <span class="toc-text">动态开点与线段树合并</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B%E7%BA%BF%E6%AE%B5%E6%A0%91"><span class="toc-number">1.</span> <span class="toc-text">简介线段树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%9A%84%E5%AD%98%E5%82%A8"><span class="toc-number">2.</span> <span class="toc-text">线段树的存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BA%E9%97%B4%E4%BF%AE%E6%94%B9%E4%B8%8E%E5%BB%B6%E8%BF%9F%E6%A0%87%E8%AE%B0"><span class="toc-number">3.</span> <span class="toc-text">区间修改与延迟标记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%B6%E8%BF%9F%E6%A0%87%E8%AE%B0%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.1.</span> <span class="toc-text">延迟标记的介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BB%84%E5%BB%B6%E8%BF%9F%E6%A0%87%E8%AE%B0"><span class="toc-number">3.2.</span> <span class="toc-text">多组延迟标记</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E7%9F%A9%E9%98%B5%E6%93%8D%E4%BD%9C"><span class="toc-number">3.2.1.</span> <span class="toc-text">快速矩阵操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ahoi2009-%E7%BB%B4%E6%8A%A4%E5%BA%8F%E5%88%97"><span class="toc-number">3.2.2.</span> <span class="toc-text">[AHOI2009] 维护序列</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-number">4.</span> <span class="toc-text">线段树的本质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%9A%84%E5%BA%94%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="toc-number">4.1.</span> <span class="toc-text">线段树的应用范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%B6%E8%BF%9F%E6%A0%87%E8%AE%B0%E4%B8%8E%E6%8C%87%E9%92%88%E5%BC%8F%E7%BA%BF%E6%AE%B5%E6%A0%91"><span class="toc-number">4.2.</span> <span class="toc-text">延迟标记与指针式线段树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%AB%E6%8F%8F%E7%BA%BF"><span class="toc-number">5.</span> <span class="toc-text">扫描线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%BC%80%E7%82%B9%E4%B8%8E%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%90%88%E5%B9%B6"><span class="toc-number">6.</span> <span class="toc-text">动态开点与线段树合并</span></a></li></ol>
     </div>
   </section>
 
@@ -3314,6 +3377,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- required -->
 
+  
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+
+
 
 <!-- internal -->
 
@@ -3321,8 +3388,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641901294097')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/thirdparty/message.js?time=1641901294097', () => {
+      volantis.css('/css/message.css?time=1641998021606')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/thirdparty/message.js?time=1641998021606', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -3367,8 +3434,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641901294097')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/thirdparty/message.js?time=1641901294097', () => {
+      volantis.css('/css/message.css?time=1641998021606')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/thirdparty/message.js?time=1641998021606', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -3427,8 +3494,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641901294097')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/thirdparty/message.js?time=1641901294097', () => {
+      volantis.css('/css/message.css?time=1641998021606')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/thirdparty/message.js?time=1641998021606', () => {
         hideMessage(done);
       });
     } else {
@@ -3572,10 +3639,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
       
         
-          <hr class="menuLoad-Content">
-        
-      
-        
           <div id="menuMusic">
             <li class='music name menuOption-Content'>
               <p class='nav music-title fix-cursor-default'></p>
@@ -3637,7 +3700,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/rightMenu.js?time=1641901294097')
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/rightMenu.js?time=1641998021606')
   </script>
 
 
@@ -3895,19 +3958,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/sites.js?time=1641901294097")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/sites.js?time=1641998021606")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/friends.js?time=1641901294097")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/friends.js?time=1641998021606")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/contributors.js?time=1641901294097")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/contributors.js?time=1641998021606")
       }
     
   };
@@ -4006,7 +4069,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/aplayer.js?time=1641901294101')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/aplayer.js?time=1641998021613')
     volantis.APlayerController.music = true;
   
   })();
@@ -4094,7 +4157,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function check_giscus() {
     if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'https://cdn.jsdelivr.net/gh/james1badcreeper/cdn/giscus/dark.css';
+      volantis.giscus.Theme = 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/dark.css';
     } else {
       volantis.giscus.Theme = 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css';
     }
@@ -4105,7 +4168,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   function pjax_giscus() {
     const HEAD = check_giscus();
     if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css","dark":"https://cdn.jsdelivr.net/gh/james1badcreeper/cdn/giscus/dark.css"},"repo":"james1BadCreeper/comments","repo-id":"R_kgDOGJmFcw","category":"Announcements","category-id":"DIC_kwDOGJmFc84B_RH7","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
+    let cfg = Object.assign({"theme":{"light":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css","dark":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/dark.css"},"repo":"james1BadCreeper/comments","repo-id":"R_kgDOGJmFcw","category":"Announcements","category-id":"DIC_kwDOGJmFc84B_RH7","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
     const script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
     Object.keys(cfg).forEach(k=>{
@@ -4142,7 +4205,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/app.js?time=1641901294097.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/app.js?time=1641998021606.js"></script>
 
 
 <!-- optional -->
@@ -4155,7 +4218,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/search/hexo.js?time=1641901294097");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/search/hexo.js?time=1641998021606");
   }
 
   function loadSearchService() {
@@ -4220,7 +4283,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4263,7 +4326,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/parallax.js?time=1641901294097').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/parallax.js?time=1641998021606').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4527,11 +4590,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/数据结构/","name":"数据结构"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/08/01/Segmenttree/","name":"线段树（Segement Tree）基础"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"线段树（Segement Tree）基础","description":"\r\n线段树（Segment Tree）是一种二叉搜索树，1977 年由 Jon Louis Bentley 发明，可以较为灵活且效率较高地解决各类序列维护问题。本文将引导你学习简单的线段树。\r\n","datePublished":"2021-08-01T12:08:43.000Z","dateModified":"2021-12-06T12:49:44.234Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/08/01/Segmenttree/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/08/01/Segmenttree/","wordCount":97,"articleSection":"OI","keywords":"数据结构","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/04/02/cm6ndf.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/数据结构/","name":"数据结构"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/08/01/Segmenttree/","name":"线段树（Segement Tree）基础"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"线段树（Segement Tree）基础","description":"\r\n线段树（Segment Tree）是一种二叉搜索树，1977 年由 Jon Louis Bentley 发明，可以较为灵活且效率较高地解决各类序列维护问题。本文将引导你学习简单的线段树。\r\n","datePublished":"2021-08-01T12:08:43.000Z","dateModified":"2022-01-12T13:52:28.536Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/08/01/Segmenttree/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/08/01/Segmenttree/","wordCount":97,"articleSection":"OI","keywords":"数据结构,线段树","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/04/02/cm6ndf.jpg","width":1024,"height":768}}]</script>
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/iconfont.js?time=1641901294097.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/iconfont.js?time=1641998021606.js"></script>
 
 
 <!-- more -->

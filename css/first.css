@@ -706,22 +706,22 @@ button {
   :root:not([color-scheme]) {
     --color-site-body: #000;
     --color-read-bkg: #222;
-    --color-read-post: #333;
+    --color-read-post: #222;
     --color-site-bg: #222;
     --color-site-inner: #eee;
     --color-site-footer: #aaa;
-    --color-card: #333;
+    --color-card: #222;
     --color-text: #eee;
-    --color-block: #3a3a3a;
+    --color-block: #2a2a2a;
     --color-codeblock: #343a3c;
-    --color-inlinecode: #ffc0cb;
-    --color-h1: #eee;
-    --color-h2: #eee;
-    --color-h3: #ddd;
-    --color-h4: #ddd;
+    --color-inlinecode: #d56d28;
+    --color-h1: #efefef;
+    --color-h2: #efefef;
+    --color-h3: #eee;
+    --color-h4: #eee;
     --color-h5: #ddd;
     --color-h6: #ddd;
-    --color-p: #bbb;
+    --color-p: #ccc;
     --color-list: #aaa;
     --color-list-hl: #69dfc4;
     --color-meta: #bbb;
@@ -771,26 +771,29 @@ button {
   :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
     background: var(--color-block) !important;
   }
+  :root:not([color-scheme]) hr {
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  }
 }
 [color-scheme='dark'] {
   --color-site-body: #000;
   --color-read-bkg: #222;
-  --color-read-post: #333;
+  --color-read-post: #222;
   --color-site-bg: #222;
   --color-site-inner: #eee;
   --color-site-footer: #aaa;
-  --color-card: #333;
+  --color-card: #222;
   --color-text: #eee;
-  --color-block: #3a3a3a;
+  --color-block: #2a2a2a;
   --color-codeblock: #343a3c;
-  --color-inlinecode: #ffc0cb;
-  --color-h1: #eee;
-  --color-h2: #eee;
-  --color-h3: #ddd;
-  --color-h4: #ddd;
+  --color-inlinecode: #d56d28;
+  --color-h1: #efefef;
+  --color-h2: #efefef;
+  --color-h3: #eee;
+  --color-h4: #eee;
   --color-h5: #ddd;
   --color-h6: #ddd;
-  --color-p: #bbb;
+  --color-p: #ccc;
   --color-list: #aaa;
   --color-list-hl: #69dfc4;
   --color-meta: #bbb;
@@ -844,6 +847,9 @@ button {
   [color-scheme='dark'] .l_header .m_search {
     background: var(--color-site-bg) !important;
   }
+}
+[color-scheme='dark'] hr {
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
 }
 @font-face {
   font-family: 'Docis';

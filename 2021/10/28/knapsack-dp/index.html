@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/22w05a'>
-  <meta name="generator" content="Hexo 5.4.0">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/22w06a'>
+  <meta name="generator" content="Hexo 6.0.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -20,13 +20,13 @@
   <meta content="james1 的博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1641901294016" as="style">
+  <link rel="preload" href="/css/style.css?time=1641998021466" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>背包问题 - james1 的博客</title>
-  <meta name="keywords" content="动态规划,null">
+  <meta name="keywords" content="动态规划,背包,null">
   <meta name="description" content="背包是 DP 中一类重要而特殊的模型。本文将引导你学习各类背包。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="背包问题">
@@ -36,9 +36,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-10-28T13:27:23.000Z">
-<meta property="article:modified_time" content="2022-01-01T14:36:44.865Z">
+<meta property="article:modified_time" content="2022-01-12T13:51:16.688Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="动态规划">
+<meta property="article:tag" content="背包">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -757,22 +758,22 @@ button {
   :root:not([color-scheme]) {
     --color-site-body: #000;
     --color-read-bkg: #222;
-    --color-read-post: #333;
+    --color-read-post: #222;
     --color-site-bg: #222;
     --color-site-inner: #eee;
     --color-site-footer: #aaa;
-    --color-card: #333;
+    --color-card: #222;
     --color-text: #eee;
-    --color-block: #3a3a3a;
+    --color-block: #2a2a2a;
     --color-codeblock: #343a3c;
-    --color-inlinecode: #ffc0cb;
-    --color-h1: #eee;
-    --color-h2: #eee;
-    --color-h3: #ddd;
-    --color-h4: #ddd;
+    --color-inlinecode: #d56d28;
+    --color-h1: #efefef;
+    --color-h2: #efefef;
+    --color-h3: #eee;
+    --color-h4: #eee;
     --color-h5: #ddd;
     --color-h6: #ddd;
-    --color-p: #bbb;
+    --color-p: #ccc;
     --color-list: #aaa;
     --color-list-hl: #69dfc4;
     --color-meta: #bbb;
@@ -822,26 +823,29 @@ button {
   :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
     background: var(--color-block) !important;
   }
+  :root:not([color-scheme]) hr {
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  }
 }
 [color-scheme='dark'] {
   --color-site-body: #000;
   --color-read-bkg: #222;
-  --color-read-post: #333;
+  --color-read-post: #222;
   --color-site-bg: #222;
   --color-site-inner: #eee;
   --color-site-footer: #aaa;
-  --color-card: #333;
+  --color-card: #222;
   --color-text: #eee;
-  --color-block: #3a3a3a;
+  --color-block: #2a2a2a;
   --color-codeblock: #343a3c;
-  --color-inlinecode: #ffc0cb;
-  --color-h1: #eee;
-  --color-h2: #eee;
-  --color-h3: #ddd;
-  --color-h4: #ddd;
+  --color-inlinecode: #d56d28;
+  --color-h1: #efefef;
+  --color-h2: #efefef;
+  --color-h3: #eee;
+  --color-h4: #eee;
   --color-h5: #ddd;
   --color-h6: #ddd;
-  --color-p: #bbb;
+  --color-p: #ccc;
   --color-list: #aaa;
   --color-list-hl: #69dfc4;
   --color-meta: #bbb;
@@ -895,6 +899,9 @@ button {
   [color-scheme='dark'] .l_header .m_search {
     background: var(--color-site-bg) !important;
   }
+}
+[color-scheme='dark'] hr {
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
 }
 @font-face {
   font-family: 'Docis';
@@ -1739,8 +1746,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1641901294016" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1641901294016"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1641998021466" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1641998021466"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -2041,7 +2048,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.import = {
     jQuery: () => {
       if (typeof jQuery == "undefined") {
-        return volantis.js("https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js")
+        return volantis.js("http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js")
       } else {
         return new Promise(resolve => {
           resolve()
@@ -2729,10 +2736,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-01-01T22:36:44+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-01-12T21:51:16+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fad fa-edit fa-fw" aria-hidden="true"></i>
-    <p>最后更新于：2022年1月1日</p>
+    <p>最后更新于：2022年1月12日</p>
   </a>
 </div>
 
@@ -2991,8 +2998,8 @@ f(i-1,j)
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="nofollow"><i class="fad fa-hashtag fa-fw" aria-hidden="true"></i><p>动态规划</p></a></div>
-  <span hidden itemprop="keywords">动态规划</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="nofollow"><i class="fad fa-hashtag fa-fw" aria-hidden="true"></i><p>动态规划</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%83%8C%E5%8C%85/" rel="nofollow"><i class="fad fa-hashtag fa-fw" aria-hidden="true"></i><p>背包</p></a></div>
+  <span hidden itemprop="keywords">动态规划 背包</span>
 
 
         
@@ -3288,6 +3295,10 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
 
 <!-- required -->
 
+  
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+
+
 
 <!-- internal -->
 
@@ -3295,8 +3306,8 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641901294016')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/thirdparty/message.js?time=1641901294016', () => {
+      volantis.css('/css/message.css?time=1641998021466')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/thirdparty/message.js?time=1641998021466', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -3341,8 +3352,8 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641901294016')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/thirdparty/message.js?time=1641901294016', () => {
+      volantis.css('/css/message.css?time=1641998021466')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/thirdparty/message.js?time=1641998021466', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -3401,8 +3412,8 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1641901294016')
-      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/thirdparty/message.js?time=1641901294016', () => {
+      volantis.css('/css/message.css?time=1641998021466')
+      volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/thirdparty/message.js?time=1641998021466', () => {
         hideMessage(done);
       });
     } else {
@@ -3546,10 +3557,6 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
         
       
         
-          <hr class="menuLoad-Content">
-        
-      
-        
           <div id="menuMusic">
             <li class='music name menuOption-Content'>
               <p class='nav music-title fix-cursor-default'></p>
@@ -3611,7 +3618,7 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
     
     
     
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/rightMenu.js?time=1641901294016')
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/rightMenu.js?time=1641998021466')
   </script>
 
 
@@ -3869,19 +3876,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/sites.js?time=1641901294016")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/sites.js?time=1641998021466")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/friends.js?time=1641901294016")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/friends.js?time=1641998021466")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/contributors.js?time=1641901294016")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/contributors.js?time=1641998021466")
       }
     
   };
@@ -3980,7 +3987,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/aplayer.js?time=1641901294020')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/aplayer.js?time=1641998021473')
     volantis.APlayerController.music = true;
   
   })();
@@ -4068,7 +4075,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function check_giscus() {
     if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'https://cdn.jsdelivr.net/gh/james1badcreeper/cdn/giscus/dark.css';
+      volantis.giscus.Theme = 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/dark.css';
     } else {
       volantis.giscus.Theme = 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css';
     }
@@ -4079,7 +4086,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   function pjax_giscus() {
     const HEAD = check_giscus();
     if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css","dark":"https://cdn.jsdelivr.net/gh/james1badcreeper/cdn/giscus/dark.css"},"repo":"james1BadCreeper/comments","repo-id":"R_kgDOGJmFcw","category":"Announcements","category-id":"DIC_kwDOGJmFc84B_RH7","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
+    let cfg = Object.assign({"theme":{"light":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css","dark":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/dark.css"},"repo":"james1BadCreeper/comments","repo-id":"R_kgDOGJmFcw","category":"Announcements","category-id":"DIC_kwDOGJmFc84B_RH7","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
     const script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
     Object.keys(cfg).forEach(k=>{
@@ -4116,7 +4123,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/app.js?time=1641901294016.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/app.js?time=1641998021466.js"></script>
 
 
 <!-- optional -->
@@ -4129,7 +4136,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/search/hexo.js?time=1641901294016");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/search/hexo.js?time=1641998021466");
   }
 
   function loadSearchService() {
@@ -4194,7 +4201,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4237,7 +4244,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/plugins/parallax.js?time=1641901294016').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/plugins/parallax.js?time=1641998021466').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4501,11 +4508,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/","name":"背包问题"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"背包问题","description":"\r\n背包是 DP 中一类重要而特殊的模型。本文将引导你学习各类背包。\r\n","datePublished":"2021-10-28T13:27:23.000Z","dateModified":"2022-01-01T14:36:44.865Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/","wordCount":36,"articleSection":"OI","keywords":"动态规划","image":{"@type":"ImageObject","url":"https://bing.ioliu.cn/photo/MistyForest_ZH-CN3024731044?force=download","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/","name":"背包问题"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"背包问题","description":"\r\n背包是 DP 中一类重要而特殊的模型。本文将引导你学习各类背包。\r\n","datePublished":"2021-10-28T13:27:23.000Z","dateModified":"2022-01-12T13:51:16.688Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/","wordCount":36,"articleSection":"OI","keywords":"动态规划,背包","image":{"@type":"ImageObject","url":"https://bing.ioliu.cn/photo/MistyForest_ZH-CN3024731044?force=download","width":1024,"height":768}}]</script>
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w05a/source/js/iconfont.js?time=1641901294016.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w06a/source/js/iconfont.js?time=1641998021466.js"></script>
 
 
 <!-- more -->
