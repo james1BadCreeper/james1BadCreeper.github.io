@@ -8557,10 +8557,6 @@ code:not([class]) {
   font-family: Cascadia, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
 }
 ul.list-v.rightmenu {
-  opacity: 0.9;
-  -webkit-opacity: 0.9;
-  -moz-opacity: 0.9;
-  backdrop-filter: blur(10px);
   border-radius: 8px;
   -webkit-border-radius: 8px;
 }
