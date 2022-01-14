@@ -804,7 +804,7 @@ Object.freeze(highlightKeyWords);
 const colortag = () => {
   console.log("coloring tag!");
   $("ul.tag-list li").each(function () {
-    let random = Math.floor(Math.random() * 7 + 1);
+    let random = Math.floor(Math.random() * 6 + 1);
     if (random == 1) {
       $(this).find('a').addClass('tagred');
     } else if (random == 2) {
@@ -816,9 +816,7 @@ const colortag = () => {
     } else if (random == 5) {
       $(this).find('a').addClass('tagpurple');
     } else if (random == 6) {
-      $(this).find('a').addClass('taggrown');
-    } else if (random == 7) {
-      $(this).find('a').addClass('tagorange');
+      $(this).find('a').addClass('tagpink');
     }
   });
 }

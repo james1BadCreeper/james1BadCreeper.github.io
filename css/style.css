@@ -8581,30 +8581,26 @@ ul.list-v.rightmenu {
   }
 }
 .tagred {
-  background: rgba(204,15,53,0.15) !important;
-  color: #cc0f35 !important;
+  background: rgba(255,99,71,0.15) !important;
+  color: #ff6347 !important;
 }
 .tagyellow {
-  background: rgba(138,81,192,0.15) !important;
-  color: #8a51c0 !important;
+  background: rgba(240,230,140,0.15) !important;
+  color: #f0e68c !important;
 }
 .tagblue {
-  background: rgba(33,96,196,0.15) !important;
-  color: #2160c4 !important;
+  background: rgba(65,105,225,0.15) !important;
+  color: #4169e1 !important;
 }
 .taggreen {
-  background: rgba(0,148,126,0.15) !important;
-  color: #00947e !important;
+  background: rgba(144,238,144,0.15) !important;
+  color: #90ee90 !important;
 }
 .tagpurple {
-  background: rgba(138,81,192,0.15) !important;
-  color: #8a51c0 !important;
+  background: rgba(153,50,204,0.15) !important;
+  color: #9932cc !important;
 }
-.taggrown {
-  background: rgba(148,118,0,0.15) !important;
-  color: #947600 !important;
-}
-.tagorange {
-  background: rgba(255,165,0,0.15) !important;
-  color: #ffa500 !important;
+.tagpink {
+  background: rgba(255,105,180,0.15) !important;
+  color: #ff69b4 !important;
 }
