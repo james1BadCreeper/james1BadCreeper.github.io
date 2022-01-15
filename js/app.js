@@ -806,7 +806,7 @@ const colortag = () => {
   $("ul.tag-list li").each(function () {
     let random = Math.floor(Math.random() * 6 + 1);
     if (random == 1) {
-      $(this).find('a').addClass('tagred');
+      $(this).find('a').addClasss('tagred');
     } else if (random == 2) {
       $(this).find('a').addClass('tagyellow');
     } else if (random == 3) {
