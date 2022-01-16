@@ -7591,8 +7591,8 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
     color: var(--color-text) !important;
   }
   :root:not([color-scheme]) .gutter {
-    background: var(--color-card) !important;
-    background-color: var(--color-card) !important;
+    background: #000 !important;
+    background-color: #000 !important;
   }
   :root:not([color-scheme]) .highlight figcaption {
     background-color: #21252b;
@@ -7700,8 +7700,8 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   color: var(--color-text) !important;
 }
 [color-scheme='dark'] .gutter {
-  background: var(--color-card) !important;
-  background-color: var(--color-card) !important;
+  background: #000 !important;
+  background-color: #000 !important;
 }
 [color-scheme='dark'] .highlight figcaption {
   background-color: #21252b;
@@ -8784,6 +8784,51 @@ details[open] > div.content {
     -o-transform: translateY(0);
     -ms-transform: translateY(0);
   }
+}
+.not-select,
+figcaption,
+details summary,
+.new-meta-box,
+.nav-tabs {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.not-select p,
+figcaption p,
+details summary p,
+.new-meta-box p,
+.nav-tabs p,
+.not-select span,
+figcaption span,
+details summary span,
+.new-meta-box span,
+.nav-tabs span {
+  cursor: $default, default;
+}
+.not-select.default-cursor,
+figcaption.default-cursor,
+details summary.default-cursor,
+.new-meta-box.default-cursor,
+.nav-tabs.default-cursor {
+  cursor: $default, default !important;
+}
+.allow-select {
+  -webkit-touch-callout: all;
+  -webkit-user-select: all;
+  -khtml-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
 }
 details[purple] {
   border-color: #f5e9f7;
