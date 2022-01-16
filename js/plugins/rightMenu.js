@@ -306,7 +306,7 @@ const RightMenu = (() => {
         }
       }).catch(e => {
         if (volantis.messageRightMenu.enable) volantis.message('系统提示', e, {
-          icon: volantis.rightMenu.faicon + ' fa-exclamation-square red'
+          icon: 'fal fa-exclamation-square red'
         });
       })
   }
@@ -504,7 +504,7 @@ const RightMenu = (() => {
     if (volantis.isReadModel) {
       const option = {
         backgroundColor: 'var(--color-read-post)',
-        icon: volantis.rightMenu.faicon + ' fa-book-reader',
+        icon: 'fal fa-book-reader PETERRIVE',
         time: 5000
       }
       if (volantis.messageRightMenu.enable) volantis.message('系统提示', '阅读模式已开启，您可以点击屏幕空白处退出。', option);

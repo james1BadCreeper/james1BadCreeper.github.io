@@ -396,7 +396,7 @@ const VolantisApp = (() => {
           }, 2000)
         }).catch(e => {
           volantis.message('系统提示', e, {
-            icon: 'fa fa-exclamation-circle red'
+            icon: 'fal fa-exclamation-circle red'
           });
           _BtnCopy.classList.add('copied-failed');
           _icon.classList.remove('fa-copy');

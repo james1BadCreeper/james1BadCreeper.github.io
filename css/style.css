@@ -7591,8 +7591,8 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
     color: var(--color-text) !important;
   }
   :root:not([color-scheme]) .gutter {
-    background: #000 !important;
-    background-color: #000 !important;
+    background: #121212 !important;
+    background-color: #121212 !important;
   }
   :root:not([color-scheme]) .highlight figcaption {
     background-color: #21252b;
@@ -7700,8 +7700,8 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   color: var(--color-text) !important;
 }
 [color-scheme='dark'] .gutter {
-  background: #000 !important;
-  background-color: #000 !important;
+  background: #121212 !important;
+  background-color: #121212 !important;
 }
 [color-scheme='dark'] .highlight figcaption {
   background-color: #21252b;
@@ -8863,7 +8863,6 @@ ul.list-v.rightmenu li.music.name p.nav.music-title {
 code:not([class]) {
   font-size: 0.9rem;
   padding: 2px;
-  font-weight: 500;
   color: var(--color-inlinecode);
   font-family: Cascadia, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
 }
