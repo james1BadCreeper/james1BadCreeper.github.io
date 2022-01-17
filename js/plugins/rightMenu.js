@@ -13,7 +13,8 @@ const RightMenu = (() => {
     _menuOption = document.querySelector('.menu-Option'),
     _searchWord = document.querySelector('.menu-Option[data-fn-type="searchWord"]'), 
     _googleSearch = document.querySelector('.menu-Option[data-fn-type="googleSearch"]'),
-    _bingSearch = document.querySelector('.menu-Option[data-fn-type="bingSearch"]')
+    _bingSearch = document.querySelector('.menu-Option[data-fn-type="bingSearch"]'),
+    _baiduSearch = document.querySelector('.menu-Option[data-fn-type="baiduSearch"');
     _copyText = document.querySelector('.menu-Option[data-fn-type="copyText"]'),
     _copyPaste = document.querySelector('.menu-Option[data-fn-type="copyPaste"]'),
     _copySelect = document.querySelector('.menu-Option[data-fn-type="copySelect"]'),
@@ -208,6 +209,7 @@ const RightMenu = (() => {
       fn.visible(_searchWord);
       fn.visible(_googleSearch);
       fn.visible(_bingSearch);
+      fn.visible(_baiduSearch);
 
       _copyText.onclick = () => {
         fn.copyString(selectText);
@@ -224,11 +226,16 @@ const RightMenu = (() => {
       !!_bingSearch && (_bingSearch.onclick = () => {
         window.open('https://global.bing.com/search?q=' + encodeURIComponent(selectText));
       })
+
+      !!_baiduSearch && (_baiduSearch.onclick = () => {
+        window.open('https://www.baidu.com/s?wd=' + encodeURIComponent(selectText));
+      })
     } else {
       fn.visible(_copyText, false);
       fn.visible(_searchWord, false);
       fn.visible(_googleSearch, false);
       fn.visible(_bingSearch, false);
+      fn.visible(_baiduSearch, false);
     }
 
     // 打印 

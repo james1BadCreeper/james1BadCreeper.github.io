@@ -20,7 +20,7 @@
   <meta content="james1 的博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1642384372080" as="style">
+  <link rel="preload" href="/css/style.css?time=1642420183027" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -36,7 +36,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-05-01T00:58:06.000Z">
-<meta property="article:modified_time" content="2022-01-16T08:02:15.983Z">
+<meta property="article:modified_time" content="2022-01-17T02:34:48.793Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="动态规划">
 <meta property="article:tag" content="线性 DP">
@@ -1744,8 +1744,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1642384372080" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1642384372080"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1642420183027" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1642420183027"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -2734,10 +2734,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-01-16T16:02:15+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-01-17T10:34:48+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fad fa-edit fa-fw" aria-hidden="true"></i>
-    <p>最后更新于：2022年1月16日</p>
+    <p>最后更新于：2022年1月17日</p>
   </a>
 </div>
 
@@ -2748,13 +2748,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       <i class="fad fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：8k 字</p>
+      <p>字数：8.3k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       <i class="fad fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：35 分钟</p>
+      <p>时长：37 分钟</p>
     </a>
   </div>
 
@@ -2981,7 +2981,21 @@ f(i) = \max(f(i), \max(f(j-1)+j-i+1))
             </details>
 </div><h2 id="problemset">Problemset</h2><div class="story post-story">
 <p>动态规划的实践性很强，需要做大量的题目。这里会给出一些。为了更好的解决一下题目，请先了解背包问题的基础概念部分（仅第 <span class="math inline">\(1\)</span> 节即可）：</p>
-<div class="tag link"><a class="link-card" title="背包 DP" href="https://james1badcreeper.github.io/2021/10/28/knapsack-dp/"><div class="left"><img src="https://z3.ax1x.com/2021/04/17/c5eGL9.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/04/17/c5eGL9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" /></div><div class="right"><p class="text">背包 DP</p><p class="url">https://james1badcreeper.github.io/2021/10/28/knapsack-dp/</p></div></a></div>
+<div class="tag link"><a class="link-card" title="背包 DP" href="/2021/10/28/knapsack-dp/"><div class="left"><img src="https://z3.ax1x.com/2021/04/17/c5eGL9.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/04/17/c5eGL9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" /></div><div class="right"><p class="text">背包 DP</p><p class="url">/2021/10/28/knapsack-dp/</p></div></a></div>
+<h3 id="uva-1025-a-spy-in-the-metro">[UVa 1025] A spy in the Metro</h3>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA1025">题面</a>。</p>
+<p>影响决策的只有当前时间和所处的车站。设 <span class="math inline">\(f(i,j)\)</span> 表示时刻 <span class="math inline">\(i\)</span>，位于车站 <span class="math inline">\(j\)</span>，最少需要等待的时间。有如下三种决策：</p>
+<ul>
+<li>等 <span class="math inline">\(1\)</span> 分钟；</li>
+<li>乘左边来的车（如果存在）；</li>
+<li>乘右边来的车（如果存在）。</li>
+</ul>
+<p>代码如下：</p>
+<details cyan><summary> 查看代码 </summary>
+              <div class='content'>
+              <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>, c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (!<span class="built_in">isdigit</span>(c)) c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(c)) x = (x&lt;&lt;<span class="number">3</span>) + (x&lt;&lt;<span class="number">1</span>) + (c^<span class="number">48</span>), c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, T, m1, m2, kase = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> t[<span class="number">55</span>];</span><br><span class="line"><span class="keyword">bool</span> has_train[<span class="number">205</span>][<span class="number">55</span>][<span class="number">2</span>];</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">205</span>][<span class="number">55</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n) == <span class="number">1</span> &amp;&amp; n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(f, <span class="number">0x3f</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(f));</span><br><span class="line">        <span class="built_in">memset</span>(has_train, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(has_train));</span><br><span class="line">        f[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        T = <span class="built_in">read</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) t[i] = <span class="built_in">read</span>();</span><br><span class="line">        m1 = <span class="built_in">read</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m1; ++i) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> x = <span class="built_in">read</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; ++j)</span><br><span class="line">            &#123;</span><br><span class="line">                has_train[x][j][<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line">                x += t[j];</span><br><span class="line">                <span class="keyword">if</span> (x &gt; T) <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        m2 = <span class="built_in">read</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m2; ++i) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> x = <span class="built_in">read</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = n; j &gt;= <span class="number">1</span>; --j)</span><br><span class="line">            &#123;</span><br><span class="line">                has_train[x][j][<span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line">                x += t[j<span class="number">-1</span>];</span><br><span class="line">                <span class="keyword">if</span> (x &gt; T) <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= T; ++i)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; ++j)</span><br><span class="line">            &#123;</span><br><span class="line">                f[i][j] = f[i<span class="number">-1</span>][j] + <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (j &gt; <span class="number">1</span> &amp;&amp; has_train[i][j][<span class="number">0</span>] &amp;&amp; i &gt;= t[j - <span class="number">1</span>])</span><br><span class="line">                    f[i][j] = <span class="built_in">min</span>(f[i][j], f[i - t[j - <span class="number">1</span>]][j - <span class="number">1</span>]);</span><br><span class="line">                <span class="keyword">if</span> (j &lt; n &amp;&amp; has_train[i][j][<span class="number">1</span>] &amp;&amp; i &gt;= t[j])</span><br><span class="line">                    f[i][j] = <span class="built_in">min</span>(f[i][j], f[i - t[j]][j + <span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Case Number %d: &quot;</span>, ++kase);</span><br><span class="line">        <span class="keyword">if</span> (f[T][n] &gt;= <span class="number">0x3f3f3f3f</span>) <span class="built_in">puts</span>(<span class="string">&quot;impossible&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, f[T][n]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
 <h3 id="luogu-1385-密令">[Luogu 1385] 密令</h3>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1385">题面</a>。</p>
 <p>可以发现一条神奇的性质：不论怎样，这个字符串的字符和永远不变，而且任意和相等的字符串都可以变出来。</p>
@@ -3033,7 +3047,7 @@ f[i-1][j]
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>, c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (!<span class="built_in">isdigit</span>(c)) c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isdigit</span>(c)) x = (x&lt;&lt;<span class="number">3</span>) + (x&lt;&lt;<span class="number">1</span>) + (c^<span class="number">48</span>), c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">505</span>], b[<span class="number">505</span>];</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">505</span>][<span class="number">505</span>], g[<span class="number">505</span>][<span class="number">505</span>]; <span class="comment">// g[i][j] 记录长度为 i 的序列选取的第 j 个数的编号</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> s)</span> <span class="comment">// 递归输出</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">print</span>(g[n][s]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, b[s]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    n = <span class="built_in">read</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) a[i] = <span class="built_in">read</span>();</span><br><span class="line">    m = <span class="built_in">read</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i) b[i] = <span class="built_in">read</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> t = <span class="number">0</span>; <span class="comment">// 记录最后选取的数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[i] == b[j])</span><br><span class="line">            &#123;</span><br><span class="line">                f[i][j] = f[i<span class="number">-1</span>][t] + <span class="number">1</span>;</span><br><span class="line">                g[i][j] = t;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                f[i][j] = f[i<span class="number">-1</span>][j];</span><br><span class="line">                g[i][j] = g[i<span class="number">-1</span>][j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (b[j] &lt; a[i]) t = j; <span class="comment">// 可选</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> s = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; ++i)</span><br><span class="line">        <span class="keyword">if</span> (f[n][i] &gt; f[n][s]) s = i;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, f[n][s]);</span><br><span class="line">    <span class="built_in">print</span>(s); <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </div><h2 id="小结">小结</h2><div class="story post-story">
 <p>动态规划的做法需要在实践中积累经验。可以看出，线性 DP 的状态设计和转移往往都比较暴力，没有太多技巧可言。但细节很多，综合性强。学完线性 DP 后，接下来可以阅读背包问题的剩余内容：</p>
-<div class="tag link"><a class="link-card" title="背包 DP" href="https://james1badcreeper.github.io/2021/10/28/knapsack-dp/"><div class="left"><img src="https://z3.ax1x.com/2021/04/17/c5eGL9.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/04/17/c5eGL9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" /></div><div class="right"><p class="text">背包 DP</p><p class="url">https://james1badcreeper.github.io/2021/10/28/knapsack-dp/</p></div></a></div>
+<div class="tag link"><a class="link-card" title="背包 DP" href="/2021/10/28/knapsack-dp/"><div class="left"><img src="https://z3.ax1x.com/2021/04/17/c5eGL9.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/04/17/c5eGL9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="This is a picture without description" /></div><div class="right"><p class="text">背包 DP</p><p class="url">/2021/10/28/knapsack-dp/</p></div></a></div>
 <p>线性 DP 也有难题，不适合放在本文。请期待笔者的后续文章。</p>
 
 </div>
@@ -3203,7 +3217,7 @@ Epcot is a theme park at Walt Disney World Resort featuring exci...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%AD%90"><span class="toc-number">1.</span> <span class="toc-text">引子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83%E7%9A%84%E6%9C%AB%E6%97%A5"><span class="toc-number">1.1.</span> <span class="toc-text">贪心的末日</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B3%E7%AD%96"><span class="toc-number">1.2.</span> <span class="toc-text">决策</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E9%97%AE%E9%A2%98%E7%9A%84%E6%8B%86%E5%88%86"><span class="toc-number">1.3.</span> <span class="toc-text">子问题的拆分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.4.</span> <span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96"><span class="toc-number">1.5.</span> <span class="toc-text">优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E5%92%8C%E5%AD%90%E9%97%AE%E9%A2%98"><span class="toc-number">1.6.</span> <span class="toc-text">状态和子问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E6%96%B9%E7%A8%8B"><span class="toc-number">1.7.</span> <span class="toc-text">状态转移方程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E5%B8%81%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">硬币问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.1.</span> <span class="toc-text">状态的设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%AC%E7%A7%BB"><span class="toc-number">2.2.</span> <span class="toc-text">状态的转移</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E6%96%B9%E6%B3%95%E5%A1%AB%E8%A1%A8%E6%B3%95"><span class="toc-number">2.2.1.</span> <span class="toc-text">传统方法（填表法）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%B7%E8%A1%A8%E6%B3%95"><span class="toc-number">2.2.2.</span> <span class="toc-text">刷表法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E7%9A%84%E6%89%93%E5%8D%B0"><span class="toc-number">2.3.</span> <span class="toc-text">解的打印</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2"><span class="toc-number">3.</span> <span class="toc-text">记忆化搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dp-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-number">4.</span> <span class="toc-text">DP 解题思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%8A%B6%E6%80%81"><span class="toc-number">4.1.</span> <span class="toc-text">设计状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E8%BD%AC%E7%A7%BB"><span class="toc-number">4.2.</span> <span class="toc-text">设计转移</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-1"><span class="toc-number">4.3.</span> <span class="toc-text">实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dp-%E4%BA%8C%E8%A6%81%E7%B4%A0"><span class="toc-number">5.</span> <span class="toc-text">DP 二要素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E5%AD%90%E7%BB%93%E6%9E%84"><span class="toc-number">5.1.</span> <span class="toc-text">最优子结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E5%90%8E%E6%95%88%E6%80%A7"><span class="toc-number">5.2.</span> <span class="toc-text">无后效性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7-dp"><span class="toc-number">6.</span> <span class="toc-text">线性 DP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97"><span class="toc-number">6.1.</span> <span class="toc-text">最长上升子序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97"><span class="toc-number">6.2.</span> <span class="toc-text">最长公共子序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#noip2000-%E6%8F%90%E9%AB%98%E7%BB%84-%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0"><span class="toc-number">6.3.</span> <span class="toc-text">[NOIP2000 提高组] 方格取数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#noip2000-%E6%8F%90%E9%AB%98%E7%BB%84-%E4%B9%98%E7%A7%AF%E6%9C%80%E5%A4%A7"><span class="toc-number">6.4.</span> <span class="toc-text">[NOIP2000 提高组] 乘积最大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#luogu-1868-%E9%A5%A5%E9%A5%BF%E7%9A%84%E5%A5%B6%E7%89%9B"><span class="toc-number">6.5.</span> <span class="toc-text">[Luogu 1868] 饥饿的奶牛</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#problemset"><span class="toc-number">7.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#luogu-1385-%E5%AF%86%E4%BB%A4"><span class="toc-number">7.1.</span> <span class="toc-text">[Luogu 1385] 密令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cf1061c-multiplicity"><span class="toc-number">7.2.</span> <span class="toc-text">[CF1061C] Multiplicity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cf10d-lcis"><span class="toc-number">7.3.</span> <span class="toc-text">[CF10D] LCIS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">小结</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%AD%90"><span class="toc-number">1.</span> <span class="toc-text">引子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83%E7%9A%84%E6%9C%AB%E6%97%A5"><span class="toc-number">1.1.</span> <span class="toc-text">贪心的末日</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B3%E7%AD%96"><span class="toc-number">1.2.</span> <span class="toc-text">决策</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E9%97%AE%E9%A2%98%E7%9A%84%E6%8B%86%E5%88%86"><span class="toc-number">1.3.</span> <span class="toc-text">子问题的拆分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.4.</span> <span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96"><span class="toc-number">1.5.</span> <span class="toc-text">优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E5%92%8C%E5%AD%90%E9%97%AE%E9%A2%98"><span class="toc-number">1.6.</span> <span class="toc-text">状态和子问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E6%96%B9%E7%A8%8B"><span class="toc-number">1.7.</span> <span class="toc-text">状态转移方程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E5%B8%81%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">硬币问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.1.</span> <span class="toc-text">状态的设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%AC%E7%A7%BB"><span class="toc-number">2.2.</span> <span class="toc-text">状态的转移</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E6%96%B9%E6%B3%95%E5%A1%AB%E8%A1%A8%E6%B3%95"><span class="toc-number">2.2.1.</span> <span class="toc-text">传统方法（填表法）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%B7%E8%A1%A8%E6%B3%95"><span class="toc-number">2.2.2.</span> <span class="toc-text">刷表法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E7%9A%84%E6%89%93%E5%8D%B0"><span class="toc-number">2.3.</span> <span class="toc-text">解的打印</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2"><span class="toc-number">3.</span> <span class="toc-text">记忆化搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dp-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-number">4.</span> <span class="toc-text">DP 解题思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%8A%B6%E6%80%81"><span class="toc-number">4.1.</span> <span class="toc-text">设计状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E8%BD%AC%E7%A7%BB"><span class="toc-number">4.2.</span> <span class="toc-text">设计转移</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-1"><span class="toc-number">4.3.</span> <span class="toc-text">实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dp-%E4%BA%8C%E8%A6%81%E7%B4%A0"><span class="toc-number">5.</span> <span class="toc-text">DP 二要素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BC%98%E5%AD%90%E7%BB%93%E6%9E%84"><span class="toc-number">5.1.</span> <span class="toc-text">最优子结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E5%90%8E%E6%95%88%E6%80%A7"><span class="toc-number">5.2.</span> <span class="toc-text">无后效性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7-dp"><span class="toc-number">6.</span> <span class="toc-text">线性 DP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97"><span class="toc-number">6.1.</span> <span class="toc-text">最长上升子序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97"><span class="toc-number">6.2.</span> <span class="toc-text">最长公共子序列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#noip2000-%E6%8F%90%E9%AB%98%E7%BB%84-%E6%96%B9%E6%A0%BC%E5%8F%96%E6%95%B0"><span class="toc-number">6.3.</span> <span class="toc-text">[NOIP2000 提高组] 方格取数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#noip2000-%E6%8F%90%E9%AB%98%E7%BB%84-%E4%B9%98%E7%A7%AF%E6%9C%80%E5%A4%A7"><span class="toc-number">6.4.</span> <span class="toc-text">[NOIP2000 提高组] 乘积最大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#luogu-1868-%E9%A5%A5%E9%A5%BF%E7%9A%84%E5%A5%B6%E7%89%9B"><span class="toc-number">6.5.</span> <span class="toc-text">[Luogu 1868] 饥饿的奶牛</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#problemset"><span class="toc-number">7.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#uva-1025-a-spy-in-the-metro"><span class="toc-number">7.1.</span> <span class="toc-text">[UVa 1025] A spy in the Metro</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#luogu-1385-%E5%AF%86%E4%BB%A4"><span class="toc-number">7.2.</span> <span class="toc-text">[Luogu 1385] 密令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cf1061c-multiplicity"><span class="toc-number">7.3.</span> <span class="toc-text">[CF1061C] Multiplicity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cf10d-lcis"><span class="toc-number">7.4.</span> <span class="toc-text">[CF10D] LCIS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">小结</span></a></li></ol>
     </div>
   </section>
 
@@ -3405,8 +3419,6 @@ Epcot is a theme park at Walt Disney World Resort featuring exci...</p>
   
   
   
-  
-  
 </script>
 
 <!-- required -->
@@ -3422,8 +3434,8 @@ Epcot is a theme park at Walt Disney World Resort featuring exci...</p>
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1642384372080')
-      volantis.js('/js/thirdparty/message.js?time=1642384372080', () => {
+      volantis.css('/css/message.css?time=1642420183027')
+      volantis.js('/js/thirdparty/message.js?time=1642420183027', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -3468,8 +3480,8 @@ Epcot is a theme park at Walt Disney World Resort featuring exci...</p>
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1642384372080')
-      volantis.js('/js/thirdparty/message.js?time=1642384372080', () => {
+      volantis.css('/css/message.css?time=1642420183027')
+      volantis.js('/js/thirdparty/message.js?time=1642420183027', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -3528,8 +3540,8 @@ Epcot is a theme park at Walt Disney World Resort featuring exci...</p>
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1642384372080')
-      volantis.js('/js/thirdparty/message.js?time=1642384372080', () => {
+      volantis.css('/css/message.css?time=1642420183027')
+      volantis.js('/js/thirdparty/message.js?time=1642420183027', () => {
         hideMessage(done);
       });
     } else {
@@ -3598,15 +3610,25 @@ Epcot is a theme park at Walt Disney World Resort featuring exci...</p>
           
           <i class='fad fa-search fa-fw PETERRIVE'></i> 站内搜索
         </span>
+        
+        
         <span class='vlts-menu opt fix-cursor-default menu-Option' data-fn-type='googleSearch'>
           
           <svg class="iconfont fa-fw"><use xlink:href="#icon-google"></use></svg><b>&thinsp;&thinsp;&thinsp;</b> 谷歌搜索
         </span>
+         
+         
         <span class='vlts-menu opt fix-cursor-default menu-Option' data-fn-type='bingSearch'>
           
           <svg class="iconfont fa-fw"><use xlink:href="#icon-Microsoft"></use></svg><b>&thinsp;&thinsp;&thinsp;</b> 必应搜索
         </span>
-        
+         
+         
+          <span class='vlts-menu opt fix-cursor-default menu-Option' data-fn-type='baiduSearch'>
+            
+            <svg class="iconfont fa-fw"><use xlink:href="#icon-baidu"></use></svg><b>&thinsp;&thinsp;&thinsp;</b> 百度搜索
+          </span>
+         
         <span class='vlts-menu opt fix-cursor-default menu-Option' data-fn-type='openTab'>
           
           <i class='fad fa-external-link-square-alt fa-fw mR12 PUMPKIN'></i> 在新标签页打开
@@ -3734,7 +3756,7 @@ Epcot is a theme park at Walt Disney World Resort featuring exci...</p>
     
     
     
-    volantis.js('/js/plugins/rightMenu.js?time=1642384372080')
+    volantis.js('/js/plugins/rightMenu.js?time=1642420183027')
   </script>
 
 
@@ -3992,19 +4014,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1642384372080")
+        volantis.js("/js/plugins/sites.js?time=1642420183027")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1642384372080")
+        volantis.js("/js/plugins/friends.js?time=1642420183027")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1642384372080")
+        volantis.js("/js/plugins/contributors.js?time=1642420183027")
       }
     
   };
@@ -4103,7 +4125,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1642384372086')
+    await volantis.js('/js/plugins/aplayer.js?time=1642420183031')
     volantis.APlayerController.music = true;
   
   })();
@@ -4239,7 +4261,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="/js/app.js?time=1642384372080.js"></script>
+<script src="/js/app.js?time=1642420183027.js"></script>
 
 
 <!-- optional -->
@@ -4252,7 +4274,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1642384372080");
+    return volantis.js("/js/search/hexo.js?time=1642420183027");
   }
 
   function loadSearchService() {
@@ -4317,7 +4339,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4360,7 +4382,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1642384372080').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1642420183027').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4624,11 +4646,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/05/01/DPbasic/","name":"动态规划（DP）基础"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"动态规划（DP）基础","description":"\r\n动态规划（Dynamic Programming，DP）是运筹学的一个分支，是求解决策过程最优化的过程。20 世纪 50 年代初，美国数学家贝尔曼（R.Bellman）等人在研究多阶段决策过程的优化问题时，提出了著名的最优化原理，从而创立了动态规划。动态规划问世以来，在经济管理、生产调度、工程技术和最优控制等方面得到了广泛的应用。例如最短路线、库存管理、资源分配、设备更新、排序、装载等问题，用动态规划方法比用其它方法求解更为方便。所以动态规划不仅在 OI 中应用广泛，在生活实际同样应用广泛。本文将引导你学习简单的动态规划。\r\n","datePublished":"2021-05-01T00:58:06.000Z","dateModified":"2022-01-16T08:02:15.983Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/05/01/DPbasic/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/05/01/DPbasic/","wordCount":268,"articleSection":"OI","keywords":"动态规划,线性 DP","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/02/27/6pHjSg.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/05/01/DPbasic/","name":"动态规划（DP）基础"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"动态规划（DP）基础","description":"\r\n动态规划（Dynamic Programming，DP）是运筹学的一个分支，是求解决策过程最优化的过程。20 世纪 50 年代初，美国数学家贝尔曼（R.Bellman）等人在研究多阶段决策过程的优化问题时，提出了著名的最优化原理，从而创立了动态规划。动态规划问世以来，在经济管理、生产调度、工程技术和最优控制等方面得到了广泛的应用。例如最短路线、库存管理、资源分配、设备更新、排序、装载等问题，用动态规划方法比用其它方法求解更为方便。所以动态规划不仅在 OI 中应用广泛，在生活实际同样应用广泛。本文将引导你学习简单的动态规划。\r\n","datePublished":"2021-05-01T00:58:06.000Z","dateModified":"2022-01-17T02:34:48.793Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/05/01/DPbasic/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/05/01/DPbasic/","wordCount":268,"articleSection":"OI","keywords":"动态规划,线性 DP","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/02/27/6pHjSg.jpg","width":1024,"height":768}}]</script>
 
 
 
-<script src="/js/iconfont.js?time=1642384372080.js"></script>
+<script src="/js/iconfont.js?time=1642420183027.js"></script>
 
 
 <!-- more -->
