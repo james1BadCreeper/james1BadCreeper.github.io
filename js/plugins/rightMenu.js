@@ -507,7 +507,7 @@ const RightMenu = (() => {
         icon: 'fal fa-book-reader PETERRIVE',
         time: 5000
       }
-      if (volantis.messageRightMenu.enable) volantis.message('系统提示', '阅读模式已开启，您可以点击屏幕空白处退出。', option);
+      if (volantis.messageRightMenu.enable) volantis.message('系统提示', '阅读模式已开启，您可以再次右键退出。', option);
       document.querySelector('#l_body').removeEventListener('click', fn.readingModel);
       document.querySelector('#l_body').addEventListener('click', (event) => {
         if (fn.hasClass(event.target, 'common_read')) {
