@@ -20,7 +20,7 @@
   <meta content="james1 的博客" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1642420328143" as="style">
+  <link rel="preload" href="/css/style.css?time=1642422005608" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -36,7 +36,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-01-01T14:22:55.000Z">
-<meta property="article:modified_time" content="2022-01-17T03:42:19.693Z">
+<meta property="article:modified_time" content="2022-01-17T12:19:19.237Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary">
@@ -1743,8 +1743,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1642420328143" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1642420328143"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1642422005608" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1642422005608"></noscript>
     <script>
       var userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -2733,7 +2733,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-01-17T11:42:19+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-01-17T20:19:19+08:00">
   <a class='notlink' href="/" onclick="return false;" title="Click me!" >
     <i class="fad fa-edit fa-fw" aria-hidden="true"></i>
     <p>最后更新于：2022年1月17日</p>
@@ -2747,13 +2747,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       <i class="fad fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：521 字</p>
+      <p>字数：754 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink' href="/" onclick="return false;" title="Click me!" >
       <i class="fad fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：1 分钟</p>
+      <p>时长：2 分钟</p>
     </a>
   </div>
 
@@ -2790,7 +2790,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>知道了这个原理，我们就可以用 DP 解决更多问题了。下面仅举一个例子，但它足够经典。</p>
 <hr />
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA437">[UVa 437] The Tower of Babylon</a>。</p>
-<div class="note "><p>有 <span class="math inline">\(n(n\le 30)\)</span> 种可任意翻转的立方体，每种都有无穷多个。要求选一些摞成柱子，使得一个方块的底的两条边严格小于另一个方块的底的两条边。求最高高度。</p></div>
+<div class="note "><p>有 <span class="math inline">\(n(n\le 30)\)</span> 种可任意翻转的砖块，每种都有无穷多个。要求选一些摞成柱子，使得一个方块的底的两条边严格小于另一个方块的底的两条边。求最高高度。</p></div>
+<p>由于每个砖块的底面长宽分别严格小于它下方砖块的底面长宽，因此不难将这样一种关系作为建图的依据，而本题也就转化为最长路问题。</p>
+<p>但问题是每个砖块都有三种摆放方式，怎么破？</p>
+<p>我们很容易想到将一块砖拆成三块转来用，因为每种砖都有无穷多个。这是常见的思路。由于是严格小于，所以肯定没有环。</p>
+<p>接下来会影响转移的就只用砖块的长和宽了。那么我们可以设 <span class="math inline">\(f(i,j)\)</span> 为“顶面尺寸是 <span class="math inline">\(i\)</span> 和 <span class="math inline">\(j\)</span>”吗？不能。因为 <span class="math inline">\(i\)</span> 和 <span class="math inline">\(j\)</span> 这两个值可能很大。我们只需要用 <span class="math inline">\((id,k)\)</span> 来间接表示这个状态，代表选取第 <span class="math inline">\(id\)</span> 块砖，使用第 <span class="math inline">\(k\)</span> 条边作为高。这样就可以正常求解了。代码如下：</p>
+<details cyan><summary> 查看代码 </summary>
+              <div class='content'>
+              <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
 </div><h2 id="环形-dp">环形 DP</h2><div class="story post-story">
 <p>这个环形不是说状态图是环形。</p>
 </div><h2 id="后效性处理">后效性处理</h2><div class="story post-story">
@@ -3176,8 +3185,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   volantis.message = (title, message, option = {}, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1642420328143')
-      volantis.js('/js/thirdparty/message.js?time=1642420328143', () => {
+      volantis.css('/css/message.css?time=1642422005608')
+      volantis.js('/js/thirdparty/message.js?time=1642422005608', () => {
         tozashMessage(title, message, option, done);
       });
     } else {
@@ -3222,8 +3231,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1642420328143')
-      volantis.js('/js/thirdparty/message.js?time=1642420328143', () => {
+      volantis.css('/css/message.css?time=1642422005608')
+      volantis.js('/js/thirdparty/message.js?time=1642422005608', () => {
         tozashQuestion(title, message, option, success, cancel, done);
       });
     } else {
@@ -3282,8 +3291,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     }
     
     if (typeof iziToast === "undefined") {
-      volantis.css('/css/message.css?time=1642420328143')
-      volantis.js('/js/thirdparty/message.js?time=1642420328143', () => {
+      volantis.css('/css/message.css?time=1642422005608')
+      volantis.js('/js/thirdparty/message.js?time=1642422005608', () => {
         hideMessage(done);
       });
     } else {
@@ -3493,7 +3502,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-    volantis.js('/js/plugins/rightMenu.js?time=1642420328143')
+    volantis.js('/js/plugins/rightMenu.js?time=1642422005608')
   </script>
 
 
@@ -3751,19 +3760,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1642420328143")
+        volantis.js("/js/plugins/sites.js?time=1642422005608")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1642420328143")
+        volantis.js("/js/plugins/friends.js?time=1642422005608")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1642420328143")
+        volantis.js("/js/plugins/contributors.js?time=1642422005608")
       }
     
   };
@@ -3862,7 +3871,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1642420328153')
+    await volantis.js('/js/plugins/aplayer.js?time=1642422005615')
     volantis.APlayerController.music = true;
   
   })();
@@ -3998,7 +4007,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="/js/app.js?time=1642420328143.js"></script>
+<script src="/js/app.js?time=1642422005608.js"></script>
 
 
 <!-- optional -->
@@ -4011,7 +4020,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1642420328143");
+    return volantis.js("/js/search/hexo.js?time=1642422005608");
   }
 
   function loadSearchService() {
@@ -4076,7 +4085,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4119,7 +4128,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1642420328143').then(()=>{
+    volantis.js('/js/plugins/parallax.js?time=1642422005608').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4383,11 +4392,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2022/01/01/DPEX/","name":"复杂状态的 DP 问题"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"复杂状态的 DP 问题","description":"\r\n无论是线性 DP、背包、区间 DP 或是树形 DP，它们的区别都在于状态设计上。实际上还有一些奇怪的状态设计，将在本文进行介绍。包括 DAG 的 DP、环形结构、后效性处理、基环树 DP 等等。\r\n","datePublished":"2022-01-01T14:22:55.000Z","dateModified":"2022-01-17T03:42:19.693Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2022/01/01/DPEX/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2022/01/01/DPEX/","wordCount":101,"articleSection":"OI","keywords":"动态规划","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/11/07/I1PR2R.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2022/01/01/DPEX/","name":"复杂状态的 DP 问题"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"复杂状态的 DP 问题","description":"\r\n无论是线性 DP、背包、区间 DP 或是树形 DP，它们的区别都在于状态设计上。实际上还有一些奇怪的状态设计，将在本文进行介绍。包括 DAG 的 DP、环形结构、后效性处理、基环树 DP 等等。\r\n","datePublished":"2022-01-01T14:22:55.000Z","dateModified":"2022-01-17T12:19:19.237Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2022/01/01/DPEX/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2022/01/01/DPEX/","wordCount":101,"articleSection":"OI","keywords":"动态规划","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/11/07/I1PR2R.jpg","width":1024,"height":768}}]</script>
 
 
 
-<script src="/js/iconfont.js?time=1642420328143.js"></script>
+<script src="/js/iconfont.js?time=1642422005608.js"></script>
 
 
 <!-- more -->
