@@ -773,6 +773,9 @@ button {
   :root:not([color-scheme]) hr {
     border-bottom: 1px solid rgba(255,255,255,0.08) !important;
   }
+  :root:not([color-scheme]) .l_header {
+    background: var(--color-site-body) !important;
+  }
 }
 [color-scheme='dark'] {
   --color-site-body: #181818;
@@ -848,6 +851,9 @@ button {
 }
 [color-scheme='dark'] hr {
   border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+[color-scheme='dark'] .l_header {
+  background: var(--color-site-body) !important;
 }
 @font-face {
   font-family: 'Docis';
