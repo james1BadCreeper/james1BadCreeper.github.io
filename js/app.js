@@ -868,4 +868,3 @@ const colortag = () => {
     }
   });
 }
-colortag();

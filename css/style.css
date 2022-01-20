@@ -5656,13 +5656,13 @@ p.p.rainbow {
     background-position: -2000vw;
   }
 }
-.swiper-container {
+.swiper {
   width: 100%;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   --gap-p: 2rem;
 }
-.swiper-container:not(.swiper-container-initialized) {
+.swiper:not(.swiper-initialized) {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: none;
@@ -5704,16 +5704,15 @@ div.swiper-slide img {
   border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-.swiper-container[width='max'] div.swiper-slide {
+.swiper[width='max'] div.swiper-slide {
   width: 100%;
 }
-.swiper-container[width='min'] div.swiper-slide {
+.swiper[width='min'] div.swiper-slide {
   width: 25%;
 }
 .swiper-button-prev,
 .swiper-button-next {
   padding: 1rem 0.5rem;
-  margin-top: -2rem !important;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   background: rgba(255,255,255,0.25);
@@ -5723,7 +5722,6 @@ div.swiper-slide img {
   -moz-transition: background 0.2s ease-out;
   -o-transition: background 0.2s ease-out;
   -ms-transition: background 0.2s ease-out;
-  --swiper-theme-color: #000 !important;
 }
 .swiper-button-prev:after,
 .swiper-button-next:after {
@@ -5732,8 +5730,7 @@ div.swiper-slide img {
 }
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background: #fff !important;
-  --swiper-theme-color: #ff5722 !important;
+  --swiper-theme-color: #ffa500 !important;
 }
 .md .table {
   overflow: auto;
@@ -8875,20 +8872,11 @@ ul.list-v.rightmenu {
   -webkit-border-radius: 8px !important;
 }
 .l_header {
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0.5em !important;
-  border-bottom-left-radius: 0.5em !important;
-  max-width: 1128px !important;
-  left: calc((100% - 1128px) * 0.5) !important;
-}
-@media screen and (max-width: 1112px) {
-  .l_header {
-    left: 0 !important;
-    border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    max-width: 100% !important;
-  }
+  left: 0 !important;
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 .tagred {
   background: rgba(255,99,71,0.15) !important;
