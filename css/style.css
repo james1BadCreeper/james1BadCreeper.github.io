@@ -8872,11 +8872,18 @@ ul.list-v.rightmenu {
   -webkit-border-radius: 8px !important;
 }
 .l_header {
-  left: 0 !important;
-  border-radius: 0 !important;
-  -webkit-border-radius: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
+  max-width: 1128px !important;
+  left: calc((100% - 1128px) * 0.5) !important;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+@media screen and (max-width: 1112px) {
+  .l_header {
+    left: 0 !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    max-width: 100% !important;
+  }
 }
 .tagred {
   background: rgba(255,99,71,0.15) !important;
