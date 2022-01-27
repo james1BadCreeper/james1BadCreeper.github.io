@@ -11,7 +11,7 @@ let SearchService = (() => {
           <span class="fad fa-search"></span>
         </button>
       </form>
-      <a id="u-search-btn-close" class="btn-close"> <span class="fad fa-times"></span> </a>
+      <a id="u-search-btn-close" class="btn-close"> <span class="fas fa-times"></span> </a>
     </header>
     <main class="modal-body">
       <ul class="modal-results"></ul>
