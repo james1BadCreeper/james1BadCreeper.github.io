@@ -1,0 +1,62 @@
+<p align="center">
+<a href="https://scrollrevealjs.org" title="Visit ScrollReveal home page"> <img src="https://scrollrevealjs.org/img/logomark.svg" alt="ScrollReveal" width="120"> </a>
+</p>
+<br>
+<p align="center">
+<a href="https://scrollrevealjs.org" title="Visit ScrollReveal home page"> <img width="200" src="https://scrollrevealjs.org/img/scrollreveal-logotype-dark.svg" alt="ScrollReveal"> </a>
+</p>
+<p align="center">
+Animate elements as they scroll into view.
+</p>
+<p align="center">
+<a href="https://travis-ci.org/jlmakes/scrollreveal"> <img src="https://img.shields.io/travis/jlmakes/scrollreveal.svg" alt="Build status"> </a> <a href="https://www.npmjs.com/package/scrollreveal"> <img src="https://img.shields.io/npm/dm/scrollreveal.svg" alt="Monthly downloads"> </a> <a href="https://www.npmjs.com/package/scrollreveal"> <img src="https://img.shields.io/npm/v/scrollreveal.svg" alt="Version"> </a> <img src="https://img.shields.io/badge/min+gzip-5.7_kB-blue.svg" alt="5.7 kB min+gzip"> <a href="https://opensource.org/licenses/GPL-3.0"> <img src="https://img.shields.io/badge/license-GPLv3-blue.svg" alt="GPLv3 License"> </a>
+</p>
+<p align="center">
+<a href="https://saucelabs.com/u/scrollreveal"> <img src="https://saucelabs.com/browser-matrix/scrollreveal.svg?y=1" alt="Browser compatibility matrix" width="100%"> </a>
+</p>
+<p><br></p>
+<p><br></p>
+<h1 id="introduction">Introduction</h1>
+<p>ScrollReveal is a JavaScript library for easily animating elements as they enter/leave the viewport. It was designed to be robust and flexible, but hopefully you’ll be surprised below at how easy it is to pick up.</p>
+<p><br></p>
+<h1 id="installation">Installation</h1>
+<h2 id="browser">Browser</h2>
+<p>A simple and fast way to get started is to include this script on your page:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://unpkg.com/scrollreveal&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span></code></pre></div>
+<p>This will create the global variable <code>ScrollReveal</code></p>
+<blockquote>
+<p>Be careful using this method in production. Without specifying a fixed version number, Unpkg may delay your page load while it resolves the latest version. Learn more at <a href="https://unpkg.com">unpkg.com</a></p>
+</blockquote>
+<h2 id="module">Module</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install scrollreveal</span></code></pre></div>
+<h4 id="commonjs">CommonJS</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> ScrollReveal <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;scrollreveal&#39;</span>)</span></code></pre></div>
+<h4 id="es2015">ES2015</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ScrollReveal <span class="im">from</span> <span class="st">&#39;scrollreveal&#39;</span></span></code></pre></div>
+<p><br></p>
+<h1 id="usage">Usage</h1>
+<p>Installation provides us with the constructor function <a href="https://scrollrevealjs.org/api/constructor.html"><code>ScrollReveal()</code></a>. Calling this function returns the ScrollReveal instance, the “brain” behind the magic.</p>
+<blockquote>
+<p>ScrollReveal employs the singleton pattern; no matter how many times the constructor is called, it will always return the same instance. This means we can call it anywhere, worry-free.</p>
+</blockquote>
+<p>There’s a lot we can do with this instance, but most of the time we’ll be using the <a href="https://scrollrevealjs.org/api/reveal.html"><code>reveal()</code></a> method to create animation. Fundamentally, this is how to use ScrollReveal:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;headline&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    Widget Inc.</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/h1&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ScrollReveal</span>()<span class="op">.</span><span class="fu">reveal</span>(<span class="st">&#39;.headline&#39;</span>)</span></code></pre></div>
+<p><strong>🔎 See this demo live on <a href="http://jsbin.com/jufohaxonu/edit?html,output">JSBin</a></strong></p>
+<p><br></p>
+<hr />
+<h3 id="the-full-documentation-can-be-found-at-httpsscrollrevealjs.org">The full documentation can be found at <a href="https://scrollrevealjs.org">https://scrollrevealjs.org</a></h3>
+<blockquote>
+<p>If you’re using an older version of ScrollReveal, you can find legacy documentation in the <a href="https://github.com/jlmakes/scrollreveal/wiki">wiki</a></p>
+</blockquote>
+<hr />
+<p><br></p>
+<p><a href="https://scrollrevealjs.org/pricing/" title="Visit ScrollReveal pricing page"> <img align="right" height="300" src="https://scrollrevealjs.org/img/license.svg" alt="Commercial License Badge"> </a></p>
+<p><br></p>
+<h1 id="license">License</h1>
+<p><strong>For commercial sites, themes, projects, and applications, keep your source code private/proprietary by purchasing a <a href="https://scrollrevealjs.org/pricing/">Commercial License</a>.</strong></p>
+<p>Licensed under the GNU General Public License 3.0 for compatible open source projects and non-commercial use.</p>
+<p><br></p>
+<p>Copyright 2021 Fisssion LLC</p>

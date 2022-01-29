@@ -16,10 +16,10 @@ const RightMenu = (() => {
   const
     _menuLoad = document.querySelectorAll('.menuLoad-Content'),
     _menuOption = document.querySelector('.menu-Option'),
-    _searchWord = document.querySelector('.menu-Option[data-fn-type="searchWord"]'), 
+    _searchWord = document.querySelector('.menu-Option[data-fn-type="searchWord"]'),
     _googleSearch = document.querySelector('.menu-Option[data-fn-type="googleSearch"]'),
     _bingSearch = document.querySelector('.menu-Option[data-fn-type="bingSearch"]'),
-    _baiduSearch = document.querySelector('.menu-Option[data-fn-type="baiduSearch"');
+    _baiduSearch = document.querySelector('.menu-Option[data-fn-type="baiduSearch"'),
     _copyText = document.querySelector('.menu-Option[data-fn-type="copyText"]'),
     _copyPaste = document.querySelector('.menu-Option[data-fn-type="copyPaste"]'),
     _copySelect = document.querySelector('.menu-Option[data-fn-type="copySelect"]'),
@@ -233,9 +233,9 @@ const RightMenu = (() => {
         fn.copyString(selectText);
       }
 
-      !!_searchWord && (_searchWord.onclick = () => { 
-        OpenSearch(selectText); 
-      }) 
+      !!_searchWord && (_searchWord.onclick = () => {
+        OpenSearch(selectText);
+      })
 
       !!_googleSearch && (_googleSearch.onclick = () => {
         window.open('https://www.google.com/search?q=' + encodeURIComponent(selectText));
@@ -526,7 +526,7 @@ const RightMenu = (() => {
     if (volantis.isReadModel) {
       const option = {
         backgroundColor: 'var(--color-read-post)',
-        icon: 'fal fa-book-reader PETERRIVE',
+        icon: rightMenuConfig.faicon + ' fa-book-reader',
         time: 5000
       }
       if (messageRightMenu) VolantisApp.message('系统提示', '阅读模式已开启，您可以点击屏幕空白处退出。', option);

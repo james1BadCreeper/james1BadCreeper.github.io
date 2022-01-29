@@ -1413,6 +1413,11 @@ svg.loading {
   max-width: 840px;
   margin: auto;
 }
+@media screen and (min-width: 2048px) {
+  #l_main.no_sidebar {
+    max-width: calc(55vw - 240px);
+  }
+}
 #l_main.no_sidebar ~#l_side {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
@@ -1831,6 +1836,11 @@ svg.loading {
   -o-justify-content: space-between;
   -ms-justify-content: space-between;
   align-items: stretch;
+}
+@media screen and (min-width: 2048px) {
+  .body-wrapper {
+    max-width: 55vw;
+  }
 }
 article#comments p[ct] {
   margin-top: 0;
@@ -5540,14 +5550,6 @@ span.p.bold,
 p.p.bold {
   font-weight: bold;
 }
-span.p.italic,
-p.p.italic {
-  font-style: italic;
-}
-span.p.oblique,
-p.p.oblique {
-  font-style: oblique;
-}
 span.p.h1,
 p.p.h1,
 span.p.h2,
@@ -5613,48 +5615,6 @@ p.p.purple {
 span.p.gray,
 p.p.gray {
   color: #999;
-}
-span.p.rainbow,
-p.p.rainbow {
-  background-image: linear-gradient(to left, #ff4500, #ffa500, #ffd700, #90ee90, #0ff, #1e90ff, #9370db, #ff69b4, #ff4500);
-  background-size: 110vw;
-  -webkit-background-size: 110vw;
-  -moz-background-size: 110vw;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-animation: rainbowan 60s linear infinite;
-  animation: rainbowan 60s linear infinite;
-  -webkit-animation: rainbowan 60s linear infinite;
-  -khtml-animation: rainbowan 60s linear infinite;
-  -moz-animation: rainbowan 60s linear infinite;
-  -o-animation: rainbowan 60s linear infinite;
-  -ms-animation: rainbowan 60s linear infinite;
-}
-@-webkit-keyframes rainbowan {
-  to {
-    background-position: -2000vw;
-  }
-}
-@-moz-keyframes rainbowan {
-  to {
-    background-position: -2000vw;
-  }
-}
-@-webkit-keyframes rainbowan {
-  to {
-    background-position: -2000vw;
-  }
-}
-@-o-keyframes rainbowan {
-  to {
-    background-position: -2000vw;
-  }
-}
-@keyframes rainbowan {
-  to {
-    background-position: -2000vw;
-  }
 }
 .swiper {
   width: 100%;
@@ -5899,47 +5859,6 @@ div.tabs .tab-content .tab-pane > .note:last-child {
   background: #fafafa;
   padding-left: 4px;
   padding-right: 4px;
-}
-.article rainbow {
-  background-image: linear-gradient(to left, #ff4500, #ffa500, #ffd700, #90ee90, #0ff, #1e90ff, #9370db, #ff69b4, #ff4500);
-  background-size: 110vw;
-  -webkit-background-size: 110vw;
-  -moz-background-size: 110vw;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-animation: rainbowan 60s linear infinite;
-  animation: rainbowan 60s linear infinite;
-  -webkit-animation: rainbowan 60s linear infinite;
-  -khtml-animation: rainbowan 60s linear infinite;
-  -moz-animation: rainbowan 60s linear infinite;
-  -o-animation: rainbowan 60s linear infinite;
-  -ms-animation: rainbowan 60s linear infinite;
-}
-@-webkit-keyframes rainbowan {
-  to {
-    background-position: -2000vw;
-  }
-}
-@-moz-keyframes rainbowan {
-  to {
-    background-position: -2000vw;
-  }
-}
-@-webkit-keyframes rainbowan {
-  to {
-    background-position: -2000vw;
-  }
-}
-@-o-keyframes rainbowan {
-  to {
-    background-position: -2000vw;
-  }
-}
-@keyframes rainbowan {
-  to {
-    background-position: -2000vw;
-  }
 }
 div.timenode {
   position: relative;
@@ -7588,17 +7507,14 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
     color: var(--color-text) !important;
   }
   :root:not([color-scheme]) .gutter {
-    background: #121212 !important;
-    background-color: #121212 !important;
+    background: var(--color-card) !important;
+    background-color: var(--color-card) !important;
   }
   :root:not([color-scheme]) .highlight figcaption {
     background-color: #21252b;
   }
   :root:not([color-scheme]) .highlight pre .line,
   :root:not([color-scheme]) .highlight pre .params {
-    color: #bbb;
-  }
-  :root:not([color-scheme]) .highlight pre .comment {
     color: rgba(158,142,142,0.9);
   }
   :root:not([color-scheme]) *:not(.highlight) >table tr {
@@ -7660,6 +7576,20 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   :root:not([color-scheme]) .progress {
     background: var(--color-block) !important;
   }
+  :root:not([color-scheme]) .gutter {
+    background: #181818 !important;
+    background-color: #181818 !important;
+  }
+  :root:not([color-scheme]) .highlight figcaption {
+    background-color: #21252b !important;
+  }
+  :root:not([color-scheme]) .highlight pre .line,
+  :root:not([color-scheme]) .highlight pre .params {
+    color: #bbb !important;
+  }
+  :root:not([color-scheme]) .highlight pre .comment {
+    color: rgba(158,142,142,0.9) !important;
+  }
 }
 [color-scheme='dark'] {
   --block-hover: #1c1c1c;
@@ -7697,17 +7627,14 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   color: var(--color-text) !important;
 }
 [color-scheme='dark'] .gutter {
-  background: #121212 !important;
-  background-color: #121212 !important;
+  background: var(--color-card) !important;
+  background-color: var(--color-card) !important;
 }
 [color-scheme='dark'] .highlight figcaption {
   background-color: #21252b;
 }
 [color-scheme='dark'] .highlight pre .line,
 [color-scheme='dark'] .highlight pre .params {
-  color: #bbb;
-}
-[color-scheme='dark'] .highlight pre .comment {
   color: rgba(158,142,142,0.9);
 }
 [color-scheme='dark'] *:not(.highlight) >table tr {
@@ -7768,6 +7695,32 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 }
 [color-scheme='dark'] .progress {
   background: var(--color-block) !important;
+}
+[color-scheme='dark'] .gutter {
+  background: #181818 !important;
+  background-color: #181818 !important;
+}
+[color-scheme='dark'] .highlight figcaption {
+  background-color: #21252b !important;
+}
+[color-scheme='dark'] .highlight pre .line,
+[color-scheme='dark'] .highlight pre .params {
+  color: #bbb !important;
+}
+[color-scheme='dark'] .highlight pre .comment {
+  color: rgba(158,142,142,0.9) !important;
+}
+.article figure:not([class]) {
+  margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  line-height: 0;
+  text-align: center;
+}
+.article figure figcaption {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
 }
 #safearea {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -8876,6 +8829,12 @@ ul.list-v.rightmenu {
   border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
   max-width: 100% !important;
+}
+#l_main.no_sidebar {
+  max-width: 840px !important;
+}
+.body-wrapper {
+  max-width: 1080px !important;
 }
 .tagred {
   background: rgba(255,99,71,0.15) !important;

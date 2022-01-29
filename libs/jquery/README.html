@@ -1,0 +1,29 @@
+<h1 id="jquery">jQuery</h1>
+<blockquote>
+<p>jQuery is a fast, small, and feature-rich JavaScript library.</p>
+</blockquote>
+<p>For information on how to get started and how to use jQuery, please see <a href="https://api.jquery.com/">jQuery's documentation</a>. For source files and issues, please visit the <a href="https://github.com/jquery/jquery">jQuery repo</a>.</p>
+<p>If upgrading, please see the <a href="https://blog.jquery.com/2021/03/02/jquery-3-6-0-released/">blog post for 3.6.0</a>. This includes notable differences from the previous version and a more readable changelog.</p>
+<h2 id="including-jquery">Including jQuery</h2>
+<p>Below are some of the most common ways to include jQuery.</p>
+<h3 id="browser">Browser</h3>
+<h4 id="script-tag">Script tag</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span></code></pre></div>
+<h4 id="babel">Babel</h4>
+<p><a href="https://babeljs.io/">Babel</a> is a next generation JavaScript compiler. One of the features is the ability to use ES6/ES2015 modules now, even though browsers do not yet support this feature natively.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> $ <span class="im">from</span> <span class="st">&quot;jquery&quot;</span><span class="op">;</span></span></code></pre></div>
+<h4 id="browserifywebpack">Browserify/Webpack</h4>
+<p>There are several ways to use <a href="http://browserify.org/">Browserify</a> and <a href="https://webpack.github.io/">Webpack</a>. For more information on using these tools, please refer to the corresponding project's documentation. In the script, including jQuery will usually look like this...</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> $ <span class="op">=</span> <span class="pp">require</span>( <span class="st">&quot;jquery&quot;</span> )<span class="op">;</span></span></code></pre></div>
+<h4 id="amd-asynchronous-module-definition">AMD (Asynchronous Module Definition)</h4>
+<p>AMD is a module format built for the browser. For more information, we recommend <a href="https://requirejs.org/docs/whyamd.html">require.js' documentation</a>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>( [ <span class="st">&quot;jquery&quot;</span> ]<span class="op">,</span> <span class="kw">function</span>( $ ) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>} )<span class="op">;</span></span></code></pre></div>
+<h3 id="node">Node</h3>
+<p>To include jQuery in <a href="https://nodejs.org/">Node</a>, first install with npm.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install jquery</span></code></pre></div>
+<p>For jQuery to work in Node, a window with a document is required. Since no such window exists natively in Node, one can be mocked by tools such as <a href="https://github.com/jsdom/jsdom">jsdom</a>. This can be useful for testing purposes.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> { JSDOM } <span class="op">=</span> <span class="pp">require</span>( <span class="st">&quot;jsdom&quot;</span> )<span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> { <span class="bu">window</span> } <span class="op">=</span> <span class="kw">new</span> <span class="fu">JSDOM</span>( <span class="st">&quot;&quot;</span> )<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> $ <span class="op">=</span> <span class="pp">require</span>( <span class="st">&quot;jquery&quot;</span> )( <span class="bu">window</span> )<span class="op">;</span></span></code></pre></div>

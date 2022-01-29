@@ -741,7 +741,7 @@ button {
     background: var(--color-site-bg) !important;
   }
   :root:not([color-scheme]) .nav-main .u-search-input {
-    background: var(--color-site-bg) !important;
+    background: var(--color-card) !important;
   }
   :root:not([color-scheme]) #l_main .article .prev-next>a {
     background: var(--color-block) !important;
@@ -769,9 +769,6 @@ button {
   }
   :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
     background: var(--color-block) !important;
-  }
-  :root:not([color-scheme]) hr {
-    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
   }
 }
 [color-scheme='dark'] {
@@ -812,7 +809,7 @@ button {
   background: var(--color-site-bg) !important;
 }
 [color-scheme='dark'] .nav-main .u-search-input {
-  background: var(--color-site-bg) !important;
+  background: var(--color-card) !important;
 }
 [color-scheme='dark'] #l_main .article .prev-next>a {
   background: var(--color-block) !important;
@@ -845,9 +842,6 @@ button {
   [color-scheme='dark'] .l_header .m_search {
     background: var(--color-site-bg) !important;
   }
-}
-[color-scheme='dark'] hr {
-  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
 }
 @font-face {
   font-family: 'Docis';

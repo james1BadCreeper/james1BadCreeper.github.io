@@ -1,0 +1,53 @@
+<p><a href="https://marked.js.org"> <img width="60px" height="60px" src="https://marked.js.org/img/logo-black.svg" align="right" /> </a></p>
+<h1 id="marked">Marked</h1>
+<p><a href="https://www.npmjs.com/package/marked"><img src="https://badgen.net/npm/v/marked" alt="npm" /></a> <a href="https://cdn.jsdelivr.net/npm/marked/marked.min.js"><embed src="https://badgen.net/badgesize/gzip/https://cdn.jsdelivr.net/npm/marked/marked.min.js" /></a> <a href="https://packagephobia.now.sh/result?p=marked"><img src="https://badgen.net/packagephobia/install/marked" alt="install size" /></a> <a href="https://www.npmjs.com/package/marked"><img src="https://badgen.net/npm/dt/marked" alt="downloads" /></a> <a href="https://github.com/markedjs/marked/actions"><img src="https://github.com/markedjs/marked/workflows/Tests/badge.svg" alt="github actions" /></a> <a href="https://snyk.io/test/npm/marked"><img src="https://snyk.io/test/npm/marked/badge.svg" alt="snyk" /></a></p>
+<ul>
+<li>⚡ built for speed</li>
+<li>⬇️ low-level compiler for parsing markdown without caching or blocking for long periods of time</li>
+<li>⚖️ light-weight while implementing all markdown features from the supported flavors &amp; specifications</li>
+<li>🌐 works in a browser, on a server, or from a command line interface (CLI)</li>
+</ul>
+<h2 id="demo">Demo</h2>
+<p>Checkout the <a href="https://marked.js.org/demo/">demo page</a> to see marked in action ⛹️</p>
+<h2 id="docs">Docs</h2>
+<p>Our <a href="https://marked.js.org">documentation pages</a> are also rendered using marked 💯</p>
+<p>Also read about:</p>
+<ul>
+<li><a href="https://marked.js.org/#/USING_ADVANCED.md">Options</a></li>
+<li><a href="https://marked.js.org/#/USING_PRO.md">Extensibility</a></li>
+</ul>
+<h2 id="compatibility">Compatibility</h2>
+<p><strong>Node.js:</strong> Only <a href="https://nodejs.org/en/about/releases/">current and LTS</a> Node.js versions are supported. End of life Node.js versions may become incompatible with Marked at any point in time.</p>
+<p><strong>Browser:</strong> Not IE11 :)</p>
+<h2 id="installation">Installation</h2>
+<p><strong>CLI:</strong> <code>npm install -g marked</code></p>
+<p><strong>In-browser:</strong> <code>npm install marked</code></p>
+<h2 id="usage">Usage</h2>
+<h3 id="warning-marked-does-not-sanitize-the-output-html.-please-use-a-sanitize-library-like-dompurify-recommended-sanitize-html-or-insane-on-the-output-html">Warning: 🚨 Marked does not <a href="https://marked.js.org/#/USING_ADVANCED.md#options">sanitize</a> the output HTML. Please use a sanitize library, like <a href="https://github.com/cure53/DOMPurify">DOMPurify</a> (recommended), <a href="https://github.com/apostrophecms/sanitize-html">sanitize-html</a> or <a href="https://github.com/bevacqua/insane">insane</a> on the output HTML! 🚨</h3>
+<p><strong>CLI</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example with stdin input</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> marked <span class="at">-o</span> hello.html</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">hello</span> world</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">^D</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat hello.html</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>p<span class="op">&gt;</span>hello <span class="ex">world</span><span class="op">&lt;</span>/p<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print all options</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> marked <span class="at">--help</span></span></code></pre></div>
+<p><strong>Browser</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype </span>html<span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;meta</span> <span class="er">charset</span><span class="ot">=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">/&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;title&gt;</span>Marked in the browser<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;content&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/marked/marked.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;script&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&#39;content&#39;</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      marked<span class="op">.</span><span class="fu">parse</span>(<span class="st">&#39;# Marked in the browser</span><span class="sc">\n\n</span><span class="st">Rendered by **marked**.&#39;</span>)<span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<h2 id="license">License</h2>
+<p>Copyright (c) 2011-2018, Christopher Jeffrey. (MIT License)</p>

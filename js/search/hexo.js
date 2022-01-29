@@ -8,7 +8,7 @@ let SearchService = (() => {
       <form id="u-search-modal-form" class="u-search-form" name="uSearchModalForm">
         <input type="text" id="u-search-modal-input" class="u-search-input" />
         <button type="submit" id="u-search-modal-btn-submit" class="u-search-btn-submit">
-          <span class="fad fa-search"></span>
+          <span class="fas fa-search"></span>
         </button>
       </form>
       <a id="u-search-btn-close" class="btn-close"> <span class="fas fa-times"></span> </a>
