@@ -7590,6 +7590,9 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   :root:not([color-scheme]) .highlight pre .comment {
     color: rgba(158,142,142,0.9) !important;
   }
+  :root:not([color-scheme]) hr {
+    border-bottom: 1px solid rgba(204,204,204,0.1) !important;
+  }
 }
 [color-scheme='dark'] {
   --block-hover: #1c1c1c;
@@ -7709,6 +7712,9 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 }
 [color-scheme='dark'] .highlight pre .comment {
   color: rgba(158,142,142,0.9) !important;
+}
+[color-scheme='dark'] hr {
+  border-bottom: 1px solid rgba(204,204,204,0.1) !important;
 }
 .article figure:not([class]) {
   margin: 0;
@@ -8791,6 +8797,169 @@ details[open][purple] {
 }
 details[open][purple] >summary {
   border-bottom-color: rgba(156,39,176,0.3);
+}
+.link-fx-1 {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-inline-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-inline-flex /* NEW - Chrome */;
+  display: inline-flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  right: 10px;
+  padding: 0 6px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.link-fx-1 .icon {
+  width: 1.5rem;
+  position: absolute;
+  right: 0;
+  bottom: 1.5px;
+  -webkit-transform: translateX(100%) rotate(90deg);
+  transform: translateX(100%) rotate(90deg);
+  -webkit-transform: translateX(100%) rotate(90deg);
+  -khtml-transform: translateX(100%) rotate(90deg);
+  -moz-transform: translateX(100%) rotate(90deg);
+  -o-transform: translateX(100%) rotate(90deg);
+  -ms-transform: translateX(100%) rotate(90deg);
+}
+.link-fx-1 .icon circle {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.2s;
+  -webkit-transition: stroke-dashoffset 0.2s;
+  -khtml-transition: stroke-dashoffset 0.2s;
+  -moz-transition: stroke-dashoffset 0.2s;
+  -o-transition: stroke-dashoffset 0.2s;
+  -ms-transition: stroke-dashoffset 0.2s;
+}
+.link-fx-1 .icon line {
+  transition: -webkit-transform 0.4s;
+  -webkit-transition: -webkit-transform 0.4s;
+  -khtml-transition: -webkit-transform 0.4s;
+  -moz-transition: -webkit-transform 0.4s;
+  -o-transition: -webkit-transform 0.4s;
+  -ms-transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transition: transform 0.4s;
+  -khtml-transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+  -ms-transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition: transform 0.4s, -webkit-transform 0.4s;
+  -khtml-transition: transform 0.4s, -webkit-transform 0.4s;
+  -moz-transition: transform 0.4s, -webkit-transform 0.4s;
+  -o-transition: transform 0.4s, -webkit-transform 0.4s;
+  -ms-transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transform-origin: 13px 15px;
+  transform-origin: 13px 15px;
+  -webkit-transform-origin: 13px 15px;
+  -khtml-transform-origin: 13px 15px;
+  -moz-transform-origin: 13px 15px;
+  -o-transform-origin: 13px 15px;
+  -ms-transform-origin: 13px 15px;
+}
+.link-fx-1 .icon line:last-child {
+  -webkit-transform-origin: 19px 15px;
+  transform-origin: 19px 15px;
+  -webkit-transform-origin: 19px 15px;
+  -khtml-transform-origin: 19px 15px;
+  -moz-transform-origin: 19px 15px;
+  -o-transform-origin: 19px 15px;
+  -ms-transform-origin: 19px 15px;
+}
+.link-fx-1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+  -webkit-transform-origin: right center;
+  -khtml-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -o-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transition: -webkit-transform 0.2s 0.1s;
+  -webkit-transition: -webkit-transform 0.2s 0.1s;
+  -khtml-transition: -webkit-transform 0.2s 0.1s;
+  -moz-transition: -webkit-transform 0.2s 0.1s;
+  -o-transition: -webkit-transform 0.2s 0.1s;
+  -ms-transition: -webkit-transform 0.2s 0.1s;
+  transition: transform 0.2s 0.1s;
+  -webkit-transition: transform 0.2s 0.1s;
+  -khtml-transition: transform 0.2s 0.1s;
+  -moz-transition: transform 0.2s 0.1s;
+  -o-transition: transform 0.2s 0.1s;
+  -ms-transition: transform 0.2s 0.1s;
+  transition: transform 0.2s 0.1s, -webkit-transform 0.2s 0.1s;
+  -webkit-transition: transform 0.2s 0.1s, -webkit-transform 0.2s 0.1s;
+  -khtml-transition: transform 0.2s 0.1s, -webkit-transform 0.2s 0.1s;
+  -moz-transition: transform 0.2s 0.1s, -webkit-transform 0.2s 0.1s;
+  -o-transition: transform 0.2s 0.1s, -webkit-transform 0.2s 0.1s;
+  -ms-transition: transform 0.2s 0.1s, -webkit-transform 0.2s 0.1s;
+}
+.link-fx-1:hover .icon circle {
+  stroke-dashoffset: 200;
+  transition: stroke-dashoffset 0.2s 0.1s;
+  -webkit-transition: stroke-dashoffset 0.2s 0.1s;
+  -khtml-transition: stroke-dashoffset 0.2s 0.1s;
+  -moz-transition: stroke-dashoffset 0.2s 0.1s;
+  -o-transition: stroke-dashoffset 0.2s 0.1s;
+  -ms-transition: stroke-dashoffset 0.2s 0.1s;
+}
+.link-fx-1:hover .icon line {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -khtml-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+}
+.link-fx-1:hover .icon line:last-child {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -khtml-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+.link-fx-1:hover::before {
+  -webkit-transform: translateX(17px) scaleX(0);
+  transform: translateX(17px) scaleX(0);
+  -webkit-transform: translateX(17px) scaleX(0);
+  -khtml-transform: translateX(17px) scaleX(0);
+  -moz-transform: translateX(17px) scaleX(0);
+  -o-transform: translateX(17px) scaleX(0);
+  -ms-transform: translateX(17px) scaleX(0);
+  transition: -webkit-transform 0.2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  -khtml-transition: -webkit-transform 0.2s;
+  -moz-transition: -webkit-transform 0.2s;
+  -o-transition: -webkit-transform 0.2s;
+  -ms-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  -khtml-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  -o-transition: transform 0.2s;
+  -ms-transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s, -webkit-transform 0.2s;
+  -khtml-transition: transform 0.2s, -webkit-transform 0.2s;
+  -moz-transition: transform 0.2s, -webkit-transform 0.2s;
+  -o-transition: transform 0.2s, -webkit-transform 0.2s;
+  -ms-transition: transform 0.2s, -webkit-transform 0.2s;
 }
 ul.list-v.rightmenu li.music.name p.nav.music-title {
   text-align: center;
