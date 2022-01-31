@@ -1110,6 +1110,7 @@ const colortag = () => {
     }
   });
 }
+colortag();
 
 /**
  * DARKMODE ANIMATE
@@ -1147,11 +1148,11 @@ const switchDarkMode = () => {
   setTimeout(function () {
     if (volantis.dark.mode == "dark") {
       VolantisApp.message('系统提示', '暗黑模式已开启', {
-        icon: 'fal fa-house-night WISTERIA'
+        icon: 'fat fa-house-night WISTERIA'
       });
     } else {
       VolantisApp.message('系统提示', '白昼模式已开启', {
-        icon: 'fal fa-house-day CARROT'
+        icon: 'fat fa-house-day CARROT'
       });
     }
   }, 2800)
