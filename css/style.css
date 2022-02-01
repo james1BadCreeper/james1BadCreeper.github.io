@@ -8926,6 +8926,8 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar {
 .aplayer-loading-icon {
   cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
+.aplayer-volume-wrap,
+.aplayer-volume-bar-wrap,
 .aplayer-volume-bar {
   cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
