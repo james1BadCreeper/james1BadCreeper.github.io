@@ -526,7 +526,7 @@ const RightMenu = (() => {
     if (volantis.isReadModel) {
       const option = {
         backgroundColor: 'var(--color-read-post)',
-        icon: rightMenuConfig.faicon + ' fa-book-reader',
+        icon: 'fat fa-book-reader PETERRIVE',
         time: 5000
       }
       if (messageRightMenu) VolantisApp.message('系统提示', '阅读模式已开启，您可以点击屏幕空白处退出。', option);

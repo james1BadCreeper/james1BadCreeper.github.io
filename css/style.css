@@ -4177,7 +4177,7 @@ div.dropmenu .list-v .list-v {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: -0.15em;
 }
 .md .tag-plugin.emoji img {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -7735,6 +7735,34 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   :root:not([color-scheme]) hr {
     border-bottom: 1px solid rgba(204,204,204,0.1) !important;
   }
+  :root:not([color-scheme]) .article h2 {
+    border-bottom: 1px solid rgba(204,204,204,0.1) !important;
+  }
+  @supports (backdrop-filter: blur(20px)) {
+    :root:not([color-scheme]) .blur {
+      background: rgba(32,32,32,0.9) !important;
+      backdrop-filter: saturate(200%) blur(20px) !important;
+    }
+  }
+  :root:not([color-scheme]) .nav-main .u-search-input {
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) img.lazyload:not(.placeholder):not(.loaded) {
+    opacity: 0 !important;
+    -webkit-opacity: 0 !important;
+    -moz-opacity: 0 !important;
+  }
+  :root:not([color-scheme]) img.lazyload:not(.placeholder).loaded {
+    opacity: 1 !important;
+    -webkit-opacity: 1 !important;
+    -moz-opacity: 1 !important;
+  }
+  :root:not([color-scheme]) img.lazyload:not(.placeholder):not(.loaded) {
+    filter: blur(8px) !important;
+  }
+  :root:not([color-scheme]) img.lazyload:not(.placeholder).loaded {
+    filter: none !important;
+  }
 }
 [color-scheme='dark'] {
   --block-hover: #1c1c1c;
@@ -7857,6 +7885,34 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 }
 [color-scheme='dark'] hr {
   border-bottom: 1px solid rgba(204,204,204,0.1) !important;
+}
+[color-scheme='dark'] .article h2 {
+  border-bottom: 1px solid rgba(204,204,204,0.1) !important;
+}
+@supports (backdrop-filter: blur(20px)) {
+  [color-scheme='dark'] .blur {
+    background: rgba(32,32,32,0.9) !important;
+    backdrop-filter: saturate(200%) blur(20px) !important;
+  }
+}
+[color-scheme='dark'] .nav-main .u-search-input {
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] img.lazyload:not(.placeholder):not(.loaded) {
+  opacity: 0 !important;
+  -webkit-opacity: 0 !important;
+  -moz-opacity: 0 !important;
+}
+[color-scheme='dark'] img.lazyload:not(.placeholder).loaded {
+  opacity: 1 !important;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+}
+[color-scheme='dark'] img.lazyload:not(.placeholder):not(.loaded) {
+  filter: blur(8px) !important;
+}
+[color-scheme='dark'] img.lazyload:not(.placeholder).loaded {
+  filter: none !important;
 }
 .article figure:not([class]) {
   margin: 0;
@@ -8887,10 +8943,13 @@ details[open] > div.content {
   }
 }
 ul.list-v.rightmenu li a {
-  cursor: url("/media/cursor/left_ptr.png"), default !important;
+  cursor: url("/media/cursor/left_ptr.png"), default;
+}
+ul.list-v.rightmenu li.menuLoad-Content a {
+  cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar {
-  cursor: url("/media/cursor/left_ptr.png"), default !important;
+  cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-pic,
 .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon,
@@ -8922,20 +8981,18 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar {
 .gitter-open-chat-button {
   cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
-.aplayer-bar-wrap,
-.aplayer-bar,
-.aplayer-loaded,
-.aplayer-thumb,
-.aplayer-loading-icon {
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap,
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar,
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded,
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played,
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span,
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span span,
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span span svg {
   cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer-volume-wrap,
-.aplayer-volume-bar-wrap,
 .aplayer-volume-bar {
   cursor: url("/media/cursor/pointer.png"), pointer !important;
-}
-.giscus-frame {
-  cursor: url("/media/cursor/left_ptr.png"), default !important;
 }
 .not-select,
 figcaption,
@@ -8993,6 +9050,11 @@ details[open][purple] {
 }
 details[open][purple] >summary {
   border-bottom-color: rgba(156,39,176,0.3);
+}
+.markdown-body details:not([open])>*:not(summary) {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: inline !important;
 }
 .link-fx-1 {
   position: relative;
