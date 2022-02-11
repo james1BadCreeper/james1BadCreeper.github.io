@@ -372,16 +372,20 @@ const VolantisApp = (() => {
 
   // hexo-reference 页脚跳转 https://github.com/volantis-x/hexo-theme-volantis/issues/647
   fn.footnotes = () => {
-    let ref = document.querySelectorAll('#l_main .footnote-backref, #l_main .footnote-ref > a');
+    // let ref = document.querySelectorAll('#l_main .footnote-backref, #l_main .footnote-ref > a');
+    let ref = document.querySelectorAll('#l_main .footnote-back, #l_main .footnote-ref'); // pandoc 专用版，非 pandoc 请启用上一行
     ref.forEach(function (e, i) {
       ref[i].click = () => { }; // 强制清空原 click 事件
       volantis.dom.$(e).on('click', (e) => {
         e.stopPropagation();
         e.preventDefault();
-        let targetID = decodeURI(e.target.hash.split('#')[1]).replace(/\ /g, '-');
+        let targetID;
+        if (e.target.nodeName == "SUP") targetID = decodeURI(e.target.parentElement.hash.split('#')[1]).replace(/\ /g, '-');
+        else targetID = decodeURI(e.target.hash.split('#')[1]).replace(/\ /g, '-');
         let target = document.getElementById(targetID);
         if (target) {
-          volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant' })
+          // volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant' })
+          volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'smooth' })
         }
       });
     })

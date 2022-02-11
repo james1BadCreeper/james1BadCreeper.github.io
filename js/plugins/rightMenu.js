@@ -44,6 +44,7 @@ const RightMenu = (() => {
 
   fn.initEvent = () => {
     window.document.oncontextmenu = (event) => {
+      fn.hideMenu();
       if (event.ctrlKey || document.body.offsetWidth <= 500) {
         fn.hideMenu();
         return true;
@@ -118,6 +119,8 @@ const RightMenu = (() => {
     if (eventTarget.tagName.toLowerCase() === 'input' || eventTarget.tagName.toLowerCase() === 'textarea') {
       const inputStr = eventTarget.value;
 
+      optionFlag = true;
+      
       // 全选 
       if (inputStr.length > 0) {
         DOMController.visible(_copySelect);
@@ -155,6 +158,11 @@ const RightMenu = (() => {
           }
         } else {
           DOMController.visible(_copyPaste, false);
+          if (inputStr.length <= 0) {
+            _menuLoad.forEach(ele => {
+              DOMController.visible(ele, true);
+            })
+          }
         }
       }).catch((err) => {
         console.error(err);
