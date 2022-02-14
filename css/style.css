@@ -7178,23 +7178,23 @@ p,
 input,
 pre>span,
 textarea {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/text.png"), text;
+  cursor: url("/media/cursor/text.png"), text;
 }
 .fancybox-container .fancybox-stage,
 .fancybox__carousel .is-draggable {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/zoom-out.png"), zoom-out;
+  cursor: url("/media/cursor/zoom-out.png"), zoom-out;
 }
 .fancybox a,
 .fancybox-can-zoomIn .fancybox-content,
 .fancybox__carousel .fancybox__slide.can-zoom_in .fancybox__content {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/zoom-in.png"), zoom-in;
+  cursor: url("/media/cursor/zoom-in.png"), zoom-in;
 }
 span.btn>a:not([href]):hover,
 .fancybox-button[disabled],
 .fancybox-button[disabled]:hover,
 .gt-container .gt-btn.is--disable,
 span.not-select {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/circle.png"), not-allowed;
+  cursor: url("/media/cursor/circle.png"), not-allowed;
 }
 html,
 a:not([href]),
@@ -7221,7 +7221,7 @@ kbd,
 p > img,
 p > svg,
 .fix-cursor-default {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/left_ptr.png"), default;
+  cursor: url("/media/cursor/left_ptr.png"), default;
 }
 a,
 psw,
@@ -7290,31 +7290,31 @@ a.result.search-result-fix,
 .tk-action-icon,
 .fancybox,
 .fix-cursor-pointer {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/pointer.png"), pointer;
+  cursor: url("/media/cursor/pointer.png"), pointer;
 }
 .cur-default {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/left_ptr.png"), default !important;
+  cursor: url("/media/cursor/left_ptr.png"), default !important;
 }
 .cur-pointer,
 .carousel__button,
 .fancybox__slide {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/pointer.png"), pointer !important;
+  cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 .cur-not-allowed {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/circle.png"), not-allowed !important;
+  cursor: url("/media/cursor/circle.png"), not-allowed !important;
 }
 .cur-zoom-in,
 .fancybox__carousel .fancybox__slide.can-zoom_in .fancybox__content,
 .has-image[data-image-fit=contain].can-zoom_in .fancybox__image {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/zoom-in.png"), zoom-in !important;
+  cursor: url("/media/cursor/zoom-in.png"), zoom-in !important;
 }
 .cur-zoom-out,
 .fancybox__carousel .is-draggable,
 .has-image[data-image-fit=contain].is-draggable .fancybox__image {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/zoom-out.png"), zoom-out !important;
+  cursor: url("/media/cursor/zoom-out.png"), zoom-out !important;
 }
 .cur-text {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/text.png"), text !important;
+  cursor: url("/media/cursor/text.png"), text !important;
 }
 .common_read {
   z-index: auto !important;
@@ -8999,13 +8999,13 @@ details[open] > div.content {
   }
 }
 ul.list-v.rightmenu li a {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/left_ptr.png"), default;
+  cursor: url("/media/cursor/left_ptr.png"), default;
 }
 ul.list-v.rightmenu li.menuLoad-Content a {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/pointer.png"), pointer !important;
+  cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/pointer.png"), pointer !important;
+  cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-pic,
 .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon,
@@ -9013,29 +9013,29 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar {
 .aplayer .aplayer-list ol li,
 .aplayer .aplayer-list ol li .aplayer-list-author,
 .aplayer .aplayer-list ol li .aplayer-list-index {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/pointer.png"), pointer !important;
+  cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 .chat-app {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/left_ptr.png"), default !important;
+  cursor: url("/media/cursor/left_ptr.png"), default !important;
 }
 .iziToast,
 .iziToast p {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/left_ptr.png"), default !important;
+  cursor: url("/media/cursor/left_ptr.png"), default !important;
 }
 .iziToast-close,
 .gitter-chat-embed-action-bar-item,
 .btn {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/pointer.png"), pointer !important;
+  cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-info .aplayer-music {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/left_ptr.png"), default !important;
+  cursor: url("/media/cursor/left_ptr.png"), default !important;
 }
 .aplayer .aplayer-info .aplayer-music .aplayer-title,
 .aplayer .aplayer-info .aplayer-music .aplayer-author {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/text.png"), text !important;
+  cursor: url("/media/cursor/text.png"), text !important;
 }
 .gitter-open-chat-button {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/pointer.png"), pointer !important;
+  cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap,
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar,
@@ -9044,14 +9044,14 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar {
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span,
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span span,
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span span svg {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/pointer.png"), pointer !important;
+  cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer-volume-wrap,
 .aplayer-volume-bar {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/pointer.png"), pointer !important;
+  cursor: url("/media/cursor/pointer.png"), pointer !important;
 }
 iframe {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/left_ptr.png"), default !important;
+  cursor: url("/media/cursor/left_ptr.png"), default !important;
 }
 .not-select,
 figcaption,
@@ -9078,14 +9078,14 @@ figcaption span,
 details summary span,
 .new-meta-box span,
 .nav-tabs span {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/left_ptr.png"), default;
+  cursor: url("/media/cursor/left_ptr.png"), default;
 }
 .not-select.default-cursor,
 figcaption.default-cursor,
 details summary.default-cursor,
 .new-meta-box.default-cursor,
 .nav-tabs.default-cursor {
-  cursor: url("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/cursor/left_ptr.png"), default !important;
+  cursor: url("/media/cursor/left_ptr.png"), default !important;
 }
 .allow-select {
   -webkit-touch-callout: all;
