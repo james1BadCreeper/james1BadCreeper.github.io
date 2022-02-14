@@ -43,8 +43,8 @@ const RightMenu = (() => {
   }
 
   fn.initEvent = () => {
+    fn.hideMenu();
     window.document.oncontextmenu = (event) => {
-      fn.hideMenu();
       if (event.ctrlKey || document.body.offsetWidth <= 500) {
         fn.hideMenu();
         return true;
@@ -93,7 +93,6 @@ const RightMenu = (() => {
       return true;
     }
 
-    fn.hideMenu();
     return false;
   }
 
