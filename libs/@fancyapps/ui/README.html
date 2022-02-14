@@ -1,143 +1,161 @@
-<h1 id="fancyapps-ui">Fancyapps UI</h1>
+<h1>Fancyapps UI</h1>
 <p>Collection of task-oriented components that will make you more productive. Packed full of features that you and your clients will love.</p>
-<p>Full docs with examples: https://fancyapps.com/docs/ui/quick-start/.</p>
-<h2 id="installation">Installation</h2>
-<h3 id="npm">NPM</h3>
+<p>Full docs with examples: <a href="https://fancyapps.com/docs/ui/quick-start/">https://fancyapps.com/docs/ui/quick-start/</a>.</p>
+<h2 id="Installation-5">Installation</h2>
+<h3 id="NPM">NPM</h3>
 <p>Use either <code>npm</code> or <code>yarn</code> as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install @fancyapps/ui</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">//</span> or</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">yarn</span> add  @fancyapps/ui</span></code></pre></div>
+<pre><code class="language-bash">npm install @fancyapps/ui
+// or
+yarn add  @fancyapps/ui
+</code></pre>
 <p>Import one or more components:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { Fancybox<span class="op">,</span> Carousel<span class="op">,</span> Panzoom } <span class="im">from</span> <span class="st">&quot;@fancyapps/ui&quot;</span><span class="op">;</span></span></code></pre></div>
+<pre><code class="language-jsx">import { Fancybox, Carousel, Panzoom } from &quot;@fancyapps/ui&quot;;
+</code></pre>
 <p>Import the appropriate CSS file, example:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> <span class="st">&quot;@fancyapps/ui/dist/fancybox.css&quot;</span><span class="op">;</span></span></code></pre></div>
-<h3 id="cdn">CDN</h3>
+<pre><code class="language-jsx">import &quot;@fancyapps/ui/dist/fancybox.css&quot;;
+</code></pre>
+<h3 id="CDN-2">CDN</h3>
 <p>A pre-bundled scripts that contain components are available on <a href="https://www.jsdelivr.com/package/npm/@fancyapps/ui?path=dist">CDN</a>.</p>
 <blockquote>
 <p><strong><em>NOTE:</em></strong> Because Fancybox is build on top of both Carousel and Panzoom components, you only have to include <code>fancybox.umd.js</code> and all 3 components will be available through the <code>window</code> object.</p>
 </blockquote>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span></code></pre></div>
+<pre><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js&quot;&gt;&lt;/script&gt;
+</code></pre>
 <p>Or use ES6 import:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="im">import</span> { Fancybox } <span class="im">from</span> <span class="st">&quot;https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.esm.js&quot;</span><span class="op">;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<pre><code class="language-html">&lt;script type=&quot;module&quot;&gt;
+  import { Fancybox } from &quot;https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.esm.js&quot;;
+&lt;/script&gt;
+</code></pre>
 <p>Remember to include the appropriate CSS file, example:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css&quot;</span> <span class="kw">/&gt;</span></span></code></pre></div>
-<h2 id="usage">Usage</h2>
-<h3 id="fancybox">Fancybox</h3>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css&quot; /&gt;
+</code></pre>
+<h2 id="Usage-5">Usage</h2>
+<h3 id="Fancybox">Fancybox</h3>
 <p>There are two ways to use Fancybox.</p>
-<h4 id="declarative">Declarative</h4>
+<h4 id="Declarative">Declarative</h4>
 <p>Add a <code>data-fancybox</code> attribute to any element to enable Fancybox. Galleries are created by adding the same attribute <code>data-fancybox</code> value to multiple elements. Use <code>data-src</code> or <code>href</code> attribute to specify the source of the content. Add a <code>data-caption</code> attribute if you want to show a caption under the content.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="ot">href</span><span class="op">=</span><span class="st">&quot;https://lipsum.app/id/1/1024x768&quot;</span> <span class="ot">data-fancybox</span><span class="op">=</span><span class="st">&quot;gallery&quot;</span> <span class="ot">data-caption</span><span class="op">=</span><span class="st">&quot;Optional caption&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  Image</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/a&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="ot">href</span><span class="op">=</span><span class="st">&quot;http://media.w3.org/2010/05/sintel/trailer.mp4&quot;</span> <span class="ot">data-fancybox</span><span class="kw">&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  Video</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/a&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="ot">href</span><span class="op">=</span><span class="st">&quot;https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10500.902039411158!2d2.2913514905137315!3d48.85391001859112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1slv!2slv!4v1622011463926!5m2!1slv!2slv&quot;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="ot">data-fancybox</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="ot">data-type</span><span class="op">=</span><span class="st">&quot;iframe&quot;</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="ot">data-preload</span><span class="op">=</span><span class="st">&quot;false&quot;</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="ot">data-width</span><span class="op">=</span><span class="st">&quot;640&quot;</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="ot">data-height</span><span class="op">=</span><span class="st">&quot;480&quot;</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  Iframe</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/a&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;button</span> <span class="ot">data-fancybox</span> <span class="ot">data-src</span><span class="op">=</span><span class="st">&quot;#dialog-content&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  HTML element</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/button&gt;</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="ot">id</span><span class="op">=</span><span class="st">&quot;dialog-content&quot;</span> <span class="ot">style</span><span class="op">=</span><span class="st">&quot;display:none;&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;h2&gt;</span>Hello, world!<span class="kw">&lt;/h2&gt;</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p&gt;</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;input</span> <span class="ot">type</span><span class="op">=</span><span class="st">&quot;text&quot;</span> <span class="ot">value</span><span class="op">=</span><span class="st">&quot;See if changes remain after closing the dialog&quot;</span> <span class="kw">/&gt;</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/p&gt;</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<pre><code class="language-jsx">&lt;a href=&quot;https://lipsum.app/id/1/1024x768&quot; data-fancybox=&quot;gallery&quot; data-caption=&quot;Optional caption&quot;&gt;
+  Image
+&lt;/a&gt;
+</code></pre>
+<pre><code class="language-jsx">&lt;a href=&quot;http://media.w3.org/2010/05/sintel/trailer.mp4&quot; data-fancybox&gt;
+  Video
+&lt;/a&gt;
+</code></pre>
+<pre><code class="language-jsx">&lt;a
+  href=&quot;https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10500.902039411158!2d2.2913514905137315!3d48.85391001859112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1slv!2slv!4v1622011463926!5m2!1slv!2slv&quot;
+  data-fancybox
+  data-type=&quot;iframe&quot;
+  data-preload=&quot;false&quot;
+  data-width=&quot;640&quot;
+  data-height=&quot;480&quot;
+&gt;
+  Iframe
+&lt;/a&gt;
+</code></pre>
+<pre><code class="language-jsx">&lt;button data-fancybox data-src=&quot;#dialog-content&quot;&gt;
+  HTML element
+&lt;/button&gt;
+
+&lt;div id=&quot;dialog-content&quot; style=&quot;display:none;&quot;&gt;
+  &lt;h2&gt;Hello, world!&lt;/h2&gt;
+  &lt;p&gt;
+    &lt;input type=&quot;text&quot; value=&quot;See if changes remain after closing the dialog&quot; /&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
 <p>Customize options:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Fancybox<span class="op">.</span><span class="fu">bind</span>(<span class="st">&quot;[data-fancybox]&quot;</span><span class="op">,</span> {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Your options go here</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
-<h4 id="programmatic">Programmatic</h4>
-<div class="sourceCode" id="cb12"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Image gallery</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> gallery <span class="op">=</span> [</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">src</span><span class="op">:</span> <span class="st">&quot;https://lipsum.app/id/2/800x600&quot;</span><span class="op">,</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">thumb</span><span class="op">:</span> <span class="st">&quot;https://lipsum.app/id/2/80x80&quot;</span><span class="op">,</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">caption</span><span class="op">:</span> <span class="st">&quot;First image&quot;</span><span class="op">,</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">src</span><span class="op">:</span> <span class="st">&quot;https://lipsum.app/id/3/800x600&quot;</span><span class="op">,</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">thumb</span><span class="op">:</span> <span class="st">&quot;https://lipsum.app/id/3/80x80&quot;</span><span class="op">,</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">caption</span><span class="op">:</span> <span class="st">&quot;Second image&quot;</span><span class="op">,</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">src</span><span class="op">:</span> <span class="st">&quot;https://lipsum.app/id/4/800x600&quot;</span><span class="op">,</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">thumb</span><span class="op">:</span> <span class="st">&quot;https://lipsum.app/id/4/80x80&quot;</span><span class="op">,</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">caption</span><span class="op">:</span> <span class="st">&quot;Third image&quot;</span><span class="op">,</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>Fancybox<span class="op">.</span><span class="fu">show</span>(gallery<span class="op">,</span> {</span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Your options go here</span></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="co">// HTML element</span></span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>Fancybox<span class="op">.</span><span class="fu">show</span>([{ <span class="dt">src</span><span class="op">:</span> <span class="st">&quot;#dialog-content&quot;</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">&quot;inline&quot;</span> }])<span class="op">;</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="co">// A copy of HTML element</span></span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>Fancybox<span class="op">.</span><span class="fu">show</span>([{ <span class="dt">src</span><span class="op">:</span> <span class="st">&quot;#dialog-content&quot;</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">&quot;clone&quot;</span> }])<span class="op">;</span></span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a><span class="co">// Any HTML content</span></span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>Fancybox<span class="op">.</span><span class="fu">show</span>([{ <span class="dt">src</span><span class="op">:</span> <span class="st">&quot;&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;&quot;</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">&quot;html&quot;</span> }])<span class="op">;</span></span></code></pre></div>
-<h3 id="carousel">Carousel</h3>
+<pre><code class="language-js">Fancybox.bind(&quot;[data-fancybox]&quot;, {
+  // Your options go here
+});
+</code></pre>
+<h4 id="Programmatic">Programmatic</h4>
+<pre><code class="language-js">// Image gallery
+var gallery = [
+  {
+    src: &quot;https://lipsum.app/id/2/800x600&quot;,
+    thumb: &quot;https://lipsum.app/id/2/80x80&quot;,
+    caption: &quot;First image&quot;,
+  },
+  {
+    src: &quot;https://lipsum.app/id/3/800x600&quot;,
+    thumb: &quot;https://lipsum.app/id/3/80x80&quot;,
+    caption: &quot;Second image&quot;,
+  },
+  {
+    src: &quot;https://lipsum.app/id/4/800x600&quot;,
+    thumb: &quot;https://lipsum.app/id/4/80x80&quot;,
+    caption: &quot;Third image&quot;,
+  },
+];
+
+Fancybox.show(gallery, {
+  // Your options go here
+});
+
+// HTML element
+Fancybox.show([{ src: &quot;#dialog-content&quot;, type: &quot;inline&quot; }]);
+
+// A copy of HTML element
+Fancybox.show([{ src: &quot;#dialog-content&quot;, type: &quot;clone&quot; }]);
+
+// Any HTML content
+Fancybox.show([{ src: &quot;&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;&quot;, type: &quot;html&quot; }]);
+</code></pre>
+<h3 id="Carousel">Carousel</h3>
 <p>Add HTML markup</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;myCarousel&quot;</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;carousel&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;carousel__slide&quot;</span><span class="kw">&gt;</span>1<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;carousel__slide&quot;</span><span class="kw">&gt;</span>2<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;carousel__slide&quot;</span><span class="kw">&gt;</span>3<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<pre><code class="language-html">&lt;div id=&quot;myCarousel&quot; class=&quot;carousel&quot;&gt;
+  &lt;div class=&quot;carousel__slide&quot;&gt;1&lt;/div&gt;
+  &lt;div class=&quot;carousel__slide&quot;&gt;2&lt;/div&gt;
+  &lt;div class=&quot;carousel__slide&quot;&gt;3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 <p>Initialise Carousel</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> myCarousel <span class="op">=</span> <span class="kw">new</span> <span class="fu">Carousel</span>(<span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;#myCarousel&quot;</span>)<span class="op">,</span> {</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Your options go here</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<pre><code class="language-js">const myCarousel = new Carousel(document.querySelector(&quot;#myCarousel&quot;), {
+  // Your options go here
+});
+</code></pre>
 <p>Optionally, use CSS to customize container, navigation elements and slides</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.carousel</span> {</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">#170724</span><span class="op">;</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--carousel-button-bg</span>: <span class="cn">#fff</span><span class="op">;</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--carousel-button-shadow</span>: <span class="dv">0</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">-1</span><span class="dt">px</span> <span class="fu">rgb(</span><span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> / <span class="dv">20</span><span class="dt">%</span><span class="fu">)</span><span class="op">,</span> <span class="dv">0</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">0</span> <span class="fu">rgb(</span><span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> / <span class="dv">14</span><span class="dt">%</span><span class="fu">)</span><span class="op">,</span> <span class="dv">0</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">3</span><span class="dt">px</span> <span class="dv">0</span> <span class="fu">rgb(</span><span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> / <span class="dv">12</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="va">--carousel-button-svg-width</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">--carousel-button-svg-height</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="va">--carousel-button-svg-stroke-width</span>: <span class="dv">2.5</span><span class="op">;</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.carousel__slide</span> {</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: flex<span class="op">;</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">align-items</span>: <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">justify-content</span>: <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">80</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">160</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-right</span>: <span class="dv">6</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#eee</span><span class="op">;</span></span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span>: <span class="dv">6</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h3 id="panzoom">Panzoom</h3>
+<pre><code class="language-css">.carousel {
+  color: #170724;
+
+  --carousel-button-bg: #fff;
+  --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+
+  --carousel-button-svg-width: 20px;
+  --carousel-button-svg-height: 20px;
+  --carousel-button-svg-stroke-width: 2.5;
+}
+
+.carousel__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  height: 160px;
+  margin-right: 6px;
+
+  background-color: #eee;
+  border-radius: 6px;
+}
+</code></pre>
+<h3 id="Panzoom">Panzoom</h3>
 <p>Add HTML markup</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;myPanzoom&quot;</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;panzoom&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;img</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;panzoom__content&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://lipsum.app/id/3/2000x1500&quot;</span> <span class="er">alt</span><span class="ot">=</span><span class="st">&quot;&quot;</span> <span class="kw">/&gt;</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<pre><code class="language-html">&lt;div id=&quot;myPanzoom&quot; class=&quot;panzoom&quot;&gt;
+  &lt;img class=&quot;panzoom__content&quot; src=&quot;https://lipsum.app/id/3/2000x1500&quot; alt=&quot;&quot; /&gt;
+&lt;/div&gt;
+</code></pre>
 <p>Initialise Panzoom</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> myPanzoom <span class="op">=</span> <span class="kw">new</span> <span class="fu">Panzoom</span>(<span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&quot;#myPanzoom&quot;</span>)<span class="op">,</span> {</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Your options go here</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<pre><code class="language-js">const myPanzoom = new Panzoom(document.querySelector(&quot;#myPanzoom&quot;), {
+  // Your options go here
+});
+</code></pre>
 <p>Optionally, use CSS to customize container</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.panzoom</span> {</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">400</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">300</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h2 id="license">License</h2>
+<pre><code class="language-css">.panzoom {
+  width: 400px;
+  height: 300px;
+}
+</code></pre>
+<h2 id="License-6">License</h2>
 <p>This is commercial software. See <a href="LICENSE.md">LICENSE.md</a> for more info.</p>

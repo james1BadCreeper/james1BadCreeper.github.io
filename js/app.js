@@ -79,6 +79,14 @@ const VolantisApp = (() => {
       }
     }
 
+    // 站点信息 运行时间
+    if(!!document.getElementById('webinfo-runtime-count')) {
+      let BirthDay = new Date(volantis.THEMECONFIG.sidebar.widget_library.webinfo.type.runtime.data);
+      let timeold = (new Date().getTime() - BirthDay.getTime());
+      let daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
+      document.getElementById('webinfo-runtime-count').innerHTML = `${daysold} ${volantis.THEMECONFIG.sidebar.widget_library.webinfo.type.runtime.unit}`;
+    }
+
     // 消息提示 复制时弹出
     if (volantis.THEMECONFIG.plugins.message.enable
       && volantis.THEMECONFIG.plugins.message.copyright.enable) {
@@ -372,16 +380,13 @@ const VolantisApp = (() => {
 
   // hexo-reference 页脚跳转 https://github.com/volantis-x/hexo-theme-volantis/issues/647
   fn.footnotes = () => {
-    // let ref = document.querySelectorAll('#l_main .footnote-backref, #l_main .footnote-ref > a');
-    let ref = document.querySelectorAll('#l_main .footnote-back, #l_main .footnote-ref'); // pandoc 专用版，非 pandoc 请启用上一行
+    let ref = document.querySelectorAll('#l_main .footnote-backref, #l_main .footnote-ref > a');
     ref.forEach(function (e, i) {
       ref[i].click = () => { }; // 强制清空原 click 事件
       volantis.dom.$(e).on('click', (e) => {
         e.stopPropagation();
         e.preventDefault();
-        let targetID;
-        if (e.target.nodeName == "SUP") targetID = decodeURI(e.target.parentElement.hash.split('#')[1]).replace(/\ /g, '-');
-        else targetID = decodeURI(e.target.hash.split('#')[1]).replace(/\ /g, '-');
+        let targetID = decodeURI(e.target.hash.split('#')[1]).replace(/\ /g, '-');
         let target = document.getElementById(targetID);
         if (target) {
           // volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant' })

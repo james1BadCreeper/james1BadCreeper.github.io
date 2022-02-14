@@ -2,184 +2,187 @@
 <img src="https://user-images.githubusercontent.com/2666735/30651452-58ae6c88-9deb-11e7-9e13-6beae3f6c54c.png" alt="Meting">
 </p>
 <p align="center">
-<a href="https://i-meto.com"><img alt="Author" src="https://img.shields.io/badge/Author-METO-blue.svg?style=flat-square"/></a> <a href="https://www.npmjs.com/package/meting"><img alt="Version" src="https://img.shields.io/npm/v/meting.svg?style=flat-square"/></a> <a href="https://travis-ci.org/metowolf/MetingJS"><img alt="Travis" src="https://img.shields.io/travis/metowolf/MetingJS.svg?style=flat-square"></a> <img alt="License" src="https://img.shields.io/npm/l/meting.svg?style=flat-square"/>
+<a href="https://i-meto.com"><img alt="Author" src="https://img.shields.io/badge/Author-METO-blue.svg?style=flat-square"/></a>
+<a href="https://www.npmjs.com/package/meting"><img alt="Version" src="https://img.shields.io/npm/v/meting.svg?style=flat-square"/></a>
+<a href="https://travis-ci.org/metowolf/MetingJS"><img alt="Travis" src="https://img.shields.io/travis/metowolf/MetingJS.svg?style=flat-square"></a>
+<img alt="License" src="https://img.shields.io/npm/l/meting.svg?style=flat-square"/>
 </p>
-<h2 id="requirement">Requirement</h2>
-<p>https://github.com/MoePlayer/APlayer</p>
+<h2 id="Requirement">Requirement</h2>
+<p><a href="https://github.com/MoePlayer/APlayer">https://github.com/MoePlayer/APlayer</a></p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Version</th>
 <th>API Status</th>
 <th>APlayer</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>1.2.x</td>
 <td>Supported</td>
-<td><a href="https://github.com/MoePlayer/APlayer"><img src="https://img.shields.io/badge/APlayer-%5E1.10.0-green.svg?longCache=true&amp;style=for-the-badge" /></a></td>
+<td><a href="https://github.com/MoePlayer/APlayer"><img src="https://img.shields.io/badge/APlayer-%5E1.10.0-green.svg?longCache=true&amp;style=for-the-badge" alt=""></a></td>
 </tr>
-<tr class="even">
+<tr>
 <td>2.0.x</td>
 <td>Latest</td>
-<td><a href="https://github.com/MoePlayer/APlayer"><img src="https://img.shields.io/badge/APlayer-%5E1.10.0-green.svg?longCache=true&amp;style=for-the-badge" /></a></td>
+<td><a href="https://github.com/MoePlayer/APlayer"><img src="https://img.shields.io/badge/APlayer-%5E1.10.0-green.svg?longCache=true&amp;style=for-the-badge" alt=""></a></td>
 </tr>
 </tbody>
 </table>
-<h2 id="cdn">CDN</h2>
+<h2 id="CDN">CDN</h2>
 <ul>
-<li>https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js</li>
-<li>https://unpkg.com/meting@2.0.1/dist/Meting.min.js</li>
+<li><a href="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js">https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js</a></li>
+<li><a href="https://unpkg.com/meting@2.0.1/dist/Meting.min.js">https://unpkg.com/meting@2.0.1/dist/Meting.min.js</a></li>
 </ul>
-<h2 id="quick-start">Quick Start</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- require APlayer --&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- require MetingJS --&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meting-js</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ot">    server=</span><span class="st">&quot;netease&quot;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ot">    type=</span><span class="st">&quot;playlist&quot;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ot">    id=</span><span class="st">&quot;60198&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/meting-js&gt;</span></span></code></pre></div>
-<p>https://music.163.com/#/playlist?id=60198</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meting-js</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ot">    auto=</span><span class="st">&quot;https://y.qq.com/n/yqq/song/001RGrEX3ija5X.html&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/meting-js&gt;</span></span></code></pre></div>
-<p>https://y.qq.com/n/yqq/song/001RGrEX3ija5X.html</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meting-js</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ot">    name=</span><span class="st">&quot;rainymood&quot;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ot">    artist=</span><span class="st">&quot;rainymood&quot;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ot">    url=</span><span class="st">&quot;https://rainymood.com/audio1110/0.m4a&quot;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ot">    cover=</span><span class="st">&quot;https://rainymood.com/i/badge.jpg&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/meting-js&gt;</span></span></code></pre></div>
+<h2 id="Quick-Start">Quick Start</h2>
+<pre><code class="language-html">&lt;!-- require APlayer --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- require MetingJS --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;meting-js
+	server=&quot;netease&quot;
+	type=&quot;playlist&quot;
+	id=&quot;60198&quot;&gt;
+&lt;/meting-js&gt;
+</code></pre>
+<p><a href="https://music.163.com/#/playlist?id=60198">https://music.163.com/#/playlist?id=60198</a></p>
+<pre><code class="language-html">&lt;meting-js
+	auto=&quot;https://y.qq.com/n/yqq/song/001RGrEX3ija5X.html&quot;&gt;
+&lt;/meting-js&gt;
+</code></pre>
+<p><a href="https://y.qq.com/n/yqq/song/001RGrEX3ija5X.html">https://y.qq.com/n/yqq/song/001RGrEX3ija5X.html</a></p>
+<pre><code class="language-html">&lt;meting-js
+	name=&quot;rainymood&quot;
+	artist=&quot;rainymood&quot;
+	url=&quot;https://rainymood.com/audio1110/0.m4a&quot;
+	cover=&quot;https://rainymood.com/i/badge.jpg&quot;&gt;
+&lt;/meting-js&gt;
+</code></pre>
 <p>for self-hosted media</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meting-js</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ot">    name=</span><span class="st">&quot;rainymood&quot;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ot">    artist=</span><span class="st">&quot;rainymood&quot;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ot">    url=</span><span class="st">&quot;https://rainymood.com/audio1110/0.m4a&quot;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ot">    cover=</span><span class="st">&quot;https://rainymood.com/i/badge.jpg&quot;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ot">    fixed=</span><span class="st">&quot;true&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;pre</span> <span class="er">hidden</span><span class="kw">&gt;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        [00:00.00]This</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        [00:04.01]is</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        [00:08.02]lyric</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/pre&gt;</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/meting-js&gt;</span></span></code></pre></div>
+<pre><code class="language-html">&lt;meting-js
+	name=&quot;rainymood&quot;
+	artist=&quot;rainymood&quot;
+	url=&quot;https://rainymood.com/audio1110/0.m4a&quot;
+	cover=&quot;https://rainymood.com/i/badge.jpg&quot;
+	fixed=&quot;true&quot;&gt;
+	&lt;pre hidden&gt;
+		[00:00.00]This
+		[00:04.01]is
+		[00:08.02]lyric
+	&lt;/pre&gt;
+&lt;/meting-js&gt;
+</code></pre>
 <p>Fixed mode with Lyric text</p>
-<h2 id="option">Option</h2>
+<h2 id="Option">Option</h2>
 <table>
-<colgroup>
-<col style="width: 45%" />
-<col style="width: 30%" />
-<col style="width: 23%" />
-</colgroup>
 <thead>
-<tr class="header">
-<th style="text-align: left;">option</th>
-<th style="text-align: center;">default</th>
-<th style="text-align: left;">description</th>
+<tr>
+<th style="text-align:left">option</th>
+<th style="text-align:center">default</th>
+<th style="text-align:left">description</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: left;">id</td>
-<td style="text-align: center;"><strong>require</strong></td>
-<td style="text-align: left;">song id / playlist id / album id / search keyword</td>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:center"><strong>require</strong></td>
+<td style="text-align:left">song id / playlist id / album id / search keyword</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">server</td>
-<td style="text-align: center;"><strong>require</strong></td>
-<td style="text-align: left;">music platform: <code>netease</code>, <code>tencent</code>, <code>kugou</code>, <code>xiami</code>, <code>baidu</code></td>
+<tr>
+<td style="text-align:left">server</td>
+<td style="text-align:center"><strong>require</strong></td>
+<td style="text-align:left">music platform: <code>netease</code>, <code>tencent</code>, <code>kugou</code>, <code>xiami</code>, <code>baidu</code></td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">type</td>
-<td style="text-align: center;"><strong>require</strong></td>
-<td style="text-align: left;"><code>song</code>, <code>playlist</code>, <code>album</code>, <code>search</code>, <code>artist</code></td>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:center"><strong>require</strong></td>
+<td style="text-align:left"><code>song</code>, <code>playlist</code>, <code>album</code>, <code>search</code>, <code>artist</code></td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">auto</td>
-<td style="text-align: center;">options</td>
-<td style="text-align: left;">music link, support: <code>netease</code>, <code>tencent</code>, <code>xiami</code></td>
+<tr>
+<td style="text-align:left">auto</td>
+<td style="text-align:center">options</td>
+<td style="text-align:left">music link, support: <code>netease</code>, <code>tencent</code>, <code>xiami</code></td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">fixed</td>
-<td style="text-align: center;"><code>false</code></td>
-<td style="text-align: left;">enable fixed mode</td>
+<tr>
+<td style="text-align:left">fixed</td>
+<td style="text-align:center"><code>false</code></td>
+<td style="text-align:left">enable fixed mode</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">mini</td>
-<td style="text-align: center;"><code>false</code></td>
-<td style="text-align: left;">enable mini mode</td>
+<tr>
+<td style="text-align:left">mini</td>
+<td style="text-align:center"><code>false</code></td>
+<td style="text-align:left">enable mini mode</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">autoplay</td>
-<td style="text-align: center;"><code>false</code></td>
-<td style="text-align: left;">audio autoplay</td>
+<tr>
+<td style="text-align:left">autoplay</td>
+<td style="text-align:center"><code>false</code></td>
+<td style="text-align:left">audio autoplay</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">theme</td>
-<td style="text-align: center;"><code>#2980b9</code></td>
-<td style="text-align: left;">main color</td>
+<tr>
+<td style="text-align:left">theme</td>
+<td style="text-align:center"><code>#2980b9</code></td>
+<td style="text-align:left">main color</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">loop</td>
-<td style="text-align: center;"><code>all</code></td>
-<td style="text-align: left;">player loop play, values: 'all', 'one', 'none'</td>
+<tr>
+<td style="text-align:left">loop</td>
+<td style="text-align:center"><code>all</code></td>
+<td style="text-align:left">player loop play, values: ‘all’, ‘one’, ‘none’</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">order</td>
-<td style="text-align: center;"><code>list</code></td>
-<td style="text-align: left;">player play order, values: 'list', 'random'</td>
+<tr>
+<td style="text-align:left">order</td>
+<td style="text-align:center"><code>list</code></td>
+<td style="text-align:left">player play order, values: ‘list’, ‘random’</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">preload</td>
-<td style="text-align: center;"><code>auto</code></td>
-<td style="text-align: left;">values: 'none', 'metadata', 'auto'</td>
+<tr>
+<td style="text-align:left">preload</td>
+<td style="text-align:center"><code>auto</code></td>
+<td style="text-align:left">values: ‘none’, ‘metadata’, ‘auto’</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">volume</td>
-<td style="text-align: center;"><code>0.7</code></td>
-<td style="text-align: left;">default volume, notice that player will remember user setting, default volume will not work after user set volume themselves</td>
+<tr>
+<td style="text-align:left">volume</td>
+<td style="text-align:center"><code>0.7</code></td>
+<td style="text-align:left">default volume, notice that player will remember user setting, default volume will not work after user set volume themselves</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">mutex</td>
-<td style="text-align: center;"><code>true</code></td>
-<td style="text-align: left;">prevent to play multiple player at the same time, pause other players when this player start play</td>
+<tr>
+<td style="text-align:left">mutex</td>
+<td style="text-align:center"><code>true</code></td>
+<td style="text-align:left">prevent to play multiple player at the same time, pause other players when this player start play</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">lrc-type</td>
-<td style="text-align: center;"><code>0</code></td>
-<td style="text-align: left;">lyric type</td>
+<tr>
+<td style="text-align:left">lrc-type</td>
+<td style="text-align:center"><code>0</code></td>
+<td style="text-align:left">lyric type</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">list-folded</td>
-<td style="text-align: center;"><code>false</code></td>
-<td style="text-align: left;">indicate whether list should folded at first</td>
+<tr>
+<td style="text-align:left">list-folded</td>
+<td style="text-align:center"><code>false</code></td>
+<td style="text-align:left">indicate whether list should folded at first</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">list-max-height</td>
-<td style="text-align: center;"><code>340px</code></td>
-<td style="text-align: left;">list max height</td>
+<tr>
+<td style="text-align:left">list-max-height</td>
+<td style="text-align:center"><code>340px</code></td>
+<td style="text-align:left">list max height</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">storage-name</td>
-<td style="text-align: center;"><code>metingjs</code></td>
-<td style="text-align: left;">localStorage key that store player setting</td>
+<tr>
+<td style="text-align:left">storage-name</td>
+<td style="text-align:center"><code>metingjs</code></td>
+<td style="text-align:left">localStorage key that store player setting</td>
 </tr>
 </tbody>
 </table>
-<p>Documentation for APlayer can be found at https://aplayer.js.org/#/home?id=options</p>
-<h2 id="advanced">Advanced</h2>
+<p>Documentation for APlayer can be found at <a href="https://aplayer.js.org/#/home?id=options">https://aplayer.js.org/#/home?id=options</a></p>
+<h2 id="Advanced">Advanced</h2>
 <p>MetingJS allow you to use self-hosted API, <a href="https://github.com/metowolf/Meting">more information about Meting</a>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> meting_api<span class="op">=</span><span class="st">&#39;http://example.com/api.php?server=:server&amp;type=:type&amp;id=:id&amp;auth=:auth&amp;r=:r&#39;</span><span class="op">;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;dist/Meting.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span></code></pre></div>
-<h2 id="browser-support">Browser support</h2>
+<pre><code class="language-html">&lt;script&gt;
+var meting_api='http://example.com/api.php?server=:server&amp;type=:type&amp;id=:id&amp;auth=:auth&amp;r=:r';
+&lt;/script&gt;
+
+&lt;script src=&quot;dist/Meting.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2 id="Browser-support">Browser support</h2>
 <p>Browsers without <a href="https://caniuse.com/#feat=custom-elementsv1">native custom element support</a> require a <a href="https://github.com/webcomponents/custom-elements">polyfill</a>.</p>
 <ul>
 <li>Chrome</li>
@@ -188,8 +191,8 @@
 <li>Internet Explorer 11</li>
 <li>Microsoft Edge</li>
 </ul>
-<h2 id="author">Author</h2>
+<h2 id="Author-2">Author</h2>
 <p><strong>MetingJS</strong> © <a href="https://github.com/metowolf">metowolf</a>, Released under the <a href="./LICENSE">MIT</a> License.<br></p>
 <blockquote>
-<p>Blog <span class="citation" data-cites="meto">[@meto]</span>(https://i-meto.com) · GitHub <span class="citation" data-cites="metowolf">[@metowolf]</span>(https://github.com/metowolf) · Twitter <span class="citation" data-cites="metowolf">[@metowolf]</span>(https://twitter.com/metowolf) · Telegram Channel <span class="citation" data-cites="metooooo">[@metooooo]</span>(https://t.me/metooooo)</p>
+<p>Blog <a href="https://i-meto.com">@meto</a> · GitHub <a href="https://github.com/metowolf">@metowolf</a> · Twitter <a href="https://twitter.com/metowolf">@metowolf</a> · Telegram Channel <a href="https://t.me/metooooo">@metooooo</a></p>
 </blockquote>

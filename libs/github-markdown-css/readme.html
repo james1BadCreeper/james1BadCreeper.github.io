@@ -1,37 +1,39 @@
-<h1 id="github-markdown-css">github-markdown-css</h1>
+<h1>github-markdown-css</h1>
 <blockquote>
 <p>The minimal amount of CSS to replicate the GitHub Markdown style</p>
 </blockquote>
 <p><strong>The CSS is generated. Contributions should go to <a href="https://github.com/sindresorhus/generate-github-markdown-css">this repo</a>.</strong></p>
 <p><a href="http://sindresorhus.com/github-markdown-css"><img src="https://cloud.githubusercontent.com/assets/170270/5219062/f22a978c-7685-11e4-8316-af25b6c89bc0.png" width="300"></a></p>
-<h2 id="demo"><a href="https://sindresorhus.com/github-markdown-css">Demo</a></h2>
-<h2 id="install">Install</h2>
+<h2 id="Demo"><a href="https://sindresorhus.com/github-markdown-css">Demo</a></h2>
+<h2 id="Install">Install</h2>
 <p>Download <a href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">manually</a>, from <a href="https://cdnjs.com/libraries/github-markdown-css">CDNJS</a>, or with npm:</p>
-<pre><code>$ npm install github-markdown-css</code></pre>
-<h2 id="usage">Usage</h2>
+<pre><code>$ npm install github-markdown-css
+</code></pre>
+<h2 id="Usage">Usage</h2>
 <p>Import the <code>github-markdown.css</code> file and add a <code>markdown-body</code> class to the container of your rendered Markdown and set a width for it. GitHub uses <code>980px</code> width and <code>45px</code> padding, and <code>15px</code> padding for mobile.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;viewport&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;width=device-width, initial-scale=1&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;github-markdown.css&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;style&gt;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.markdown-body</span> {</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">box-sizing</span>: <span class="dv">border-box</span><span class="op">;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">min-width</span>: <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">max-width</span>: <span class="dv">980</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">margin</span>: <span class="dv">0</span> <span class="bu">auto</span><span class="op">;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">padding</span>: <span class="dv">45</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="im">@media</span> (<span class="kw">max-width</span>: <span class="dv">767</span><span class="dt">px</span>) {</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">.markdown-body</span> {</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            <span class="kw">padding</span>: <span class="dv">15</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/style&gt;</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;article</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;markdown-body&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h1&gt;</span>Unicorns<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;p&gt;</span>All the things<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/article&gt;</span></span></code></pre></div>
-<p>If you want code syntax highlighted, use GitHub Flavored Markdown rendered from <a href="https://docs.github.com/en/free-pro-team@latest/rest/reference/markdown">GitHub's <code>/markdown</code> API</a>.</p>
+<pre><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;github-markdown.css&quot;&gt;
+&lt;style&gt;
+	.markdown-body {
+		box-sizing: border-box;
+		min-width: 200px;
+		max-width: 980px;
+		margin: 0 auto;
+		padding: 45px;
+	}
+
+	@media (max-width: 767px) {
+		.markdown-body {
+			padding: 15px;
+		}
+	}
+&lt;/style&gt;
+&lt;article class=&quot;markdown-body&quot;&gt;
+	&lt;h1&gt;Unicorns&lt;/h1&gt;
+	&lt;p&gt;All the things&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+<p>If you want code syntax highlighted, use GitHub Flavored Markdown rendered from <a href="https://docs.github.com/en/free-pro-team@latest/rest/reference/markdown">GitHub’s <code>/markdown</code> API</a>.</p>
 <p>There are 3 themes provided in this package:</p>
 <ul>
 <li><strong>github-markdown.css</strong>: (default) Automatically switches between light and dark through <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"><code>@media (prefers-color-scheme)</code></a>.</li>
@@ -39,7 +41,7 @@
 <li><strong>github-markdown-dark.css</strong>: Dark-only.</li>
 </ul>
 <p>You may know that now GitHub supports more than 2 themes including <code>dark_dimmed</code>, <code>dark_high_contrast</code> and <code>colorblind</code> variants. If you want to try these themes, you can generate them on your own! See next section.</p>
-<h2 id="how">How</h2>
-<p>See <a href="https://github.com/sindresorhus/generate-github-markdown-css"><code>generate-github-markdown-css</code></a> for how it's generated and ability to generate your own.</p>
-<h2 id="dev">Dev</h2>
+<h2 id="How">How</h2>
+<p>See <a href="https://github.com/sindresorhus/generate-github-markdown-css"><code>generate-github-markdown-css</code></a> for how it’s generated and ability to generate your own.</p>
+<h2 id="Dev">Dev</h2>
 <p>Run <code>npm run make</code> to update the CSS.</p>
