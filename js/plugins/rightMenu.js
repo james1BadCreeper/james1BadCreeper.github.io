@@ -93,6 +93,7 @@ const RightMenu = (() => {
       return true;
     }
 
+    fn.hideMenu();
     return false;
   }
 
