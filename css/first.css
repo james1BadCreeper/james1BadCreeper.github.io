@@ -7,8 +7,8 @@
   * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
 */
 :root {
-  --color-site-body: #f4f4f4;
-  --color-site-bg: #f4f4f4;
+  --color-site-body: #f3f6f7;
+  --color-site-bg: #f3f6f7;
   --color-site-inner: #fff;
   --color-site-footer: #666;
   --color-card: #fff;
@@ -712,8 +712,8 @@ button {
     --color-site-footer: #aaa;
     --color-card: #202020;
     --color-text: #eee;
-    --color-block: #2a2a2a;
-    --color-codeblock: #343a3c;
+    --color-block: #212121;
+    --color-codeblock: #263238;
     --color-inlinecode: #d56d28;
     --color-h1: #efefef;
     --color-h2: #efefef;
@@ -780,8 +780,8 @@ button {
   --color-site-footer: #aaa;
   --color-card: #202020;
   --color-text: #eee;
-  --color-block: #2a2a2a;
-  --color-codeblock: #343a3c;
+  --color-block: #212121;
+  --color-codeblock: #263238;
   --color-inlinecode: #d56d28;
   --color-h1: #efefef;
   --color-h2: #efefef;
