@@ -34,14 +34,14 @@
 <meta property="og:site_name" content="james1 的博客">
 <meta property="og:description" content="树形 DP，本质很简单，就是把原来在序列上的 DP 放到序列上进行。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-09-29T09:59:26.000Z">
 <meta property="article:modified_time" content="2022-01-12T13:52:48.669Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="动态规划">
 <meta property="article:tag" content="树形 DP">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
     <link rel="alternate" href="/atom.xml" title="james1 的博客" type="application/atom+xml">
   <!-- import meta -->
@@ -1813,7 +1813,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 12:08:21 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 12:52:34 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
@@ -2789,7 +2789,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <span id="more"></span>
 <p>在此之前，请先学习 DP 的基本知识。</p>
-<h2 id="概念-6">概念</h2><div class="story post-story">
+<h2 id="概念-5">概念</h2><div class="story post-story">
 <p>既然 DP 都长到树上去了，那么肯定有不一样的地方。</p>
 <p>由于树固有的递归性质，树形 DP 一般都是<strong>递归进行</strong>的。在树形 DP 中，我们会选<strong>根节点</strong>为 DP 的开始，</p>
 </div><h2 id="基础例题">基础例题</h2><div class="story post-story">
@@ -2866,7 +2866,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div><h2 id="二次扫描与换根法">二次扫描与换根法</h2><div class="story post-story">
 <p><a target="_blank" rel="noopener" href="http://poj.org/problem?id=3585">POJ3585 Accumulation Degree</a>。</p>
 <p>正常来讲，这道题怎么做？要每一个根都跑一遍树形 DP 吗？没必要。树形 DP 中有一个叫做“二次扫描与换根法”的技巧可以用来解决这种问题。</p>
-</div><h2 id="Problemset-14">Problemset</h2><div class="story post-story">
+</div><h2 id="Problemset-13">Problemset</h2><div class="story post-story">
 </div><h2 id="小结-4">小结</h2><div class="story post-story">
 <p>树形 DP 相比序列上的 DP 并没有难多少，学习方式依旧不变：做题。掌握扎实后，可以阅读：</p>
 <div class="tag link"><a class="link-card" title="复杂状态的 DP 问题" href="https://james1badcreeper.github.io/2022/01/01/DPEX/"><div class="left"><img src="https://z3.ax1x.com/2021/04/17/c5eGL9.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/04/17/c5eGL9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></div><div class="right"><p class="text">复杂状态的 DP 问题</p><p class="url">https://james1badcreeper.github.io/2022/01/01/DPEX/</p></div></a></div>
@@ -3029,7 +3029,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-6"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%BE%8B%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">基础例题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%A1%E6%9C%89%E4%B8%8A%E5%8F%B8%E7%9A%84%E8%88%9E%E4%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">没有上司的舞会</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%98%E7%95%A5%E6%B8%B8%E6%88%8F"><span class="toc-number">2.2.</span> <span class="toc-text">战略游戏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ZJOI2007-%E6%97%B6%E6%80%81%E5%90%8C%E6%AD%A5"><span class="toc-number">2.3.</span> <span class="toc-text">[ZJOI2007] 时态同步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E5%BD%A2%E8%83%8C%E5%8C%85"><span class="toc-number">3.</span> <span class="toc-text">树形背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E6%89%AB%E6%8F%8F%E4%B8%8E%E6%8D%A2%E6%A0%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">二次扫描与换根法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset-14"><span class="toc-number">5.</span> <span class="toc-text">Problemset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-4"><span class="toc-number">6.</span> <span class="toc-text">小结</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-5"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%BE%8B%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">基础例题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%A1%E6%9C%89%E4%B8%8A%E5%8F%B8%E7%9A%84%E8%88%9E%E4%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">没有上司的舞会</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%98%E7%95%A5%E6%B8%B8%E6%88%8F"><span class="toc-number">2.2.</span> <span class="toc-text">战略游戏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ZJOI2007-%E6%97%B6%E6%80%81%E5%90%8C%E6%AD%A5"><span class="toc-number">2.3.</span> <span class="toc-text">[ZJOI2007] 时态同步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E5%BD%A2%E8%83%8C%E5%8C%85"><span class="toc-number">3.</span> <span class="toc-text">树形背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E6%89%AB%E6%8F%8F%E4%B8%8E%E6%8D%A2%E6%A0%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">二次扫描与换根法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset-13"><span class="toc-number">5.</span> <span class="toc-text">Problemset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-4"><span class="toc-number">6.</span> <span class="toc-text">小结</span></a></li></ol>
     </div>
   </section>
 
@@ -3242,7 +3242,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/app.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/app.min.js"></script>
 
 
 
@@ -3381,7 +3381,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/rightMenu.min.js?time=1644984501631')</script>
+  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.min.js?time=1644987154203')</script>
 
 
 
@@ -3591,19 +3591,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/sites.min.js?time=1644984501631")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644987154203")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/friends.min.js?time=1644984501631")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644987154203")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/contributors.min.js?time=1644984501631")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644987154203")
       }
     
   };
@@ -3699,7 +3699,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/aplayer.min.js?time=1644984501635')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644987154208')
   
   })();
 
@@ -3833,7 +3833,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/search/hexo.min.js?time=1644984501631");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644987154203");
   }
 
   function loadSearchService() {
@@ -3898,7 +3898,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3941,7 +3941,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/parallax.min.js?time=1644984501631').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644987154203').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4196,11 +4196,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/09/29/tree-dp/","name":"树形 DP"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"树形 DP","description":"\n树形 DP，本质很简单，就是把原来在序列上的 DP 放到序列上进行。\n","datePublished":"2021-09-29T09:59:26.000Z","dateModified":"2022-01-12T13:52:48.669Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/09/29/tree-dp/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/09/29/tree-dp/","wordCount":36,"articleSection":"OI","keywords":"动态规划,树形 DP","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/11/07/I1PWx1.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/09/29/tree-dp/","name":"树形 DP"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"树形 DP","description":"\n树形 DP，本质很简单，就是把原来在序列上的 DP 放到序列上进行。\n","datePublished":"2021-09-29T09:59:26.000Z","dateModified":"2022-01-12T13:52:48.669Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/09/29/tree-dp/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/09/29/tree-dp/","wordCount":36,"articleSection":"OI","keywords":"动态规划,树形 DP","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/11/07/I1PWx1.jpg","width":1024,"height":768}}]</script>
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/iconfont.min.js?time=1644984501631.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644987154203.js"></script>
 
 
 <!-- more -->
