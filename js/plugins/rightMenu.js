@@ -44,7 +44,6 @@ const RightMenu = (() => {
 
   fn.initEvent = () => {
     window.document.oncontextmenu = (event) => {
-      fn.hideMenu();
       if (event.ctrlKey || document.body.offsetWidth <= 500) {
         fn.hideMenu();
         return true;
