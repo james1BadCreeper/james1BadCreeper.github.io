@@ -34,13 +34,13 @@
 <meta property="og:site_name" content="james1 的博客">
 <meta property="og:description" content="无论是线性 DP、背包、区间 DP 或是树形 DP，它们的区别都在于状态设计上。实际上还有一些奇怪的状态设计，将在本文进行介绍。包括 DAG 的 DP、环形结构、后效性处理、基环树 DP 等等。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://james1badcreeper.github.io/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-01-01T14:22:55.000Z">
 <meta property="article:modified_time" content="2022-02-16T10:06:59.633Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://james1badcreeper.github.io/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
     <link rel="alternate" href="/atom.xml" title="james1 的博客" type="application/atom+xml">
   <!-- import meta -->
@@ -1812,7 +1812,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 18:10:18 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 19:48:58 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
@@ -2837,11 +2837,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     </section>
     <section class='body'>
       <div class="vlts-rps"><a class="item" href="\2021\DPbasic\" title="动态规划（DP）基础" rel="bookmark "><img src="https://z3.ax1x.com/2021/02/27/6pHjSg.jpg" class="lazyload" data-srcset="https://z3.ax1x.com/2021/02/27/6pHjSg.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">动态规划（DP）基础</span><span class="excerpt">
-动态规划（Dynamic Programming，DP）是运筹学的一个分支，是求解决策过程最优化的过程。20 世纪 50...</span></a><a class="item" href="\2021\knapsack-dp\" title="背包问题" rel="bookmark "><img src="https://bing.ioliu.cn/photo/MistyForest_ZH-CN3024731044?force=download" class="lazyload" data-srcset="https://bing.ioliu.cn/photo/MistyForest_ZH-CN3024731044?force=download" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">背包问题</span><span class="excerpt">
-背包是 DP 中一类重要而特殊的模型。本文将引导你学习各类背包。
-</span></a><a class="item" href="\2021\range-dp\" title="区间 DP" rel="bookmark "><img src="https://z3.ax1x.com/2021/11/07/I1PLRA.jpg" class="lazyload" data-srcset="https://z3.ax1x.com/2021/11/07/I1PLRA.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">区间 DP</span><span class="excerpt">
+动态规划（Dynamic Programming，DP）是运筹学的一个分支，是求解决策过程最优化的过程。20 世纪 50...</span></a><a class="item" href="\2021\range-dp\" title="区间 DP" rel="bookmark "><img src="https://z3.ax1x.com/2021/11/07/I1PLRA.jpg" class="lazyload" data-srcset="https://z3.ax1x.com/2021/11/07/I1PLRA.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">区间 DP</span><span class="excerpt">
 区间 DP 是线性 DP 的一种特殊形式，它在分阶段地划分问题时，与阶段中元素出现的顺序和由前一阶段的哪些元素合并而来有...</span></a><a class="item" href="\2021\tree-dp\" title="树形 DP" rel="bookmark "><img src="https://z3.ax1x.com/2021/11/07/I1PWx1.jpg" class="lazyload" data-srcset="https://z3.ax1x.com/2021/11/07/I1PWx1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">树形 DP</span><span class="excerpt">
 树形 DP，本质很简单，就是把原来在序列上的 DP 放到序列上进行。
+</span></a><a class="item" href="\2021\knapsack-dp\" title="背包问题" rel="bookmark "><img src="https://bing.ioliu.cn/photo/MistyForest_ZH-CN3024731044?force=download" class="lazyload" data-srcset="https://bing.ioliu.cn/photo/MistyForest_ZH-CN3024731044?force=download" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">背包问题</span><span class="excerpt">
+背包是 DP 中一类重要而特殊的模型。本文将引导你学习各类背包。
 </span></a></div></section></div>
       
       
@@ -3335,7 +3335,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1645006218785')</script>
+  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/js/plugins/rightMenu.min.js?time=1645012138418')</script>
 
 
 
@@ -3545,19 +3545,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1645006218785")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/js/plugins/sites.min.js?time=1645012138418")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1645006218785")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/js/plugins/friends.min.js?time=1645012138418")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1645006218785")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/js/plugins/contributors.min.js?time=1645012138418")
       }
     
   };
@@ -3653,7 +3653,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1645006218800')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/js/plugins/aplayer.min.js?time=1645012138422')
   
   })();
 
@@ -3787,7 +3787,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1645006218785");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/js/search/hexo.min.js?time=1645012138418");
   }
 
   function loadSearchService() {
@@ -3852,7 +3852,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3895,7 +3895,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1645006218785').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/js/plugins/parallax.min.js?time=1645012138418').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4150,11 +4150,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2022/DPEX/","name":"复杂状态的 DP 问题"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"复杂状态的 DP 问题","description":"\n无论是线性 DP、背包、区间 DP 或是树形 DP，它们的区别都在于状态设计上。实际上还有一些奇怪的状态设计，将在本文进行介绍。包括 DAG 的 DP、环形结构、后效性处理、基环树 DP 等等。\n","datePublished":"2022-01-01T14:22:55.000Z","dateModified":"2022-02-16T10:06:59.633Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2022/DPEX/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2022/DPEX/","wordCount":99,"articleSection":"OI","keywords":"动态规划","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/11/07/I1PR2R.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2022/DPEX/","name":"复杂状态的 DP 问题"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"复杂状态的 DP 问题","description":"\n无论是线性 DP、背包、区间 DP 或是树形 DP，它们的区别都在于状态设计上。实际上还有一些奇怪的状态设计，将在本文进行介绍。包括 DAG 的 DP、环形结构、后效性处理、基环树 DP 等等。\n","datePublished":"2022-01-01T14:22:55.000Z","dateModified":"2022-02-16T10:06:59.633Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2022/DPEX/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2022/DPEX/","wordCount":99,"articleSection":"OI","keywords":"动态规划","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/11/07/I1PR2R.jpg","width":1024,"height":768}}]</script>
 
 
 
-<script src="/js/iconfont.js?time=1645006218785.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1BadCreeper/james1BadCreeper.github.io@0.0.1/js/iconfont.min.js?time=1645012138418.js"></script>
 
 
 <!-- more -->
