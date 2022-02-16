@@ -44,6 +44,7 @@ const RightMenu = (() => {
 
   fn.initEvent = () => {
     window.document.oncontextmenu = (event) => {
+      fn.hideMenu();
       if (event.ctrlKey || document.body.offsetWidth <= 500) {
         fn.hideMenu();
         return true;
@@ -71,7 +72,7 @@ const RightMenu = (() => {
     let screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
     let screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
 
-    try {
+    //try {
       fn.setMenuItem(event);
       DOMController.visible(_rightMenuWrapper);
       _rightMenuWrapper.focus();
@@ -86,11 +87,11 @@ const RightMenu = (() => {
       _rightMenuWrapper.style.top = showTop + "px";
       _rightMenuWrapper.style.zIndex = '2147483648';
       if (volantis.THEMECONFIG.plugins.message.rightmenu.notice) fn.showMessage();
-    } catch (error) {
-      _rightMenuWrapper.blur();
-      console.error(error);
-      return true;
-    }
+    //} catch (error) {
+    //  _rightMenuWrapper.blur();
+    //  console.error(error);
+    //  return true;
+    //}
 
     return false;
   }

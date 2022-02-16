@@ -34,14 +34,14 @@
 <meta property="og:site_name" content="james1 的博客">
 <meta property="og:description" content="高级的数论知识更为困难，但也更有意思。本文将介绍省选以内的常见数论知识点，并通过题目介绍它们的应用。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://james1badcreeper.github.io/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-01-27T10:19:56.000Z">
 <meta property="article:modified_time" content="2022-02-10T14:58:36.268Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="数论">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://james1badcreeper.github.io/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
     <link rel="alternate" href="/atom.xml" title="james1 的博客" type="application/atom+xml">
   <!-- import meta -->
@@ -1813,12 +1813,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 09:52:23 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 12:08:21 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
-    await fetch('/volantis-webconfig.json').then(data => data.json()).then(data => {volantis.WEBCONFIG=data})
-    await fetch('/volantis-themeconfig.json').then(data => data.json()).then(data => {volantis.THEMECONFIG=data})
+    try {
+      let respThemeConfig = await fetch('/volantis-themeconfig.json');
+      let respWebConfig = await fetch('/volantis-webconfig.json');
+      volantis.THEMECONFIG = await respThemeConfig.json();
+      volantis.WEBCONFIG = await respWebConfig.json();
+    } catch (e) {
+      console.error(`主题配置读取失败： ${e}`)
+      
+    }
   }
   volantisInitConfig()
 
@@ -2783,7 +2790,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <span id="more"></span>
 <p>在此之前，请完全消化上一篇文章的内容，并可以与本文的“热身”部分穿插阅读：</p>
 <div class="tag link"><a class="link-card" title="数论初步" href="/2021/11/09/number-theory/"><div class="left"><img src="https://gitee.com/james1BadCreeper/bad-creeper-cdn/raw/main/icon.png" class="lazyload" data-srcset="https://gitee.com/james1BadCreeper/bad-creeper-cdn/raw/main/icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/></div><div class="right"><p class="text">数论初步</p><p class="url">/2021/11/09/number-theory/</p></div></a></div>
-<h2 id="热身">热身</h2><div class="story post-story">
+<h2 id="热身-2">热身</h2><div class="story post-story">
 <p>这里是一些之前略过的内容，在之前的基础上加以扩展。</p>
 <h3 id="数论分块">数论分块</h3>
 <h3 id="实数取模">实数取模</h3>
@@ -3195,7 +3202,7 @@ a_n=\cfrac{1}{188305837}\left(94153035^{n}-905847205^{n}\right)
 <h3 id="高次同余方程">高次同余方程</h3>
 <p>高次同余方程有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mi>x</mi></msup><mo>≡</mo><mi>b</mi><mspace></mspace><mspace width="0.4444em"/><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mspace width="0.3333em"/><mi>p</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">a^x\equiv b \pmod p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.4444em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.3333em;"></span><span class="mord mathnormal">p</span><span class="mclose">)</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mi>a</mi></msup><mo>≡</mo><mi>b</mi><mspace></mspace><mspace width="0.4444em"/><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mspace width="0.3333em"/><mi>p</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x^a \equiv b \pmod p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.4444em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.3333em;"></span><span class="mord mathnormal">p</span><span class="mclose">)</span></span></span></span> 两类问题，但是后者超出了本文的讨论范围。请读者自行寻找关于“原根”“阶”“指标”等相关资料。前者可以用 Baby Step, Giant Step 算法解决（听上去搞笑吧）解决，这里进行简单介绍。</p>
 <h3 id="exCRT">exCRT</h3>
-<h3 id="Problemset-12">Problemset</h3>
+<h3 id="Problemset-10">Problemset</h3>
 
 </div>
   </div>
@@ -3353,7 +3360,7 @@ KMP 模式匹配
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%83%AD%E8%BA%AB"><span class="toc-number">1.</span> <span class="toc-text">热身</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E8%AE%BA%E5%88%86%E5%9D%97"><span class="toc-number">1.1.</span> <span class="toc-text">数论分块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%95%B0%E5%8F%96%E6%A8%A1"><span class="toc-number">1.2.</span> <span class="toc-text">实数取模</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E7%90%86%E6%95%B0%E5%8F%96%E4%BD%99"><span class="toc-number">1.2.1.</span> <span class="toc-text">有理数取余</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E7%90%86%E6%95%B0%E5%8F%96%E4%BD%99"><span class="toc-number">1.2.2.</span> <span class="toc-text">无理数取余</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%89%E9%80%9F%E5%B9%82"><span class="toc-number">1.3.</span> <span class="toc-text">光速幂</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E6%AC%A1%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B"><span class="toc-number">1.4.</span> <span class="toc-text">高次同余方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exCRT"><span class="toc-number">1.5.</span> <span class="toc-text">exCRT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Problemset-12"><span class="toc-number">1.6.</span> <span class="toc-text">Problemset</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%83%AD%E8%BA%AB-2"><span class="toc-number">1.</span> <span class="toc-text">热身</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E8%AE%BA%E5%88%86%E5%9D%97"><span class="toc-number">1.1.</span> <span class="toc-text">数论分块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%95%B0%E5%8F%96%E6%A8%A1"><span class="toc-number">1.2.</span> <span class="toc-text">实数取模</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E7%90%86%E6%95%B0%E5%8F%96%E4%BD%99"><span class="toc-number">1.2.1.</span> <span class="toc-text">有理数取余</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E7%90%86%E6%95%B0%E5%8F%96%E4%BD%99"><span class="toc-number">1.2.2.</span> <span class="toc-text">无理数取余</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%89%E9%80%9F%E5%B9%82"><span class="toc-number">1.3.</span> <span class="toc-text">光速幂</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E6%AC%A1%E5%90%8C%E4%BD%99%E6%96%B9%E7%A8%8B"><span class="toc-number">1.4.</span> <span class="toc-text">高次同余方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exCRT"><span class="toc-number">1.5.</span> <span class="toc-text">exCRT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Problemset-10"><span class="toc-number">1.6.</span> <span class="toc-text">Problemset</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3566,7 +3573,7 @@ KMP 模式匹配
 
 <!-- internal -->
 
-<script src="/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/app.min.js"></script>
 
 
 
@@ -3705,7 +3712,7 @@ KMP 模式匹配
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1644976343531')</script>
+  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/rightMenu.min.js?time=1644984501515')</script>
 
 
 
@@ -3915,19 +3922,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1644976343531")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/sites.min.js?time=1644984501515")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1644976343531")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/friends.min.js?time=1644984501515")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1644976343531")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/contributors.min.js?time=1644984501515")
       }
     
   };
@@ -4023,7 +4030,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1644976343541')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/aplayer.min.js?time=1644984501522')
   
   })();
 
@@ -4041,8 +4048,8 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
           setTimeout(() => {
             Metings.forEach((item, index) => {
               const aplayerItem = item.aplayer; if(!aplayerItem) return;
-              const rightAplayerCheck = volantis.THEMECONFIG.rightmenu.layout.includes('music') 
-                && item.meta.id === volantis.THEMECONFIG.plugins.aplayer.id;
+              const rightAplayerCheck = 'true' === 'true'
+                && item.meta.id === '6619405731'; 
               if(rightAplayerCheck) RightMenuAplayer.checkAPlayer();
               if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
                 aplayerItem.on('play', function messagePlay() {
@@ -4157,7 +4164,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1644976343531");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/search/hexo.min.js?time=1644984501515");
   }
 
   function loadSearchService() {
@@ -4222,7 +4229,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4265,7 +4272,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1644976343531').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/parallax.min.js?time=1644984501515').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4520,11 +4527,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/数学/","name":"数学"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2022/01/27/npex/","name":"数论进阶"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数论进阶","description":"\n高级的数论知识更为困难，但也更有意思。本文将介绍省选以内的常见数论知识点，并通过题目介绍它们的应用。\n","datePublished":"2022-01-27T10:19:56.000Z","dateModified":"2022-02-10T14:58:36.268Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2022/01/27/npex/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2022/01/27/npex/","wordCount":52,"articleSection":"OI","keywords":"数学,数论","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/11/07/I1P7Ie.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/数学/","name":"数学"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2022/01/27/npex/","name":"数论进阶"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数论进阶","description":"\n高级的数论知识更为困难，但也更有意思。本文将介绍省选以内的常见数论知识点，并通过题目介绍它们的应用。\n","datePublished":"2022-01-27T10:19:56.000Z","dateModified":"2022-02-10T14:58:36.268Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2022/01/27/npex/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2022/01/27/npex/","wordCount":52,"articleSection":"OI","keywords":"数学,数论","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/11/07/I1P7Ie.jpg","width":1024,"height":768}}]</script>
 
 
 
-<script src="/js/iconfont.js?time=1644976343531.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/iconfont.min.js?time=1644984501515.js"></script>
 
 
 <!-- more -->

@@ -34,14 +34,14 @@
 <meta property="og:site_name" content="james1 的博客">
 <meta property="og:description" content="背包是 DP 中一类重要而特殊的模型。本文将引导你学习各类背包。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://james1badcreeper.github.io/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-10-28T13:27:23.000Z">
 <meta property="article:modified_time" content="2022-01-12T13:51:16.688Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="动态规划">
 <meta property="article:tag" content="背包">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://james1badcreeper.github.io/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
     <link rel="alternate" href="/atom.xml" title="james1 的博客" type="application/atom+xml">
   <!-- import meta -->
@@ -1813,12 +1813,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 09:52:23 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 12:08:21 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
-    await fetch('/volantis-webconfig.json').then(data => data.json()).then(data => {volantis.WEBCONFIG=data})
-    await fetch('/volantis-themeconfig.json').then(data => data.json()).then(data => {volantis.THEMECONFIG=data})
+    try {
+      let respThemeConfig = await fetch('/volantis-themeconfig.json');
+      let respWebConfig = await fetch('/volantis-webconfig.json');
+      volantis.THEMECONFIG = await respThemeConfig.json();
+      volantis.WEBCONFIG = await respWebConfig.json();
+    } catch (e) {
+      console.error(`主题配置读取失败： ${e}`)
+      
+    }
   }
   volantisInitConfig()
 
@@ -2912,7 +2919,7 @@ f(i-1,j)
               </div>
             </details>
 <p>这类问题的更复杂形态我们会在树形 DP 中讨论。</p>
-</div><h2 id="Problemset-8">Problemset</h2><div class="story post-story">
+</div><h2 id="Problemset-9">Problemset</h2><div class="story post-story">
 <p>这里是一些简单各类背包问题的合集。它们本身不难，主要是帮助读者进一步了解背包，为接下来更困难的 DP 学习做准备。强烈读者仔细阅读这一部分，<strong>其中会出现一些前面的专题没有讲述的内容</strong>。</p>
 <h3 id="NOIP2001-普及组-装箱问题">[NOIP2001 普及组] 装箱问题</h3>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1049">题面</a>。</p>
@@ -3091,7 +3098,7 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-%E8%83%8C%E5%8C%85"><span class="toc-number">1.</span> <span class="toc-text">01 背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85"><span class="toc-number">2.</span> <span class="toc-text">完全背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D%E8%83%8C%E5%8C%85"><span class="toc-number">3.</span> <span class="toc-text">多重背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B7%E5%90%88%E8%83%8C%E5%8C%85"><span class="toc-number">4.</span> <span class="toc-text">混合背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E8%B4%B9%E7%94%A8%E8%83%8C%E5%8C%85"><span class="toc-number">5.</span> <span class="toc-text">二维费用背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E8%83%8C%E5%8C%85"><span class="toc-number">6.</span> <span class="toc-text">分组背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E6%80%A7%E8%83%8C%E5%8C%85"><span class="toc-number">7.</span> <span class="toc-text">依赖性背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset-8"><span class="toc-number">8.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NOIP2001-%E6%99%AE%E5%8F%8A%E7%BB%84-%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98"><span class="toc-number">8.1.</span> <span class="toc-text">[NOIP2001 普及组] 装箱问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-2"><span class="toc-number">9.</span> <span class="toc-text">小结</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-%E8%83%8C%E5%8C%85"><span class="toc-number">1.</span> <span class="toc-text">01 背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85"><span class="toc-number">2.</span> <span class="toc-text">完全背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D%E8%83%8C%E5%8C%85"><span class="toc-number">3.</span> <span class="toc-text">多重背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B7%E5%90%88%E8%83%8C%E5%8C%85"><span class="toc-number">4.</span> <span class="toc-text">混合背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E8%B4%B9%E7%94%A8%E8%83%8C%E5%8C%85"><span class="toc-number">5.</span> <span class="toc-text">二维费用背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%BB%84%E8%83%8C%E5%8C%85"><span class="toc-number">6.</span> <span class="toc-text">分组背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E6%80%A7%E8%83%8C%E5%8C%85"><span class="toc-number">7.</span> <span class="toc-text">依赖性背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset-9"><span class="toc-number">8.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NOIP2001-%E6%99%AE%E5%8F%8A%E7%BB%84-%E8%A3%85%E7%AE%B1%E9%97%AE%E9%A2%98"><span class="toc-number">8.1.</span> <span class="toc-text">[NOIP2001 普及组] 装箱问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-2"><span class="toc-number">9.</span> <span class="toc-text">小结</span></a></li></ol>
     </div>
   </section>
 
@@ -3304,7 +3311,7 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
 
 <!-- internal -->
 
-<script src="/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/app.min.js"></script>
 
 
 
@@ -3443,7 +3450,7 @@ CSP-S 2021 的智障爆零选手的游记，坐标：LN。
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1644976343644')</script>
+  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/rightMenu.min.js?time=1644984501604')</script>
 
 
 
@@ -3653,19 +3660,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1644976343644")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/sites.min.js?time=1644984501604")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1644976343644")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/friends.min.js?time=1644984501604")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1644976343644")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/contributors.min.js?time=1644984501604")
       }
     
   };
@@ -3761,7 +3768,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1644976343648')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/aplayer.min.js?time=1644984501609')
   
   })();
 
@@ -3779,8 +3786,8 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
           setTimeout(() => {
             Metings.forEach((item, index) => {
               const aplayerItem = item.aplayer; if(!aplayerItem) return;
-              const rightAplayerCheck = volantis.THEMECONFIG.rightmenu.layout.includes('music') 
-                && item.meta.id === volantis.THEMECONFIG.plugins.aplayer.id;
+              const rightAplayerCheck = 'true' === 'true'
+                && item.meta.id === '6619405731'; 
               if(rightAplayerCheck) RightMenuAplayer.checkAPlayer();
               if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
                 aplayerItem.on('play', function messagePlay() {
@@ -3895,7 +3902,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1644976343644");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/search/hexo.min.js?time=1644984501604");
   }
 
   function loadSearchService() {
@@ -3960,7 +3967,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4003,7 +4010,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1644976343644').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/parallax.min.js?time=1644984501604').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4258,11 +4265,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/","name":"背包问题"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"背包问题","description":"\n背包是 DP 中一类重要而特殊的模型。本文将引导你学习各类背包。\n","datePublished":"2021-10-28T13:27:23.000Z","dateModified":"2022-01-12T13:51:16.688Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/","wordCount":34,"articleSection":"OI","keywords":"动态规划,背包","image":{"@type":"ImageObject","url":"https://bing.ioliu.cn/photo/MistyForest_ZH-CN3024731044?force=download","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/动态规划/","name":"动态规划"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/","name":"背包问题"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"背包问题","description":"\n背包是 DP 中一类重要而特殊的模型。本文将引导你学习各类背包。\n","datePublished":"2021-10-28T13:27:23.000Z","dateModified":"2022-01-12T13:51:16.688Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/10/28/knapsack-dp/","wordCount":34,"articleSection":"OI","keywords":"动态规划,背包","image":{"@type":"ImageObject","url":"https://bing.ioliu.cn/photo/MistyForest_ZH-CN3024731044?force=download","width":1024,"height":768}}]</script>
 
 
 
-<script src="/js/iconfont.js?time=1644976343644.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/iconfont.min.js?time=1644984501604.js"></script>
 
 
 <!-- more -->

@@ -34,14 +34,14 @@
 <meta property="og:site_name" content="james1 的博客">
 <meta property="og:description" content="组合计数是组合数学的基础，研究某组离散对象满足一定条件的安排的存在性、构造及计数等问题。看似名字人畜无害，实则“算死人，不偿命”。本文将引导你学习简单的组合计数，为接下来学习毒瘤的计数问题作准备。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://james1badcreeper.github.io/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-11-07T10:41:00.000Z">
 <meta property="article:modified_time" content="2022-02-08T05:14:32.747Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="数学">
 <meta property="article:tag" content="组合数学">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://james1badcreeper.github.io/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
     <link rel="alternate" href="/atom.xml" title="james1 的博客" type="application/atom+xml">
   <!-- import meta -->
@@ -1813,12 +1813,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 09:52:23 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 12:08:21 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
-    await fetch('/volantis-webconfig.json').then(data => data.json()).then(data => {volantis.WEBCONFIG=data})
-    await fetch('/volantis-themeconfig.json').then(data => data.json()).then(data => {volantis.THEMECONFIG=data})
+    try {
+      let respThemeConfig = await fetch('/volantis-themeconfig.json');
+      let respWebConfig = await fetch('/volantis-webconfig.json');
+      volantis.THEMECONFIG = await respThemeConfig.json();
+      volantis.WEBCONFIG = await respWebConfig.json();
+    } catch (e) {
+      console.error(`主题配置读取失败： ${e}`)
+      
+    }
   }
   volantisInitConfig()
 
@@ -2900,10 +2907,10 @@ C_{n}^{m}=\cfrac{A_{n}^{m}}{A_{m}^{m}}=\cfrac{n(n-1)(n-2)\cdots(n-m+1)}{m!}=\cfr
       <i class="fad fa-books fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2021\11\09\number-theory\" title="数论初步" rel="bookmark "><img src="https://z3.ax1x.com/2021/11/07/I1P4r6.jpg" class="lazyload" data-srcset="https://z3.ax1x.com/2021/11/07/I1P4r6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">数论初步</span><span class="excerpt">
-数论主要研究整数的性质，被数学王子高斯称为“数学上的皇冠”。初等数论是用初等方法研究的数论，它的研究方法本质上说，就是利...</span></a><a class="item" href="\2022\01\27\npex\" title="数论进阶" rel="bookmark "><img src="https://z3.ax1x.com/2021/11/07/I1P7Ie.jpg" class="lazyload" data-srcset="https://z3.ax1x.com/2021/11/07/I1P7Ie.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">数论进阶</span><span class="excerpt">
+      <div class="vlts-rps"><a class="item" href="\2022\01\27\npex\" title="数论进阶" rel="bookmark "><img src="https://z3.ax1x.com/2021/11/07/I1P7Ie.jpg" class="lazyload" data-srcset="https://z3.ax1x.com/2021/11/07/I1P7Ie.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">数论进阶</span><span class="excerpt">
 高级的数论知识更为困难，但也更有意思。本文将介绍省选以内的常见数论知识点，并通过题目介绍它们的应用。
-</span></a></div></section></div>
+</span></a><a class="item" href="\2021\11\09\number-theory\" title="数论初步" rel="bookmark "><img src="https://z3.ax1x.com/2021/11/07/I1P4r6.jpg" class="lazyload" data-srcset="https://z3.ax1x.com/2021/11/07/I1P4r6.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">数论初步</span><span class="excerpt">
+数论主要研究整数的性质，被数学王子高斯称为“数学上的皇冠”。初等数论是用初等方法研究的数论，它的研究方法本质上说，就是利...</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -3255,7 +3262,7 @@ C_{n}^{m}=\cfrac{A_{n}^{m}}{A_{m}^{m}}=\cfrac{n(n-1)(n-2)\cdots(n-m+1)}{m!}=\cfr
 
 <!-- internal -->
 
-<script src="/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/app.min.js"></script>
 
 
 
@@ -3394,7 +3401,7 @@ C_{n}^{m}=\cfrac{A_{n}^{m}}{A_{m}^{m}}=\cfrac{n(n-1)(n-2)\cdots(n-m+1)}{m!}=\cfr
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1644976343625')</script>
+  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/rightMenu.min.js?time=1644984501591')</script>
 
 
 
@@ -3604,19 +3611,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1644976343625")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/sites.min.js?time=1644984501591")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1644976343625")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/friends.min.js?time=1644984501591")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1644976343625")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/contributors.min.js?time=1644984501591")
       }
     
   };
@@ -3712,7 +3719,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('/js/plugins/aplayer.js?time=1644976343630')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/aplayer.min.js?time=1644984501595')
   
   })();
 
@@ -3730,8 +3737,8 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
           setTimeout(() => {
             Metings.forEach((item, index) => {
               const aplayerItem = item.aplayer; if(!aplayerItem) return;
-              const rightAplayerCheck = volantis.THEMECONFIG.rightmenu.layout.includes('music') 
-                && item.meta.id === volantis.THEMECONFIG.plugins.aplayer.id;
+              const rightAplayerCheck = 'true' === 'true'
+                && item.meta.id === '6619405731'; 
               if(rightAplayerCheck) RightMenuAplayer.checkAPlayer();
               if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
                 aplayerItem.on('play', function messagePlay() {
@@ -3846,7 +3853,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1644976343625");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/search/hexo.min.js?time=1644984501591");
   }
 
   function loadSearchService() {
@@ -3911,7 +3918,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3954,7 +3961,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('/js/plugins/parallax.js?time=1644976343625').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/plugins/parallax.min.js?time=1644984501591').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4209,11 +4216,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/数学/","name":"数学"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/11/07/combination/","name":"组合计数基础"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"组合计数基础","description":"\n组合计数是组合数学的基础，研究某组离散对象满足一定条件的安排的存在性、构造及计数等问题。看似名字人畜无害，实则“算死人，不偿命”。本文将引导你学习简单的组合计数，为接下来学习毒瘤的计数问题作准备。\n","datePublished":"2021-11-07T10:41:00.000Z","dateModified":"2022-02-08T05:14:32.747Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/11/07/combination/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/11/07/combination/","wordCount":100,"articleSection":"OI","keywords":"数学,组合数学","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/11/07/I1PjMt.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/","name":"OI"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/OI/学习笔记/数学/","name":"数学"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2021/11/07/combination/","name":"组合计数基础"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"组合计数基础","description":"\n组合计数是组合数学的基础，研究某组离散对象满足一定条件的安排的存在性、构造及计数等问题。看似名字人畜无害，实则“算死人，不偿命”。本文将引导你学习简单的组合计数，为接下来学习毒瘤的计数问题作准备。\n","datePublished":"2021-11-07T10:41:00.000Z","dateModified":"2022-02-08T05:14:32.747Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2021/11/07/combination/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2021/11/07/combination/","wordCount":100,"articleSection":"OI","keywords":"数学,组合数学","image":{"@type":"ImageObject","url":"https://z3.ax1x.com/2021/11/07/I1PjMt.jpg","width":1024,"height":768}}]</script>
 
 
 
-<script src="/js/iconfont.js?time=1644976343625.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w15a/source/js/iconfont.min.js?time=1644984501591.js"></script>
 
 
 <!-- more -->

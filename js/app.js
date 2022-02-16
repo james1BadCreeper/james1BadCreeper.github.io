@@ -1101,7 +1101,6 @@ Object.freeze(DOMController);
 
 // 彩色标签云
 const colortag = () => {
-  console.log("coloring tag!");
   $("ul.tag-list li").each(function () {
     let random = Math.floor(Math.random() * 6 + 1);
     if (random == 1) {
