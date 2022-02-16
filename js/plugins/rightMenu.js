@@ -72,7 +72,7 @@ const RightMenu = (() => {
     let screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
     let screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
 
-    //try {
+    try {
       fn.setMenuItem(event);
       DOMController.visible(_rightMenuWrapper);
       _rightMenuWrapper.focus();
@@ -87,11 +87,11 @@ const RightMenu = (() => {
       _rightMenuWrapper.style.top = showTop + "px";
       _rightMenuWrapper.style.zIndex = '2147483648';
       if (volantis.THEMECONFIG.plugins.message.rightmenu.notice) fn.showMessage();
-    //} catch (error) {
-    //  _rightMenuWrapper.blur();
-    //  console.error(error);
-    //  return true;
-    //}
+    } catch (error) {
+      _rightMenuWrapper.blur();
+      console.error(error);
+      return true;
+    }
 
     return false;
   }
