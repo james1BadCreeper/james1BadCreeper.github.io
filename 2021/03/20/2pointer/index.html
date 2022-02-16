@@ -1813,7 +1813,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 12:52:34 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 13:25:16 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
@@ -2788,7 +2788,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>双指针，指的是在遍历对象的过程中，不是普通的使用单个指针进行访问，而是使用两个相同方向或者相反方向的指针进行扫描。本文将引导你学习双指针及双指针的简单用法。</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="概念">概念</h2><div class="story post-story">
+<h2 id="概念-2">概念</h2><div class="story post-story">
 <p>双指针里的指针并不是指 C 语言中的指针，而是一个抽象的指针。我一个指针“指”在了序列中的某个地方，一方面表示目前枚举到了这里，另一方面表示正在关注这个数，两个指针也经常有区间左右端点的意义。一般是枚举一个指针，然后另一个指针随着这个指针的移动而移动<br>
 这就要求题目一般要有随着一个指针移动，另一个指针单调移动的特点。</p>
 <p>不知道为什么，双指针在二分的判断函数中特别常见。<br>
@@ -2955,7 +2955,7 @@ Day ?
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">2.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90Luogu-5745%E3%80%91%E6%95%B0%E5%88%97%E6%B1%82%E5%92%8C"><span class="toc-number">2.1.</span> <span class="toc-text">【Luogu 5745】数列求和</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-2"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">2.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90Luogu-5745%E3%80%91%E6%95%B0%E5%88%97%E6%B1%82%E5%92%8C"><span class="toc-number">2.1.</span> <span class="toc-text">【Luogu 5745】数列求和</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3307,7 +3307,7 @@ Day ?
       
     </ul>
   </div>
-  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.min.js?time=1644987154285')</script>
+  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.js')</script>
 
 
 
@@ -3517,19 +3517,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644987154285")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644989116700")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644987154285")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644989116700")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644987154285")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644989116700")
       }
     
   };
@@ -3625,7 +3625,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644987154289')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644989116705')
   
   })();
 
@@ -3759,7 +3759,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644987154285");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644989116700");
   }
 
   function loadSearchService() {
@@ -3824,7 +3824,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3867,7 +3867,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644987154285').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644989116700').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4126,7 +4126,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644987154285.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644989116700.js"></script>
 
 
 <!-- more -->

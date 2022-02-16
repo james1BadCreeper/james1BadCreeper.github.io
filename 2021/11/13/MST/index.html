@@ -1813,7 +1813,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 12:52:34 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 13:25:16 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
@@ -2818,7 +2818,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://www.mcbbs.net/static/image/hrline/4.gif" class="lazyload" data-srcset="https://www.mcbbs.net/static/image/hrline/4.gif" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div></div>
 <p>有向图中有一类生成树称为最小树形图。这个问题比较复杂，不在本文中讨论。感兴趣的同学可以自行了解。</p>
 <p>还有一类问题称为 k 小生成树，但是这种问题的做法笔者暂时没有了解。据闻在大神刘汝佳的《算法艺术与信息学竞赛》P300 中有说明，感兴趣的读者可以自行送死（</p>
-</div><h2 id="Problemset-4">Problemset</h2><div class="story post-story">
+</div><h2 id="Problemset-5">Problemset</h2><div class="story post-story">
 <p>最小生成树的题目多种多样，其中还有一些经典的套路。这里是一些比较有趣的题目，它们有难有易，读者可以自行取用。</p>
 <h3 id="UVa1395-Slim-Span">[UVa1395] Slim Span</h3>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA1395">题面</a>。</p>
@@ -2991,7 +2991,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kruskal"><span class="toc-number">1.</span> <span class="toc-text">Kruskal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prim"><span class="toc-number">2.</span> <span class="toc-text">Prim</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E5%AE%83%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-number">3.</span> <span class="toc-text">其它生成树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E7%93%B6%E9%A2%88%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-number">3.1.</span> <span class="toc-text">最小瓶颈生成树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E7%93%B6%E9%A2%88%E8%B7%AF"><span class="toc-number">3.2.</span> <span class="toc-text">最小瓶颈路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E9%87%8F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-number">3.3.</span> <span class="toc-text">增量最小生成树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AC%A1%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-number">3.4.</span> <span class="toc-text">次小生成树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset-4"><span class="toc-number">4.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UVa1395-Slim-Span"><span class="toc-number">4.1.</span> <span class="toc-text">[UVa1395] Slim Span</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kruskal"><span class="toc-number">1.</span> <span class="toc-text">Kruskal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prim"><span class="toc-number">2.</span> <span class="toc-text">Prim</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E5%AE%83%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-number">3.</span> <span class="toc-text">其它生成树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E7%93%B6%E9%A2%88%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-number">3.1.</span> <span class="toc-text">最小瓶颈生成树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E7%93%B6%E9%A2%88%E8%B7%AF"><span class="toc-number">3.2.</span> <span class="toc-text">最小瓶颈路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E9%87%8F%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-number">3.3.</span> <span class="toc-text">增量最小生成树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AC%A1%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-number">3.4.</span> <span class="toc-text">次小生成树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset-5"><span class="toc-number">4.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UVa1395-Slim-Span"><span class="toc-number">4.1.</span> <span class="toc-text">[UVa1395] Slim Span</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3343,7 +3343,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.min.js?time=1644987154127')</script>
+  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.js')</script>
 
 
 
@@ -3553,19 +3553,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644987154127")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644989116536")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644987154127")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644989116536")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644987154127")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644989116536")
       }
     
   };
@@ -3661,7 +3661,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644987154132')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644989116542')
   
   })();
 
@@ -3795,7 +3795,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644987154127");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644989116536");
   }
 
   function loadSearchService() {
@@ -3860,7 +3860,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3903,7 +3903,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644987154127').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644989116536').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4162,7 +4162,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644987154127.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644989116536.js"></script>
 
 
 <!-- more -->

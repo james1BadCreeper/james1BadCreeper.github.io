@@ -1813,7 +1813,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 12:52:34 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 13:25:16 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
@@ -2788,7 +2788,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>最近公共祖先简称 LCA（Lowest Common Ancestor）。两个节点的最近公共祖先，就是这两个点的公共祖先里面，离根最远的那个。LCA 是解决许多问题的利器，本文将引导你学习 LCA。</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="概念-3">概念</h2><div class="story post-story">
+<h2 id="概念-4">概念</h2><div class="story post-story">
 <p>LCA 是指点集的 LCA，为了方便，我们记某点集 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false">{</mo><msub><mi>u</mi><mi>i</mi></msub><mi mathvariant="normal">∣</mi><mn>1</mn><mo>⩽</mo><mi>i</mi><mo>⩽</mo><mi>n</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">A=\{u_i|1\leqslant i\leqslant n\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">∣1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7962em;vertical-align:-0.1367em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mclose">}</span></span></span></span> 的最近公共祖先为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>C</mi><mi>A</mi><mo stretchy="false">(</mo><msub><mi>u</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>u</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>u</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">LCA(u_1,u_2,\ldots,u_n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 或 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>C</mi><mi>A</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">LCA(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span></span></span></span>。</p>
 <p>LCA 有以下性质：</p>
 <ol>
@@ -2971,7 +2971,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-3"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%82%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">求法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E4%B8%8A%E6%A0%87%E8%AE%B0%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">向上标记法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%91%E4%B8%8A%E5%80%8D%E5%A2%9E%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">树上倍增法</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-4"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%82%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">求法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E4%B8%8A%E6%A0%87%E8%AE%B0%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">向上标记法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%91%E4%B8%8A%E5%80%8D%E5%A2%9E%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">树上倍增法</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3323,7 +3323,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.min.js?time=1644987154195')</script>
+  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.js')</script>
 
 
 
@@ -3533,19 +3533,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644987154195")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644989116596")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644987154195")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644989116596")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644987154195")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644989116596")
       }
     
   };
@@ -3641,7 +3641,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644987154200')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644989116602')
   
   })();
 
@@ -3775,7 +3775,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644987154195");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644989116596");
   }
 
   function loadSearchService() {
@@ -3840,7 +3840,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3883,7 +3883,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644987154195').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644989116596').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4142,7 +4142,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644987154195.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644989116596.js"></script>
 
 
 <!-- more -->

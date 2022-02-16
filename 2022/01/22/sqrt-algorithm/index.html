@@ -1813,7 +1813,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 12:52:34 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 13:25:16 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
@@ -2844,7 +2844,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 </div><h2 id="块状链表">块状链表</h2><div class="story post-story">
 </div><h2 id="简单莫队">简单莫队</h2><div class="story post-story">
 <p>有时题目的查询非常诡异，常规的在线做法（读入一个询问回答一个）不起作用，需要离线做法（读入所有询问后统一处理）。如果还要对询问进行分块，那么莫队就出现了。</p>
-</div><h2 id="Problemset-12">Problemset</h2><div class="story post-story">
+</div><h2 id="Problemset-13">Problemset</h2><div class="story post-story">
 
 </div>
   </div>
@@ -3002,7 +3002,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%9D%97%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">分块基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%97%E7%8A%B6%E6%95%B0%E7%BB%84"><span class="toc-number">2.</span> <span class="toc-text">块状数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Luogu-2801-%E6%95%99%E4%B8%BB%E7%9A%84%E9%AD%94%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">[Luogu 2801] 教主的魔法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%97%E7%8A%B6%E9%93%BE%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">块状链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E8%8E%AB%E9%98%9F"><span class="toc-number">4.</span> <span class="toc-text">简单莫队</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset-12"><span class="toc-number">5.</span> <span class="toc-text">Problemset</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%9D%97%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">分块基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%97%E7%8A%B6%E6%95%B0%E7%BB%84"><span class="toc-number">2.</span> <span class="toc-text">块状数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Luogu-2801-%E6%95%99%E4%B8%BB%E7%9A%84%E9%AD%94%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">[Luogu 2801] 教主的魔法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%97%E7%8A%B6%E9%93%BE%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">块状链表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E8%8E%AB%E9%98%9F"><span class="toc-number">4.</span> <span class="toc-text">简单莫队</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset-13"><span class="toc-number">5.</span> <span class="toc-text">Problemset</span></a></li></ol>
     </div>
   </section>
 
@@ -3354,7 +3354,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
       
     </ul>
   </div>
-  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.min.js?time=1644987154101')</script>
+  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.js')</script>
 
 
 
@@ -3564,19 +3564,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644987154101")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644989116495")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644987154101")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644989116495")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644987154101")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644989116495")
       }
     
   };
@@ -3672,7 +3672,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644987154107')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644989116500')
   
   })();
 
@@ -3806,7 +3806,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644987154101");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644989116495");
   }
 
   function loadSearchService() {
@@ -3871,7 +3871,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3914,7 +3914,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644987154101').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644989116495').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4173,7 +4173,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644987154101.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644989116495.js"></script>
 
 
 <!-- more -->

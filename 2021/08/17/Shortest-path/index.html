@@ -1813,7 +1813,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
   volantis.debug = false; // 开启调试模式
-  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 12:52:34 GMT+0800 (China Standard Time)');
+  volantis.LASTUPDATE = new Date('Wed Feb 16 2022 13:25:16 GMT+0800 (China Standard Time)');
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   async function volantisInitConfig() {
@@ -2788,7 +2788,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>最短路是图论中的常考问题，本文引导你学习最短路的 Floyd，BellmanFord 及 Djikstra 算法。</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="概念-4">概念</h2><div class="story post-story">
+<h2 id="概念-5">概念</h2><div class="story post-story">
 <p><strong>松弛</strong>。最短路的核心思想是松弛，即找一个点 C，如果从 A 到 B 的距离比从 A 到 C 再到 B 的距离长，那么更新最短路，这便是松弛操作。</p>
 <p><strong>环</strong>。要认识到一个事实。如果最短路存在，一定是个<strong>不含环的最短路</strong>。因为如果它是正环（边权和为正数），走它是自寻死路；如果它是零环，走它没有意义；如果它是负环，则不存在最短路了（或者说存在长度为 <code>-INF</code> 的最短路<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/滑稽.png"/></span>）。</p>
 </div><h2 id="多源最短路">多源最短路</h2><div class="story post-story">
@@ -2915,7 +2915,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>以 Dijkstra 为例：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> p[<span class="number">100005</span>];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dijkstra</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int, int&gt;</span></span></span><br><span class="line">    priority_queue &lt; pii, vector &lt; pii &gt;, greater &lt; pii &gt; &gt; q;</span><br><span class="line">    <span class="built_in">memset</span>(d, <span class="number">0x3f</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(d));</span><br><span class="line">    d[s] = <span class="number">0</span>;</span><br><span class="line">    q.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(<span class="number">0</span>, s));</span><br><span class="line">    <span class="keyword">while</span> (!q.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> u = q.<span class="built_in">top</span>().second;</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span> (v[u] == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            v[u] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; G[u].<span class="built_in">size</span>(); ++i)</span><br><span class="line">            &#123;</span><br><span class="line">                edge &amp;e = edges[G[u][i]];</span><br><span class="line">                <span class="keyword">if</span> (d[u] + e.dist &lt; d[e.to])</span><br><span class="line">                &#123;</span><br><span class="line">                    d[e.to] = d[u] + e.dist;</span><br><span class="line">                    p[e.to] = G[u][i]; <span class="comment">// 记录从哪个点来</span></span><br><span class="line">                    q.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(d[e.to], e.to));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> t)</span> <span class="comment">// 打印 s 到 t 的最短路</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == t)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, s);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(s, p[t]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, t);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>就是这么简单<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/%E6%BB%91%E7%A8%BD.png" style="height:1.5em"/>。</p>
-</div><h2 id="Problemset-6">Problemset</h2><div class="story post-story">
+</div><h2 id="Problemset-7">Problemset</h2><div class="story post-story">
 <p>接下来我们看一些最短路例题，它们的难度都不低，请做好战斗准备<img no-lazy class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji@1.0.0/tieba/%E6%BB%91%E7%A8%BD.png" style="height:1.5em"/>！</p>
 <p>这些题的有些会出现一些经典的最短路建模技巧，请读者仔细阅读。</p>
 <h3 id="热身">热身</h3>
@@ -3111,7 +3111,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-4"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF"><span class="toc-number">2.</span> <span class="toc-text">多源最短路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Floyd"><span class="toc-number">2.1.</span> <span class="toc-text">Floyd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Johnson"><span class="toc-number">2.2.</span> <span class="toc-text">Johnson</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bellman-Ford"><span class="toc-number">3.</span> <span class="toc-text">Bellman-Ford</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86-2"><span class="toc-number">3.1.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPFA"><span class="toc-number">3.2.</span> <span class="toc-text">SPFA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B2%E6%8E%89-SPFA"><span class="toc-number">3.3.</span> <span class="toc-text">干掉 SPFA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9F%E7%8E%AF"><span class="toc-number">3.4.</span> <span class="toc-text">负环</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dijkstra"><span class="toc-number">4.</span> <span class="toc-text">Dijkstra</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.1.</span> <span class="toc-text">原理与实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96-2"><span class="toc-number">4.2.</span> <span class="toc-text">优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%A9%B6%E7%AB%9F%E7%94%A8%E4%BB%80%E4%B9%88%E7%AE%97%E6%B3%95%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">我究竟用什么算法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%9A%84%E6%89%93%E5%8D%B0"><span class="toc-number">6.</span> <span class="toc-text">最短路的打印</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset-6"><span class="toc-number">7.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E8%BA%AB"><span class="toc-number">7.1.</span> <span class="toc-text">热身</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Luogu-1119-%E7%81%BE%E5%90%8E%E9%87%8D%E5%BB%BA"><span class="toc-number">7.1.1.</span> <span class="toc-text">[Luogu 1119] 灾后重建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UVa11374-Airport-Express"><span class="toc-number">7.1.2.</span> <span class="toc-text">[UVa11374] Airport Express</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Luogu-1629-%E9%82%AE%E9%80%92%E5%91%98%E9%80%81%E4%BF%A1"><span class="toc-number">7.1.3.</span> <span class="toc-text">[Luogu 1629] 邮递员送信</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7"><span class="toc-number">7.2.</span> <span class="toc-text">技巧</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-5"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF"><span class="toc-number">2.</span> <span class="toc-text">多源最短路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Floyd"><span class="toc-number">2.1.</span> <span class="toc-text">Floyd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Johnson"><span class="toc-number">2.2.</span> <span class="toc-text">Johnson</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bellman-Ford"><span class="toc-number">3.</span> <span class="toc-text">Bellman-Ford</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86-2"><span class="toc-number">3.1.</span> <span class="toc-text">原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPFA"><span class="toc-number">3.2.</span> <span class="toc-text">SPFA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B2%E6%8E%89-SPFA"><span class="toc-number">3.3.</span> <span class="toc-text">干掉 SPFA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9F%E7%8E%AF"><span class="toc-number">3.4.</span> <span class="toc-text">负环</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dijkstra"><span class="toc-number">4.</span> <span class="toc-text">Dijkstra</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.1.</span> <span class="toc-text">原理与实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96-2"><span class="toc-number">4.2.</span> <span class="toc-text">优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%A9%B6%E7%AB%9F%E7%94%A8%E4%BB%80%E4%B9%88%E7%AE%97%E6%B3%95%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">我究竟用什么算法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%9A%84%E6%89%93%E5%8D%B0"><span class="toc-number">6.</span> <span class="toc-text">最短路的打印</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset-7"><span class="toc-number">7.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E8%BA%AB"><span class="toc-number">7.1.</span> <span class="toc-text">热身</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Luogu-1119-%E7%81%BE%E5%90%8E%E9%87%8D%E5%BB%BA"><span class="toc-number">7.1.1.</span> <span class="toc-text">[Luogu 1119] 灾后重建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UVa11374-Airport-Express"><span class="toc-number">7.1.2.</span> <span class="toc-text">[UVa11374] Airport Express</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Luogu-1629-%E9%82%AE%E9%80%92%E5%91%98%E9%80%81%E4%BF%A1"><span class="toc-number">7.1.3.</span> <span class="toc-text">[Luogu 1629] 邮递员送信</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E5%B7%A7"><span class="toc-number">7.2.</span> <span class="toc-text">技巧</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3463,7 +3463,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.min.js?time=1644987154218')</script>
+  <script>volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/rightMenu.js')</script>
 
 
 
@@ -3673,19 +3673,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644987154218")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/sites.min.js?time=1644989116613")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644987154218")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/friends.min.js?time=1644989116613")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644987154218")
+        volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/contributors.min.js?time=1644989116613")
       }
     
   };
@@ -3781,7 +3781,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     await volantis.js("https://npm.elemecdn.com/meting@2.0/dist/Meting.min.js")
   
     // 右键 music 需要在 APlayer  MetingJS 之后加载
-    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644987154222')
+    await volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/aplayer.min.js?time=1644989116619')
   
   })();
 
@@ -3915,7 +3915,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644987154218");
+    return volantis.js("https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/search/hexo.min.js?time=1644989116613");
   }
 
   function loadSearchService() {
@@ -3980,7 +3980,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp"];
+  let imgs = ["https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/038.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/035.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/034.webp","https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4023,7 +4023,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644987154218').then(()=>{
+    volantis.js('https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/plugins/parallax.min.js?time=1644989116613').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
@@ -4282,7 +4282,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644987154218.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/james1badcreeper/hexo-theme-volantis@22w16a/source/js/iconfont.min.js?time=1644989116613.js"></script>
 
 
 <!-- more -->
