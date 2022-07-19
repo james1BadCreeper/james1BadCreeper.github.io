@@ -254,8 +254,8 @@ th {
   padding: 0;
 }
 @font-face {
-  font-family: 'Cascadia';
-  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/CascadiaCode/Cascadia.ttf");
+  font-family: 'Jetbrains';
+  src: url("https://fastly.jsdelivr.net/gh/JetBrains/JetBrainsMono@2.242/fonts/webfonts/JetBrainsMono-Regular.woff2");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -600,7 +600,7 @@ article#tag .all-tags ul li span:before {
   overflow: auto;
   background: var(--color-codeblock);
   font-size: 0.8125rem;
-  font-family: Cascadia, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
   border: 1px solid #d9ffd9;
   padding: 16px;
   border-radius: 4px;
@@ -620,7 +620,7 @@ article#tag .all-tags ul li span:before {
   color: rgba(68,68,68,0.9);
 }
 .article code {
-  font-family: Cascadia, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
 }
 .article code:not([class]) {
   word-break: break-all;
@@ -5475,7 +5475,7 @@ p.p.logo {
 }
 span.p.code,
 p.p.code {
-  font-family: Cascadia, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
 }
 span.p.left,
 p.p.left {
@@ -5960,7 +5960,7 @@ div.timenode:hover .meta:after {
   -ms-transform: scale(1);
 }
 .article mjx-container {
-  font-family: Cascadia, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
   padding: 16px 8px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -6419,7 +6419,7 @@ div.timenode:hover .meta:after {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-appearance: none;
-  font-family: Menlo, Cascadia, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Menlo, Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
   font-size: 11px;
   font-weight: bold;
   padding: 4px 8px;
@@ -6573,6 +6573,35 @@ div.timenode:hover .meta:after {
 .hljs.typescript:before,
 .highlight.typescript:before {
   content: "TypeScript";
+}
+.highlight.cpp .keyword {
+  color: #12aa9c !important;
+}
+.highlight.cpp .type {
+  color: #cc5595;
+}
+.highlight.cpp .built_in,
+.highlight.cpp .title {
+  color: #1781b5;
+}
+.highlight.cpp .number {
+  color: #fc6315;
+}
+.highlight.cpp .line .meta {
+  color: #12aa9c;
+}
+.highlight.cpp .line .meta-string,
+.highlight.cpp .line .string {
+  color: #b78d12;
+}
+.highlight.cpp .line .class {
+  color: rgba(68,68,68,0.9);
+}
+.highlight.cpp .line .class .title {
+  color: #1e80f0;
+}
+.highlight.cpp .line .comment {
+  color: #a4aca7;
 }
 .highlight pre .line,
 .highlight pre .params {
@@ -6765,7 +6794,7 @@ pre {
   display: block;
   background: var(--color-block);
   font-size: 0.8125rem;
-  font-family: Cascadia, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   line-height: 1.5;
@@ -9271,7 +9300,7 @@ kbd {
   box-shadow: inset 0 -2px 0 #d3d3d4, 0 1px 1px rgba(0,0,0,0.5) !important;
   -webkit-box-shadow: inset 0 -2px 0 #d3d3d4, 0 1px 1px rgba(0,0,0,0.5) !important;
   font-size: 0.9em;
-  font-family: Cascadia, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
 }
 ul.list-v.rightmenu {
   border-radius: 8px;
