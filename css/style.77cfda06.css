@@ -600,7 +600,7 @@ article#tag .all-tags ul li span:before {
   overflow: auto;
   background: var(--color-codeblock);
   font-size: 0.8125rem;
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Jetbrains Mono", "Microsoft YaHei", monospace, courier, sans-serif;
   border: 1px solid #d9ffd9;
   padding: 16px;
   border-radius: 4px;
@@ -620,7 +620,7 @@ article#tag .all-tags ul li span:before {
   color: rgba(68,68,68,0.9);
 }
 .article code {
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Jetbrains Mono", "Microsoft YaHei", monospace, courier, sans-serif;
 }
 .article code:not([class]) {
   word-break: break-all;
@@ -4511,12 +4511,6 @@ details {
   -webkit-border-radius: 4px;
   background: var(--color-card);
   font-size: 0.9375rem;
-  transition: all 0.28s ease;
-  -webkit-transition: all 0.28s ease;
-  -khtml-transition: all 0.28s ease;
-  -moz-transition: all 0.28s ease;
-  -o-transition: all 0.28s ease;
-  -ms-transition: all 0.28s ease;
   border: 1px solid var(--color-block);
 }
 details summary {
@@ -5475,7 +5469,7 @@ p.p.logo {
 }
 span.p.code,
 p.p.code {
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Jetbrains Mono", "Microsoft YaHei", monospace, courier, sans-serif;
 }
 span.p.left,
 p.p.left {
@@ -5960,7 +5954,7 @@ div.timenode:hover .meta:after {
   -ms-transform: scale(1);
 }
 .article mjx-container {
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Jetbrains Mono", "Microsoft YaHei", monospace, courier, sans-serif;
   padding: 16px 8px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -6419,7 +6413,7 @@ div.timenode:hover .meta:after {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-appearance: none;
-  font-family: Menlo, Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Menlo, Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Jetbrains Mono", "Microsoft YaHei", monospace, courier, sans-serif;
   font-size: 11px;
   font-weight: bold;
   padding: 4px 8px;
@@ -6794,7 +6788,7 @@ pre {
   display: block;
   background: var(--color-block);
   font-size: 0.8125rem;
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Jetbrains Mono", "Microsoft YaHei", monospace, courier, sans-serif;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   line-height: 1.5;
@@ -6991,23 +6985,23 @@ p,
 input,
 pre>span,
 textarea {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/text.png"), text;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/text.png"), text;
 }
 .fancybox-container .fancybox-stage,
 .fancybox__carousel .is-draggable {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/zoom-out.png"), zoom-out;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/zoom-out.png"), zoom-out;
 }
 .fancybox a,
 .fancybox-can-zoomIn .fancybox-content,
 .fancybox__carousel .fancybox__slide.can-zoom_in .fancybox__content {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/zoom-in.png"), zoom-in;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/zoom-in.png"), zoom-in;
 }
 span.btn>a:not([href]):hover,
 .fancybox-button[disabled],
 .fancybox-button[disabled]:hover,
 .gt-container .gt-btn.is--disable,
 span.not-select {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/circle.png"), not-allowed;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/circle.png"), not-allowed;
 }
 html,
 a:not([href]),
@@ -7032,7 +7026,7 @@ kbd,
 p > img,
 p > svg,
 .fix-cursor-default {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/left_ptr.png"), default;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/left_ptr.png"), default;
 }
 a,
 psw,
@@ -7093,31 +7087,31 @@ a.result.search-result-fix,
 .tk-action-icon,
 .fancybox,
 .fix-cursor-pointer {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/pointer.png"), pointer;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png"), pointer;
 }
 .cur-default {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/left_ptr.png"), default !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/left_ptr.png"), default !important;
 }
 .cur-pointer,
 .carousel__button,
 .fancybox__slide {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png"), pointer !important;
 }
 .cur-not-allowed {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/circle.png"), not-allowed !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/circle.png"), not-allowed !important;
 }
 .cur-zoom-in,
 .fancybox__carousel .fancybox__slide.can-zoom_in .fancybox__content,
 .has-image[data-image-fit=contain].can-zoom_in .fancybox__image {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/zoom-in.png"), zoom-in !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/zoom-in.png"), zoom-in !important;
 }
 .cur-zoom-out,
 .fancybox__carousel .is-draggable,
 .has-image[data-image-fit=contain].is-draggable .fancybox__image {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/zoom-out.png"), zoom-out !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/zoom-out.png"), zoom-out !important;
 }
 .cur-text {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/text.png"), text !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/text.png"), text !important;
 }
 .common_read {
   z-index: auto !important;
@@ -8683,13 +8677,13 @@ details[open] > div.content {
   }
 }
 ul.list-v.rightmenu li a {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/left_ptr.png"), default;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/left_ptr.png"), default;
 }
 ul.list-v.rightmenu li.menuLoad-Content a {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png"), pointer !important;
 }
 ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-pic,
 .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon,
@@ -8697,30 +8691,30 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar {
 .aplayer .aplayer-list ol li,
 .aplayer .aplayer-list ol li .aplayer-list-author,
 .aplayer .aplayer-list ol li .aplayer-list-index {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png"), pointer !important;
 }
 .chat-app {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/left_ptr.png"), default !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/left_ptr.png"), default !important;
 }
 .iziToast,
 .iziToast p {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/left_ptr.png"), default !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/left_ptr.png"), default !important;
 }
 .iziToast-close,
 .gitter-chat-embed-action-bar-item,
 .btn,
 button {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-info .aplayer-music {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/left_ptr.png"), default !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/left_ptr.png"), default !important;
 }
 .aplayer .aplayer-info .aplayer-music .aplayer-title,
 .aplayer .aplayer-info .aplayer-music .aplayer-author {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/text.png"), text !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/text.png"), text !important;
 }
 .gitter-open-chat-button {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap,
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar,
@@ -8729,15 +8723,15 @@ button {
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span,
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span span,
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span span svg {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png"), pointer !important;
 }
 .aplayer-volume-wrap,
 .aplayer-volume-bar {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/pointer.png"), pointer !important;
 }
 iframe,
 .notlink {
-  cursor: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/cursor/left_ptr.png"), default !important;
+  cursor: url("https://gcore.jsdelivr.net/gh/inkss/common@1/cursor/left_ptr.png"), default !important;
 }
 .not-select,
 figcaption,
@@ -9054,6 +9048,12 @@ details[open][purple] >summary {
   -o-transition: transform 0.2s, -webkit-transform 0.2s;
   -ms-transition: transform 0.2s, -webkit-transform 0.2s;
 }
+div.note.alien-monster::before {
+  content: '\f8f6';
+}
+div.note.face-sad-tear::before {
+  content: '\f5b4';
+}
 .link-fx-1 {
   position: relative;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -9300,7 +9300,7 @@ kbd {
   box-shadow: inset 0 -2px 0 #d3d3d4, 0 1px 1px rgba(0,0,0,0.5) !important;
   -webkit-box-shadow: inset 0 -2px 0 #d3d3d4, 0 1px 1px rgba(0,0,0,0.5) !important;
   font-size: 0.9em;
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Microsoft YaHei", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", "Jetbrains Mono", "Microsoft YaHei", monospace, courier, sans-serif;
 }
 ul.list-v.rightmenu {
   border-radius: 8px;
