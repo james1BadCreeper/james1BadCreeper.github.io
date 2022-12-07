@@ -23,28 +23,36 @@
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
   <!-- import head_begin begin -->
+      <link href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" rel="stylesheet">
   <!-- import head_begin end -->
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
+    <link rel="shortcut icon" type='image/x-icon' href="https://s3.bmp.ovh/imgs/2022/07/15/832a039463fab678.png">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>网络流初步 - james1 的博客</title>
-  <meta name="keywords" content="null">
-  <meta desc name="description" content="james1 - james1BadCreeper - james1 的博客">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="网络流初步">
+  <title>二分图与网络流 - james1 的博客</title>
+  <meta name="keywords" content="网络流,二分图,null">
+  <meta desc name="description" content="
+网络流是个很有用的东西，而二分图。本文将带你进入二分图与网络流这一图论中最为古老的内容。
+ - james1BadCreeper - james1 的博客">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="二分图与网络流">
 <meta property="og:url" content="http://example.com/2022/ecebf309/index.html">
 <meta property="og:site_name" content="james1 的博客">
+<meta property="og:description" content="网络流是个很有用的东西，而二分图。本文将带你进入二分图与网络流这一图论中最为古老的内容。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-02-05T00:48:37.000Z">
-<meta property="article:modified_time" content="2022-11-25T10:08:54.000Z">
+<meta property="article:published_time" content="2022-12-07T00:48:37.000Z">
+<meta property="article:modified_time" content="2022-12-07T08:49:31.216Z">
 <meta property="article:author" content="james1BadCreeper">
+<meta property="article:tag" content="网络流">
+<meta property="article:tag" content="二分图">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -104,7 +112,7 @@ html {
   color: var(--color-text);
   width: 100%;
   height: 100%;
-  font-family: Dosis, "Microsoft YaHei", "Pingfang SC", Menlo, Monaco, monospace, sans-serif;
+  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Menlo, Monaco, monospace, sans-serif;
   font-size: 16px;
 }
 html >::-webkit-scrollbar {
@@ -418,7 +426,7 @@ button {
   margin-top: 32px;
 }
 .cover-wrapper .cover-body .title {
-  font-family: Dosis, "Microsoft YaHei", "Pingfang SC", Helvetica, monospace;
+  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Helvetica, monospace;
   font-size: 3.125rem;
   line-height: 1.2;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -915,8 +923,8 @@ button {
   }
 }
 @font-face {
-  font-family: 'Dosis';
-  src: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
+  font-family: 'UbuntuMono';
+  src: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -1046,7 +1054,7 @@ button {
   line-height: 64px;
   padding: 0 24px;
   font-size: 1.375rem;
-  font-family: Dosis, "Microsoft YaHei", "Pingfang SC", Helvetica, monospace;
+  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Helvetica, monospace;
 }
 .l_header #wrapper .nav-main .title img {
   height: 64px;
@@ -1057,7 +1065,7 @@ button {
 }
 .l_header .nav-sub .title {
   font-weight: bold;
-  font-family: Dosis, "Microsoft YaHei", "Pingfang SC", Menlo, Monaco, monospace, sans-serif;
+  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Menlo, Monaco, monospace, sans-serif;
   line-height: 1.2;
   max-height: 64px;
   white-space: normal;
@@ -2237,7 +2245,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670289295456),
+    lastupdate: new Date(1670410263075),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2790,7 +2798,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md  article-type-post" id="post" itemscope itemprop="blogPost">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://example.com/2022/ecebf309/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="james1 的博客">
@@ -2812,7 +2820,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        网络流初步
+        二分图与网络流
       </h1>
       <div class='new-meta-box'>
         
@@ -2829,10 +2837,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-25T18:08:54+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-07T16:49:31+08:00">
   <a class='notlink'>
     <i class="fad fa-edit TURQUOISE fa-fw" aria-hidden="true"></i>
-    <p>更新于 2022年11月25日</p>
+    <p>更新于 2022年12月7日</p>
   </a>
 </div>
 
@@ -2864,7 +2872,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fad fa-keyboard CARROT fa-fw" aria-hidden="true"></i>
-      <p>字数：0 字</p>
+      <p>字数：140 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2888,8 +2896,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   
   <div id="post-body" itemprop="articleBody">
-    <blockquote></blockquote>
+    <blockquote>
+<p>网络流是个很有用的东西，而二分图。本文将带你进入二分图与网络流这一图论中最为古老的内容。</p>
+</blockquote>
 <span id="more"></span>
+<h2 id="网络流">网络流</h2>
+<p>一个<strong>网络</strong>是一张有向图 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mo stretchy="false">(</mo><mi>V</mi><mo separator="true">,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">G=(V,E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span>，对于每条有向边 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>∈</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">(u,v)\in E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span> 存在<strong>容量限制</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">c(u,v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span>，当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>∉</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">(u,v)\not\in E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span> 时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c(u,v)=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。</p>
+<h3 id="网络流-24-题">网络流 24 题</h3>
+<p>虽然很老，但是还是比较经典吧。</p>
+<h2 id="Problemset">Problemset</h2>
+<h3 id="网络流-2">网络流</h3>
+
   </div>
   
   
@@ -2904,7 +2921,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">网络流初步</div>
+            <div class="license-title">二分图与网络流</div>
             <div class="license-link"><a href="http://example.com/2022/ecebf309/">http://example.com/2022/ecebf309/</a>
             </div>
             <div class="license-meta">
@@ -2914,12 +2931,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2022年2月5日</div>
-              </div>
-              
-              <div class="license-meta-item">
-                <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2022年11月25日</div>
+                <div class="license-meta-text">2022年12月7日</div>
               </div>
               
               
@@ -2944,10 +2956,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-02-05T08:48:37+08:00">
+          <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-12-07T08:48:37+08:00">
   <a class='notlink'>
     <i class="fad fa-calendar-alt TURQUOISE fa-fw" aria-hidden="true"></i>
-    <p>发布于 2022年2月5日</p>
+    <p>发布于 2022年12月7日</p>
   </a>
 </div>
 
@@ -2955,12 +2967,41 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-duotone fa-folder-open ORANGE fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/">算法竞赛</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BE%E8%AE%BA/">图论</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" itemprop="url"><span itemprop="name">算法竞赛</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BE%E8%AE%BA/" itemprop="url"><span itemprop="name">图论</span></a>
+      </span>
+    
+  </div>
+  
+
 
 
         
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>网络流</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>二分图</p></a></div>
+  <span hidden itemprop="keywords">网络流 二分图</span>
+  
+
 
         
       
@@ -2977,24 +3018,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/3f40bc15/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>记 2022 大连中考</p>
+        <a class='prev' href='/2022/26972790/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>非传统题目</p>
           <p class='content'>
-大连中考满分 695 分，其中语数各 150 分，英语 140 分，理综 160 分（物理 90，化学 70），体育 50 分，等级学科累计成绩 45 分。由于辽宁是信息学竞赛的弱省，大连市唯...</p>
+常规的传统题目采用黑箱评测，让选手程序读入输入数据，将选手输出与输出数据全文比较或者采用 Special Judge 比较。但比赛中还有一些非传统题目，本文将简单介绍。
+
+
+交互题
+这是什么呢...</p>
         </a>
       
       
-        <a class='next' href='/2021/bec2b773/'>
-          <p class='title'>Goodbye 2021, Hello 2022!<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='next' href='/2022/71e30681/'>
+          <p class='title'>字符串与自动机<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
-再见，2021。你好，2022！
+高级的字符串算法几乎都与一个重要的概念：确定有限状态自动机（DFA）有关。这是一种重要的数学模型。
 
-
-引子
-班级搞了新年联欢会，而且我是 1 月份生日，老师直接给我们开生日派对，不过真的挺开心的。
-借此，就在这里写一些奇谈鬼论吧。
-回首
-真的就这么过去了。...</p>
+</p>
         </a>
       
     </div>
@@ -3106,9 +3146,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fad fa-list BELIZEHOLE fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%B5%81"><span class="toc-number">1.</span> <span class="toc-text">网络流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%B5%81-24-%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">网络流 24 题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset"><span class="toc-number">2.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%B5%81-2"><span class="toc-number">2.1.</span> <span class="toc-text">网络流</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
 
 <!--tikAs-->
@@ -4140,7 +4190,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 
 
   <script>
-  let imgs = ["https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp"];
+  let imgs = ["https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4249,7 +4299,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
         renderMathInElement(document.body);
       })
     }
-    volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.0/contrib/copy-tex.min.js")
+    volantis.js("")
     volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.0/katex.min.js").then(pjax_katex)
     volantis.pjax.push(pjax_katex)
   }
@@ -4392,7 +4442,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/ecebf309/","name":"网络流初步"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"网络流初步","description":"james1","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/ecebf309/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/ecebf309/","wordCount":0,"datePublished":"2022-02-05T00:48:37.000Z","dateModified":"2022-11-25T10:08:54.000Z","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/图论/","name":"图论"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/ecebf309/","name":"二分图与网络流"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"二分图与网络流","description":"\n网络流是个很有用的东西，而二分图。本文将带你进入二分图与网络流这一图论中最为古老的内容。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/ecebf309/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/ecebf309/","wordCount":46,"datePublished":"2022-12-07T00:48:37.000Z","dateModified":"2022-12-07T08:49:31.216Z","articleSection":"算法竞赛","keywords":"网络流,二分图","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
