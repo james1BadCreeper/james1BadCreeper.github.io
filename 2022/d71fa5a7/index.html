@@ -36,7 +36,7 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>Codeforces Div.2 VP 记录 - james1 的博客</title>
-  <meta name="keywords" content="Codeforces,比赛,Div.2,null">
+  <meta name="keywords" content="Div.2,Codeforces,比赛,null">
   <meta desc name="description" content="
 我不会做普及题了。
  - james1BadCreeper - james1 的博客">
@@ -49,11 +49,11 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-11-14T08:13:10.000Z">
-<meta property="article:modified_time" content="2022-12-07T08:02:03.156Z">
+<meta property="article:modified_time" content="2022-12-08T01:46:29.235Z">
 <meta property="article:author" content="james1BadCreeper">
+<meta property="article:tag" content="Div.2">
 <meta property="article:tag" content="Codeforces">
 <meta property="article:tag" content="比赛">
-<meta property="article:tag" content="Div.2">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2246,7 +2246,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670410263075),
+    lastupdate: new Date(1671349032900),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2840,10 +2840,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-07T16:02:03+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-08T09:46:29+08:00">
   <a class='notlink'>
     <i class="fad fa-edit TURQUOISE fa-fw" aria-hidden="true"></i>
-    <p>更新于 2022年12月7日</p>
+    <p>更新于 2022年12月8日</p>
   </a>
 </div>
 
@@ -2875,13 +2875,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fad fa-keyboard CARROT fa-fw" aria-hidden="true"></i>
-      <p>字数：11.9k 字</p>
+      <p>字数：12.1k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fad fa-hourglass-half CARROT fa-fw" aria-hidden="true"></i>
-      <p>时长：63 分钟</p>
+      <p>时长：64 分钟</p>
     </a>
   </div>
 
@@ -4676,6 +4676,66 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
               </div>
             </details>
+<h3 id="Codeforces-Round-836-Div-2">Codeforces Round #836 (Div. 2)</h3>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1758">Portal</a>.</p>
+<p>这应该是近期打的最后一场了，接下来会把前面的补掉。</p>
+<h4 id="A-SSeeeeiinngg-DDoouubbllee">A. SSeeeeiinngg DDoouubbllee</h4>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1758/problem/A">Portal</a>.</p>
+<details cyan><summary> 查看代码 </summary>
+              <div class='content'>
+              <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> i64<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> n<span class="token punctuation">;</span>
+<span class="token keyword">char</span> s<span class="token punctuation">[</span><span class="token number">200005</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    cin <span class="token operator">>></span> s<span class="token punctuation">;</span> n <span class="token operator">=</span> <span class="token function">strlen</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> s<span class="token punctuation">;</span>
+    <span class="token function">reverse</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> s <span class="token operator">+</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> s <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    ios<span class="token double-colon punctuation">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> T<span class="token punctuation">;</span> cin <span class="token operator">>></span> T<span class="token punctuation">;</span> 
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>T<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              </div>
+            </details>
+<h4 id="B-XOR-Average">B.	XOR = Average</h4>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1758/problem/B">Portal</a>.</p>
+<details cyan><summary> 查看代码 </summary>
+              <div class='content'>
+              <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> i64<span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">;</span> cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"1 "</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+        cout <span class="token operator">&lt;&lt;</span> n <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"1 "</span> <span class="token operator">&lt;&lt;</span> n <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    ios<span class="token double-colon punctuation">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> T<span class="token punctuation">;</span> cin <span class="token operator">>></span> T<span class="token punctuation">;</span> 
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>T<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              </div>
+            </details>
   </div>
   
   
@@ -4705,7 +4765,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2022年12月7日</div>
+                <div class="license-meta-text">2022年12月8日</div>
               </div>
               
               
@@ -4768,8 +4828,8 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Codeforces/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>Codeforces</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%AF%94%E8%B5%9B/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>比赛</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Div-2/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>Div.2</p></a></div>
-  <span hidden itemprop="keywords">Codeforces 比赛 Div.2</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Div-2/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>Div.2</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Codeforces/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>Codeforces</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%AF%94%E8%B5%9B/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>比赛</p></a></div>
+  <span hidden itemprop="keywords">Div.2 Codeforces 比赛</span>
   
 
 
@@ -4789,15 +4849,14 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
     <div class="prev-next">
       
         <a class='prev' href='/2022/da8ee41/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>2022 省选日志</p>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>2022~2023 省选日志（持续更新）</p>
           <p class='content'>
 Burn everything with Raging Hellfire.
+注意，这篇文章可能是鲜花集合。随着心智的成熟，这一篇会比 NOIP 那篇给您带来更多的收获。
 
 
 11 月
-MOIP 没有了！嘎嘎！退钱！
-得出的结论：参加 NOIP-Spring 2023 需要交钱！嘎嘎！
-...</p>
+NOIP...</p>
         </a>
       
       
@@ -4820,7 +4879,20 @@ MOIP 没有了！嘎嘎！退钱！
 
   
 
-  
+
+  <article class="post white-box shadow" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2022/d71fa5a7/index.html#comments">
+    </span>
+    <p ct><i class='fad fa-comments'></i> 评论</p>
+    
+      <p cst>若无法加载，请尝试刷新（若还有问题请尝试通过右键或顶栏选择关于以联系作者），欢迎讨论与交流，支持 Markdown 与 LaTeX 语法（Mathjax 的加载可能较为缓慢，公式与文字间必须有空格，否则会渲染失败）！</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
 
 
 
@@ -4926,7 +4998,7 @@ MOIP 没有了！嘎嘎！退钱！
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E6%9C%88%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">11 月记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-830-Div-2"><span class="toc-number">1.1.</span> <span class="toc-text">Codeforces Round #830 (Div.2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Bestie"><span class="toc-number">1.1.1.</span> <span class="toc-text">A. Bestie</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Ugu"><span class="toc-number">1.1.2.</span> <span class="toc-text">B. Ugu</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Sheikh-Hard-Version"><span class="toc-number">1.1.3.</span> <span class="toc-text">C. Sheikh (Hard Version)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Balance-Hard-version"><span class="toc-number">1.1.4.</span> <span class="toc-text">D. Balance (Hard version)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-Location"><span class="toc-number">1.1.5.</span> <span class="toc-text">E. Location</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-822-Div-2"><span class="toc-number">1.2.</span> <span class="toc-text">Codeforces Round #822 (Div.2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Select-Three-Sticks"><span class="toc-number">1.2.1.</span> <span class="toc-text">A. Select Three Sticks</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Bright-Nice-BrilliantGNU"><span class="toc-number">1.2.2.</span> <span class="toc-text">B. Bright, Nice, Brilliant	GNU</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Removing-Smallest-Multiples"><span class="toc-number">1.2.3.</span> <span class="toc-text">C. Removing Smallest Multiples</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Slime-Escape"><span class="toc-number">1.2.4.</span> <span class="toc-text">D. Slime Escape</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-Rectangular-Congruence"><span class="toc-number">1.2.5.</span> <span class="toc-text">E. Rectangular Congruence</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#F-Zeros-and-Ones"><span class="toc-number">1.2.6.</span> <span class="toc-text">F. Zeros and Ones</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-833-Div-2"><span class="toc-number">1.3.</span> <span class="toc-text">Codeforces Round #833 (Div.2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-The-Ultimate-Square"><span class="toc-number">1.3.1.</span> <span class="toc-text">A. The Ultimate Square</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Diverse-Substrings"><span class="toc-number">1.3.2.</span> <span class="toc-text">B. Diverse Substrings</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Zero-Sum-Prefixes"><span class="toc-number">1.3.3.</span> <span class="toc-text">C. Zero-Sum Prefixes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-ConstructOR"><span class="toc-number">1.3.4.</span> <span class="toc-text">D. ConstructOR</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-802-Div-2"><span class="toc-number">1.4.</span> <span class="toc-text">Codeforces Round #802 (Div.2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Optimal-Path"><span class="toc-number">1.4.1.</span> <span class="toc-text">A. Optimal Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Palindromic-Numbers"><span class="toc-number">1.4.2.</span> <span class="toc-text">B. Palindromic Numbers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Helping-the-Nature"><span class="toc-number">1.4.3.</span> <span class="toc-text">C. Helping the Nature</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-River-Locks"><span class="toc-number">1.4.4.</span> <span class="toc-text">D. River Locks</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-Serega-the-Pirate"><span class="toc-number">1.4.5.</span> <span class="toc-text">E. Serega the Pirate</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-813-Div-2"><span class="toc-number">1.5.</span> <span class="toc-text">Codeforces Round #813 (Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Wonderful-Permutation"><span class="toc-number">1.5.1.</span> <span class="toc-text">A. Wonderful Permutation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Woeful-Permutation"><span class="toc-number">1.5.2.</span> <span class="toc-text">B. Woeful Permutation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Sort-Zero"><span class="toc-number">1.5.3.</span> <span class="toc-text">C. Sort Zero</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Empty-Graph"><span class="toc-number">1.5.4.</span> <span class="toc-text">D. Empty Graph</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E6%9C%88%E8%AE%B0%E5%BD%95"><span class="toc-number">2.</span> <span class="toc-text">12 月记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-825-Div-2"><span class="toc-number">2.1.</span> <span class="toc-text">Codeforces Round #825 (Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Make-A-Equal-to-B"><span class="toc-number">2.1.1.</span> <span class="toc-text">A. Make A Equal to B</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Playing-with-GCD"><span class="toc-number">2.1.2.</span> <span class="toc-text">B. Playing with GCD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C2-Good-Subarrays-Hard-Version"><span class="toc-number">2.1.3.</span> <span class="toc-text">C2. Good Subarrays (Hard Version)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Equal-Binary-Subsequences"><span class="toc-number">2.1.4.</span> <span class="toc-text">D. Equal Binary Subsequences</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-Swap-and-Take"><span class="toc-number">2.1.5.</span> <span class="toc-text">E. Swap and Take</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Educational-Codeforces-Round-67-Rated-for-Div-2"><span class="toc-number">2.2.</span> <span class="toc-text">Educational Codeforces Round 67 (Rated for Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Stickers-and-Toys"><span class="toc-number">2.2.1.</span> <span class="toc-text">A. Stickers and Toys</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Letters-Shop"><span class="toc-number">2.2.2.</span> <span class="toc-text">B. Letters Shop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Vasya-And-Array"><span class="toc-number">2.2.3.</span> <span class="toc-text">C. Vasya And Array</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Subarray-Sorting"><span class="toc-number">2.2.4.</span> <span class="toc-text">D. Subarray Sorting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-Tree-Painting"><span class="toc-number">2.2.5.</span> <span class="toc-text">E. Tree Painting</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Educational-Codeforces-Round-126-Rated-for-Div-2"><span class="toc-number">2.3.</span> <span class="toc-text">Educational Codeforces Round 126 (Rated for Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Array-Balancing"><span class="toc-number">2.3.1.</span> <span class="toc-text">A. Array Balancing</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Getting-Zero"><span class="toc-number">2.3.2.</span> <span class="toc-text">B. Getting Zero</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Water-the-Trees"><span class="toc-number">2.3.3.</span> <span class="toc-text">C. Water the Trees</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Progressions-Covering"><span class="toc-number">2.3.4.</span> <span class="toc-text">D. Progressions Covering</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-746-Div-2"><span class="toc-number">2.4.</span> <span class="toc-text">Codeforces Round #746 (Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Gamer-Hemose"><span class="toc-number">2.4.1.</span> <span class="toc-text">A. Gamer Hemose</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Hemose-Shopping"><span class="toc-number">2.4.2.</span> <span class="toc-text">B. Hemose Shopping</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Bakry-and-Partitioning"><span class="toc-number">2.4.3.</span> <span class="toc-text">C. Bakry and Partitioning</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Hemose-in-ICPC"><span class="toc-number">2.4.4.</span> <span class="toc-text">D. Hemose in ICPC ?</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E6%9C%88%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">11 月记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-830-Div-2"><span class="toc-number">1.1.</span> <span class="toc-text">Codeforces Round #830 (Div.2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Bestie"><span class="toc-number">1.1.1.</span> <span class="toc-text">A. Bestie</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Ugu"><span class="toc-number">1.1.2.</span> <span class="toc-text">B. Ugu</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Sheikh-Hard-Version"><span class="toc-number">1.1.3.</span> <span class="toc-text">C. Sheikh (Hard Version)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Balance-Hard-version"><span class="toc-number">1.1.4.</span> <span class="toc-text">D. Balance (Hard version)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-Location"><span class="toc-number">1.1.5.</span> <span class="toc-text">E. Location</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-822-Div-2"><span class="toc-number">1.2.</span> <span class="toc-text">Codeforces Round #822 (Div.2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Select-Three-Sticks"><span class="toc-number">1.2.1.</span> <span class="toc-text">A. Select Three Sticks</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Bright-Nice-BrilliantGNU"><span class="toc-number">1.2.2.</span> <span class="toc-text">B. Bright, Nice, Brilliant	GNU</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Removing-Smallest-Multiples"><span class="toc-number">1.2.3.</span> <span class="toc-text">C. Removing Smallest Multiples</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Slime-Escape"><span class="toc-number">1.2.4.</span> <span class="toc-text">D. Slime Escape</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-Rectangular-Congruence"><span class="toc-number">1.2.5.</span> <span class="toc-text">E. Rectangular Congruence</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#F-Zeros-and-Ones"><span class="toc-number">1.2.6.</span> <span class="toc-text">F. Zeros and Ones</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-833-Div-2"><span class="toc-number">1.3.</span> <span class="toc-text">Codeforces Round #833 (Div.2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-The-Ultimate-Square"><span class="toc-number">1.3.1.</span> <span class="toc-text">A. The Ultimate Square</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Diverse-Substrings"><span class="toc-number">1.3.2.</span> <span class="toc-text">B. Diverse Substrings</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Zero-Sum-Prefixes"><span class="toc-number">1.3.3.</span> <span class="toc-text">C. Zero-Sum Prefixes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-ConstructOR"><span class="toc-number">1.3.4.</span> <span class="toc-text">D. ConstructOR</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-802-Div-2"><span class="toc-number">1.4.</span> <span class="toc-text">Codeforces Round #802 (Div.2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Optimal-Path"><span class="toc-number">1.4.1.</span> <span class="toc-text">A. Optimal Path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Palindromic-Numbers"><span class="toc-number">1.4.2.</span> <span class="toc-text">B. Palindromic Numbers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Helping-the-Nature"><span class="toc-number">1.4.3.</span> <span class="toc-text">C. Helping the Nature</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-River-Locks"><span class="toc-number">1.4.4.</span> <span class="toc-text">D. River Locks</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-Serega-the-Pirate"><span class="toc-number">1.4.5.</span> <span class="toc-text">E. Serega the Pirate</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-813-Div-2"><span class="toc-number">1.5.</span> <span class="toc-text">Codeforces Round #813 (Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Wonderful-Permutation"><span class="toc-number">1.5.1.</span> <span class="toc-text">A. Wonderful Permutation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Woeful-Permutation"><span class="toc-number">1.5.2.</span> <span class="toc-text">B. Woeful Permutation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Sort-Zero"><span class="toc-number">1.5.3.</span> <span class="toc-text">C. Sort Zero</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Empty-Graph"><span class="toc-number">1.5.4.</span> <span class="toc-text">D. Empty Graph</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E6%9C%88%E8%AE%B0%E5%BD%95"><span class="toc-number">2.</span> <span class="toc-text">12 月记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-825-Div-2"><span class="toc-number">2.1.</span> <span class="toc-text">Codeforces Round #825 (Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Make-A-Equal-to-B"><span class="toc-number">2.1.1.</span> <span class="toc-text">A. Make A Equal to B</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Playing-with-GCD"><span class="toc-number">2.1.2.</span> <span class="toc-text">B. Playing with GCD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C2-Good-Subarrays-Hard-Version"><span class="toc-number">2.1.3.</span> <span class="toc-text">C2. Good Subarrays (Hard Version)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Equal-Binary-Subsequences"><span class="toc-number">2.1.4.</span> <span class="toc-text">D. Equal Binary Subsequences</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-Swap-and-Take"><span class="toc-number">2.1.5.</span> <span class="toc-text">E. Swap and Take</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Educational-Codeforces-Round-67-Rated-for-Div-2"><span class="toc-number">2.2.</span> <span class="toc-text">Educational Codeforces Round 67 (Rated for Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Stickers-and-Toys"><span class="toc-number">2.2.1.</span> <span class="toc-text">A. Stickers and Toys</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Letters-Shop"><span class="toc-number">2.2.2.</span> <span class="toc-text">B. Letters Shop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Vasya-And-Array"><span class="toc-number">2.2.3.</span> <span class="toc-text">C. Vasya And Array</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Subarray-Sorting"><span class="toc-number">2.2.4.</span> <span class="toc-text">D. Subarray Sorting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-Tree-Painting"><span class="toc-number">2.2.5.</span> <span class="toc-text">E. Tree Painting</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Educational-Codeforces-Round-126-Rated-for-Div-2"><span class="toc-number">2.3.</span> <span class="toc-text">Educational Codeforces Round 126 (Rated for Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Array-Balancing"><span class="toc-number">2.3.1.</span> <span class="toc-text">A. Array Balancing</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Getting-Zero"><span class="toc-number">2.3.2.</span> <span class="toc-text">B. Getting Zero</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Water-the-Trees"><span class="toc-number">2.3.3.</span> <span class="toc-text">C. Water the Trees</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Progressions-Covering"><span class="toc-number">2.3.4.</span> <span class="toc-text">D. Progressions Covering</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-746-Div-2"><span class="toc-number">2.4.</span> <span class="toc-text">Codeforces Round #746 (Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Gamer-Hemose"><span class="toc-number">2.4.1.</span> <span class="toc-text">A. Gamer Hemose</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-Hemose-Shopping"><span class="toc-number">2.4.2.</span> <span class="toc-text">B. Hemose Shopping</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-Bakry-and-Partitioning"><span class="toc-number">2.4.3.</span> <span class="toc-text">C. Bakry and Partitioning</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-Hemose-in-ICPC"><span class="toc-number">2.4.4.</span> <span class="toc-text">D. Hemose in ICPC ?</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codeforces-Round-836-Div-2"><span class="toc-number">2.5.</span> <span class="toc-text">Codeforces Round #836 (Div. 2)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-SSeeeeiinngg-DDoouubbllee"><span class="toc-number">2.5.1.</span> <span class="toc-text">A. SSeeeeiinngg DDoouubbllee</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-XOR-Average"><span class="toc-number">2.5.2.</span> <span class="toc-text">B.	XOR &#x3D; Average</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -5011,32 +5083,6 @@ MOIP 没有了！嘎嘎！退钱！
   
   <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
-    
-      
-        <div class="aplayer-container">
-          
-
-  
-    
-      <meting-js
-        theme='#1BCDFC'
-        autoplay='false'
-        volume='0.7'
-        loop='all'
-        order='random'
-        fixed='false'
-        list-max-height='320px'
-        server='netease'
-        type='playlist'
-        id='7730564369'
-        list-folded='true'>
-      </meting-js>
-    
-  
-
-
-        </div>
-      
     
       
         <br>
@@ -5832,6 +5878,55 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
+      <script>
+  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
+
+  volantis.giscus = {};
+
+  function check_giscus() {
+    if (volantis.dark.mode === "dark") {
+      volantis.giscus.Theme = 'dark';
+    } else {
+      volantis.giscus.Theme = 'light';
+    }
+
+    return document.getElementById("giscus_container");
+  }
+
+  function pjax_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"james1BadCreeper/comments","repo-id":"R_kgDOHqRCfQ","category":"Announcements","category-id":"DIC_kwDOHqRCfc4CQOhD","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN","input-position":"top"},pdata.commentConfig)
+    const script = document.createElement('script');
+    script.setAttribute('src', 'https://giscus.app/client.js');
+    Object.keys(cfg).forEach(k=>{
+      if (k != "theme") {
+        script.setAttribute('data-'+k, cfg[k]);
+      }
+    })
+    script.setAttribute('data-theme', volantis.giscus.Theme);
+    script.setAttribute('crossorigin', "anonymous");
+    HEAD.appendChild(script);
+  }
+
+  function dark_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+
+    const message = {
+      setConfig: {
+        theme: volantis.giscus.Theme
+      }
+    };
+    const giscusIframe = document.querySelector('iframe.giscus-frame');
+    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+  pjax_giscus();
+  volantis.pjax.push(pjax_giscus);
+  volantis.dark.push(dark_giscus);
+</script>
+
+    
 
 
 
@@ -5960,7 +6055,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 
 
   <script>
-  let imgs = ["https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp"];
+  let imgs = ["https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -6212,7 +6307,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/比赛记录/","name":"比赛记录"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/d71fa5a7/","name":"Codeforces Div.2 VP 记录"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Codeforces Div.2 VP 记录","description":"\n我不会做普及题了。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/d71fa5a7/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/d71fa5a7/","wordCount":11,"datePublished":"2022-11-14T08:13:10.000Z","dateModified":"2022-12-07T08:02:03.156Z","articleSection":"算法竞赛","keywords":"Codeforces,比赛,Div.2","image":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/6371c85216f2c2beb12c24ef.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/比赛记录/","name":"比赛记录"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/d71fa5a7/","name":"Codeforces Div.2 VP 记录"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Codeforces Div.2 VP 记录","description":"\n我不会做普及题了。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/d71fa5a7/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/d71fa5a7/","wordCount":11,"datePublished":"2022-11-14T08:13:10.000Z","dateModified":"2022-12-08T01:46:29.235Z","articleSection":"算法竞赛","keywords":"Div.2,Codeforces,比赛","image":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/6371c85216f2c2beb12c24ef.jpg","width":1024,"height":768}}]</script>
 
 
 
