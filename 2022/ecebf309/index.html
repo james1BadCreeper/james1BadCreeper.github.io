@@ -9,8 +9,8 @@
   <link rel="canonical" href="http://example.com/2022/ecebf309/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://test1.jsdelivr.net'>
-      <link rel="preconnect" href="https://test1.jsdelivr.net" crossorigin>
+      <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+      <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
       <link rel='dns-prefetch' href='https://cdn.bootcdn.net'>
       <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
   <meta name="renderer" content="webkit">
@@ -30,31 +30,30 @@
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="https://s3.bmp.ovh/imgs/2022/07/15/832a039463fab678.png">
   <link rel="preload" href="/css/style.css" as="style">
-  <link rel="preload" href="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>二分图与网络流 - james1 的博客</title>
-  <meta name="keywords" content="网络流,二分图,null">
+  <title>网络流问题 - james1 的博客</title>
+  <meta name="keywords" content="网络流,null">
   <meta desc name="description" content="
-网络流是个很有用的东西，而二分图有关的很多内容都可以转换为网络流。本文将带你进入二分图与网络流这一图论中最为古老也最为博大精深的内容。
+网络流是个很有用的东西，很多问题都可以转化为网络流。
  - james1BadCreeper - james1 的博客">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分图与网络流">
+<meta property="og:title" content="网络流问题">
 <meta property="og:url" content="http://example.com/2022/ecebf309/index.html">
 <meta property="og:site_name" content="james1 的博客">
-<meta property="og:description" content="网络流是个很有用的东西，而二分图有关的很多内容都可以转换为网络流。本文将带你进入二分图与网络流这一图论中最为古老也最为博大精深的内容。">
+<meta property="og:description" content="网络流是个很有用的东西，很多问题都可以转化为网络流。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-12-07T00:48:37.000Z">
-<meta property="article:modified_time" content="2022-12-15T09:37:00.291Z">
+<meta property="article:modified_time" content="2023-01-10T10:38:54.844Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="网络流">
-<meta property="article:tag" content="二分图">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
     /* 首屏样式 */
     #safearea {
@@ -112,7 +111,7 @@ html {
   color: var(--color-text);
   width: 100%;
   height: 100%;
-  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Menlo, Monaco, monospace, sans-serif;
+  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
   font-size: 16px;
 }
 html >::-webkit-scrollbar {
@@ -426,7 +425,7 @@ button {
   margin-top: 32px;
 }
 .cover-wrapper .cover-body .title {
-  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Helvetica, monospace;
+  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
   font-size: 3.125rem;
   line-height: 1.2;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -924,14 +923,14 @@ button {
 }
 @font-face {
   font-family: 'UbuntuMono';
-  src: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  src: url("https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
   font-family: 'Dosis';
-  src: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
+  src: url("https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -1054,7 +1053,7 @@ button {
   line-height: 64px;
   padding: 0 24px;
   font-size: 1.375rem;
-  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Helvetica, monospace;
+  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
 }
 .l_header #wrapper .nav-main .title img {
   height: 64px;
@@ -1065,7 +1064,7 @@ button {
 }
 .l_header .nav-sub .title {
   font-weight: bold;
-  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Menlo, Monaco, monospace, sans-serif;
+  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
   line-height: 1.2;
   max-height: 64px;
   white-space: normal;
@@ -2175,9 +2174,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     volantis.requestAnimationFrame(loop)
   }
   volantis.scroll.handleScrollEvents()
+  volantis.scroll.ele = null;
   // 触发页面滚动至目标元素位置
   volantis.scroll.to = (ele, option = {}) => {
     if (!ele) return;
+    volantis.scroll.ele = ele;
     // 默认配置
     opt = {
       top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
@@ -2204,6 +2205,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // option.observer = false
     if (option.observer) {
       setTimeout(() => {
+        if (volantis.scroll.ele != ele) {
+          return
+        }
         volantis.scroll.unengine.push(() => {
           let me = ele.getBoundingClientRect().top
           if (!(me >= -option.observerDic && me <= option.observerDic)) {
@@ -2231,11 +2235,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /******************************************************************************/
   //图像加载出错时的处理
   function errorImgAvatar(img) {
-    img.src = "https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg";
+    img.src = "https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg";
     img.onerror = null;
   }
   function errorImgCover(img) {
-    img.src = "https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg";
+    img.src = "https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg";
     img.onerror = null;
   }
   /******************************************************************************/
@@ -2244,8 +2248,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.GLOBAL_CONFIG ={
     root: '/',
     debug: "env",
-    default: {"avatar":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671349032900),
+    default: {"avatar":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date(1674568037736),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2275,7 +2279,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       },
       
       
-      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.link","menus.prevNext","hr","plugins.articlePage","menus.darkMode","hr","music"],"options":{"iconPrefix":"fa-duotone PETERRIVE","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-duotone fa-arrow-left PETERRIVE","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-duotone fa-arrow-right PETERRIVE","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-duotone fa-redo PETERRIVE","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-duotone fa-arrow-up PETERRIVE","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-duotone fa-paste EMERALD","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-duotone fa-object-ungroup EMERALD","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-duotone fa-cut EMERALD","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-duotone fa-copy EMERALD","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-duotone fa-search EMERALD","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-duotone fa-search PETERRIVE","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"},{"id":"googleSearch","name":"谷歌搜索","icon":"fa-duotone fa-search ALIZARIN","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-duotone fa-external-link-square-alt PUMPKIN","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-duotone fa-link PUMPKIN","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-duotone fa-image SUNFLOWER","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-duotone fa-images SUNFLOWER","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-duotone fa-print ORANGE","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-duotone fa-book-open-cover PETERRIVE","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"home","name":"首页博文","icon":"fa-duotone fa-blog PETERRIVE","link":"/","group":"link"},{"id":"notes","name":"学习笔记","icon":"fa-duotone fa-notes teal","link":"/notes/","group":"link"},{"id":"summaries","name":"随笔与文章","icon":"fa-duotone fa-pen-line ALIZARIN","link":"/summaries/","group":"link"},{"id":"achieve","name":"文章归档","icon":"fad fa-archive WISTERIA","link":"/archives/","group":"link"},{"id":"about","name":"关于笔者","icon":"fa-duotone fa-info-circle ORANGE","link":"/about/","group":"link"}],"darkMode":[{"id":"darkMode","name":"昼夜切换","icon":"fa-duotone fa-moon-over-sun WISTERIA","event":"volantis.dark.toggle()","group":"darkMode"}]}}
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.link","menus.prevNext","hr","plugins.articlePage","menus.darkMode","hr","music"],"options":{"iconPrefix":"fa-duotone PETERRIVE","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-duotone fa-arrow-left PETERRIVE","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-duotone fa-arrow-right PETERRIVE","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-duotone fa-redo PETERRIVE","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-duotone fa-arrow-up PETERRIVE","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-duotone fa-paste EMERALD","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-duotone fa-object-ungroup EMERALD","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-duotone fa-cut EMERALD","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-duotone fa-copy EMERALD","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-duotone fa-search EMERALD","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-duotone fa-search PETERRIVE","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"},{"id":"googleSearch","name":"谷歌搜索","icon":"fa-duotone fa-search ALIZARIN","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-duotone fa-external-link-square-alt PUMPKIN","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-duotone fa-link PUMPKIN","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-duotone fa-image SUNFLOWER","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-duotone fa-images SUNFLOWER","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-duotone fa-print ORANGE","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-duotone fa-book-open-cover PETERRIVE","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"home","name":"首页博文","icon":"fa-duotone fa-blog PETERRIVE","link":"/","group":"link"},{"id":"notes","name":"学习笔记","icon":"fa-duotone fa-notes teal","link":"/categories/算法竞赛/学习笔记/","group":"link"},{"id":"summaries","name":"随笔与文章","icon":"fa-duotone fa-pen-line ALIZARIN","link":"/categories/文章/","group":"link"},{"id":"achieve","name":"文章归档","icon":"fad fa-archive WISTERIA","link":"/archives/","group":"link"},{"id":"about","name":"关于笔者","icon":"fa-duotone fa-info-circle ORANGE","link":"/about/","group":"link"}],"darkMode":[{"id":"darkMode","name":"昼夜切换","icon":"fa-duotone fa-moon-over-sun WISTERIA","event":"volantis.dark.toggle()","group":"darkMode"}]}}
       
     },
     search: {
@@ -2326,7 +2330,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://s4.ax1x.com/2022/01/02/T7CGdA.png'/>
+            <img no-lazy class='logo' src='/media/logo.png'/>
           
           
           
@@ -2751,35 +2755,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <img src='https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
+              <img src='https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
             </a>
           
             <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
               
               
               active-action="action-categoriesE7AE97E6B395E7AB9EE8B59BE5ADA6E4B9A0E7AC94E8AEB0">
-              <img src='https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4da.svg'><p>笔记</p>
+              <img src='https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4da.svg'><p>笔记</p>
             </a>
           
             <a href="/categories/%E6%96%87%E7%AB%A0/"
               
               
               active-action="action-categoriesE69687E7ABA0">
-              <img src='https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1fab6.svg'><p>随笔</p>
+              <img src='https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1fab6.svg'><p>随笔</p>
             </a>
           
             <a href="/archives/"
               
               
               active-action="action-archives">
-              <img src='https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f516.svg'><p>归档</p>
+              <img src='https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f516.svg'><p>归档</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://github.com/james1BadCreeper/james1BadCreeper.github.io"
               
               
               active-action="action-https:githubcomjames1BadCreeperjames1BadCreepergithubio">
-              <img src='https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
+              <img src='https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
             </a>
           
         
@@ -2822,7 +2826,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        二分图与网络流
+        网络流问题
       </h1>
       <div class='new-meta-box'>
         
@@ -2839,10 +2843,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-15T17:37:00+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-10T18:38:54+08:00">
   <a class='notlink'>
     <i class="fad fa-edit TURQUOISE fa-fw" aria-hidden="true"></i>
-    <p>更新于 2022年12月15日</p>
+    <p>更新于 2023年1月10日</p>
   </a>
 </div>
 
@@ -2899,11 +2903,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div id="post-body" itemprop="articleBody">
     <blockquote>
-<p>网络流是个很有用的东西，而二分图有关的很多内容都可以转换为网络流。本文将带你进入二分图与网络流这一图论中最为古老也最为博大精深的内容。</p>
+<p>网络流是个很有用的东西，很多问题都可以转化为网络流。</p>
 </blockquote>
 <span id="more"></span>
 <p>目前本文会很快切入建图，证明什么有时间再补。</p>
-<h2 id="网络流">网络流</h2>
+<h2 id="概述">概述</h2>
 <p>一个<strong>网络</strong>是一张有向图 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mo stretchy="false">(</mo><mi>V</mi><mo separator="true">,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">G=(V,E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span>，对于每条有向边 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>∈</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">(u,v)\in E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span> 存在<strong>容量限制</strong> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">c(u,v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span>，当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>∉</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">(u,v)\not\in E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span> 时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c(u,v)=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。网络的可行流分为有源汇（指定了两个节点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo separator="true">,</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">s,t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">t</span></span></span></span>，代表图的<strong>源点</strong>和<strong>汇点</strong>）和无源汇，但是都存在一个定义域为节点二元组的流函数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 代表边 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x\rightarrow y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 的流量，满足：</p>
 <ol>
 <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> 满足<strong>容量限制</strong>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>c</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x,y)\le c(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>，当两者相等时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x\rightarrow y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 就流满了；</li>
@@ -2918,24 +2922,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>将点集分为两个互补相交的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，且满足 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mi>T</mi><mo>∈</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">S\in A, T\in B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，这种划分方式称为<strong>割</strong>，割的容量为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mrow><mi>u</mi><mo>∈</mo><mi>A</mi></mrow></msub><msub><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>B</mi></mrow></msub><mi>c</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\sum_{u\in A}\sum_{v\in B}c(u,v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0771em;vertical-align:-0.3271em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1786em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">u</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3271em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1786em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3271em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span>，流量为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mrow><mi>u</mi><mo>∈</mo><mi>A</mi></mrow></msub><msub><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>B</mi></mrow></msub><mi>f</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\sum_{u\in A}\sum_{v\in B}f(u,v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0771em;vertical-align:-0.3271em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1786em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">u</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3271em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1786em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3271em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span>。如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mi>v</mi><mo>∈</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">u\in A,v\in B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">u</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，那么 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(u,v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span> 是<strong>割边</strong>，可以看出，割边一般不止一条。</li>
 </ul>
 <p>接下来讨论的内容默认都是有源流<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://www.mcbbs.net/static/image/smiley/tong/....png"/></span>！</p>
-<h3 id="最大流">最大流</h3>
+<h2 id="最大流问题">最大流问题</h2>
 <p>最大流是求一个网络的最大流量。</p>
-<h4 id="增广">增广</h4>
+<h3 id="增广">增广</h3>
 <p>找到一条残量网络 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>f</mi></msub></mrow><annotation encoding="application/x-tex">G_f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> 上的增广路 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>，并为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> 上的每一条边增加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>f</mi></msub><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mrow><mi>min</mi><mo>⁡</mo></mrow><mrow><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>∈</mo><mi>P</mi></mrow></msub><msub><mi>c</mi><mi>f</mi></msub><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">c_f(P)=\min_{(u,v)\in P}c_f(u,v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mop"><span class="mop">min</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">u</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mclose mtight">)</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span> 的流量。也就是说，流量能流满就能流满。这一过程称之为<strong>增广</strong>。</p>
 <p>怎样证明这个贪心策略？不需要！实际上在当前边的<strong>流量</strong>增加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>f</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">c_f(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 时，我们要给它的反向边的<strong>容量</strong>增加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>f</mi></msub><mo stretchy="false">(</mo><mi>y</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">c_f(y,x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>，其实这是一个反悔贪心的策略，可以回收原来的流量，正确性得以保证。</p>
-<h4 id="最大流最小割定理">最大流最小割定理</h4>
+<h3 id="最大流最小割定理">最大流最小割定理</h3>
 <p>割中割边容量和最小的划分方式称为<strong>最小割</strong>，而且<strong>最大流等于最小割</strong>。证明如下：</p>
 <ul>
 <li>存在一组流的流量等于一组割的容量：只需要让割边流满即可，最大流存在的时候残量网络<strong>不连通</strong>，也就提供了一组割。</li>
 <li>任意一组流的流量<strong>不大于</strong>任意一组割的容量。如果割掉这些边，那么网络流量尚未最大化，仍然可以找到增广路，与最大流的求解方式矛盾。</li>
 </ul>
-<h4 id="Dinic-算法">Dinic 算法</h4>
+<h3 id="Dinic-算法">Dinic 算法</h3>
 <blockquote>
 <p>Edmonds-Karp 和其他高级算法在本文中不会出现，只会介绍 Dinic。</p>
 </blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3376">模板</a>。</p>
 <p>Dinic 会不断进行 bfs 来在残量网络上构造分层图（根据节点的层次 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">d[x]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mopen">[</span><span class="mord mathnormal">x</span><span class="mclose">]</span></span></span></span>，从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 最少需要经过的边数），然后在分层图上进行 dfs 寻找增广路。时间复杂度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span>。</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<details cyan><summary> 查看代码 </summary>
+              <div class='content'>
+              <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdio></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
@@ -3005,6 +3011,8 @@ i64 <span class="token function">dinic</span><span class="token punctuation">(</
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span> maxflow<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              </div>
+            </details>
 <h3 id="无负环费用流">无负环费用流</h3>
 <p>指的是<strong>最小费用最大流</strong>，也就是说，在原有网络的基础上，每一条边多了一个权值 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">w(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>，要求在<strong>保证最大流</strong>前提下，找出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>∈</mo><mi>E</mi></mrow></msub><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>×</mo><mi>w</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\sum_{(x,y)\in E} f(x,y)\times w(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2247em;vertical-align:-0.4747em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2253em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">x</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mclose mtight">)</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4747em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 的最小值。通常使用 SPP 算法解决这个问题。</p>
 <p>SSP 实现时只需要将 Dinic 的 bfs 替换为 SPFA 即可（每条边的长度为权值 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span>）。相应的地方改一下即可。理论上限时间复杂度很高，但是实际表现不错，而且业界公约不卡。</p>
@@ -3168,12 +3176,12 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
               </div>
             </details>
 <p>如果要求输出集合划分模型的一组方案，那么就看残余网络上的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span> 到每个点的距离。如果能走到就是在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>，否则就是在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>。</p>
-<h3 id="上下界网络流">上下界网络流</h3>
+<h2 id="上下界网络流">上下界网络流</h2>
 <p>有的题目的流量限制除了有上界，还有下界。</p>
 <h2 id="Problemset">Problemset</h2>
 <p>嗯，这里题一堆。</p>
 <h3 id="网络流-24-题">网络流 24 题</h3>
-<p>没有固定的顺序。</p>
+<p>没有固定的顺序。虽然非常老，但是其中有些建模方式相当经典。</p>
 <h4 id="软件补丁问题">软件补丁问题</h4>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2761">Portal</a>.</p>
 <p>状压来表示点即可，压根就不是网络流。</p>
@@ -3254,7 +3262,7 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
         
           
           <div class="copyright license">
-            <div class="license-title">二分图与网络流</div>
+            <div class="license-title">网络流问题</div>
             <div class="license-link"><a href="http://example.com/2022/ecebf309/">http://example.com/2022/ecebf309/</a>
             </div>
             <div class="license-meta">
@@ -3269,7 +3277,7 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2022年12月15日</div>
+                <div class="license-meta-text">2023年1月10日</div>
               </div>
               
               
@@ -3336,8 +3344,8 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>网络流</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>二分图</p></a></div>
-  <span hidden itemprop="keywords">网络流 二分图</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BD%91%E7%BB%9C%E6%B5%81/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>网络流</p></a></div>
+  <span hidden itemprop="keywords">网络流</span>
   
 
 
@@ -3375,7 +3383,7 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
 
 概述
 这里只讲一些概念，但是非常有用。
-自动机是一个对信号序列进行判定的数学模型。“信号...</p>
+OI 中的自动机一般指确定有限状态自动机（DFA...</p>
         </a>
       
     </div>
@@ -3510,7 +3518,7 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%B5%81"><span class="toc-number">1.</span> <span class="toc-text">网络流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E6%B5%81"><span class="toc-number">1.1.</span> <span class="toc-text">最大流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A2%9E%E5%B9%BF"><span class="toc-number">1.1.1.</span> <span class="toc-text">增广</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E6%B5%81%E6%9C%80%E5%B0%8F%E5%89%B2%E5%AE%9A%E7%90%86"><span class="toc-number">1.1.2.</span> <span class="toc-text">最大流最小割定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dinic-%E7%AE%97%E6%B3%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">Dinic 算法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E8%B4%9F%E7%8E%AF%E8%B4%B9%E7%94%A8%E6%B5%81"><span class="toc-number">1.2.</span> <span class="toc-text">无负环费用流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-number">1.3.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E7%95%8C%E7%BD%91%E7%BB%9C%E6%B5%81"><span class="toc-number">1.4.</span> <span class="toc-text">上下界网络流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset"><span class="toc-number">2.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%B5%81-24-%E9%A2%98"><span class="toc-number">2.1.</span> <span class="toc-text">网络流 24 题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E8%A1%A5%E4%B8%81%E9%97%AE%E9%A2%98"><span class="toc-number">2.1.1.</span> <span class="toc-text">软件补丁问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%B5%81%E6%9D%82%E9%A2%98"><span class="toc-number">2.2.</span> <span class="toc-text">网络流杂题</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E6%B5%81%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">最大流问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%B9%BF"><span class="toc-number">2.1.</span> <span class="toc-text">增广</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E6%B5%81%E6%9C%80%E5%B0%8F%E5%89%B2%E5%AE%9A%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">最大流最小割定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dinic-%E7%AE%97%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">Dinic 算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E8%B4%9F%E7%8E%AF%E8%B4%B9%E7%94%A8%E6%B5%81"><span class="toc-number">2.4.</span> <span class="toc-text">无负环费用流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-number">2.5.</span> <span class="toc-text">解题思路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E7%95%8C%E7%BD%91%E7%BB%9C%E6%B5%81"><span class="toc-number">3.</span> <span class="toc-text">上下界网络流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset"><span class="toc-number">4.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%B5%81-24-%E9%A2%98"><span class="toc-number">4.1.</span> <span class="toc-text">网络流 24 题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E8%A1%A5%E4%B8%81%E9%97%AE%E9%A2%98"><span class="toc-number">4.1.1.</span> <span class="toc-text">软件补丁问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%B5%81%E6%9D%82%E9%A2%98"><span class="toc-number">4.2.</span> <span class="toc-text">网络流杂题</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3606,7 +3614,7 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -3617,7 +3625,7 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -3628,7 +3636,7 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -3689,7 +3697,7 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
 
 <script>
   
-  volantis.css("https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/libs/@fortawesome/fontawesome-pro/css/all.min.css");
+  volantis.css("https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/libs/@fortawesome/fontawesome-pro/css/all.min.css");
   
   
   
@@ -3859,7 +3867,7 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="notes" href="/notes/" data-group="link">
+    <a class="vlts-menu fix-cursor-default" id="notes" href="/categories/算法竞赛/学习笔记/" data-group="link">
       <i class="fa-duotone fa-notes teal fa-fw"></i>
       学习笔记
     </a>
@@ -3868,7 +3876,7 @@ queue<span class="token operator">&lt;</span><span class="token keyword">int</sp
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="summaries" href="/summaries/" data-group="link">
+    <a class="vlts-menu fix-cursor-default" id="summaries" href="/categories/文章/" data-group="link">
       <i class="fa-duotone fa-pen-line ALIZARIN fa-fw"></i>
       随笔与文章
     </a>
@@ -4274,7 +4282,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 	hoverDelay: 0
   };
 </script>
-<script defer src="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/libs/flying-pages/flying-pages.min.js"></script>
+<script defer src="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
@@ -4316,7 +4324,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     (async () => {
       // APlayer 需要在  MetingJS 之前加载
       await volantis.js("https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js")
-      await volantis.js("https://test1.jsdelivr.net/npm/meting@2/dist/Meting.min.js")
+      await volantis.js("https://gcore.jsdelivr.net/npm/meting@2/dist/Meting.min.js")
     
       // 右键 music 需要在 APlayer  MetingJS 之后加载
       await volantis.js('/js/plugins/aplayer.js')
@@ -4504,20 +4512,20 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
 
 
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
 
 
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
 
 
   
-<link rel="stylesheet" href="https://test1.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
 
 
 <script>
@@ -4567,7 +4575,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 
 
   <script>
-  let imgs = ["https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp"];
+  let imgs = ["https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4670,14 +4678,14 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
         <script>
   // https://www.micdz.cn/article/katex-on-volantis/
   if (typeof renderMathInElement == "undefined") {
-    volantis.css("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.0/katex.min.css")
+    volantis.css("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.15.2/katex.min.css")
     function pjax_katex() {
-      volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.0/contrib/auto-render.min.js").then(()=>{
+      volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.15.2/contrib/auto-render.min.js").then(()=>{
         renderMathInElement(document.body);
       })
     }
     volantis.js("")
-    volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.0/katex.min.js").then(pjax_katex)
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.15.2/katex.min.js").then(pjax_katex)
     volantis.pjax.push(pjax_katex)
   }
 </script>
@@ -4819,7 +4827,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/图论/","name":"图论"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/ecebf309/","name":"二分图与网络流"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"二分图与网络流","description":"\n网络流是个很有用的东西，而二分图有关的很多内容都可以转换为网络流。本文将带你进入二分图与网络流这一图论中最为古老也最为博大精深的内容。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/ecebf309/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/ecebf309/","wordCount":69,"datePublished":"2022-12-07T00:48:37.000Z","dateModified":"2022-12-15T09:37:00.291Z","articleSection":"算法竞赛","keywords":"网络流,二分图","image":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/63927c15b1fccdcd36f47656.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/图论/","name":"图论"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/ecebf309/","name":"网络流问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"网络流问题","description":"\n网络流是个很有用的东西，很多问题都可以转化为网络流。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/ecebf309/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/ecebf309/","wordCount":28,"datePublished":"2022-12-07T00:48:37.000Z","dateModified":"2023-01-10T10:38:54.844Z","articleSection":"算法竞赛","keywords":"网络流","image":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/63927c15b1fccdcd36f47656.jpg","width":1024,"height":768}}]</script>
 
 
 

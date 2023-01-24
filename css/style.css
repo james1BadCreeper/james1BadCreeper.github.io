@@ -255,7 +255,7 @@ th {
 }
 @font-face {
   font-family: 'Jetbrains';
-  src: url("https://test1.jsdelivr.net/gh/JetBrains/JetBrainsMono@2.242/fonts/webfonts/JetBrainsMono-Regular.woff2");
+  src: url("https://gcore.jsdelivr.net/gh/JetBrains/JetBrainsMono@2.242/fonts/webfonts/JetBrainsMono-Regular.woff2");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -5587,7 +5587,7 @@ p.p.subtitle:first-child {
 }
 span.p.logo,
 p.p.logo {
-  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Helvetica, monospace;
+  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
 }
 span.p.code,
 p.p.code {
@@ -6726,7 +6726,7 @@ pre::-webkit-scrollbar-thumb:hover {
   border-radius: 4px;
   -webkit-border-radius: 4px;
   color: var(--color-text);
-  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Menlo, Monaco, monospace, sans-serif;
+  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
 }
 .aplayer .aplayer-list {
   text-align: left;
@@ -6752,23 +6752,23 @@ p,
 input,
 pre>span,
 textarea {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/text.png"), text;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/text.png"), text;
 }
 .fancybox-container .fancybox-stage,
 .fancybox__carousel .is-draggable {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/zoom-out.png"), zoom-out;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/zoom-out.png"), zoom-out;
 }
 .fancybox a,
 .fancybox-can-zoomIn .fancybox-content,
 .fancybox__carousel .fancybox__slide.can-zoom_in .fancybox__content {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/zoom-in.png"), zoom-in;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/zoom-in.png"), zoom-in;
 }
 span.btn>a:not([href]):hover,
 .fancybox-button[disabled],
 .fancybox-button[disabled]:hover,
 .gt-container .gt-btn.is--disable,
 span.not-select {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/circle.png"), not-allowed;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/circle.png"), not-allowed;
 }
 html,
 a:not([href]),
@@ -6793,7 +6793,7 @@ kbd,
 p > img,
 p > svg,
 .fix-cursor-default {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default;
 }
 a,
 psw,
@@ -6854,31 +6854,31 @@ a.result.search-result-fix,
 .tk-action-icon,
 .fancybox,
 .fix-cursor-pointer {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer;
 }
 .cur-default {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default !important;
 }
 .cur-pointer,
 .carousel__button,
 .fancybox__slide {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
 }
 .cur-not-allowed {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/circle.png"), not-allowed !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/circle.png"), not-allowed !important;
 }
 .cur-zoom-in,
 .fancybox__carousel .fancybox__slide.can-zoom_in .fancybox__content,
 .has-image[data-image-fit=contain].can-zoom_in .fancybox__image {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/zoom-in.png"), zoom-in !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/zoom-in.png"), zoom-in !important;
 }
 .cur-zoom-out,
 .fancybox__carousel .is-draggable,
 .has-image[data-image-fit=contain].is-draggable .fancybox__image {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/zoom-out.png"), zoom-out !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/zoom-out.png"), zoom-out !important;
 }
 .cur-text {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/text.png"), text !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/text.png"), text !important;
 }
 .common_read {
   z-index: auto !important;
@@ -8722,13 +8722,13 @@ pre[class*="language-"] {
   cursor: help;
 }
 ul.list-v.rightmenu li a {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default;
 }
 ul.list-v.rightmenu li.menuLoad-Content a {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
 }
 ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-pic,
 .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon,
@@ -8736,23 +8736,23 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar {
 .aplayer .aplayer-list ol li,
 .aplayer .aplayer-list ol li .aplayer-list-author,
 .aplayer .aplayer-list ol li .aplayer-list-index {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
 }
 .chat-app {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default !important;
 }
 .iziToast,
 .iziToast p {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default !important;
 }
 .iziToast-close,
 .gitter-chat-embed-action-bar-item,
 .btn,
 button {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-info .aplayer-music {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default !important;
 }
 .aplayer .aplayer-info .aplayer-music .aplayer-title,
 .aplayer .aplayer-info .aplayer-music .aplayer-author,
@@ -8764,10 +8764,10 @@ h3,
 h4,
 h5,
 h6 {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/text.png"), text !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/text.png"), text !important;
 }
 .gitter-open-chat-button {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap,
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar,
@@ -8776,15 +8776,15 @@ h6 {
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span,
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span span,
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played span span svg {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer-volume-wrap,
 .aplayer-volume-bar {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
 }
 iframe,
 .notlink {
-  cursor: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default !important;
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/left_ptr.png"), default !important;
 }
 .not-select,
 figcaption,
@@ -8937,6 +8937,9 @@ details[open][purple] {
 }
 details[open][purple] >summary {
   border-bottom-color: rgba(156,39,176,0.3);
+}
+.katex-display .katex .katex-html {
+  overflow-x: auto;
 }
 div.note.alien-monster::before {
   content: '\f8f6';
@@ -9182,19 +9185,6 @@ rainbow {
   to {
     background-position: -2000vw;
   }
-}
-#l_main #post-body h2 {
-  border-left: 4px solid #3b73de;
-  border-bottom: none;
-  padding-left: 0.75rem;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-#l_main #post-body h2:before {
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: none;
 }
 .iconfont {
   width: 1em;

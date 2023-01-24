@@ -9,8 +9,8 @@
   <link rel="canonical" href="http://example.com/2022/d81de632/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://test1.jsdelivr.net'>
-      <link rel="preconnect" href="https://test1.jsdelivr.net" crossorigin>
+      <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+      <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
       <link rel='dns-prefetch' href='https://cdn.bootcdn.net'>
       <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
   <meta name="renderer" content="webkit">
@@ -30,31 +30,30 @@
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="https://s3.bmp.ovh/imgs/2022/07/15/832a039463fab678.png">
   <link rel="preload" href="/css/style.css" as="style">
-  <link rel="preload" href="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>数据结构进阶 - james1 的博客</title>
-  <meta name="keywords" content="CDQ 分治,整体二分,null">
+  <title>数据结构杂项 - james1 的博客</title>
+  <meta name="keywords" content="数据结构,null">
   <meta desc name="description" content="
-这里是省选范围以内的常用数据结构。
+这里是省选范围以内的小数据结构，它们能解决一些特定的问题，但都不算常见。本文还介绍了一些经典数据结构问题。
  - james1BadCreeper - james1 的博客">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构进阶">
+<meta property="og:title" content="数据结构杂项">
 <meta property="og:url" content="http://example.com/2022/d81de632/index.html">
 <meta property="og:site_name" content="james1 的博客">
-<meta property="og:description" content="这里是省选范围以内的常用数据结构。">
+<meta property="og:description" content="这里是省选范围以内的小数据结构，它们能解决一些特定的问题，但都不算常见。本文还介绍了一些经典数据结构问题。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-08-31T13:54:04.000Z">
-<meta property="article:modified_time" content="2022-12-10T00:28:27.060Z">
+<meta property="og:image" content="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-12-26T15:54:04.000Z">
+<meta property="article:modified_time" content="2023-01-07T03:33:15.191Z">
 <meta property="article:author" content="james1BadCreeper">
-<meta property="article:tag" content="CDQ 分治">
-<meta property="article:tag" content="整体二分">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
     /* 首屏样式 */
     #safearea {
@@ -112,7 +111,7 @@ html {
   color: var(--color-text);
   width: 100%;
   height: 100%;
-  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Menlo, Monaco, monospace, sans-serif;
+  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
   font-size: 16px;
 }
 html >::-webkit-scrollbar {
@@ -426,7 +425,7 @@ button {
   margin-top: 32px;
 }
 .cover-wrapper .cover-body .title {
-  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Helvetica, monospace;
+  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
   font-size: 3.125rem;
   line-height: 1.2;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -924,14 +923,14 @@ button {
 }
 @font-face {
   font-family: 'UbuntuMono';
-  src: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  src: url("https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
   font-family: 'Dosis';
-  src: url("https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
+  src: url("https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -1054,7 +1053,7 @@ button {
   line-height: 64px;
   padding: 0 24px;
   font-size: 1.375rem;
-  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Helvetica, monospace;
+  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
 }
 .l_header #wrapper .nav-main .title img {
   height: 64px;
@@ -1065,7 +1064,7 @@ button {
 }
 .l_header .nav-sub .title {
   font-weight: bold;
-  font-family: Dosis, HarmonyOS_Regular, "Microsoft YaHei", "Pingfang SC", Menlo, Monaco, monospace, sans-serif;
+  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
   line-height: 1.2;
   max-height: 64px;
   white-space: normal;
@@ -2175,9 +2174,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     volantis.requestAnimationFrame(loop)
   }
   volantis.scroll.handleScrollEvents()
+  volantis.scroll.ele = null;
   // 触发页面滚动至目标元素位置
   volantis.scroll.to = (ele, option = {}) => {
     if (!ele) return;
+    volantis.scroll.ele = ele;
     // 默认配置
     opt = {
       top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
@@ -2204,6 +2205,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // option.observer = false
     if (option.observer) {
       setTimeout(() => {
+        if (volantis.scroll.ele != ele) {
+          return
+        }
         volantis.scroll.unengine.push(() => {
           let me = ele.getBoundingClientRect().top
           if (!(me >= -option.observerDic && me <= option.observerDic)) {
@@ -2231,11 +2235,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /******************************************************************************/
   //图像加载出错时的处理
   function errorImgAvatar(img) {
-    img.src = "https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg";
+    img.src = "https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg";
     img.onerror = null;
   }
   function errorImgCover(img) {
-    img.src = "https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg";
+    img.src = "https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg";
     img.onerror = null;
   }
   /******************************************************************************/
@@ -2244,8 +2248,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.GLOBAL_CONFIG ={
     root: '/',
     debug: "env",
-    default: {"avatar":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671349032900),
+    default: {"avatar":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date(1674568037736),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2275,7 +2279,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       },
       
       
-      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.link","menus.prevNext","hr","plugins.articlePage","menus.darkMode","hr","music"],"options":{"iconPrefix":"fa-duotone PETERRIVE","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-duotone fa-arrow-left PETERRIVE","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-duotone fa-arrow-right PETERRIVE","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-duotone fa-redo PETERRIVE","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-duotone fa-arrow-up PETERRIVE","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-duotone fa-paste EMERALD","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-duotone fa-object-ungroup EMERALD","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-duotone fa-cut EMERALD","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-duotone fa-copy EMERALD","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-duotone fa-search EMERALD","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-duotone fa-search PETERRIVE","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"},{"id":"googleSearch","name":"谷歌搜索","icon":"fa-duotone fa-search ALIZARIN","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-duotone fa-external-link-square-alt PUMPKIN","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-duotone fa-link PUMPKIN","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-duotone fa-image SUNFLOWER","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-duotone fa-images SUNFLOWER","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-duotone fa-print ORANGE","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-duotone fa-book-open-cover PETERRIVE","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"home","name":"首页博文","icon":"fa-duotone fa-blog PETERRIVE","link":"/","group":"link"},{"id":"notes","name":"学习笔记","icon":"fa-duotone fa-notes teal","link":"/notes/","group":"link"},{"id":"summaries","name":"随笔与文章","icon":"fa-duotone fa-pen-line ALIZARIN","link":"/summaries/","group":"link"},{"id":"achieve","name":"文章归档","icon":"fad fa-archive WISTERIA","link":"/archives/","group":"link"},{"id":"about","name":"关于笔者","icon":"fa-duotone fa-info-circle ORANGE","link":"/about/","group":"link"}],"darkMode":[{"id":"darkMode","name":"昼夜切换","icon":"fa-duotone fa-moon-over-sun WISTERIA","event":"volantis.dark.toggle()","group":"darkMode"}]}}
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.link","menus.prevNext","hr","plugins.articlePage","menus.darkMode","hr","music"],"options":{"iconPrefix":"fa-duotone PETERRIVE","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-duotone fa-arrow-left PETERRIVE","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-duotone fa-arrow-right PETERRIVE","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-duotone fa-redo PETERRIVE","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-duotone fa-arrow-up PETERRIVE","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-duotone fa-paste EMERALD","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-duotone fa-object-ungroup EMERALD","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-duotone fa-cut EMERALD","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-duotone fa-copy EMERALD","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-duotone fa-search EMERALD","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-duotone fa-search PETERRIVE","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"},{"id":"googleSearch","name":"谷歌搜索","icon":"fa-duotone fa-search ALIZARIN","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-duotone fa-external-link-square-alt PUMPKIN","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-duotone fa-link PUMPKIN","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-duotone fa-image SUNFLOWER","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-duotone fa-images SUNFLOWER","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-duotone fa-print ORANGE","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-duotone fa-book-open-cover PETERRIVE","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"home","name":"首页博文","icon":"fa-duotone fa-blog PETERRIVE","link":"/","group":"link"},{"id":"notes","name":"学习笔记","icon":"fa-duotone fa-notes teal","link":"/categories/算法竞赛/学习笔记/","group":"link"},{"id":"summaries","name":"随笔与文章","icon":"fa-duotone fa-pen-line ALIZARIN","link":"/categories/文章/","group":"link"},{"id":"achieve","name":"文章归档","icon":"fad fa-archive WISTERIA","link":"/archives/","group":"link"},{"id":"about","name":"关于笔者","icon":"fa-duotone fa-info-circle ORANGE","link":"/about/","group":"link"}],"darkMode":[{"id":"darkMode","name":"昼夜切换","icon":"fa-duotone fa-moon-over-sun WISTERIA","event":"volantis.dark.toggle()","group":"darkMode"}]}}
       
     },
     search: {
@@ -2326,7 +2330,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://s4.ax1x.com/2022/01/02/T7CGdA.png'/>
+            <img no-lazy class='logo' src='/media/logo.png'/>
           
           
           
@@ -2751,35 +2755,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <img src='https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
+              <img src='https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
             </a>
           
             <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
               
               
               active-action="action-categoriesE7AE97E6B395E7AB9EE8B59BE5ADA6E4B9A0E7AC94E8AEB0">
-              <img src='https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4da.svg'><p>笔记</p>
+              <img src='https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4da.svg'><p>笔记</p>
             </a>
           
             <a href="/categories/%E6%96%87%E7%AB%A0/"
               
               
               active-action="action-categoriesE69687E7ABA0">
-              <img src='https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1fab6.svg'><p>随笔</p>
+              <img src='https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1fab6.svg'><p>随笔</p>
             </a>
           
             <a href="/archives/"
               
               
               active-action="action-archives">
-              <img src='https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f516.svg'><p>归档</p>
+              <img src='https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f516.svg'><p>归档</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://github.com/james1BadCreeper/james1BadCreeper.github.io"
               
               
               active-action="action-https:githubcomjames1BadCreeperjames1BadCreepergithubio">
-              <img src='https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
+              <img src='https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
             </a>
           
         
@@ -2811,16 +2815,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   
-    <span hidden>
-      <meta itemprop="image" content="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img itemprop="image" class='headimg' src='https://pic.imgdb.cn/item/63a9bed708b6830163621dea.jpg'/>
+      </a>
+    </div>
   
   <div class="article-meta" id="top">
     
     
     
       <h1 class="title" itemprop="name headline">
-        数据结构进阶
+        数据结构杂项
       </h1>
       <div class='new-meta-box'>
         
@@ -2837,10 +2843,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-10T08:28:27+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-07T11:33:15+08:00">
   <a class='notlink'>
     <i class="fad fa-edit TURQUOISE fa-fw" aria-hidden="true"></i>
-    <p>更新于 2022年12月10日</p>
+    <p>更新于 2023年1月7日</p>
   </a>
 </div>
 
@@ -2872,13 +2878,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fad fa-keyboard CARROT fa-fw" aria-hidden="true"></i>
-      <p>字数：61 字</p>
+      <p>字数：592 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fad fa-hourglass-half CARROT fa-fw" aria-hidden="true"></i>
-      <p>时长：1 分钟</p>
+      <p>时长：2 分钟</p>
     </a>
   </div>
 
@@ -2897,21 +2903,109 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div id="post-body" itemprop="articleBody">
     <blockquote>
-<p>这里是省选范围以内的常用数据结构。</p>
+<p>这里是省选范围以内的小数据结构，它们能解决一些特定的问题，但都不算常见。本文还介绍了一些经典数据结构问题。</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="数据结构闲话">数据结构闲话</h2>
-<h3 id="离线问题与在线问题">离线问题与在线问题</h3>
-<h2 id="离线分治算法">离线分治算法</h2>
-<h3 id="CDQ-分治">CDQ 分治</h3>
-<h3 id="整体二分">整体二分</h3>
 <h2 id="线性基">线性基</h2>
-<h2 id="珂朵莉树">珂朵莉树</h2>
-<h2 id="动态树">动态树</h2>
+<p>可以完成：</p>
+<ul>
+<li>查询一个数是否可以被一堆数异或出来；</li>
+<li>查询一堆数可以异或出来的最大/最小值；</li>
+<li>查询一堆数可以异或出来的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 小值。</li>
+</ul>
+<h3 id="核心数据结构">核心数据结构</h3>
+<p>非常简单：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">i64 p<span class="token punctuation">[</span><span class="token number">70</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 线性基</span>
+<span class="token keyword">int</span> cnt<span class="token punctuation">;</span> <span class="token comment">// 代表线性基有数的位数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="插入">插入</h3>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span>i64 x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> N<span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token operator">--</span>i<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">1ll</span> <span class="token operator">&lt;&lt;</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">;</span> <span class="token operator">++</span>cnt<span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+            <span class="token keyword">else</span> x <span class="token operator">^=</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="查询最大值">查询最大值</h3>
+<p>从高位到低位贪心即可。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">i64 <span class="token function">askmx</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    i64 ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> N<span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token operator">--</span>i<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ans <span class="token operator">^</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">></span> ans<span class="token punctuation">)</span> ans <span class="token operator">^=</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="查询最小值">查询最小值</h3>
+<p>找到线性基最低为有数的即可。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">i64 <span class="token function">askmn</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>cnt<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> N<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">return</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="性质">性质</h3>
+<ul>
+<li>线性基可以异或出来的数的个数等于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>c</mi><mi>n</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">2^{cnt}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span></span></span>；</li>
+</ul>
+<h3 id="模板题集合">模板题集合</h3>
+<p>以下都是一些模板。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3812">Luogu P3812 【模板】线性基</a>，</li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3857">[TJOI2008] 彩灯</a>，</li>
+</ul>
 <h2 id="K-D-Tree">K-D Tree</h2>
 <h2 id="可并堆">可并堆</h2>
 <h2 id="Problemset">Problemset</h2>
+<p>可以练习一下。</p>
+<h3 id="线性基-2">线性基</h3>
+<p>线性基主要用于快速维护一个异或系统，可以查询当中能异或出来的最大值。</p>
+<h4 id="WC2011-最大-XOR-和路径">[WC2011] 最大 XOR 和路径</h4>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4151">Portal</a>.</p>
+<p>画个图就能发现，随便找一条路径，然后异或上环的权值可以得到答案。使用线性基找出最大值即可。</p>
+<details cyan><summary> 查看代码 </summary>
+              <div class='content'>
+              <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdio></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
 
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> i64<span class="token punctuation">;</span>
+
+i64 p<span class="token punctuation">[</span><span class="token number">70</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span>i64 x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">63</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token operator">--</span>i<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">1ll</span> <span class="token operator">&lt;&lt;</span> i<span class="token punctuation">)</span> <span class="token operator">&amp;</span> x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+            <span class="token keyword">else</span> x <span class="token operator">^=</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">int</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
+i64 dis<span class="token punctuation">[</span><span class="token number">50005</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">bool</span> vis<span class="token punctuation">[</span><span class="token number">50005</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+vector<span class="token operator">&lt;</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> i64<span class="token operator">>></span> G<span class="token punctuation">[</span><span class="token number">50005</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> i64 res<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    dis<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> res<span class="token punctuation">;</span> vis<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> G<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> v <span class="token operator">=</span> G<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>first<span class="token punctuation">;</span> i64 d <span class="token operator">=</span> G<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>second<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>vis<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token function">dfs</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> res <span class="token operator">^</span> d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> <span class="token function">insert</span><span class="token punctuation">(</span>res <span class="token operator">^</span> d <span class="token operator">^</span> dis<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">,</span> <span class="token operator">&amp;</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>m<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> u<span class="token punctuation">,</span> v<span class="token punctuation">;</span> i64 d<span class="token punctuation">;</span> <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d%lld"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>u<span class="token punctuation">,</span> <span class="token operator">&amp;</span>v<span class="token punctuation">,</span> <span class="token operator">&amp;</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        G<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>v<span class="token punctuation">,</span> d<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> G<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>u<span class="token punctuation">,</span> d<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    i64 ans <span class="token operator">=</span> dis<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">63</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token operator">--</span>i<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ans <span class="token operator">^</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">></span> ans<span class="token punctuation">)</span> ans <span class="token operator">^=</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span> ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              </div>
+            </details>
   </div>
   
   
@@ -2926,7 +3020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">数据结构进阶</div>
+            <div class="license-title">数据结构杂项</div>
             <div class="license-link"><a href="http://example.com/2022/d81de632/">http://example.com/2022/d81de632/</a>
             </div>
             <div class="license-meta">
@@ -2936,12 +3030,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2022年8月31日</div>
+                <div class="license-meta-text">2022年12月26日</div>
               </div>
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2022年12月10日</div>
+                <div class="license-meta-text">2023年1月7日</div>
               </div>
               
               
@@ -2966,10 +3060,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-08-31T21:54:04+08:00">
+          <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-12-26T23:54:04+08:00">
   <a class='notlink'>
     <i class="fad fa-calendar-alt TURQUOISE fa-fw" aria-hidden="true"></i>
-    <p>发布于 2022年8月31日</p>
+    <p>发布于 2022年12月26日</p>
   </a>
 </div>
 
@@ -3008,8 +3102,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CDQ-%E5%88%86%E6%B2%BB/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>CDQ 分治</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B4%E4%BD%93%E4%BA%8C%E5%88%86/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>整体二分</p></a></div>
-  <span hidden itemprop="keywords">CDQ 分治 整体二分</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="nofollow"><i class="fad fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>数据结构</p></a></div>
+  <span hidden itemprop="keywords">数据结构</span>
   
 
 
@@ -3028,20 +3122,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/ee93771d/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>复杂状态的 DP 问题</p>
+        <a class='prev' href='/2022/cb0d04d8/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>线段树与平衡树进阶</p>
           <p class='content'>
-无论是线性 DP、背包、区间 DP 或是树形 DP，它们的区别都在于状态设计上。实际上还有一些奇怪的状态设计，将在本文进行介绍。包括图上 DP、环形结构、后效性处理、基环树 DP 等等。
+线段树的应用非常多，本身也有许多变种。本文介绍了几种常见的线段树的应用（顺带将树状数组的一些 trick 写了），以及一些平衡树的应用。本文并不涉及到树套树相关的内容。
 
 
-...</p>
+特别地，关于线段树...</p>
         </a>
       
       
-        <a class='next' href='/2022/6513c499/'>
-          <p class='title'>组合计数基础<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='next' href='/2022/cb620531/'>
+          <p class='title'>组合计数进阶<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
-组合计数是组合数学的基础，研究某组离散对象满足一定条件的安排的存在性、构造及计数等问题。看似名字人畜无害，实则“算死人，不偿命”。本文将引导你学习简单的组合计数，为接下来学习毒瘤的计数问题作准...</p>
+高阶的计数问题更为困难。在阅读本文之前，请确保你对生成函数和多项式有一定的了解。
+
+
+常见构造手段
+计数问题有一些常有的求解手段。在研究更多内容前，我们先了解一下这些方法。
+构造双射
+不同的两...</p>
         </a>
       
     </div>
@@ -3176,7 +3276,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%97%B2%E8%AF%9D"><span class="toc-number">1.</span> <span class="toc-text">数据结构闲话</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E7%BA%BF%E9%97%AE%E9%A2%98%E4%B8%8E%E5%9C%A8%E7%BA%BF%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">离线问题与在线问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E7%BA%BF%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">离线分治算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CDQ-%E5%88%86%E6%B2%BB"><span class="toc-number">2.1.</span> <span class="toc-text">CDQ 分治</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E4%BD%93%E4%BA%8C%E5%88%86"><span class="toc-number">2.2.</span> <span class="toc-text">整体二分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%9F%BA"><span class="toc-number">3.</span> <span class="toc-text">线性基</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91"><span class="toc-number">4.</span> <span class="toc-text">珂朵莉树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E6%A0%91"><span class="toc-number">5.</span> <span class="toc-text">动态树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#K-D-Tree"><span class="toc-number">6.</span> <span class="toc-text">K-D Tree</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E5%B9%B6%E5%A0%86"><span class="toc-number">7.</span> <span class="toc-text">可并堆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset"><span class="toc-number">8.</span> <span class="toc-text">Problemset</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%9F%BA"><span class="toc-number">1.</span> <span class="toc-text">线性基</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">核心数据结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5"><span class="toc-number">1.2.</span> <span class="toc-text">插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E6%9C%80%E5%A4%A7%E5%80%BC"><span class="toc-number">1.3.</span> <span class="toc-text">查询最大值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E6%9C%80%E5%B0%8F%E5%80%BC"><span class="toc-number">1.4.</span> <span class="toc-text">查询最小值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-number">1.5.</span> <span class="toc-text">性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E9%A2%98%E9%9B%86%E5%90%88"><span class="toc-number">1.6.</span> <span class="toc-text">模板题集合</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#K-D-Tree"><span class="toc-number">2.</span> <span class="toc-text">K-D Tree</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E5%B9%B6%E5%A0%86"><span class="toc-number">3.</span> <span class="toc-text">可并堆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problemset"><span class="toc-number">4.</span> <span class="toc-text">Problemset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%9F%BA-2"><span class="toc-number">4.1.</span> <span class="toc-text">线性基</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#WC2011-%E6%9C%80%E5%A4%A7-XOR-%E5%92%8C%E8%B7%AF%E5%BE%84"><span class="toc-number">4.1.1.</span> <span class="toc-text">[WC2011] 最大 XOR 和路径</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -3272,7 +3372,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -3283,7 +3383,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -3294,7 +3394,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -3355,7 +3455,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   
-  volantis.css("https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/libs/@fortawesome/fontawesome-pro/css/all.min.css");
+  volantis.css("https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/libs/@fortawesome/fontawesome-pro/css/all.min.css");
   
   
   
@@ -3525,7 +3625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="notes" href="/notes/" data-group="link">
+    <a class="vlts-menu fix-cursor-default" id="notes" href="/categories/算法竞赛/学习笔记/" data-group="link">
       <i class="fa-duotone fa-notes teal fa-fw"></i>
       学习笔记
     </a>
@@ -3534,7 +3634,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="summaries" href="/summaries/" data-group="link">
+    <a class="vlts-menu fix-cursor-default" id="summaries" href="/categories/文章/" data-group="link">
       <i class="fa-duotone fa-pen-line ALIZARIN fa-fw"></i>
       随笔与文章
     </a>
@@ -3940,7 +4040,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 	hoverDelay: 0
   };
 </script>
-<script defer src="https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/libs/flying-pages/flying-pages.min.js"></script>
+<script defer src="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
@@ -3982,7 +4082,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     (async () => {
       // APlayer 需要在  MetingJS 之前加载
       await volantis.js("https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js")
-      await volantis.js("https://test1.jsdelivr.net/npm/meting@2/dist/Meting.min.js")
+      await volantis.js("https://gcore.jsdelivr.net/npm/meting@2/dist/Meting.min.js")
     
       // 右键 music 需要在 APlayer  MetingJS 之后加载
       await volantis.js('/js/plugins/aplayer.js')
@@ -4170,20 +4270,20 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
 
 
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
 
 
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
 
 
   
-<link rel="stylesheet" href="https://test1.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
 
 
 <script>
@@ -4233,7 +4333,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 
 
   <script>
-  let imgs = ["https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp"];
+  let imgs = ["https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4336,14 +4436,14 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
         <script>
   // https://www.micdz.cn/article/katex-on-volantis/
   if (typeof renderMathInElement == "undefined") {
-    volantis.css("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.0/katex.min.css")
+    volantis.css("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.15.2/katex.min.css")
     function pjax_katex() {
-      volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.0/contrib/auto-render.min.js").then(()=>{
+      volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.15.2/contrib/auto-render.min.js").then(()=>{
         renderMathInElement(document.body);
       })
     }
     volantis.js("")
-    volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.0/katex.min.js").then(pjax_katex)
+    volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.15.2/katex.min.js").then(pjax_katex)
     volantis.pjax.push(pjax_katex)
   }
 </script>
@@ -4485,7 +4585,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/数据结构/","name":"数据结构"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/d81de632/","name":"数据结构进阶"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数据结构进阶","description":"\n这里是省选范围以内的常用数据结构。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/d81de632/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/d81de632/","wordCount":19,"datePublished":"2022-08-31T13:54:04.000Z","dateModified":"2022-12-10T00:28:27.060Z","articleSection":"算法竞赛","keywords":"CDQ 分治,整体二分","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm//volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/数据结构/","name":"数据结构"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/d81de632/","name":"数据结构杂项"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数据结构杂项","description":"\n这里是省选范围以内的小数据结构，它们能解决一些特定的问题，但都不算常见。本文还介绍了一些经典数据结构问题。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/d81de632/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/d81de632/","wordCount":55,"datePublished":"2022-12-26T15:54:04.000Z","dateModified":"2023-01-07T03:33:15.191Z","articleSection":"算法竞赛","keywords":"数据结构","image":{"@type":"ImageObject","url":"https://pic.imgdb.cn/item/63a9bed708b6830163621dea.jpg","width":1024,"height":768}}]</script>
 
 
 
