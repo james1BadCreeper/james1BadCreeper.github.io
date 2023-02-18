@@ -8938,9 +8938,6 @@ details[open][purple] {
 details[open][purple] >summary {
   border-bottom-color: rgba(156,39,176,0.3);
 }
-.katex-display .katex .katex-html {
-  overflow-x: auto;
-}
 div.note.alien-monster::before {
   content: '\f8f6';
 }
