@@ -255,7 +255,7 @@ th {
 }
 @font-face {
   font-family: 'Jetbrains';
-  src: url("https://gcore.jsdelivr.net/gh/JetBrains/JetBrainsMono@2.242/fonts/webfonts/JetBrainsMono-Regular.woff2");
+  src: url("https://test1.jsdelivr.net/gh/JetBrains/JetBrainsMono@2.242/fonts/webfonts/JetBrainsMono-Regular.woff2");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
