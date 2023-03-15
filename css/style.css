@@ -255,7 +255,7 @@ th {
 }
 @font-face {
   font-family: 'Jetbrains';
-  src: url("https://test1.jsdelivr.net/gh/JetBrains/JetBrainsMono@2.242/fonts/webfonts/JetBrainsMono-Regular.woff2");
+  src: url("https://gcore.jsdelivr.net/gh/JetBrains/JetBrainsMono@2.242/fonts/webfonts/JetBrainsMono-Regular.woff2");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -600,7 +600,7 @@ article#tag .all-tags ul li span:before {
   overflow: auto;
   background: var(--color-codeblock);
   font-size: 0.8125rem;
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
   border: 1px solid #dbffdb;
   padding: 16px;
   border-radius: 4px;
@@ -620,7 +620,7 @@ article#tag .all-tags ul li span:before {
   color: rgba(68,68,68,0.9);
 }
 .article code {
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
 }
 .article code:not([class]) {
   word-break: break-all;
@@ -5591,7 +5591,7 @@ p.p.logo {
 }
 span.p.code,
 p.p.code {
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
 }
 span.p.left,
 p.p.left {
@@ -6076,7 +6076,7 @@ div.timenode:hover .meta:after {
   -ms-transform: scale(1);
 }
 .article mjx-container {
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
   padding: 16px 8px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -6535,7 +6535,7 @@ div.timenode:hover .meta:after {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-appearance: none;
-  font-family: Menlo, Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
+  font-family: Menlo, Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
   font-size: 11px;
   font-weight: bold;
   padding: 4px 8px;
@@ -8631,7 +8631,7 @@ pre[class*="language-"] {
   text-align: left;
   white-space: pre;
   word-spacing: normal;
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif !important;
+  font-family: Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif !important;
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
@@ -9212,7 +9212,7 @@ kbd {
   box-shadow: inset 0 -2px 0 #d3d3d4, 0 1px 1px rgba(0,0,0,0.5) !important;
   -webkit-box-shadow: inset 0 -2px 0 #d3d3d4, 0 1px 1px rgba(0,0,0,0.5) !important;
   font-size: 0.9em;
-  font-family: Jetbrains, "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
+  font-family: Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
 }
 ul.list-v.rightmenu {
   border-radius: 8px;

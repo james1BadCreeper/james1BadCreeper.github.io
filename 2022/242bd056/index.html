@@ -9,8 +9,8 @@
   <link rel="canonical" href="http://example.com/2022/242bd056/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://test1.jsdelivr.net'>
-      <link rel="preconnect" href="https://test1.jsdelivr.net" crossorigin>
+      <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+      <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
       <link rel='dns-prefetch' href='https://cdn.bootcdn.net'>
       <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
   <meta name="renderer" content="webkit">
@@ -30,8 +30,8 @@
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="https://s3.bmp.ovh/imgs/2022/07/15/832a039463fab678.png">
   <link rel="preload" href="/css/style.css" as="style">
-  <link rel="preload" href="https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
@@ -47,13 +47,13 @@
 <meta property="og:site_name" content="james1 的博客">
 <meta property="og:description" content="在图中，如何判断一张图是否连通？如果删掉某条边，它还连通吗？有向图呢？这些操作有什么特殊性质吗？本文将探讨以 Tarjan 算法为核心的有关图的连通性的问题和欧拉路问题。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-10-04T14:04:57.000Z">
-<meta property="article:modified_time" content="2023-02-25T16:19:25.388Z">
+<meta property="article:modified_time" content="2023-03-02T06:06:13.051Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="图论">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
     /* 首屏样式 */
     #safearea {
@@ -923,14 +923,14 @@ button {
 }
 @font-face {
   font-family: 'UbuntuMono';
-  src: url("https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
   font-family: 'Dosis';
-  src: url("https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
+  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -2235,11 +2235,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /******************************************************************************/
   //图像加载出错时的处理
   function errorImgAvatar(img) {
-    img.src = "https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg";
+    img.src = "https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg";
     img.onerror = null;
   }
   function errorImgCover(img) {
-    img.src = "https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg";
+    img.src = "https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg";
     img.onerror = null;
   }
   /******************************************************************************/
@@ -2248,8 +2248,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.GLOBAL_CONFIG ={
     root: '/',
     debug: "env",
-    default: {"avatar":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1677666846020),
+    default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date(1678855461561),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2755,35 +2755,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <img src='https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
             </a>
           
             <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
               
               
               active-action="action-categoriesE7AE97E6B395E7AB9EE8B59BE5ADA6E4B9A0E7AC94E8AEB0">
-              <img src='https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4da.svg'><p>笔记</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4da.svg'><p>笔记</p>
             </a>
           
             <a href="/categories/%E6%96%87%E7%AB%A0/"
               
               
               active-action="action-categoriesE69687E7ABA0">
-              <img src='https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1fab6.svg'><p>随笔</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1fab6.svg'><p>随笔</p>
             </a>
           
             <a href="/archives/"
               
               
               active-action="action-archives">
-              <img src='https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f516.svg'><p>归档</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f516.svg'><p>归档</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://github.com/james1BadCreeper/james1BadCreeper.github.io"
               
               
               active-action="action-https:githubcomjames1BadCreeperjames1BadCreepergithubio">
-              <img src='https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
             </a>
           
         
@@ -2843,10 +2843,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-02-26T00:19:25+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-02T14:06:13+08:00">
   <a class='notlink'>
     <i class="fad fa-edit TURQUOISE fa-fw" aria-hidden="true"></i>
-    <p>更新于 2023年2月26日</p>
+    <p>更新于 2023年3月2日</p>
   </a>
 </div>
 
@@ -2878,7 +2878,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fad fa-keyboard CARROT fa-fw" aria-hidden="true"></i>
-      <p>字数：13.8k 字</p>
+      <p>字数：13.7k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2968,7 +2968,7 @@ queue <span class="token operator">&lt;</span><span class="token keyword">int</s
 <p>有的时候求的拓扑序要求字典序，这时候直接将队列改为优先队列即可。</p>
 <h2 id="无向图的连通性">无向图的连通性</h2>
 <p>给定无向图 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mo stretchy="false">(</mo><mi>V</mi><mo separator="true">,</mo><mi>E</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">G=(V,E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span>，如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">x\in V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>，从图中删去节点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 和与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 关联的所有边之后，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 被分裂成两个或两个以上的不相连的子图，那么称 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 称之为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 的<strong>割点</strong>或<strong>割顶</strong>。如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">e\in V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span>，将 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> 删去后，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 分裂成两个不相连的子图，则称 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> 为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 的<strong>桥</strong>或<strong>割边</strong>。</p>
-<p>我们可以使用 Tarjan 算法（嗯，还是 Robert Tarjan，什么 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> LCA、伸展树、LCT 都是他搞出来的）在线性时间内求解无向图的割点和桥。</p>
+<p>我们可以使用 Tarjan 算法在线性时间内求解无向图的割点和桥。</p>
 <p>想要使用 Tarjan 算法，我们需要先了解几个基本概念：</p>
 <h3 id="Tarjan-算法">Tarjan 算法</h3>
 <p><strong>时间戳</strong>。我们对图进行深度优先遍历，按照每个节点第一次被访问到的顺序，依次给予 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个节点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∼</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1\sim n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 的整数标记，记为时间戳 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>f</mi><mi>n</mi><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">dfn[x]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">df</span><span class="mord mathnormal">n</span><span class="mopen">[</span><span class="mord mathnormal">x</span><span class="mclose">]</span></span></span></span>，代表在 DFS 序中出现的位置。</p>
@@ -3564,7 +3564,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
 <p>通过图中所有顶点一次的通路称为哈密顿通路，通过图中所有顶点一次的回路称为哈密顿回路。判断一个图是否存在哈密顿回路是 NPC 的，不存在多项式时间复杂度的求法。</p>
 <p>其它性质有时间再写。</p>
 <h2 id="Problemset">Problemset</h2>
-<p>连通性的问题很有意思，我们来看几道题玩一下<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://test1.jsdelivr.net/gh/zhheo/Sticker-Heo/Sticker/滑稽狂汗.png"/></span>。</p>
+<p>连通性的问题很有意思，我们来看几道题玩一下<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://gcore.jsdelivr.net/gh/zhheo/Sticker-Heo/Sticker/滑稽狂汗.png"/></span>。</p>
 <h3 id="拓扑排序-2">拓扑排序</h3>
 <p>基础中的基础。</p>
 <h4 id="Luogu-P1347-排序">[Luogu P1347] 排序</h4>
@@ -4798,7 +4798,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2023年2月26日</div>
+                <div class="license-meta-text">2023年3月2日</div>
               </div>
               
               
@@ -5128,7 +5128,7 @@ Rating 值为 1400~1500...</p>
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -5139,7 +5139,7 @@ Rating 值为 1400~1500...</p>
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -5150,7 +5150,7 @@ Rating 值为 1400~1500...</p>
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -5211,7 +5211,7 @@ Rating 值为 1400~1500...</p>
 
 <script>
   
-  volantis.css("https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/libs/@fortawesome/fontawesome-pro/css/all.min.css");
+  volantis.css("https://unpkg.com/volantis-static@0.0.1660614606622/libs/@fortawesome/fontawesome-pro/css/all.min.css");
   
   
   
@@ -5796,7 +5796,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 	hoverDelay: 0
   };
 </script>
-<script defer src="https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/libs/flying-pages/flying-pages.min.js"></script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1660614606622/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
@@ -5838,7 +5838,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     (async () => {
       // APlayer 需要在  MetingJS 之前加载
       await volantis.js("https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js")
-      await volantis.js("https://test1.jsdelivr.net/npm/meting@2/dist/Meting.min.js")
+      await volantis.js("https://unpkg.com/meting@2/dist/Meting.min.js")
     
       // 右键 music 需要在 APlayer  MetingJS 之后加载
       await volantis.js('/js/plugins/aplayer.js')
@@ -6026,20 +6026,20 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+<script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
 
 
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
 
 
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
 
 
   
-<link rel="stylesheet" href="https://test1.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
 
 
 <script>
@@ -6089,7 +6089,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 
 
   <script>
-  let imgs = ["https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -6341,7 +6341,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/242bd056/","name":"拓扑排序与图的连通性问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"拓扑排序与图的连通性问题","description":"\n在图中，如何判断一张图是否连通？如果删掉某条边，它还连通吗？有向图呢？这些操作有什么特殊性质吗？本文将探讨以 Tarjan 算法为核心的有关图的连通性的问题和欧拉路问题。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/242bd056/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/242bd056/","wordCount":87,"datePublished":"2022-10-04T14:04:57.000Z","dateModified":"2023-02-25T16:19:25.388Z","articleSection":"算法竞赛","keywords":"图论","image":{"@type":"ImageObject","url":"https://s1.ax1x.com/2022/08/04/vmu0Re.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/242bd056/","name":"拓扑排序与图的连通性问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"拓扑排序与图的连通性问题","description":"\n在图中，如何判断一张图是否连通？如果删掉某条边，它还连通吗？有向图呢？这些操作有什么特殊性质吗？本文将探讨以 Tarjan 算法为核心的有关图的连通性的问题和欧拉路问题。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/242bd056/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/242bd056/","wordCount":87,"datePublished":"2022-10-04T14:04:57.000Z","dateModified":"2023-03-02T06:06:13.051Z","articleSection":"算法竞赛","keywords":"图论","image":{"@type":"ImageObject","url":"https://s1.ax1x.com/2022/08/04/vmu0Re.jpg","width":1024,"height":768}}]</script>
 
 
 

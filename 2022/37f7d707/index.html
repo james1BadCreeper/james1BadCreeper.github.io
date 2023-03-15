@@ -9,8 +9,8 @@
   <link rel="canonical" href="http://example.com/2022/37f7d707/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://test1.jsdelivr.net'>
-      <link rel="preconnect" href="https://test1.jsdelivr.net" crossorigin>
+      <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+      <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
       <link rel='dns-prefetch' href='https://cdn.bootcdn.net'>
       <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
   <meta name="renderer" content="webkit">
@@ -30,8 +30,8 @@
   <!-- Custom Files headBegin end-->
     <link rel="shortcut icon" type='image/x-icon' href="https://s3.bmp.ovh/imgs/2022/07/15/832a039463fab678.png">
   <link rel="preload" href="/css/style.css" as="style">
-  <link rel="preload" href="https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
@@ -47,7 +47,7 @@
 <meta property="og:site_name" content="james1 的博客">
 <meta property="og:description" content="提高组的常见简单技巧包括前缀和与差分，2-pointers 等，本文简单介绍了它们。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-07-24T03:21:36.000Z">
 <meta property="article:modified_time" content="2023-01-11T13:49:16.944Z">
 <meta property="article:author" content="james1BadCreeper">
@@ -57,7 +57,7 @@
 <meta property="article:tag" content="差分">
 <meta property="article:tag" content="单调栈">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
     /* 首屏样式 */
     #safearea {
@@ -927,14 +927,14 @@ button {
 }
 @font-face {
   font-family: 'UbuntuMono';
-  src: url("https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
   font-family: 'Dosis';
-  src: url("https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
+  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/Dosis/Dosis-Medium.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -2239,11 +2239,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /******************************************************************************/
   //图像加载出错时的处理
   function errorImgAvatar(img) {
-    img.src = "https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg";
+    img.src = "https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg";
     img.onerror = null;
   }
   function errorImgCover(img) {
-    img.src = "https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg";
+    img.src = "https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg";
     img.onerror = null;
   }
   /******************************************************************************/
@@ -2252,8 +2252,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.GLOBAL_CONFIG ={
     root: '/',
     debug: "env",
-    default: {"avatar":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1677666846020),
+    default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date(1678855461561),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2759,35 +2759,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <img src='https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4f0.svg'><p>博客</p>
             </a>
           
             <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
               
               
               active-action="action-categoriesE7AE97E6B395E7AB9EE8B59BE5ADA6E4B9A0E7AC94E8AEB0">
-              <img src='https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4da.svg'><p>笔记</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f4da.svg'><p>笔记</p>
             </a>
           
             <a href="/categories/%E6%96%87%E7%AB%A0/"
               
               
               active-action="action-categoriesE69687E7ABA0">
-              <img src='https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1fab6.svg'><p>随笔</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1fab6.svg'><p>随笔</p>
             </a>
           
             <a href="/archives/"
               
               
               active-action="action-archives">
-              <img src='https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f516.svg'><p>归档</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f516.svg'><p>归档</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://github.com/james1BadCreeper/james1BadCreeper.github.io"
               
               
               active-action="action-https:githubcomjames1BadCreeperjames1BadCreepergithubio">
-              <img src='https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1660614606622/media/twemoji/assets/svg/1f9ec.svg'><p>源码</p>
             </a>
           
         
@@ -3090,7 +3090,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             </details>
 <h3 id="尺取法">尺取法</h3>
 <p><s>我也不知道这是个什么东西，但是给的题单是这样的，笔记我就这么写了。</s><br>
-<s>感觉就是滑动窗口，但可能还不太一样。</s><span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://test1.jsdelivr.net/gh/volantis-x/cdn-emoji/aru/84.png"/></span></p>
+<s>感觉就是滑动窗口，但可能还不太一样。</s><span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-emoji/aru/84.png"/></span></p>
 <p>实际上指的就是两个移动方向相同的双指针，然后统计它们之间的信息。</p>
 <h4 id="Luogu-P1638-逛画展">[Luogu P1638] 逛画展</h4>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1638">Portal</a>.</p>
@@ -3500,7 +3500,7 @@ i64 sum<span class="token punctuation">[</span><span class="token number">100005
               </div>
             </details>
 <h3 id="高维问题">高维问题</h3>
-<p>前缀和和差分不仅能够在一维线性空间上工作，还可以在高维空间上工作。主要应用是二位前缀和和二维差分（<s>三维可以自己类比，需要一定的空间想象能力，这里不做介绍 <psw>实际上你也用不着</psw></s>）<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://test1.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/滑稽.png"/></span>。</p>
+<p>前缀和和差分不仅能够在一维线性空间上工作，还可以在高维空间上工作。主要应用是二位前缀和和二维差分（<s>三维可以自己类比，需要一定的空间想象能力，这里不做介绍 <psw>实际上你也用不着</psw></s>）<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/滑稽.png"/></span>。</p>
 <h4 id="二维前缀和">二维前缀和</h4>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1719">[Luogu P1719] 最大加权矩形</a>。要求给出一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的算法。</p>
 <p>我们可以枚举矩形的四个端点坐标，然后使用二维前缀和在常数时间内解决问题。利用容斥原理很容易得到结果，具体过程请读者自行模拟：记</p>
@@ -3626,7 +3626,7 @@ s[x_{2},y_{2}]-s[x_{1}-1,y_{2}]-s[x_{2},y_{1}-1]+s[x_{1}-1,y_{1}-1]
             </details>
 <h4 id="HNOI2003-激光炸弹">[HNOI2003] 激光炸弹</h4>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2280">Portal</a>.</p>
-<p>直接用二位前缀和处理，然后枚举激光炸弹投放的位置即可。空间较为紧张，最好直接在前缀和数组上进行读入。虽然目标是一个质点，但我们可以把它看成一个块块，前缀和就可以做了<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://test1.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/滑稽.png"/></span>。代码如下：</p>
+<p>直接用二位前缀和处理，然后枚举激光炸弹投放的位置即可。空间较为紧张，最好直接在前缀和数组上进行读入。虽然目标是一个质点，但我们可以把它看成一个块块，前缀和就可以做了<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/滑稽.png"/></span>。代码如下：</p>
 <details cyan><summary> 查看代码 </summary>
               <div class='content'>
               <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
@@ -3743,7 +3743,7 @@ s[x_{2},y_{2}]-s[x_{1}-1,y_{2}]-s[x_{2},y_{1}-1]+s[x_{1}-1,y_{1}-1]
 三维求和：<code>s[x2][y2][z2] - s[x1-1][y2][z2] - s[x2][y1-1][z2] - s[x2][y2][z1-1] + s[x1-1][y1-1][z2] + s[x1-1][y2][z1-1] + s[x2][y1-1][z1-1] - s[x1-1][y1-1][z1-1]</code></p>
 <p>差分大概也是同样的原理：</p>
 <p>三维差分： <code>b[x1][y1][z1] += c , b[x2+1][y1][z1] -=c , b[x1][y2+1][z1] -= c , b[x1][y1][z2+1] -= c , b[x2+1][y2+1][z1] += c , b[x2+1][y1][z2+1] += c , b[x1][y2+1][z2+1] += c , b[x2+1][y2+1][z2+1] -= c</code></p>
-<p>然后呢<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://test1.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/2030.gif"/></span>？<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 维前缀和的问题较为困难，需要使用 sosDP，请读者阅读笔者的《基于状态进行优化的 DP》一文。</p>
+<p>然后呢<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/2030.gif"/></span>？<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 维前缀和的问题较为困难，需要使用 sosDP，请读者阅读笔者的《基于状态进行优化的 DP》一文。</p>
 <h2 id="贪心的应用">贪心的应用</h2>
 <p>真的不是简单贪心了。</p>
 <h3 id="贪心方法">贪心方法</h3>
@@ -5111,7 +5111,7 @@ Portal.
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -5122,7 +5122,7 @@ Portal.
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -5133,7 +5133,7 @@ Portal.
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" class="lazyload" data-srcset="https://test1.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -5194,7 +5194,7 @@ Portal.
 
 <script>
   
-  volantis.css("https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/libs/@fortawesome/fontawesome-pro/css/all.min.css");
+  volantis.css("https://unpkg.com/volantis-static@0.0.1660614606622/libs/@fortawesome/fontawesome-pro/css/all.min.css");
   
   
   
@@ -5779,7 +5779,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 	hoverDelay: 0
   };
 </script>
-<script defer src="https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/libs/flying-pages/flying-pages.min.js"></script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1660614606622/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
@@ -5821,7 +5821,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     (async () => {
       // APlayer 需要在  MetingJS 之前加载
       await volantis.js("https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js")
-      await volantis.js("https://test1.jsdelivr.net/npm/meting@2/dist/Meting.min.js")
+      await volantis.js("https://unpkg.com/meting@2/dist/Meting.min.js")
     
       // 右键 music 需要在 APlayer  MetingJS 之后加载
       await volantis.js('/js/plugins/aplayer.js')
@@ -6009,20 +6009,20 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+<script src="https://unpkg.com/prismjs/components/prism-core.min.js"></script>
 
 
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
 
 
   
-<script src="https://test1.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
 
 
   
-<link rel="stylesheet" href="https://test1.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+<link rel="stylesheet" href="https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.css">
 
 
 <script>
@@ -6072,7 +6072,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 
 
   <script>
-  let imgs = ["https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -6324,7 +6324,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/37f7d707/","name":"提高简单技巧"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"提高简单技巧","description":"\n提高组的常见简单技巧包括前缀和与差分，2-pointers 等，本文简单介绍了它们。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/37f7d707/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://test1.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/37f7d707/","wordCount":44,"datePublished":"2022-07-24T03:21:36.000Z","dateModified":"2023-01-11T13:49:16.944Z","articleSection":"算法竞赛","keywords":"单调队列,双指针,前缀和,差分,单调栈","image":{"@type":"ImageObject","url":"https://s1.ax1x.com/2022/08/04/vmpXTA.png","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/37f7d707/","name":"提高简单技巧"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"http://example.com/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"提高简单技巧","description":"\n提高组的常见简单技巧包括前缀和与差分，2-pointers 等，本文简单介绍了它们。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/37f7d707/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/37f7d707/","wordCount":44,"datePublished":"2022-07-24T03:21:36.000Z","dateModified":"2023-01-11T13:49:16.944Z","articleSection":"算法竞赛","keywords":"单调队列,双指针,前缀和,差分,单调栈","image":{"@type":"ImageObject","url":"https://s1.ax1x.com/2022/08/04/vmpXTA.png","width":1024,"height":768}}]</script>
 
 
 
