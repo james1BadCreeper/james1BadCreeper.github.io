@@ -8096,6 +8096,86 @@ details[open] > div.content {
     -ms-transform: translateY(0);
   }
 }
+.Cuteen_DarkSky,
+.Cuteen_DarkSky:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2000000000;
+}
+.Cuteen_DarkSky {
+  background: linear-gradient(#feb8b0, #fef9db);
+}
+.Cuteen_DarkSky:before {
+  transition: 2s ease all;
+  -webkit-transition: 2s ease all;
+  -khtml-transition: 2s ease all;
+  -moz-transition: 2s ease all;
+  -o-transition: 2s ease all;
+  -ms-transition: 2s ease all;
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  background: linear-gradient(#4c3f6d, #6c62bb, #93b1ed);
+}
+.DarkMode .Cuteen_DarkSky:before {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+}
+.Cuteen_DarkPlanet {
+  z-index: 99999999;
+  position: fixed;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  -webkit-animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
+  animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
+  -webkit-animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
+  -khtml-animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
+  -moz-animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
+  -o-animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
+  -ms-animation: CuteenPlanetMove 2s cubic-bezier(0.7, 0, 0, 1);
+  transform-origin: center bottom;
+  -webkit-transform-origin: center bottom;
+  -khtml-transform-origin: center bottom;
+  -moz-transform-origin: center bottom;
+  -o-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+}
+@-webkit-keyframes CuteenPlanetMove {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+.Cuteen_DarkPlanet::before {
+  position: absolute;
+  left: 35%;
+  top: 40%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  content: "";
+  background: linear-gradient(#fefefe, #fffbe8);
+}
 @-moz-keyframes fade-in {
   0% {
     opacity: 0;
@@ -8622,6 +8702,78 @@ details[open] > div.content {
     -moz-transform: translateY(0);
     -o-transform: translateY(0);
     -ms-transform: translateY(0);
+  }
+}
+@-moz-keyframes CuteenPlanetMove {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes CuteenPlanetMove {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-o-keyframes CuteenPlanetMove {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@keyframes CuteenPlanetMove {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
   }
 }
 code[class*="language-"],
