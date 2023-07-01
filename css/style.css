@@ -4342,6 +4342,8 @@ article .checkbox p {
 }
 .divider {
   object-fit: contain;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
 }
 div.dropmenu-wrapper {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -8919,6 +8921,9 @@ h6 {
   cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/text.png"), text !important;
 }
 .gitter-open-chat-button {
+  cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
+}
+#l_cover #full #scroll-down {
   cursor: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/cursor/pointer.png"), pointer !important;
 }
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap,
