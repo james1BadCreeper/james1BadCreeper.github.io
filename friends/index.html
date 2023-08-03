@@ -52,8 +52,8 @@
 <meta property="og:description" content="欢迎您，旅行者！ 希望您可以在这个简陋的地方度过一个美妙的夜晚（雾）~  动态 友链 关于">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-08-01T16:51:13.146Z">
-<meta property="article:modified_time" content="2023-08-01T16:51:13.146Z">
+<meta property="article:published_time" content="2023-08-03T15:05:14.276Z">
+<meta property="article:modified_time" content="2023-08-03T15:05:14.276Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2252,7 +2252,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1690908701423),
+    lastupdate: new Date(1691075134989),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2260,7 +2260,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
     },
     sidebar: {
-      for_page: ["notice","blogger","lastupdate","webinfo"],
+      for_page: ["notice","blogger","webinfo"],
       for_post: ["blogger","toc"],
       webinfo: {
         lastupd: {
@@ -2478,6 +2478,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     
                       
             
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fad fa-hashtag PETERRIVE fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
               <hr>
             
           
@@ -2674,6 +2691,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     
                       
             
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fad fa-hashtag PETERRIVE fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
               <hr>
             
           
@@ -2837,14 +2871,54 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='friends-group'>
           <br>
           <h2 class='friend-header'>
-            同学
+            iznomia
           </h2>
           
-            <p>Hello</p>
+            <p>欢迎探索支线副本！</p>
 
           
           
-            <div class='friend-content'>
+            <script>
+    function pjax_macy() {
+      const nodeList = document.querySelectorAll('.friend-content');
+      if(nodeList.length === 0) return;
+      nodeList.forEach((element,i) => {
+        let container = '#friend-content-' + i;
+          load_macy(() => {
+          let macy = Macy({
+            container: container.toString(),
+            margin: {x: 10,y: 55},
+            columns: 5,
+            breakAt: {
+              1000: {columns: 5},
+              800: {olumns: 4},
+              600: {columns: 3}
+            }
+          })
+          setTimeout(() => {
+            macy.reInit();
+            if (typeof ScrollReveal === 'function') ScrollReveal().clean('#comments');
+          }, 500)
+        })
+      });
+    }
+  
+    function load_macy(done = null) {
+      if(typeof Macy === "undefined") {
+        volantis.js("https://gcore.jsdelivr.net/npm/macy@2.5.1/dist/macy.js").then(() => {
+          if(done) done();
+        })
+      } else {
+        if(done) done();
+      }
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      pjax_macy();
+    })
+    volantis.pjax.push(pjax_macy);
+  </script>
+            <div class='friend-content' id="friend-content-0">
               
                 
                   <a class='friend-card'
@@ -2874,6 +2948,59 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   </a>
                 
               
+            </div>
+          
+        </div>
+      
+        <div class='friends-group'>
+          <br>
+          <h2 class='friend-header'>
+            同学
+          </h2>
+          
+          
+            <script>
+    function pjax_macy() {
+      const nodeList = document.querySelectorAll('.friend-content');
+      if(nodeList.length === 0) return;
+      nodeList.forEach((element,i) => {
+        let container = '#friend-content-' + i;
+          load_macy(() => {
+          let macy = Macy({
+            container: container.toString(),
+            margin: {x: 10,y: 55},
+            columns: 5,
+            breakAt: {
+              1000: {columns: 5},
+              800: {olumns: 4},
+              600: {columns: 3}
+            }
+          })
+          setTimeout(() => {
+            macy.reInit();
+            if (typeof ScrollReveal === 'function') ScrollReveal().clean('#comments');
+          }, 500)
+        })
+      });
+    }
+  
+    function load_macy(done = null) {
+      if(typeof Macy === "undefined") {
+        volantis.js("https://gcore.jsdelivr.net/npm/macy@2.5.1/dist/macy.js").then(() => {
+          if(done) done();
+        })
+      } else {
+        if(done) done();
+      }
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      pjax_macy();
+    })
+    volantis.pjax.push(pjax_macy);
+  </script>
+            <div class='friend-content' id="friend-content-1">
+              
                 
                   <a class='friend-card'
                     target="_blank" rel="external noopener noreferrer" href="https://cx330-oier.top/">
@@ -2890,13 +3017,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   </a>
                 
               
+                
+                  <a class='friend-card'
+                    target="_blank" rel="external noopener noreferrer" href="https://www.cnblogs.com/ying-xue">
+                    <div class='friend-left'>
+                      
+                        <img class='avatar' src='https://cdn.luogu.com.cn/upload/image_hosting/i1e0nqe9.png'/>
+                      
+                    </div>
+                    <div class='friend-right'>
+                      <p class="friend-name">樱雪晴空</p>
+                      
+                      
+                    </div>
+                  </a>
+                
+              
             </div>
           
         </div>
       
     
     <br><br>
-    <p>这里可以写友链页面下方的文字备注，例如自己的友链规范、示例等。</p>
+    <hr>
 <p>与我交换友链的方式：</p>
 <ul>
 <li>拥有一个可以放置友链的博客。</li>
@@ -2904,7 +3047,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>然后发邮件给我：<a href="mailto:CN__james1@outlook.com">CN__james1@outlook.com</a>。如果不方便也可以试试下面的评论。</li>
 </ul>
 <p>我的信息（根据您能支持的信息选取，或者有缺的在换的时候告诉我，我会回复）：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> iznomia
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> james1 <span class="token comment"># 如果您高兴也可以写 iznomia</span>
 <span class="token key atrule">avatar</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//s3.bmp.ovh/imgs/2022/07/15/832a039463fab678.png
 <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//james1badcreeper.github.io/
 <span class="token key atrule">keywords</span><span class="token punctuation">:</span>
@@ -3039,7 +3182,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>56 篇</div>
+          <div>57 篇</div>
         </div>
       
 
@@ -3054,7 +3197,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>425.8k 字</div>
+          <div>427.1k 字</div>
         </div>
       
 
@@ -3082,7 +3225,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后更新时间：</div>
-          <div id="last-update-show">2023-08-01 日</div>
+          <div id="last-update-show">2023-08-03 日</div>
         </div>
       
     </div>
@@ -3099,6 +3242,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -4139,7 +4286,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4391,7 +4538,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"https://james1badcreeper.github.io/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://james1badcreeper.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"\n欢迎您，旅行者！\n希望您可以在这个简陋的地方度过一个美妙的夜晚（雾）~\n\n动态 友链 关于\n\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/friends/index.html"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/friends/index.html","wordCount":48,"datePublished":"2023-08-01T16:51:13.146Z","dateModified":"2023-08-01T16:51:13.146Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"https://james1badcreeper.github.io/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://james1badcreeper.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"\n欢迎您，旅行者！\n希望您可以在这个简陋的地方度过一个美妙的夜晚（雾）~\n\n动态 友链 关于\n\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/friends/index.html"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/friends/index.html","wordCount":48,"datePublished":"2023-08-03T15:05:14.276Z","dateModified":"2023-08-03T15:05:14.276Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
