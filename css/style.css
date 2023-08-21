@@ -7565,6 +7565,8 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
 }
 .katex {
   font-size: 1.1em !important;
+  overflow-y: hidden !important;
+  overflow-x: auto !important;
 }
 .katex-display .katex {
   font-size: 1.21em !important;
