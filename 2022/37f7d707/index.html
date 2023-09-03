@@ -9,8 +9,8 @@
   <link rel="canonical" href="https://james1badcreeper.github.io/2022/37f7d707/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
-      <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+      <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
       <link rel='dns-prefetch' href='https://cdn.bootcdn.net'>
       <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
   <meta name="renderer" content="webkit">
@@ -49,7 +49,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-07-24T11:21:36.000Z">
-<meta property="article:modified_time" content="2023-08-31T09:42:54.944Z">
+<meta property="article:modified_time" content="2023-09-03T01:48:25.406Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="单调队列">
 <meta property="article:tag" content="双指针">
@@ -2253,7 +2253,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1693474996611),
+    lastupdate: new Date(1693705728606),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -3103,7 +3103,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             </details>
 <h3 id="尺取法">尺取法</h3>
 <p><s>我也不知道这是个什么东西，但是给的题单是这样的，笔记我就这么写了。</s><br>
-<s>感觉就是滑动窗口，但可能还不太一样。</s><span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-emoji/aru/84.png"/></span></p>
+<s>感觉就是滑动窗口，但可能还不太一样。</s><span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru/84.png"/></span></p>
 <p>实际上指的就是两个移动方向相同的双指针，然后统计它们之间的信息。</p>
 <h4 id="Luogu-P1638-逛画展">[Luogu P1638] 逛画展</h4>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1638">Portal</a>.</p>
@@ -3513,7 +3513,7 @@ i64 sum<span class="token punctuation">[</span><span class="token number">100005
               </div>
             </details>
 <h3 id="高维问题">高维问题</h3>
-<p>前缀和和差分不仅能够在一维线性空间上工作，还可以在高维空间上工作。主要应用是二位前缀和和二维差分（<s>三维可以自己类比，需要一定的空间想象能力，这里不做介绍 <psw>实际上你也用不着</psw></s>）<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/滑稽.png"/></span>。</p>
+<p>前缀和和差分不仅能够在一维线性空间上工作，还可以在高维空间上工作。主要应用是二位前缀和和二维差分（<s>三维可以自己类比，需要一定的空间想象能力，这里不做介绍 <psw>实际上你也用不着</psw></s>）<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/滑稽.png"/></span>。</p>
 <h4 id="二维前缀和">二维前缀和</h4>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1719">[Luogu P1719] 最大加权矩形</a>。要求给出一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的算法。</p>
 <p>我们可以枚举矩形的四个端点坐标，然后使用二维前缀和在常数时间内解决问题。利用容斥原理很容易得到结果，具体过程请读者自行模拟：记</p>
@@ -3639,7 +3639,7 @@ s[x_{2},y_{2}]-s[x_{1}-1,y_{2}]-s[x_{2},y_{1}-1]+s[x_{1}-1,y_{1}-1]
             </details>
 <h4 id="HNOI2003-激光炸弹">[HNOI2003] 激光炸弹</h4>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2280">Portal</a>.</p>
-<p>直接用二位前缀和处理，然后枚举激光炸弹投放的位置即可。空间较为紧张，最好直接在前缀和数组上进行读入。虽然目标是一个质点，但我们可以把它看成一个块块，前缀和就可以做了<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/滑稽.png"/></span>。代码如下：</p>
+<p>直接用二位前缀和处理，然后枚举激光炸弹投放的位置即可。空间较为紧张，最好直接在前缀和数组上进行读入。虽然目标是一个质点，但我们可以把它看成一个块块，前缀和就可以做了<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/滑稽.png"/></span>。代码如下：</p>
 <details cyan><summary> 查看代码 </summary>
               <div class='content'>
               <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
@@ -3756,7 +3756,7 @@ s[x_{2},y_{2}]-s[x_{1}-1,y_{2}]-s[x_{2},y_{1}-1]+s[x_{1}-1,y_{1}-1]
 三维求和：<code>s[x2][y2][z2] - s[x1-1][y2][z2] - s[x2][y1-1][z2] - s[x2][y2][z1-1] + s[x1-1][y1-1][z2] + s[x1-1][y2][z1-1] + s[x2][y1-1][z1-1] - s[x1-1][y1-1][z1-1]</code></p>
 <p>差分大概也是同样的原理：</p>
 <p>三维差分： <code>b[x1][y1][z1] += c , b[x2+1][y1][z1] -=c , b[x1][y2+1][z1] -= c , b[x1][y1][z2+1] -= c , b[x2+1][y2+1][z1] += c , b[x2+1][y1][z2+1] += c , b[x1][y2+1][z2+1] += c , b[x2+1][y2+1][z2+1] -= c</code></p>
-<p>然后呢<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/2030.gif"/></span>？<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 维前缀和的问题较为困难，需要使用 sosDP，请读者阅读笔者的《基于状态进行优化的 DP》一文。</p>
+<p>然后呢<span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/2030.gif"/></span>？<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 维前缀和的问题较为困难，需要使用 sosDP，请读者阅读笔者的《基于状态进行优化的 DP》一文。</p>
 <h2 id="贪心的应用">贪心的应用</h2>
 <p>真的不是简单贪心了。</p>
 <h3 id="贪心方法">贪心方法</h3>
@@ -4793,7 +4793,7 @@ i64 ans <span class="token operator">=</span> <span class="token number">0</span
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2023年8月31日</div>
+                <div class="license-meta-text">2023年9月3日</div>
               </div>
               
               
@@ -5139,7 +5139,7 @@ Portal.
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -5150,7 +5150,7 @@ Portal.
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -5161,7 +5161,7 @@ Portal.
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
-                  <img src="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                  <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/016-skype.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                 
               </a>
             
@@ -6100,7 +6100,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -6368,7 +6368,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2022/37f7d707/","name":"提高优化技巧"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"https://james1badcreeper.github.io/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://james1badcreeper.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"提高优化技巧","description":"\n提高级别的常见简单技巧包括前缀和与差分，2-pointers 等，本文简单介绍了它们。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2022/37f7d707/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2022/37f7d707/","wordCount":45,"datePublished":"2022-07-24T11:21:36.000Z","dateModified":"2023-08-31T09:42:54.944Z","articleSection":"算法竞赛","keywords":"单调队列,双指针,前缀和,差分,单调栈","image":{"@type":"ImageObject","url":"https://s1.ax1x.com/2022/08/04/vmpXTA.png","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/2022/37f7d707/","name":"提高优化技巧"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"https://james1badcreeper.github.io/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://james1badcreeper.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"提高优化技巧","description":"\n提高级别的常见简单技巧包括前缀和与差分，2-pointers 等，本文简单介绍了它们。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/2022/37f7d707/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/2022/37f7d707/","wordCount":45,"datePublished":"2022-07-24T11:21:36.000Z","dateModified":"2023-09-03T01:48:25.406Z","articleSection":"算法竞赛","keywords":"单调队列,双指针,前缀和,差分,单调栈","image":{"@type":"ImageObject","url":"https://s1.ax1x.com/2022/08/04/vmpXTA.png","width":1024,"height":768}}]</script>
 
 
 

@@ -9114,6 +9114,15 @@ div.note.jet-fighter-up::before {
 div.note.fa-chalkboard::before {
   content: '\f51b';
 }
+div.note.space-thief::before {
+  content: '\e022';
+}
+div.note.time-traveller::before {
+  content: '\f1da';
+}
+div.note.skull-book::before {
+  content: '\e1a4';
+}
 .link-fx-1 {
   position: relative;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
