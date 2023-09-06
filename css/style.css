@@ -9120,8 +9120,11 @@ div.note.space-thief::before {
 div.note.time-traveller::before {
   content: '\f1da';
 }
-div.note.skull-book::before {
+div.note.skull-hand::before {
   content: '\e1a4';
+}
+div.note.poison::before {
+  content: '\f6e0';
 }
 .link-fx-1 {
   position: relative;
