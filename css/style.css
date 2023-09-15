@@ -5424,6 +5424,13 @@ div.note.purple {
 div.note.purple::before {
   color: #9c27b0;
 }
+div.note.deep-blue {
+  background: #eaeffa;
+  border-color: #3367d6;
+}
+div.note.deep-blue::before {
+  color: #3367d6;
+}
 .sites-wrap .group-header {
   margin: 0 0 1rem;
 }
@@ -9125,6 +9132,18 @@ div.note.skull-hand::before {
 }
 div.note.poison::before {
   content: '\f6e0';
+}
+div.note.bomb::before {
+  content: '\f1e2';
+}
+div.note.question::before {
+  content: '\3f';
+}
+div.note.frog::before {
+  content: '\f52e';
+}
+div.note.ufo::before {
+  content: '\e047';
 }
 .link-fx-1 {
   position: relative;
