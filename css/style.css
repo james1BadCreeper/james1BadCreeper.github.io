@@ -2111,6 +2111,7 @@ img.lazyload:not(.placeholder).loaded {
 .md h4,
 .md h5,
 .md h6 {
+  font-family: "LXGW WenKai Screen", Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
   position: relative;
   pointer-events: none;
   margin-top: 0;
@@ -2147,6 +2148,10 @@ img.lazyload:not(.placeholder).loaded {
   height: 96px;
   visibility: hidden;
   pointer-events: none;
+}
+.md h1 {
+  padding-left: 9px;
+  border-left: 6px solid #bcdffb;
 }
 .md h1:before,
 .md h2:before {
@@ -2353,6 +2358,9 @@ img.lazyload:not(.placeholder).loaded {
 .article-title {
   font-weight: 500;
   margin-bottom: 12px;
+  font-family: "LXGW WenKai Screen", Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
+  padding-left: 9px;
+  border-left: 6px solid #bcdffb;
   line-height: 1.4;
 }
 .article-title a {
@@ -9476,4 +9484,10 @@ ul.list-v.rightmenu li.music.name p.nav.music-title {
   #safearea #l_main {
     padding-left: 0;
   }
+}
+article#comments p[ct] {
+  font-family: "LXGW WenKai Screen", Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
+}
+div .nav-sub p {
+  font-family: "LXGW WenKai Screen", Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif !important;
 }
