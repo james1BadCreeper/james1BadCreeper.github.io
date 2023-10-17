@@ -8200,6 +8200,14 @@ details[open] > div.content {
   content: "";
   background: linear-gradient(#fefefe, #fffbe8);
 }
+img.parallax-slider {
+  transition: opacity linear 1500ms;
+  -webkit-transition: opacity linear 1500ms;
+  -khtml-transition: opacity linear 1500ms;
+  -moz-transition: opacity linear 1500ms;
+  -o-transition: opacity linear 1500ms;
+  -ms-transition: opacity linear 1500ms;
+}
 @-moz-keyframes fade-in {
   0% {
     opacity: 0;
