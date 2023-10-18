@@ -9499,3 +9499,6 @@ article#comments p[ct] {
 div .nav-sub p {
   font-family: "LXGW WenKai Screen", Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif !important;
 }
+.widget span.name {
+  font-family: "LXGW WenKai Screen", Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif !important;
+}
