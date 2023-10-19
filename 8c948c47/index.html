@@ -39,7 +39,7 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>JOISC 2019 题目合集 - james1 的博客</title>
-  <meta name="keywords" content="null">
+  <meta name="keywords" content="题解,null">
   <meta desc name="description" content="
 说好的加训，结果加的跟没加一样。人啊，要支棱起来啊！
  - james1BadCreeper - james1 的博客">
@@ -52,8 +52,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-04T19:08:49.000Z">
-<meta property="article:modified_time" content="2023-10-19T09:27:37.384Z">
+<meta property="article:modified_time" content="2023-10-19T13:02:26.668Z">
 <meta property="article:author" content="james1BadCreeper">
+<meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2251,7 +2252,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1697707676727),
+    lastupdate: new Date(1697720569154),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2281,7 +2282,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       },
       
       
-      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.link","menus.prevNext","hr","plugins.articlePage","menus.darkMode","hr","music"],"options":{"iconPrefix":"fa-duotone PETERRIVE","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-duotone fa-arrow-left PETERRIVE","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-duotone fa-arrow-right PETERRIVE","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-duotone fa-redo PETERRIVE","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-duotone fa-arrow-up PETERRIVE","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-duotone fa-paste EMERALD","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-duotone fa-object-ungroup EMERALD","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-duotone fa-cut EMERALD","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-duotone fa-copy EMERALD","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-duotone fa-search EMERALD","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-duotone fa-search PETERRIVE","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"},{"id":"googleSearch","name":"谷歌搜索","icon":"fa-duotone fa-search ALIZARIN","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-duotone fa-external-link-square-alt PUMPKIN","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-duotone fa-link PUMPKIN","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-duotone fa-image SUNFLOWER","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-duotone fa-images SUNFLOWER","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-duotone fa-print ORANGE","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-duotone fa-book-open-cover PETERRIVE","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"home","name":"首页博文","icon":"fa-duotone fa-blog PETERRIVE","link":"/","group":"link"},{"id":"notes","name":"学习笔记","icon":"fa-duotone fa-notes teal","link":"/categories/算法竞赛/学习笔记/","group":"link"},{"id":"summaries","name":"随笔与文章","icon":"fa-duotone fa-pen-line ALIZARIN","link":"/categories/文章/","group":"link"},{"id":"achieve","name":"文章归档","icon":"fad fa-archive WISTERIA","link":"/archives/","group":"link"},{"id":"about","name":"关于笔者","icon":"fa-duotone fa-info-circle ORANGE","link":"/about/","group":"link"}],"darkMode":[{"id":"darkMode","name":"昼夜切换","icon":"fa-duotone fa-moon-over-sun WISTERIA","event":"volantis.dark.toggle()","group":"darkMode"}]}}
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","hr","menus.link","menus.prevNext","hr","plugins.articlePage","menus.darkMode","hr","music"],"options":{"iconPrefix":"fa-duotone PETERRIVE","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-duotone fa-arrow-left PETERRIVE","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-duotone fa-arrow-right PETERRIVE","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-duotone fa-redo PETERRIVE","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-duotone fa-arrow-up PETERRIVE","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-duotone fa-paste EMERALD","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-duotone fa-object-ungroup EMERALD","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-duotone fa-cut EMERALD","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-duotone fa-copy EMERALD","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-duotone fa-search EMERALD","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-duotone fa-search PETERRIVE","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"},{"id":"googleSearch","name":"谷歌搜索","icon":"fa-duotone fa-search ALIZARIN","event":"window.open(`https://www.google.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-duotone fa-external-link-square-alt PUMPKIN","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-duotone fa-link PUMPKIN","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-duotone fa-image SUNFLOWER","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-duotone fa-images SUNFLOWER","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-duotone fa-print ORANGE","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-duotone fa-book-open-cover PETERRIVE","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"home","name":"首页博文","icon":"fa-duotone fa-blog PETERRIVE","link":"/","group":"link"},{"id":"notes","name":"学习笔记","icon":"fa-duotone fa-notes teal","link":"/categories/算法竞赛/学习笔记/","group":"link"},{"id":"summaries","name":"随笔与文章","icon":"fa-duotone fa-pen-line ALIZARIN","link":"/categories/文章/","group":"link"},{"id":"achieve","name":"文章归档","icon":"fa-duotone fa-archive WISTERIA","link":"/archives/","group":"link"},{"id":"about","name":"关于笔者","icon":"fa-duotone fa-info-circle ORANGE","link":"/about/","group":"link"}],"darkMode":[{"id":"darkMode","name":"昼夜切换","icon":"fa-duotone fa-moon-over-sun WISTERIA","event":"volantis.dark.toggle()","group":"darkMode"}]}}
       
     },
     search: {
@@ -2354,7 +2355,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-home"
                   >
-                  <i class='fad fa-blog PETERRIVE fa-fw'></i>博客
+                  <i class='fa-duotone fa-blog PETERRIVE fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2371,7 +2372,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-categoriesE7AE97E6B395E7AB9EE8B59BE5ADA6E4B9A0E7AC94E8AEB0"
                   >
-                  <i class='fad fa-notes teal fa-fw'></i>笔记
+                  <i class='fa-duotone fa-notes teal fa-fw'></i>笔记
                 </a>
                 
               </li>
@@ -2388,7 +2389,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-categoriesE69687E7ABA0"
                   >
-                  <i class='fad fa-pen-line ALIZARIN fa-fw'></i>随笔
+                  <i class='fa-duotone fa-pen-line ALIZARIN fa-fw'></i>随笔
                 </a>
                 
               </li>
@@ -2405,7 +2406,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-archives"
                   >
-                  <i class='fad fa-archive WISTERIA fa-fw'></i>归档
+                  <i class='fa-duotone fa-archive WISTERIA fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -2422,7 +2423,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-about"
                   >
-                  <i class='fad fa-info-circle ORANGE fa-fw'></i>关于
+                  <i class='fa-duotone fa-info-circle ORANGE fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2437,7 +2438,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                   
                   >
-                  <i class='fad fa-ellipsis-v teal fa-fw'></i>更多
+                  <i class='fa-duotone fa-ellipsis-v teal fa-fw'></i>更多
                 </a>
                 
                   <ul class="list-v">
@@ -2446,7 +2447,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fad fa-moon-over-sun AMETHYST fa-fw'></i>昼夜切换
+                  <i class='fa-duotone fa-moon-over-sun AMETHYST fa-fw'></i>昼夜切换
                 </a>
               <li>
             
@@ -2468,7 +2469,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-categories"
                   >
-                  <i class='fad fa-folder-open ORANGE fa-fw'></i>分类
+                  <i class='fa-duotone fa-folder-open ORANGE fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -2485,7 +2486,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-tags"
                   >
-                  <i class='fad fa-tags PETERRIVE fa-fw'></i>标签
+                  <i class='fa-duotone fa-tags PETERRIVE fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -2508,7 +2509,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-https:githubcomjames1BadCreeperjames1BadCreepergithubio"
                   >
-                  <i class='fad fa-code POMEGRANATE fa-fw'></i>本站源码
+                  <i class='fa-duotone fa-code POMEGRANATE fa-fw'></i>本站源码
                 </a>
                 
               </li>
@@ -2525,7 +2526,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-https:githubcomjames1BadCreeperhexo-theme-volantis"
                   >
-                  <i class='fad fa-code teal fa-fw'></i>主题源码
+                  <i class='fa-duotone fa-code teal fa-fw'></i>主题源码
                 </a>
                 
               </li>
@@ -2567,7 +2568,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-home"
                   >
-                  <i class='fad fa-blog PETERRIVE fa-fw'></i>博客
+                  <i class='fa-duotone fa-blog PETERRIVE fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2584,7 +2585,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-categoriesE7AE97E6B395E7AB9EE8B59BE5ADA6E4B9A0E7AC94E8AEB0"
                   >
-                  <i class='fad fa-notes teal fa-fw'></i>笔记
+                  <i class='fa-duotone fa-notes teal fa-fw'></i>笔记
                 </a>
                 
               </li>
@@ -2601,7 +2602,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-categoriesE69687E7ABA0"
                   >
-                  <i class='fad fa-pen-line ALIZARIN fa-fw'></i>随笔
+                  <i class='fa-duotone fa-pen-line ALIZARIN fa-fw'></i>随笔
                 </a>
                 
               </li>
@@ -2618,7 +2619,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-archives"
                   >
-                  <i class='fad fa-archive WISTERIA fa-fw'></i>归档
+                  <i class='fa-duotone fa-archive WISTERIA fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -2635,7 +2636,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-about"
                   >
-                  <i class='fad fa-info-circle ORANGE fa-fw'></i>关于
+                  <i class='fa-duotone fa-info-circle ORANGE fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2650,7 +2651,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                   
                   >
-                  <i class='fad fa-ellipsis-v teal fa-fw'></i>更多
+                  <i class='fa-duotone fa-ellipsis-v teal fa-fw'></i>更多
                 </a>
                 
                   <ul class="list-v">
@@ -2659,7 +2660,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fad fa-moon-over-sun AMETHYST fa-fw'></i>昼夜切换
+                  <i class='fa-duotone fa-moon-over-sun AMETHYST fa-fw'></i>昼夜切换
                 </a>
               <li>
             
@@ -2681,7 +2682,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-categories"
                   >
-                  <i class='fad fa-folder-open ORANGE fa-fw'></i>分类
+                  <i class='fa-duotone fa-folder-open ORANGE fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -2698,7 +2699,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-tags"
                   >
-                  <i class='fad fa-tags PETERRIVE fa-fw'></i>标签
+                  <i class='fa-duotone fa-tags PETERRIVE fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -2721,7 +2722,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-https:githubcomjames1BadCreeperjames1BadCreepergithubio"
                   >
-                  <i class='fad fa-code POMEGRANATE fa-fw'></i>本站源码
+                  <i class='fa-duotone fa-code POMEGRANATE fa-fw'></i>本站源码
                 </a>
                 
               </li>
@@ -2738,7 +2739,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-https:githubcomjames1BadCreeperhexo-theme-volantis"
                   >
-                  <i class='fad fa-code teal fa-fw'></i>主题源码
+                  <i class='fa-duotone fa-code teal fa-fw'></i>主题源码
                 </a>
                 
               </li>
@@ -2879,7 +2880,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-04T19:08:49+00:00">
   <a class='notlink'>
-    <i class="fad fa-calendar-alt TURQUOISE fa-fw" aria-hidden="true"></i>
+    <i class="fa-duotone fa-calendar-alt TURQUOISE fa-fw" aria-hidden="true"></i>
     <p>发布于 2023年10月4日</p>
   </a>
 </div>
@@ -2890,13 +2891,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class="new-meta-item wordcount">
     <a class='notlink'>
-      <i class="fad fa-keyboard CARROT fa-fw" aria-hidden="true"></i>
+      <i class="fa-duotone fa-keyboard CARROT fa-fw" aria-hidden="true"></i>
       <p>字数：6.4k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
-      <i class="fad fa-hourglass-half CARROT fa-fw" aria-hidden="true"></i>
+      <i class="fa-duotone fa-hourglass-half CARROT fa-fw" aria-hidden="true"></i>
       <p>时长：33 分钟</p>
     </a>
   </div>
@@ -3165,7 +3166,7 @@ vector<span class="token operator">&lt;</span>pair<span class="token operator">&
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="C-两种交通工具">C. 两种交通工具</h4>
-<div class="note space-thief blue"><p><strong>空间大盗扭曲了此处的空间。</strong></p><p>通信题。</p><p>猜猜我是否还能回来做！对不起了！</p></div>
+<div class="note time-traveller red"><p><strong>时间旅人逆转了此处的时间。</strong></p><p>通信题。</p><p>猜猜我是否还能回来做！对不起了！</p></div>
 <h3 id="Day3">Day3</h3>
 <p><a target="_blank" rel="noopener" href="https://qoj.ac/problem/68">A</a>，<a target="_blank" rel="noopener" href="https://qoj.ac/problem/69">B</a>，<a target="_blank" rel="noopener" href="https://qoj.ac/problem/70">C</a>。</p>
 <h4 id="A-指定城市">A. * 指定城市</h4>
@@ -3601,14 +3602,14 @@ mt19937 <span class="token function">Rand</span><span class="token punctuation">
   
   <div class='new-meta-item category'>
     <i class="fa-duotone fa-folder-open ORANGE fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/">算法竞赛</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E9%A2%98%E8%A7%A3/">题解</a>
+    <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/">算法竞赛</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/">做题记录</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" itemprop="url"><span itemprop="name">算法竞赛</span></a>
       </span>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E9%A2%98%E8%A7%A3/" itemprop="url"><span itemprop="name">题解</span></a>
+        <a href="/categories/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/" itemprop="url"><span itemprop="name">做题记录</span></a>
       </span>
     
   </div>
@@ -3620,6 +3621,13 @@ mt19937 <span class="token function">Rand</span><span class="token punctuation">
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%A2%98%E8%A7%A3/" rel="nofollow"><i class="fa-duotone fa-hashtag PETERRIVE fa-fw" aria-hidden="true"></i><p>题解</p></a></div>
+  <span hidden itemprop="keywords">题解</span>
+  
+
 
         
       
@@ -3683,9 +3691,9 @@ PART I
     <span hidden>
       <meta itemprop="discussionUrl" content="/8c948c47/index.html#comments">
     </span>
-    <p ct><i class='fad fa-comments'></i> 评论</p>
+    <p ct><i class='fa-duotone fa-comments'></i> 评论</p>
     
-      <p cst>若无法加载，请尝试刷新（若还有问题请尝试通过右键或顶栏选择关于以联系作者），欢迎讨论与交流，支持 Markdown 与 LaTeX 语法（Mathjax 的加载可能较为缓慢，公式与文字间必须有空格，否则会渲染失败）！</p>
+      <p cst>若无法加载，请尝试刷新，欢迎讨论、交流和提出意见，支持 Markdown 与 LaTeX 语法（公式与文字间必须有空格）！</p>
     
 
     <div id="layoutHelper-comments"></div>
@@ -3731,7 +3739,7 @@ PART I
         
           
             <a href="/atom.xml"
-              class="social fad fa-rss PETERRIVE flat-btn"
+              class="social fa-duotone fa-rss PETERRIVE flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
               
@@ -3740,7 +3748,7 @@ PART I
         
           
             <a href="mailto:CN__james1@outlook.com"
-              class="social fad fa-envelope EMERALD flat-btn"
+              class="social fa-duotone fa-envelope EMERALD flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
               
@@ -3791,7 +3799,7 @@ PART I
     
   <header>
     
-      <i class="fad fa-list BELIZEHOLE fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <i class="fa-duotone fa-list BELIZEHOLE fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
@@ -4169,7 +4177,7 @@ PART I
 
   <li class="menuLoad-Content">
     <a class="vlts-menu fix-cursor-default" id="achieve" href="/archives/" data-group="link">
-      <i class="fad fa-archive WISTERIA fa-fw"></i>
+      <i class="fa-duotone fa-archive WISTERIA fa-fw"></i>
       文章归档
     </a>
   </li>
@@ -4858,7 +4866,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -5126,7 +5134,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/题解/","name":"题解"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/8c948c47/","name":"JOISC 2019 题目合集"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"https://james1badcreeper.github.io/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://james1badcreeper.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"JOISC 2019 题目合集","description":"\n说好的加训，结果加的跟没加一样。人啊，要支棱起来啊！\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/8c948c47/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/8c948c47/","wordCount":28,"datePublished":"2023-10-04T19:08:49.000Z","dateModified":"2023-10-19T09:27:37.384Z","articleSection":"算法竞赛","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/做题记录/","name":"做题记录"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/8c948c47/","name":"JOISC 2019 题目合集"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"https://james1badcreeper.github.io/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://james1badcreeper.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"JOISC 2019 题目合集","description":"\n说好的加训，结果加的跟没加一样。人啊，要支棱起来啊！\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/8c948c47/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/8c948c47/","wordCount":28,"datePublished":"2023-10-04T19:08:49.000Z","dateModified":"2023-10-19T13:02:26.668Z","articleSection":"算法竞赛","keywords":"题解","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
