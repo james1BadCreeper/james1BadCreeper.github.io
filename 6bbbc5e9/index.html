@@ -51,8 +51,8 @@
 <meta property="og:description" content="最短路是图论中的常考问题，本文引导你学习最短路的 Floyd，BellmanFord 及 Djikstra 算法，以及它们的各种应用。还有一种基于最短路的系统：差分约束系统。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-08-01T09:31:35.000Z">
-<meta property="article:modified_time" content="2023-10-19T14:38:04.292Z">
+<meta property="article:published_time" content="2022-08-01T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-01T00:00:00.000Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="图论">
 <meta property="article:tag" content="最短路">
@@ -430,7 +430,7 @@ button {
   margin-top: 32px;
 }
 .cover-wrapper .cover-body .title {
-  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
+  font-family: Dosis, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
   font-size: 3.125rem;
   line-height: 1.2;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -1058,7 +1058,7 @@ button {
   line-height: 64px;
   padding: 0 24px;
   font-size: 1.375rem;
-  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
+  font-family: Dosis, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
 }
 .l_header #wrapper .nav-main .title img {
   height: 64px;
@@ -2254,7 +2254,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1697726309929),
+    lastupdate: new Date(1698016453835),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2882,7 +2882,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-08-01T09:31:35+00:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-08-01T00:00:00+00:00">
   <a class='notlink'>
     <i class="fa-duotone fa-calendar-alt TURQUOISE fa-fw" aria-hidden="true"></i>
     <p>发布于 2022年8月1日</p>
@@ -2918,6 +2918,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div id="layoutHelper-page-plugins"></div>
+  
+    
+      <div class="note done">
+        <p>本文已经更新完毕，若有错误或需要补充的内容请在评论区留言。</p>
+      </div>
+    
+    
+    
+    
   
   <div id="post-body" itemprop="articleBody">
     <blockquote>
@@ -4952,11 +4961,6 @@ priority_queue<span class="token operator">&lt;</span>pli<span class="token punc
                 <div class="license-meta-text">2022年8月1日</div>
               </div>
               
-              <div class="license-meta-item">
-                <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2023年10月19日</div>
-              </div>
-              
               
               <div class="license-meta-item">
                 <div class="license-meta-title">许可协议</div>
@@ -5049,8 +5053,21 @@ priority_queue<span class="token operator">&lt;</span>pli<span class="token punc
   
     <div class="prev-next">
       
-        <a class='prev' href='/85699f68/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>简单树形问题</p>
+        <a class='prev' href='/acb544c/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>CSP-S & NOIP 2022 游记</p>
+          <p class='content'>
+本文为 james1 CSP-S 2022 的记录（同时把 NOIP 一起写掉了），大家快来看这个水浸蒟蒻是怎么爆零的吧！
+
+
+暑假
+中考之后的故事。
+8.5
+开坑了文章。这是洛谷 NOIP ...</p>
+        </a>
+      
+      
+        <a class='next' href='/85699f68/'>
+          <p class='title'>简单树形问题<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
 本文对简单的树形问题进行了讲解。
 
@@ -5058,13 +5075,6 @@ priority_queue<span class="token operator">&lt;</span>pli<span class="token punc
 有关树的问题在考试时非常常见，所以必须熟练掌握。本文介绍的问题都比较简单，不涉及什么高难的问题。
 树的性质与遍历
 我们知道，一棵树有 nnn 个点，n−1...</p>
-        </a>
-      
-      
-        <a class='next' href='/1177a5e3/'>
-          <p class='title'>区间 DP 与高维 DP<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>
-区间 DP 是线性 DP 的一种特殊形式，它在分阶段地划分问题时，与阶段中元素出现的顺序和由前一阶段的哪些元素合并而来有很大的关系。高维 DP 则是线性 DP 的扩展，大部分是从一条链扩展为了...</p>
         </a>
       
     </div>
@@ -6261,7 +6271,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -6529,7 +6539,7 @@ volantis.js("https://sidecar.gitter.im/dist/sidecar.v1.js")
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/6bbbc5e9/","name":"最短路问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"https://james1badcreeper.github.io/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://james1badcreeper.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"最短路问题","description":"\n最短路是图论中的常考问题，本文引导你学习最短路的 Floyd，BellmanFord 及 Djikstra 算法，以及它们的各种应用。还有一种基于最短路的系统：差分约束系统。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/6bbbc5e9/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/6bbbc5e9/","wordCount":89,"datePublished":"2022-08-01T09:31:35.000Z","dateModified":"2023-10-19T14:38:04.292Z","articleSection":"算法竞赛","keywords":"图论,最短路,差分约束","image":{"@type":"ImageObject","url":"https://s1.ax1x.com/2022/08/04/vm9npV.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/6bbbc5e9/","name":"最短路问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"https://james1badcreeper.github.io/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://james1badcreeper.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"最短路问题","description":"\n最短路是图论中的常考问题，本文引导你学习最短路的 Floyd，BellmanFord 及 Djikstra 算法，以及它们的各种应用。还有一种基于最短路的系统：差分约束系统。\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/6bbbc5e9/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/6bbbc5e9/","wordCount":89,"datePublished":"2022-08-01T00:00:00.000Z","dateModified":"2022-08-01T00:00:00.000Z","articleSection":"算法竞赛","keywords":"图论,最短路,差分约束","image":{"@type":"ImageObject","url":"https://s1.ax1x.com/2022/08/04/vm9npV.jpg","width":1024,"height":768}}]</script>
 
 
 

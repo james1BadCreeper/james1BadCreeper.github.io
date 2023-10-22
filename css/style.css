@@ -5597,11 +5597,15 @@ p.p.subtitle:first-child {
 }
 span.p.logo,
 p.p.logo {
-  font-family: Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
+  font-family: Dosis, "Pingfang SC", "Microsoft YaHei", Helvetica, monospace;
 }
 span.p.code,
 p.p.code {
   font-family: Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
+}
+span.p.title,
+p.p.title {
+  font-family: "LXGW WenKai Screen", Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
 }
 span.p.left,
 p.p.left {
@@ -9501,4 +9505,7 @@ div .nav-sub p {
 }
 .widget span.name {
   font-family: "LXGW WenKai Screen", Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif !important;
+}
+details summary {
+  font-family: "LXGW WenKai Screen", Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
 }
