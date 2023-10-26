@@ -5439,6 +5439,13 @@ div.note.deep-blue {
 div.note.deep-blue::before {
   color: #3367d6;
 }
+div.note.orange {
+  background: #fff4e5;
+  border-color: #ff9800;
+}
+div.note.orange::before {
+  color: #ff9800;
+}
 .sites-wrap .group-header {
   margin: 0 0 1rem;
 }
