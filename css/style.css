@@ -9516,3 +9516,7 @@ div .nav-sub p {
 details summary {
   font-family: "LXGW WenKai Screen", Dosis, HarmonyOS_Regular, "Pingfang SC", "Microsoft YaHei", Menlo, Monaco, monospace, sans-serif;
 }
+td {
+  word-break: break-all;
+  word-wrap: break-word;
+}
