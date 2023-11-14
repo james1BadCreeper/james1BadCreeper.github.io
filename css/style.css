@@ -6252,6 +6252,9 @@ div.timenode:hover .meta .user-info span:after {
 .tag-plugin.timeline .body .footer .reaction {
   border-color: #a1a1a1;
 }
+.widget >.content .timeline p:first-child {
+  margin-top: 0em;
+}
 .article mjx-container {
   font-family: Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
   padding: 16px 8px;
