@@ -2247,7 +2247,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1699892030528),
+    lastupdate: new Date(1699960143384),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2255,7 +2255,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
     },
     sidebar: {
-      for_page: ["notice","blogger","lastupdate","webinfo"],
+      for_page: ["notice","blogger","lastupdate","timeline","webinfo"],
       for_post: ["blogger","toc"],
       webinfo: {
         lastupd: {
@@ -2395,23 +2395,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-duotone fa-archive WISTERIA fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/about/" title="关于"
                   
                   
@@ -2451,6 +2434,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-duotone fa-archive WISTERIA fa-fw'></i>归档
+                </a>
+                
+              </li>
             
           
                     
@@ -2608,23 +2608,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-duotone fa-archive WISTERIA fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/about/" title="关于"
                   
                   
@@ -2664,6 +2647,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-duotone fa-archive WISTERIA fa-fw'></i>归档
+                </a>
+                
+              </li>
             
           
                     
@@ -3177,6 +3177,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
+<section class="widget text desktop mobile pjax">
+  
+  <header>
+    
+      <i class="fa-duotone fa-list-alt PETERRIVE fa-fw" aria-hidden="true"></i><span class='name'>近期动态</span>
+    
+  </header>
+
+
+  <div class='content'>
+    
+      <div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.xaox.cc/repos/james1BadCreeper/james1BadCreeper.github.io/issues?per_page=2" user="james1BadCreeper"></div>
+    
+      <p><a href="/timeline/">查看更多动态</a></p>
+
+    
+  </div>
+</section>
+
+    
+  
+
+  
+    
+    
+      
 <section class="widget desktop pjax">
   
   <header>
@@ -3234,7 +3260,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后更新时间：</div>
-          <div id="last-update-show">2023-11-13 日</div>
+          <div id="last-update-show">2023-11-14 日</div>
         </div>
       
     </div>
@@ -3416,6 +3442,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 <!-- required -->
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
 
 <!-- internal -->
@@ -3944,6 +3974,11 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
         volantis.js("/js/plugins/tags/contributors.js")
       }
     
+    const els = document.getElementsByClassName('stellar-timeline-api');
+    if (els != undefined && els.length > 0) {
+      volantis.js("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js"); 
+      volantis.js("/js/plugins/tags/timeline.js"); 
+    }
   };
   loadIssuesJS()
   volantis.pjax.push(()=>{
@@ -4268,7 +4303,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://unpkg.com/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp"];
   let index = 0;
   let IntervalParallax = null;
 
