@@ -4384,13 +4384,13 @@ div.dropmenu ul>li >a:hover {
 div.dropmenu .list-v .list-v {
   left: calc(100% - 0.5 * 16px);
 }
-.md .tag-plugin.emoji {
+.tag-plugin.emoji {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: inline-block;
   vertical-align: -0.15em;
 }
-.md .tag-plugin.emoji img {
+.tag-plugin.emoji img {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: block;
@@ -6171,9 +6171,6 @@ div.timenode:hover .meta .user-info span:after {
 }
 .tag-plugin.timeline .body img {
   margin: 0.5rem auto;
-}
-.tag-plugin.timeline .body pre code {
-  font-size: 0.75rem;
 }
 .tag-plugin.timeline .body .footer {
   margin: 0 0 -0.5rem;
