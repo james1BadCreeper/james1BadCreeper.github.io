@@ -92,7 +92,7 @@ const StellarTimeline = {
         cell += '</div>';
         cell += '<div class="body">';
         console.log(cell); 
-        if (!hide.includes('title')) {
+        if (!hide.includes('title') && item.title != "none") {
           cell += '<p class="title">';
           cell += '<a href="' + item.html_url + '" target="_blank" rel="external nofollow noopener noreferrer">';
           cell += item.title || item.name || item.tag_name;
