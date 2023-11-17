@@ -6174,7 +6174,7 @@ div.timenode:hover .meta .user-info span:after {
 }
 .tag-plugin.timeline .body .footer {
   margin: 0 0 -0.5rem;
-  padding: 0.5rem 0 1rem;
+  padding: 0.5rem 0 0.5rem;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6251,6 +6251,13 @@ div.timenode:hover .meta .user-info span:after {
 }
 .widget >.content .timeline p:first-child {
   margin-top: 0em;
+}
+svg.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  overflow: hidden;
 }
 .article mjx-container {
   font-family: Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
@@ -9183,6 +9190,119 @@ details summary,
   -o-animation: content-fadeOut;
   -ms-animation: content-fadeOut;
   animation-duration: 1s;
+}
+svg.loading {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  position: absolute;
+  color: var(--text-p3);
+  z-index: -1;
+  width: 100%;
+  height: 2rem;
+  margin: auto;
+  animation: spin infinite 2s;
+  -webkit-animation: spin infinite 2s;
+  -khtml-animation: spin infinite 2s;
+  -moz-animation: spin infinite 2s;
+  -o-animation: spin infinite 2s;
+  -ms-animation: spin infinite 2s;
+  animation-timing-function: linear;
+}
+@-moz-keyframes spin {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -khtml-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -khtml-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-o-keyframes spin {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -khtml-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -khtml-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+.loading-wrap {
+  margin: 0;
+  text-align: center;
+  background: var(--color-block);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  position: relative;
+  padding: 2rem;
+}
+.loading-wrap svg {
+  margin: 4px;
+}
+.loading-wrap:after {
+  content: '正在加载';
+  color: var(--text-p1);
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  font-size: 14px;
+}
+.loading-wrap.error:after {
+  content: '加载失败，请稍后重试。';
 }
 @-moz-keyframes content-fadeIn {
   0% {
