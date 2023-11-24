@@ -102,7 +102,7 @@ const StellarTimeline = {
         console.log(cell); 
         
         cell += marked.parse(item.body || '');
-        if (0 && !hide.includes('footer')) {
+        if (!hide.includes('footer')) {
           cell += '<div class="footer">';
           cell += '<div class="flex left">';
           if (item.labels) {
