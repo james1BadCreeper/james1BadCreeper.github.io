@@ -6259,6 +6259,56 @@ svg.icon {
   fill: currentColor;
   overflow: hidden;
 }
+ul,
+ol {
+  font-size: 0.9375rem;
+  list-style: initial;
+  padding-left: 8px;
+  margin-left: 16px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul li,
+ol li {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ul li li,
+ol li li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul li p,
+ol li p {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+ul.task-list,
+ol.task-list {
+  padding-left: 0;
+  margin-left: 4px;
+}
+ul.task-list li,
+ol.task-list li {
+  list-style: none;
+}
+ul.task-list li input,
+ol.task-list li input {
+  margin-right: 4px;
+}
+ul>li {
+  list-style: initial;
+}
+ol>li {
+  list-style: decimal;
+}
 .article mjx-container {
   font-family: Jetbrains, "Jetbrains Mono", "Fira Code", "Cascadia Code", "SF Mono", Monaco, Consolas, "Ubuntu Mono", HarmonyOS_Regular, "Microsoft YaHei", "PingFang SC", monospace, courier, sans-serif;
   padding: 16px 8px;
