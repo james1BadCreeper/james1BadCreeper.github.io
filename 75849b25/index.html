@@ -2075,7 +2075,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.import = {
     jQuery: () => {
       if (typeof jQuery == "undefined") {
-        return volantis.js("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js")
+        return volantis.js("https://gcore.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js")
       } else {
         return new Promise(resolve => {
           resolve()
@@ -2250,12 +2250,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1702686301916),
+    lastupdate: new Date(1702836062728),
     cdn: {
-      izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
-      izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
-      fancybox_css: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.min.css',
-      fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
+      izitoast_css: 'https://gcore.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css',
+      izitoast_js: 'https://gcore.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js',
+      fancybox_css: 'https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.css',
+      fancybox_js: 'https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.umd.js'
     },
     sidebar: {
       for_page: ["notice","blogger","lastupdate","timeline","webinfo"],
@@ -3859,7 +3859,7 @@ OI 中的自动机一般指确定有限状态自动机（DFA...</p>
 <!-- required -->
 
   
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
 
 
@@ -4391,7 +4391,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
     const els = document.getElementsByClassName('stellar-timeline-api');
     if (els != undefined && els.length > 0) {
-      volantis.js("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js"); 
+      volantis.js("https://gcore.jsdelivr.net/npm/marked@4.0.18/marked.min.js"); 
       volantis.js("/js/plugins/tags/timeline.js"); 
     }
   };
@@ -4405,7 +4405,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.1.0/lazyload.min.js"></script>
+  <script defer src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -4467,7 +4467,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
       pjax_scrollrebeal();
     }
   }
-  volantis.js("https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js");
+  volantis.js("https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js");
   document.addEventListener("DOMContentLoaded", init_scrollrebeal)
   volantis.pjax.push(
     pjax_scrollrebeal,
@@ -4485,7 +4485,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   
     (async () => {
       // APlayer 需要在  MetingJS 之前加载
-      await volantis.js("https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js")
+      await volantis.js("https://gcore.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js")
       await volantis.js("https://gcore.jsdelivr.net/npm/meting@2/dist/Meting.min.js")
     
       // 右键 music 需要在 APlayer  MetingJS 之后加载
@@ -4718,7 +4718,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp"];
+  let imgs = ["https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4777,8 +4777,8 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   <script>
   function load_swiper() {
     if (!document.querySelectorAll(".swiper-container")[0]) return;
-    volantis.css("https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css");
-    volantis.js("https://cdn.bootcdn.net/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js").then(() => {
+    volantis.css("https://gcore.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.css");
+    volantis.js("https://gcore.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.js").then(() => {
       pjax_swiper();
     });
   }
@@ -4815,8 +4815,8 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  volantis.css("https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/themes/green/pace-theme-minimal.min.css");
-  volantis.js("https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js").then(() => {
+  volantis.css("https://gcore.jsdelivr.net/npm/pace-js@1.2.4/themes/green/pace-theme-minimal.css");
+  volantis.js("https://gcore.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js").then(() => {
     Pace.options.restartOnPushState = false;
     volantis.pjax.send(Pace.restart);
     // 阅读进度
@@ -4837,14 +4837,14 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
         <script>
   // https://www.micdz.cn/article/katex-on-volantis/
   if (typeof renderMathInElement == "undefined") {
-    volantis.css("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.9/katex.min.css")
+    volantis.css("https://gcore.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css")
     function pjax_katex() {
-      volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js").then(()=>{
+      volantis.js("https://gcore.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js").then(()=>{
         renderMathInElement(document.body);
       })
     }
     volantis.js("")
-    volantis.js("https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.9/katex.min.js").then(pjax_katex)
+    volantis.js("https://gcore.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js").then(pjax_katex)
     volantis.pjax.push(pjax_katex)
   }
 </script>
