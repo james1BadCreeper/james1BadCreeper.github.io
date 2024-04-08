@@ -2249,7 +2249,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712497758700),
+    lastupdate: new Date(1712582198446),
     cdn: {
       izitoast_css: 'https://gcore.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css',
       izitoast_js: 'https://gcore.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js',
@@ -2891,7 +2891,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-duotone fa-keyboard CARROT fa-fw" aria-hidden="true"></i>
-      <p>141 字</p>
+      <p>394 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2941,14 +2941,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <span id="more"></span>
 <p>广义来说，所有问题都属于构造类问题——它们都需要构造解。</p>
+<p>此类题目中也有较多 ad-hoc 题，需要我们从多个角度思考，发挥自己的想象力。</p>
+<p>我们不能对于每道题都枚举所有套路逐一试错，而需要具体情况具体分析。不应当完全依靠猜或试找出来，而是主要通过线索推断出来。它们包括但不限于：</p>
+<ul>
+<li>特殊的题目条件、数据范围</li>
+<li>特殊性质、部分分</li>
+<li>必然性、充分性</li>
+<li>模型的观察与转化</li>
+<li>打表的结果</li>
+</ul>
+<p>注意在做此类题目时，要避免自己陷入思维死局。</p>
 <h2 id="常见模型">常见模型</h2>
 <p>一些问题常在特定结构上出现。</p>
+<h3 id="DFS-树">DFS 树</h3>
+<p>无向图的 DFS 树是没有横叉边的，可以根据此来完成一些题目。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7320">「PMOI-4」可怜的团主</a>。直接跑 DFS 树，如果叶子足够就直接构造（因为没横叉边），否则依次连边即可。<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/154920281">代码</a>。</p>
 <h3 id="图论相关">图论相关</h3>
 <p>图论相关的内容非常多，可以参见以下表格。</p>
-<div class="tabs" id="tab-tab_5"><ul class="nav-tabs"><li class="tab active"><a class="#tab_5-1">基础性质</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_5-1"><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/CF1444C">CF1444C</a>.</p>
-<p>我们知道 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi mathvariant="normal">deg</mi><mo>⁡</mo><mo>=</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">\sum \operatorname{deg}=m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mord mathrm" style="margin-right:0.01389em;">deg</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span>，因此内部判断完之后，直接枚举就是对的。</p></div></div></div>
-<h2 id="实例">实例</h2>
-<p>以下题目可能需要一些“灵光乍现”。</p>
+<div class="tabs" id="tab-tab_5"><ul class="nav-tabs"><li class="tab active"><a class="#tab_5-1">基础性质</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_5-1"><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/CF1444C">CF1444C</a>。我们知道 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi mathvariant="normal">deg</mi><mo>⁡</mo><mo>=</mo><mi>O</mi><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\sum \operatorname{deg}=O(m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mord mathrm" style="margin-right:0.01389em;">deg</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span>，因此内部判断完之后，直接枚举就是对的。</p></div></div></div>
+<h3 id="zig-zag-pattern">zig-zag pattern</h3>
+<p>即之字形构造。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9837">P9837 汪了个汪</a>。所有的无序数对都要恰好出现一次，那么按照顺序填，按照无序数对的差分类即可。</p>
 
   </div>
   
@@ -3223,7 +3236,7 @@ Portal.
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">常见模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E8%AE%BA%E7%9B%B8%E5%85%B3"><span class="toc-number">1.1.</span> <span class="toc-text">图论相关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">常见模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DFS-%E6%A0%91"><span class="toc-number">1.1.</span> <span class="toc-text">DFS 树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E8%AE%BA%E7%9B%B8%E5%85%B3"><span class="toc-number">1.2.</span> <span class="toc-text">图论相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zig-zag-pattern"><span class="toc-number">1.3.</span> <span class="toc-text">zig-zag pattern</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4264,7 +4277,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp"];
+  let imgs = ["https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp"];
   let index = 0;
   let IntervalParallax = null;
 
