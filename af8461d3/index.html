@@ -36,19 +36,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>2024/06/24(#55)：让蔷薇开出一种结果 - james1 的博客</title>
+  <title>2024/06/25(#55)：让蔷薇开出一种结果 - james1 的博客</title>
   <meta name="keywords" content="题解,闲话,做题记录,null">
   <meta desc name="description" content="也许是最后的，拥抱热爱。 - james1BadCreeper - james1 的博客">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="2024&#x2F;06&#x2F;24(#55)：让蔷薇开出一种结果">
+<meta property="og:title" content="2024&#x2F;06&#x2F;25(#55)：让蔷薇开出一种结果">
 <meta property="og:url" content="https://james1badcreeper.github.io/af8461d3/index.html">
 <meta property="og:site_name" content="james1 的博客">
 <meta property="og:description" content="也许是最后的，拥抱热爱。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-06-23T00:00:00.000Z">
-<meta property="article:modified_time" content="2024-06-24T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-06-25T00:00:00.000Z">
 <meta property="article:author" content="james1BadCreeper">
 <meta property="article:tag" content="题解">
 <meta property="article:tag" content="闲话">
@@ -2250,7 +2250,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1719234818195),
+    lastupdate: new Date(1719303314359),
     cdn: {
       izitoast_css: 'https://gcore.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css',
       izitoast_js: 'https://gcore.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js',
@@ -2859,7 +2859,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        2024/06/24(#55)：让蔷薇开出一种结果
+        2024/06/25(#55)：让蔷薇开出一种结果
       </h1>
       <div class='new-meta-box'>
         
@@ -2876,10 +2876,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-24T00:00:00+00:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-25T00:00:00+00:00">
   <a class='notlink'>
     <i class="fa-duotone fa-edit TURQUOISE fa-fw" aria-hidden="true"></i>
-    <p>更新于 2024年6月24日</p>
+    <p>更新于 2024年6月25日</p>
   </a>
 </div>
 
@@ -2890,7 +2890,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-duotone fa-keyboard CARROT fa-fw" aria-hidden="true"></i>
-      <p>46 字</p>
+      <p>219 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2939,6 +2939,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <span id="more"></span>
 <h4 id="107-NOI2018-冒泡排序">107 NOI2018 冒泡排序</h4>
 <p>首先打表得出结论：好排列的充要条件是最长下降子序列长度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\le 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>。</p>
+<p>比如没有字典序限制，纵坐标是当前填的最大值，横坐标是当前填了几个数，发现转移是类似于下面的一个过程：</p>
+<p><img src="https://pic.imgdb.cn/item/667a6415d9c307b7e93027c5.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/667a6415d9c307b7e93027c5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></p>
+<p>向上是填写一个比当前最大值大的值，横着走是填写一个最小值。只有这样是合法的。</p>
+<p>发现这个写着向上走可以对应到唯一的向上走一段再往右走一格。</p>
+<p>然后枚举前缀随便算一下。</p>
+<h4 id="108-ARC172E-Last-9-Digits">108 ARC172E Last 9 Digits</h4>
+<p>发现其结构可以拆开：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><msup><mn>0</mn><mi>y</mi></msup><msup><mo stretchy="false">)</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn><msup><mn>0</mn><mi>y</mi></msup></mrow></msup><mo>≡</mo><msup><mi>x</mi><mi>x</mi></msup><mspace></mspace><mspace width="0.4444em"/><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mspace width="0.3333em"/><mn>1</mn><msup><mn>0</mn><mi>y</mi></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x+10^y)^{x+10^y}\equiv x^x \pmod {10^{y}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.13em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.88em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7385em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span><span class="mspace allowbreak"></span><span class="mspace" style="margin-right:0.4444em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord"><span class="mord mathrm">mod</span></span></span><span class="mspace" style="margin-right:0.3333em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，然后预处理后七位，枚举前两位即可。</p>
 
   </div>
   
@@ -2954,7 +2961,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">2024/06/24(#55)：让蔷薇开出一种结果</div>
+            <div class="license-title">2024/06/25(#55)：让蔷薇开出一种结果</div>
             <div class="license-link"><a href="https://james1badcreeper.github.io/af8461d3/">https://james1badcreeper.github.io/af8461d3/</a>
             </div>
             <div class="license-meta">
@@ -2969,7 +2976,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               <div class="license-meta-item">
                 <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2024年6月24日</div>
+                <div class="license-meta-text">2024年6月25日</div>
               </div>
               
               
@@ -3202,7 +3209,7 @@ https://www.luogu.com.cn/training/531947。
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#107-NOI2018-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text">107 NOI2018 冒泡排序</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#107-NOI2018-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text">107 NOI2018 冒泡排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#108-ARC172E-Last-9-Digits"><span class="toc-number">2.</span> <span class="toc-text">108 ARC172E Last 9 Digits</span></a></li></ol>
     </div>
   </section>
 
@@ -4243,7 +4250,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp"];
+  let imgs = ["https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/020.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/046.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/010.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/004.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/026.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/012.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/019.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/006.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/042.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/017.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/039.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/038.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/003.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/016.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/007.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/002.webp","https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/wallpaper/minimalist/2020/021.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4511,7 +4518,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/做题记录/","name":"做题记录"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/做题记录/加训/","name":"加训"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/af8461d3/","name":"2024/06/24(#55)：让蔷薇开出一种结果"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"https://james1badcreeper.github.io/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://james1badcreeper.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"2024/06/24(#55)：让蔷薇开出一种结果","description":"也许是最后的，拥抱热爱。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/af8461d3/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/af8461d3/","wordCount":12,"datePublished":"2024-06-23T00:00:00.000Z","dateModified":"2024-06-24T00:00:00.000Z","articleSection":"算法竞赛","keywords":"题解,闲话,做题记录","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","sameAs":["https://github.com/volantis-x"],"description":"james1"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://james1badcreeper.github.io/","name":"james1 的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/","name":"算法竞赛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/做题记录/","name":"做题记录"}},{"@type":"ListItem","position":2,"item":{"@id":"https://james1badcreeper.github.io/categories/算法竞赛/做题记录/加训/","name":"加训"}},{"@type":"ListItem","position":3,"item":{"@id":"https://james1badcreeper.github.io/af8461d3/","name":"2024/06/25(#55)：让蔷薇开出一种结果"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"james1 的博客","url":"https://james1badcreeper.github.io/","keywords":null,"description":"james1","author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/","description":"james1"},"publisher":{"@type":"Organization","name":"james1 的博客","url":"https://james1badcreeper.github.io/","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://james1badcreeper.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"2024/06/25(#55)：让蔷薇开出一种结果","description":"也许是最后的，拥抱热爱。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://james1badcreeper.github.io/af8461d3/"},"author":{"@type":"Person","name":"james1BadCreeper","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://james1badcreeper.github.io/"},"publisher":{"@type":"Organization","name":"james1 的博客","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://james1badcreeper.github.io/af8461d3/","wordCount":12,"datePublished":"2024-06-23T00:00:00.000Z","dateModified":"2024-06-25T00:00:00.000Z","articleSection":"算法竞赛","keywords":"题解,闲话,做题记录","image":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/npm/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
